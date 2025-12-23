@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+  <title>아이캔 올티가스 캠프 학부모 정보 포털</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Inter"', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+            display: ['"Inter"', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            // Apple-inspired palette
+            paper: '#F5F5F7', // Main background (light gray)
+            card: '#FFFFFF',  // Card background (white)
+            ink: '#1D1D1F',   // Primary text (near black)
+            secondary: '#86868B', // Secondary text (gray)
+            accent: '#0071E3', // Apple Blue
+            ican: {
+              50: '#F5F5F7',
+              100: '#E8E8ED',
+              500: '#0071E3', // Rebrand primary to Apple Blue
+              600: '#0077ED',
+              800: '#1D1D1F',
+              900: '#000000',
+            }
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards', // Smoother cubic-bezier for Apple feel
+            'slide-up': 'slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react/": "https://esm.sh/react@18.3.1/",
+    "react-dom": "https://esm.sh/react-dom@18.3.1",
+    "react-dom/": "https://esm.sh/react-dom@18.3.1/",
+    "react-dom/server": "https://esm.sh/react-dom@18.3.1/server",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.28.0?deps=react@18.3.1,react-dom@18.3.1",
+    "lucide-react": "https://esm.sh/lucide-react@0.460.0?deps=react@18.3.1",
+    "framer-motion": "https://esm.sh/framer-motion@10.16.4?deps=react@18.3.1,react-dom@18.3.1",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "leaflet": "https://esm.sh/leaflet@1.9.4",
+    "react-leaflet": "https://esm.sh/react-leaflet@4.2.1?deps=react@18.3.1,react-dom@18.3.1,leaflet@1.9.4"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body class="bg-paper text-ink font-sans antialiased selection:bg-accent selection:text-white">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>
