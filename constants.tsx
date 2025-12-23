@@ -33,7 +33,7 @@ export const ACADEMY_INFO = {
   location: "16F Strata 100 Building, Emerald Ave, Ortigas Center, Pasig City",
   coordinates: { lat: 14.5869, lng: 121.0628 }, // Strata 100 Coordinates
   contacts: {
-    phone: "070-7014-7139",
+    phone: "070-7014-2233",
     localPhone: "0945-479-9556",
     kakao: "icanacademy",
     email: "icanacademy@naver.com",
@@ -949,7 +949,7 @@ export const KO_DATA = {
     ],
     ctaFooter: {
       title: "멤버십 합류하기",
-      subtitle: "2025년 레지던시 멤버십 문의"
+      subtitle: "2026년 영어 캠프 참가 문의"
     }
   },
   strengths: [
@@ -1043,15 +1043,26 @@ export const KO_DATA = {
     }
   ],
   fees: {
-    tuitionTitle: "수업료 안내",
+    tuitionTitle: "캠프수업료 안내",
     tuitionSubtitle: "합리적인 비용으로 최고의 교육을 제공합니다.",
-    headers: ["기간", "수업료", "교재비"],
+    headers: ["기간", "캠프수업료", "교재비"],
     items: [
-      { duration: "4주", tuition: "140만원", materialFee: "5만원" },
-      { duration: "8주", tuition: "260만원", materialFee: "10만원" },
-      { duration: "12주", tuition: "380만원", materialFee: "15만원" }
+      { duration: "4주", tuition: "190만원", materialFee: "10만원" },
+      { duration: "8주", tuition: "360만원", materialFee: "15만원" },
+      { duration: "12주", tuition: "530만원", materialFee: "20만원" }
     ],
-    note: "* 환율 변동에 따라 원화 금액은 달라질 수 있습니다.\n* 숙소 및 식비는 별도입니다.",
+    additionalClasses: {
+      title: "추가 선택 수업",
+      subtitle: "학생의 필요와 목표에 맞춰 선택할 수 있는 심화 과정입니다.",
+      headers: ["수업명", "기간", "추가 비용"],
+      items: [
+        { name: "테드 (TED) 수업 추가", duration: "4주", price: "5만원" },
+        { name: "주니어 토플 수업 추가", duration: "4주", price: "5만원" },
+        { name: "AI 수업 추가", duration: "4주", price: "7만원" },
+        { name: "토플 수업 추가", duration: "4주", price: "10만원" }
+      ]
+    },
+    note: "* 환율 변동에 따라 원화 금액은 달라질 수 있습니다.\n* 숙소 및 식비는 별도입니다.\n* 입학금 한 가정당 15만원 (재등록자 면제)",
     visaTitle: "비자 및 기타 비용",
     visaSubtitle: "필리핀 현지에서 납부해야 하는 비용입니다.",
     visaItems: [

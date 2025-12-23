@@ -64,6 +64,46 @@ const VisaAndEntry: React.FC = () => {
           </div>
         </section>
 
+        {/* Additional Optional Classes Card */}
+        {fees.additionalClasses && (
+          <section className="bg-white rounded-3xl shadow-sm overflow-hidden mb-8">
+            <div className="p-8 md:p-12 border-b border-gray-100">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2">
+                <h2 className="text-3xl font-bold tracking-tight">{fees.additionalClasses.title}</h2>
+                <span className="text-sm font-semibold text-[#0071E3] bg-blue-50 px-3 py-1 rounded-full">
+                  {fees.additionalClasses.subtitle}
+                </span>
+              </div>
+              <p className="text-gray-500 text-sm md:text-base">
+                Specialized courses available for students who want to advance their skills further.
+              </p>
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead className="bg-[#F5F5F7]/50 text-xs font-semibold uppercase tracking-wide text-gray-500">
+                  <tr>
+                    {fees.additionalClasses.headers.map((header, idx) => (
+                      <th key={idx} className="p-6 first:pl-8 last:pr-8 md:first:pl-12 md:last:pr-12 whitespace-nowrap">
+                        {header}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  {fees.additionalClasses.items.map((item, idx) => (
+                    <tr key={idx} className="hover:bg-gray-50/50 transition-colors">
+                      <td className="p-6 md:p-8 md:pl-12 font-semibold text-lg">{item.name}</td>
+                      <td className="p-6 md:p-8 font-medium text-gray-600">{item.duration}</td>
+                      <td className="p-6 md:p-8 md:pr-12 text-gray-600">{item.price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )}
+
         {/* Visa & Admin Fees Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <section className="bg-white rounded-3xl p-8 shadow-sm">

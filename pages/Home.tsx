@@ -153,7 +153,7 @@ const Home: React.FC = () => {
             {content.home.hero.ctas.living}
           </Link>
           <a
-            href="https://pf.kakao.com/_xkxjxjxj"
+            href="https://pf.kakao.com/_jMuBxb"
             className="border border-white px-6 py-3 rounded"
           >
             {content.home.hero.ctas.kakao}
