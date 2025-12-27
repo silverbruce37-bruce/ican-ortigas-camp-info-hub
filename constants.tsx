@@ -647,6 +647,34 @@ export const LIVING_INFO_DATA_KO: LivingInfoItem[] = [
     link: 'https://www.globe.com.ph/',
     linkLabel: 'Globe 홈페이지'
   },
+  {
+    category: 'mobile',
+    title: '슈퍼 택시 (JoyRide Super Taxi)',
+    description: '그랩(Grab)의 대안으로 떠오르는 새로운 택시 호출 앱입니다. 미터기 요금 기반으로 운영되어 비교적 합리적이며, 승차 거부가 적습니다.',
+    details: [
+      '앱: JoyRide Superapp 다운로드 후 이용',
+      '특징: 도요타 벨로즈 등 쾌적한 신형 차량 위주 배차',
+      '장점: 공항 픽업/샌딩 예약 가능, 일반 택시보다 안전함'
+    ],
+    location: 'App Store / Google Play',
+    type: 'online',
+    link: 'https://joyride.com.ph/',
+    linkLabel: 'JoyRide 다운로드'
+  },
+  {
+    category: 'mobile',
+    title: '라자다 & 쇼피 (Lazada / Shopee)',
+    description: '필리핀의 쿠팡이라 불리는 양대 산맥 온라인 쇼핑몰입니다. 생필품, 식료품, 전자제품 등 없는 게 없으며 배송도 빠른 편입니다.',
+    details: [
+      'Lazada: 전반적으로 배송이 조금 더 빠르고 물류 시스템이 안정적',
+      'Shopee: 다양한 자잘한 물건이 많고 할인 쿠폰/무료 배송 혜택이 풍부',
+      '팁: COD(Cash On Delivery) 옵션을 사용하면 물건을 받을 때 현금으로 결제 가능하여 안전함'
+    ],
+    location: 'Online App',
+    type: 'online',
+    link: 'https://www.lazada.com.ph/',
+    linkLabel: 'Lazada 바로가기'
+  },
 
   // --- RENT & ACCOMMODATION (EXPANDED) ---
   {
@@ -1144,10 +1172,10 @@ export const KO_DATA = {
   home: {
     catchphrase: "슈퍼키즈 마인드셋: 회복탄력성(Resilience)과 그릿(Grit)으로 완성되는 슈퍼파워. 거친 도전 속에서도 끝까지 해내는 힘, 뇌의 컨트롤 센터를 깨웁니다.",
     hero: {
-      badge: "The Future of Education",
-      titleLine1: "슈퍼키즈 마인드셋",
-      titleLine2: "스페이스 오리엔티어링",
-      subtitle: "회복탄력성(Resilience)과 그릿(Grit)으로 완성되는 슈퍼파워",
+      badge: "스페이스 엔지니어",
+      titleLine1: "이중언어와 우주적 사고",
+      titleLine2: "슈퍼키즈 마인드셋",
+      subtitle: "아이캔의 아이들을 우주시대의 CHOSEN 자유인으로 만들어 나갑니다.",
       ctaCurriculum: "커리큘럼 살펴보기",
       ctaFees: "비용 안내",
       ctas: {
@@ -1161,7 +1189,7 @@ export const KO_DATA = {
       { title: "Global Conversation", desc: "SAT 펀더멘털과 고전 읽기를 통해 자유, 정의, 인권의 가치를 논하며 시대를 초월하는 인싸이트와 비평적 사고를 완성합니다.", icon: ICONS.Globe, link: "/curriculum" }
     ],
     location: {
-      title: "안전한 교육생태계 '올티가스 센타'",
+      title: "안전한 교육생태계 '올티가스 센타' 에서 그 꿈을 실현해 나갑니다",
       desc: "올티가스는 마닐라의 비즈니스 중심지로, 치안이 매우 우수하고 쾌적한 환경을 자랑합니다. 우리는 이곳을 'The Environment'라 부르며, 아이들의 안전과 몰입을 위한 최적의 기지로 활용합니다.",
       safety: "Safety & Security",
       safetyDesc: "24시간 가드 상주 및 인텔리전트 빌딩 관리",

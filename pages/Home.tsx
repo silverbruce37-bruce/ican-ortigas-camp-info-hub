@@ -12,31 +12,63 @@ const Home: React.FC = () => {
   return (
     <div className="font-sans bg-white text-black">
       {/* Hero Section */}
-      <section className="min-h-[50vh] flex flex-col items-center justify-center text-center p-8 pt-24">
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
+      <section className="min-h-[60vh] flex flex-col items-center justify-center text-center p-8 pt-32 pb-16">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl font-bold mb-4 flex items-center justify-center gap-3"
+          transition={{ duration: 0.6 }}
+          className="mb-6 inline-block"
         >
-          <Rocket className="w-10 h-10 text-black" strokeWidth={1.5} />
-          {content.home.hero.titleLine1}
-        </motion.h1>
-        <p className="text-lg mb-6">{content.home.hero.subtitle}</p>
-        <div className="flex gap-4">
+          <span className="px-4 py-1.5 rounded-full bg-gray-100 text-gray-600 text-sm font-semibold tracking-wide border border-gray-200">
+            {content.home.hero.badge}
+          </span>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-8"
+        >
+          <h1 className="text-5xl md:text-6xl font-black text-gray-900 tracking-tight leading-tight mb-2 flex flex-col md:flex-row items-center justify-center gap-3">
+            <span className="flex items-center gap-3">
+              <Rocket className="w-10 h-10 md:w-12 md:h-12 text-ican-500" strokeWidth={2} />
+              {content.home.hero.titleLine1}
+            </span>
+          </h1>
+          <h1 className="text-5xl md:text-6xl font-black text-gray-900 tracking-tight leading-tight">
+            <span className="text-ican-600">{content.home.hero.titleLine2}</span>
+          </h1>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-xl md:text-2xl text-gray-500 font-medium mb-10 max-w-3xl mx-auto leading-relaxed"
+        >
+          {content.home.hero.subtitle}
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+        >
           <Link
             to="/curriculum"
-            className="text-sm font-medium underline flex items-center"
+            className="px-8 py-3.5 bg-ican-600 text-white rounded-full font-bold text-lg hover:bg-ican-700 transition-colors shadow-lg shadow-ican-200 flex items-center justify-center gap-2"
           >
-            {content.home.hero.ctaCurriculum} <ArrowRight size={14} className="ml-1" />
+            {content.home.hero.ctaCurriculum} <ArrowRight size={18} />
           </Link>
           <Link
             to="/fees"
-            className="text-sm font-medium underline flex items-center"
+            className="px-8 py-3.5 bg-white text-gray-700 border border-gray-200 rounded-full font-bold text-lg hover:bg-gray-50 transition-colors flex items-center justify-center gap-2"
           >
-            {content.home.hero.ctaFees} <ArrowRight size={14} className="ml-1" />
+            {content.home.hero.ctaFees} <ArrowRight size={18} />
           </Link>
-        </div>
+        </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -53,7 +85,7 @@ const Home: React.FC = () => {
 
       <section className="py-16 px-4 mt-8">
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-black text-gray-900 mb-3 tracking-tight">닥터아이캔의 에듀스페이스</h2>
+          <h2 className="text-4xl font-black text-gray-900 mb-3 tracking-tight">닥터아이캔의 에듀스페이스에서 우주인이 되어 갑니다.</h2>
           <p className="text-gray-500 max-w-3xl mx-auto font-medium">
             20년 교육 노하우가 집약된 AI '닥터아이캔'의 개인별 맞춤 설계와 크리스천 인성 교육으로 완성하는 미래형 에듀스페이스
           </p>
