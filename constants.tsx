@@ -9,6 +9,11 @@ import blog8Img from './blog-8.png';
 import blog6Img from './blog-6.png';
 import blog5Img from './blog-5.png';
 import blog3Img from './blog-3.png';
+import nanobananaSkatingImg from './nanobanana-skating.png';
+import nanobananaAceWaterSpaImg from './nanobanana-acewaterspa.png';
+import blogEmeraldWeekendImg from './blog-emerald-weekend.png';
+import blogTobysEstateImg from './tobys-estate-brunch.png';
+import blogTobysEstateMothersImg from './tobys-estate-mothers.png';
 
 // --- Icons Map (To share across languages) ---
 export const ICONS = {
@@ -150,6 +155,144 @@ export const CARROT_ITEMS: CarrotItem[] = [
 
 // --- Blog Data (Roy House) ---
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: 'blog-14',
+    title: "나만 알고 싶은 아지트, 토비 하우스(Toby's Estate) ☕️✨",
+    excerpt: "우연히 들렀다가 '인생 카페' 등극! 산미 가득한 롱블랙과 가성비 최고의 파스타, 그리고 끊이지 않는 수다. 엄마들의 힐링 성지, 함께 가실래요?",
+    content: `
+      <p>안녕하세요! 로이 하우스입니다. :) 👋</p><br/>
+      <p>오늘은 제가 정말 우연히 발견했다가, 이제는 <strong>'없으면 못 사는'</strong> 최애 아지트가 되어버린 곳을 소개해 드리려고 해요. 바로 올티가스의 숨은(사실은 유명하지만! 😉) 보석, <strong>'토비 하우스(Toby's Estate)'</strong>입니다.</p><br/>
+
+      <h3 class="text-xl font-bold mb-2">🚪 우연이 선물해 준 마법 같은 공간</h3>
+      <p>아이들 학원 보내놓고 '어디 괜찮은 데 없나?' 서성이다가, 통유리 너머로 보이는 고급스러운 조명에 이끌려 들어간 곳이었어요. 문을 열자마자 퍼지는 향긋한 원두 냄새와 높은 천장, 세련된 인테리어... 마치 청담동 갤러리 카페에 온 듯한 기분이더라고요! 😍</p><br/>
+
+      <img src="${blogTobysEstateMothersImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Moms enjoying brunch at Tobys Estate" />
+
+      <h3 class="text-xl font-bold mb-2">☕️ '산미'의 신세계, 롱블랙(Long Black)</h3>
+      <p>이곳의 시그니처는 단연 <strong>롱블랙</strong>이에요. 평소 고소한 커피만 찾던 저였는데, 직원분의 추천으로 마셔본 이곳의 롱블랙은 충격 그 자체였어요! 기분 좋게 톡 쏘는 산미가 입안을 감싸는데, 디저트 없이 커피만 마셔도 황홀할 지경이었답니다. 커피 맛 좀 아는 엄마들 사이에선 이미 정평이 나 있더라고요.</p><br/>
+
+      <h3 class="text-xl font-bold mb-2">🍝 가성비와 분위기, 두 마리 토끼를 잡다</h3>
+      <p>"이렇게 고급스러우면 비싸지 않을까?" 걱정은 NO! 메뉴판을 보고 또 한 번 놀랐어요. 파스타와 브런치 메뉴들이 이 분위기에 믿기지 않을 만큼 <strong>합리적인 가격</strong>이었거든요. 꾸덕꾸덕한 크림 파스타 한 입 먹고, 깔끔한 롱블랙 한 모금 마시면... 그곳이 바로 천국! 🌈</p><br/>
+
+      <h3 class="text-xl font-bold mb-2">🗣️ 우리들만의 비밀스러운 수다 타임</h3>
+      <p>맛있는 음식과 커피, 그리고 편안한 분위기 덕분일까요? 이곳에만 오면 시간 가는 줄 모르고 이야기꽃을 피우게 돼요. 육아 스트레스, 남편 흉(?), 아이들 교육 정보까지... 쉴 새 없이 떠들다 보면 어느새 하원 시간이 훌쩍 다가와 있답니다.</p>
+      <p>엄마들에게도 가끔은 이런 <strong>'근사한 사치'</strong>가 필요하잖아요? 부담 없는 가격으로 누리는 최고의 힐링, 토비 하우스에서 꼭 경험해 보세요! (저랑 마주치면 인사해요! 👋)</p>
+    `,
+    date: "2025.12.28",
+    category: "Food",
+    image: blogTobysEstateMothersImg,
+    author: "Roy House (Joy Mom)",
+    tags: ["OrtigasCafe", "TobysEstate", "MomsBrunch", "LongBlack"]
+  },
+  {
+    id: 'blog-13',
+    title: "도로가 운동장으로 변신? 오감만족, 토요일의 에메랄드 애비뉴 🛹🍱",
+    excerpt: "차 없는 거리에서 즐기는 자유! 자전거, 스케이트보드, 줄넘기... 그리고 오후 3시까지만 열리는 반짝 맛집 시장과 이색 테니스까지. 올티가스 주민이 전하는 생생한 주말 라이프!",
+    content: `
+      <p>안녕하세요! 로이 하우스입니다. :) 🌿</p><br/>
+      <p>매주 토요일, 제가 사는 이곳 올티가스에는 마법 같은 일이 벌어집니다. 평일 내내 차들로 꽉 막혀있던 <strong>'에메랄드 애비뉴(Emerald Avenue)'</strong>가 거대한 놀이터로 변신하거든요! 로컬 주민인 제가 직접 다녀온 생생한 현장을 여러분께 1인칭 시점으로 중계해 드릴게요.</p><br/>
+      
+      <h3 class="text-xl font-bold mb-2">🚫 차 없는 거리의 자유로움 (Car-Free Weekend)</h3>
+      <p>토요일 아침이 밝으면 도로는 아이들의 세상이 됩니다. 아스팔트 위를 마음껏 달리는 기분, 상상이 가시나요?</p>
+      <ul class="list-disc ml-5 mb-4">
+        <li><strong>씽씽 쌩쌩!</strong> 자전거, 인라인스케이트, 킥보드를 탄 아이들이 신나게 질주합니다. 차 걱정 없이 안전하게 탈 수 있어 부모님들도 안심이죠.</li>
+        <li><strong>줄넘기 & 배드민턴:</strong> 뻥 뚫린 도로 한복판에서 줄넘기를 하거나 배드민턴 채를 휘두르는 모습도 흔한 풍경이에요.</li>
+      </ul><br/>
+
+      <img src="${blogEmeraldWeekendImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Emerald Avenue Weekend Market and Activities" />
+
+      <h3 class="text-xl font-bold mb-2">🍱 놓치면 후회! 오후 3시까지 열리는 먹거리 시장</h3>
+      <p>운동을 하다 출출해지면 어디선가 맛있는 냄새가 코를 찌릅니다. 바로 주말에만 열리는 '먹거리 시장'인데요. <strong>주의하세요! 이 시장은 오후 3시까지만 운영됩니다.</strong> ⏰</p>
+      <p>필리핀 현지 바비큐 꼬치구이(Isaw)부터 시원한 열대 과일 셰이크, 갓 구운 빵까지... 점심 식사나 간식으로 딱이에요. 3시가 지나면 마법처럼 사라지니, 운동 전에 든든하게 배를 채우거나 점심 시간에 맞춰 방문하는 센스가 필요해요! 😋</p><br/>
+
+      <h3 class="text-xl font-bold mb-2">🎾 도심 속 이색 스포츠, 간이 테니스(Pickleball)</h3>
+      <p>그리고 또 하나의 하이라이트! 선선한 저녁이 되면 도로 한편에 <strong>'간이 테니스장(Pickleball Court)'</strong>이 뚝딱 만들어집니다.</p>
+      <p>네트와 라인까지 완벽하게 갖춰져 있고, 소정의 비용만 내면 누구나 라켓을 빌려 즐길 수 있어요. '탁구+테니스+배드민턴'을 섞어 놓은 듯한 피클볼은 요즘 올티가스에서 가장 핫한 스포츠랍니다. 빌딩 숲 야경을 배경으로 공을 치다 보면 스트레스가 확 풀려요!</p><br/>
+
+      <h3 class="text-xl font-bold mb-2">✨ 로이맘의 한 줄 평</h3>
+      <p><strong>"낮에는 맛집 탐방, 밤에는 이색 스포츠! 토요일을 꽉 채우는 완벽 코스"</strong><br/>
+      멀리 여행 가지 않아도 좋아요. 이번 주말엔 운동화 끈 조여 매고 에메랄드 애비뉴로 나와보시는 건 어떨까요? 활기찬 에너지와 맛있는 음식이 여러분을 기다리고 있답니다. ❤️</p>
+    `,
+    date: "2025.12.27",
+    category: "Culture",
+    image: blogEmeraldWeekendImg,
+    author: "Roy House (Joy Mom)",
+    tags: ["OrtigasWeekend", "EmeraldAvenue", "StreetFood", "Pickleball"]
+  },
+  {
+    id: 'blog-12',
+    title: "첨벙첨벙! 개구쟁이 쌍둥이와 함께한 에이스 워터 스파 (Ace Water Spa) 파식 정복기!",
+    excerpt: "에너자이저 3학년 아들 둘과 함께 다녀온 파식의 핫플레이스! 물놀이도 하고 피로도 풀고, 온 가족이 만족한 하루 코스를 공개합니다.",
+    content: `
+      <p>안녕하세요! 로이 하우스입니다. ✨</p><br/>
+      <p>오늘은 저희 가족(저, 남편, 그리고 에너지가 넘쳐흐르는 3학년 쌍둥이 아들 둘!)이 다녀온 <strong>'에이스 워터 스파(Ace Water Spa)'</strong> 이야기를 들려드릴게요. 파식(Pasig) 시에 위치한 이곳은 단순한 수영장이 아니라, 어른들은 마사지를 즐기고 아이들은 신나게 놀 수 있는 일석이조의 천국이랍니다.</p><br/>
+      
+      <h3 class="text-xl font-bold mb-2">🚗 출발 전 체크! 준비물 챙기기</h3>
+      <p>에이스 워터 스파는 복장 규정이 매~우 엄격해요. 저희도 미리 알고 가서 다행이었지, 아니면 입구 컷 당할 뻔했답니다.</p>
+      <ul class="list-disc ml-5 mb-4">
+        <li><strong>수영복:</strong> 헐렁한 비치웨어 NO! 지퍼나 장식이 달린 것도 NO! 오직 <strong>몸에 딱 붙는 스판덱스(Spandex) 소재</strong>의 래시가드나 수영복만 가능해요.</li>
+        <li><strong>수영모자:</strong> 필수입니다. 캡모자는 안 돼요.</li>
+        <li><strong>세면도구:</strong> 샴푸, 바디워시 등은 챙겨가시는 게 좋아요.</li>
+      </ul><br/>
+
+      <h3 class="text-xl font-bold mb-2">💦 본격 물놀이 시작! (ft. 나노바나나)</h3>
+      <p>입장하자마자 아이들은 유수풀(Lazy River)로 풍덩! 둥둥 떠다니며 깔깔거리는 소리에 저절로 미소가 지어지더라고요.</p>
+      <img src="${nanobananaAceWaterSpaImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Family and NanoBanana at Ace Water Spa" />
+      <p>특히 오늘은 특별 게스트, <strong>나노바나나</strong>도 함께했는데요! 물장구치는 아이들 사이에서 노란 바나나가 둥둥 떠다니니 시선 집중! 😍 (물론 상상 속 친구였지만 아이들은 진짜 있는 것처럼 즐거워했어요 ㅎㅎ)</p><br/>
+
+      <h3 class="text-xl font-bold mb-2">💆‍♀️ 엄빠는 힐링 타임</h3>
+      <p>아이들이 신나게 노는 동안, 저와 남편은 '수압 마사지 존'을 순회했습니다. 허리, 어깨, 발바닥까지... 강력한 물줄기에 몸을 맡기니 그동안 쌓인 피로가 싹~ 날아가는 기분! "아~ 시원하다" 소리가 절로 나왔어요. 수십 가지 코스가 있어서 지루할 틈이 없었답니다.</p><br/>
+
+      <h3 class="text-xl font-bold mb-2">🍲 물놀이 후엔 역시 먹방!</h3>
+      <p>4시간 꽉 채워 놀고 나니 배에서 꼬르륵 소리가... 스파 바로 위층에도 식당이 있고, 건너편 '카피톨요(Kapitolyo)' 지역이 또 맛집 천국이잖아요? 저희는 따끈한 국물이 생각나서 근처 샤브샤브 집으로 향했답니다. 물놀이 후 먹는 밥은 꿀맛 그 자체!</p><br/>
+
+      <h3 class="text-xl font-bold mb-2">👍 총평</h3>
+      <p><strong>"엄마, 다음 주에 또 와요!"</strong>라고 외치는 아이들. 😊<br/>
+      물놀이를 좋아하는 아이들과 피로를 풀고 싶은 부모님 모두를 만족시킬 수 있는 최고의 장소였습니다. 이번 주말, 에이스 워터 스파에서 가족의 사랑 온도를 1도 올려보시는 건 어떨까요?</p>
+    `,
+    date: "2025.12.27",
+    category: "Activity",
+    image: nanobananaAceWaterSpaImg,
+    author: "Roy House (Joy Mom)",
+    tags: ["AceWaterSpa", "Pasig", "FamilyTrip"]
+  },
+  {
+    id: 'blog-11',
+    title: "Fun & Smart! 엄마와 아이를 위한 SM 메가몰 하루 코스 정복기!",
+    excerpt: "거대 쇼핑몰 SM 메가몰, 어디서부터 가야 할지 막막하시죠? 전문 가이드가 추천하는 알짜배기 데이트 코스로 하루를 완벽하게 즐겨보세요!",
+    content: `
+      <p>안녕하세요, 로이 하우스입니다.</p><br/>
+      <p>올티가스 생활의 중심, <strong>SM 메가몰(SM Megamall)</strong>! 하지만 막상 가보면 너무 넓어서 어디가 어딘지, 아이랑 가기엔 괜찮을지 고민되시죠?</p>
+      <p>그래서 준비했습니다. <strong>엄마는 여유롭게 쇼핑하고, 아이는 신나게 뛰어노는 '1타 2피' 하루 완성 코스!</strong> 지금 바로 출발합니다.</p><br/>
+      
+      <h3 class="text-xl font-bold mb-2">🕘 [오전 10:00] 여유로운 브런치 & 카페인 충전</h3>
+      <p>먼저 카페인 수혈부터 해야겠죠? 메가몰 <strong>Mega Fashion Hall 1층</strong>에 있는 <strong>'살라 비스트로(Sala Bistro)'</strong>나 <strong>'팀호완(Tim Ho Wan)'</strong> 옆의 카페들을 추천합니다. 비교적 한적한 오전에 갓 구운 빵과 커피 향을 음미하며 오늘 하루를 계획해 보세요.</p><br/>
+      
+      <h3 class="text-xl font-bold mb-2">⚽ [오전 11:30] 아이들의 천국, 키즈 카페</h3>
+      <p>먼저 아이들과 함께 <strong>나노바나나(NanoBanana)</strong>를 만나 신나게 스케이트장으로 향해볼까요?</p>
+      <img src="${nanobananaSkatingImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="NanoBanana Skating with Family" />
+      <p>엄마가 차 한 잔의 여유를 즐겼다면, 이제 아이들 차례입니다! <strong>A동 지하 1층</strong>의 <strong>'Cosmic Kidz'</strong>나 새롭게 리뉴얼된 키즈 존으로 이동하세요. 거대한 볼풀장과 미끄럼틀에서 아이들이 에너지를 쏟아내는 동안, 잠시 쇼핑 목록을 점검하는 센스!</p><br/>
+      
+      <h3 class="text-xl font-bold mb-2">🥟 [오후 1:00] 실패 없는 점심, 딘타이펑 (Din Tai Fung)</h3>
+      <p>점심은 <strong>Mega Fashion Hall 1층</strong>의 <strong>'딘타이펑'</strong>을 추천합니다. 호불호 없는 샤오롱바오와 계란 볶음밥은 아이들도 정말 잘 먹거든요. 대기 시간이 길 수 있으니 조금 서두르거나 미리 번호표를 뽑아두는 것이 팁입니다!</p>
+      <img src="https://images.unsplash.com/photo-1563245372-f21727e5891d?q=80&w=2070&auto=format&fit=crop" class="w-full rounded-2xl my-6 shadow-sm" alt="Dimsum Lunch" />
+      <br/>
+      
+      <h3 class="text-xl font-bold mb-2">⛸️ [오후 3:00] 메가몰의 하이라이트, 아이스 스케이팅</h3>
+      <p>더운 필리핀에서 즐기는 겨울왕국! <strong>3층에 위치한 아이스 링크</strong>는 아이들에게 잊지 못할 추억을 선물합니다. 스케이트를 타지 않더라도 구경하는 것만으로도 시원해지는 기분이에요. (긴 바지와 양말은 필수!)</p><br/>
+      
+      <h3 class="text-xl font-bold mb-2">🛒 [오후 5:30] 저녁 장보기, SM Supermarket</h3>
+      <p>집으로 돌아가기 전, <strong>A동 지하 1층 슈퍼마켓</strong>에 들러보세요. 한국 라면, 김치는 물론이고 신선한 망고와 열대 과일을 저렴하게 득템할 수 있습니다. 짐이 무거우니 그랩(Grab) 잡기 편한 출구 쪽으로 이동하는 동선을 추천드려요.</p><br/>
+      
+      <p class="font-bold">✨ 로하우스의 꿀팁</p>
+      <p>메가몰은 에어컨이 매우 빵빵합니다. 아이들과 어머님 모두 <strong>얇은 카디건</strong>을 꼭 챙기세요!</p>
+    `,
+    date: "2025.12.27",
+    category: "Philippines Life",
+    image: nanobananaSkatingImg,
+    author: "Roy House",
+    tags: ["SMMegaMall", "DayTour", "MomsGuide"]
+  },
   {
     id: 'blog-1',
     title: "아이캔 캠프의 하루: 몰입과 즐거움 사이",
