@@ -14,6 +14,12 @@ import nanobananaAceWaterSpaImg from './nanobanana-acewaterspa.png';
 import blogEmeraldWeekendImg from './blog-emerald-weekend.png';
 import blogTobysEstateImg from './tobys-estate-brunch.png';
 import blogTobysEstateMothersImg from './tobys-estate-mothers.png';
+import starbucksPearlImg from './starbucks-pearl.png';
+import starbucksPodiumInteriorImg from './starbucks-podium-interior.png';
+import starbucksMeditationImg from './starbucks-meditation.png';
+import starbucksCapitolImg from './starbucks-capitol-commons.png';
+import starbucksCyberscapeImg from './starbucks-cyberscape.png';
+import starbucksGlasTowerImg from './starbucks-glas-tower.png';
 
 // --- Icons Map (To share across languages) ---
 export const ICONS = {
@@ -155,6 +161,110 @@ export const CARROT_ITEMS: CarrotItem[] = [
 
 // --- Blog Data (Roy House) ---
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: 'blog-15',
+    title: "새벽 5시의 기적? ☕️ 올티가스 스타벅스 명당 & 오픈시간 총정리!",
+    excerpt: "새벽 묵상과 모닝 커피를 사랑하는 분들을 위한 특급 정보! 24시간 불이 꺼지지 않는 곳부터, 호텔급 인테리어의 리저브 매장까지. 올티가스 스벅 대동여지도를 공개합니다.",
+    content: `
+      <p>안녕하세요! 스타벅스 닉네임 <strong>'로이맘'</strong>, 로이 하우스입니다. 🌿</p><br/>
+      <p>저는 하루 중 가장 좋아하는 시간이 바로 모두가 잠든 <strong>새벽 5시</strong>예요. 따뜻한 아메리카노 한 잔과 함께 다이어리를 정리하고 말씀을 묵상하는 그 고요한 시간이 없으면 하루를 시작할 에너지가 안 생기더라고요.</p>
+      <p>그래서 저처럼 <strong>'새벽형 인간'</strong>이신 학부모님들을 위해, 제가 두 발로 뛰어 완성한 <strong><올티가스 스타벅스 대동여지도></strong>를 공개합니다. 5시, 6시에 여는 곳? 모두 찾았습니다! (저장은 필수! ⭐)</p><br/>
+
+      <img src="${starbucksMeditationImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Early morning meditation with coffee" />
+
+      <h3 class="text-xl font-bold mb-2">1. 🌙 24시간 잠들지 않는 곳 (새벽 5시 OK!)</h3>
+      <p>언제 가도 열려 있는 든든한 24시간 매장들입니다. 새벽 5시 묵상은 물론, 밤샘 공부도 문제없어요.</p>
+      
+      <div class="mb-4">
+        <h4 class="font-bold text-lg text-ican-600">📍 펄 플라자 (Pearl Plaza) 점</h4>
+        <p>올티가스 센터 중심부에서 가장 접근성이 좋은 24시간 매장입니다. 2층 규모라 자리도 넉넉해요.</p>
+        <ul class="list-disc ml-5 text-sm text-gray-600">
+          <li><strong>위치:</strong> Pearl Plaza, Pearl Dr (SM 메가몰 B동 건너편)</li>
+          <li><strong>특징:</strong> 새벽에도 공부하는 학생들과 직장인들로 적당한 활기가 있어 무섭지 않아요. 야외 테이블에서 맞는 새벽 공기가 일품!</li>
+        </ul>
+      </div>
+
+      <div class="mb-4">
+        <h4 class="font-bold text-lg text-ican-600">📍 이스트 텍타이트 (East Tektite) 점</h4>
+        <p>증권가 건물 1층에 있어 층고가 높고 쾌적합니다. 비교적 덜 붐비는 숨은 명소예요.</p>
+         <ul class="list-disc ml-5 text-sm text-gray-600">
+          <li><strong>위치:</strong> Exchange Road, Tektite Towers West Tower (산 미구엘 본사 근처)</li>
+        </ul>
+      </div>
+
+       <div class="mb-6">
+        <h4 class="font-bold text-lg text-ican-600">📍 메트로워크 (Metrowalk) 점</h4>
+        <p>상업 지구 내에 있어 주차도 편하고, 주변이 밝아서 안전합니다.</p>
+         <ul class="list-disc ml-5 text-sm text-gray-600">
+          <li><strong>위치:</strong> Metrowalk Complex, Meralco Avenue</li>
+        </ul>
+      </div>
+
+      <img src="${starbucksPearlImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Starbucks Pearl Plaza Exterior" />
+
+      <h3 class="text-xl font-bold mb-2">2. 🌅 새벽 6시 전후 오픈 (상쾌한 아침 산책)</h3>
+      <p>공원 산책과 함께 모닝 커피를 즐길 수 있는 최고의 코스입니다.</p>
+
+      <div class="mb-4">
+        <h4 class="font-bold text-lg text-ican-600">📍 캐피톨 커먼스 (Capitol Commons) 리저브 & 드라이브 스루</h4>
+        <p><strong>"공원 뷰 맛집 + 주말 24시간의 반전!"</strong></p>
+        <p>새벽 조깅하시는 분들에게 강추! 바로 앞 공원을 바라보며 마시는 커피는 꿀맛입니다. 보통 오전 6시쯤 열지만, <strong>금/토요일은 24시간</strong> 운영하기도 하니 주말 새벽 묵상 장소로 딱이죠.</p>
+         <ul class="list-disc ml-5 text-sm text-gray-600">
+          <li><strong>위치:</strong> Capitol Commons Park, Meralco Ave (에스탄시아 몰 앞)</li>
+          <li><strong>추천:</strong> 통유리로 들어오는 아침 햇살이 정말 예술입니다. ☀️</li>
+        </ul>
+      </div>
+      
+      <img src="${starbucksCapitolImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Starbucks Capitol Commons with Park View" />
+
+      <div class="mb-6">
+        <h4 class="font-bold text-lg text-ican-600">📍 올티가스 익스텐션 (Ortigas Ext) 점</h4>
+        <p>로이 하우스에서 차로 조금 이동해야 하지만, <strong>오전 6시 칼오픈</strong> 하는 부지런한 매장입니다. 드라이브 스루라 픽업하기도 편해요.</p>
+      </div>
+
+      <h3 class="text-xl font-bold mb-2">3. ✨ (번외) 시설 & 분위기 끝판왕</h3>
+      <p><strong>더 포디움 리저브 (The Podium Reserve)</strong>: 오픈은 8시 반으로 늦지만, 인테리어와 커피 맛은 올티가스 최고! (호텔 라운지 급)</p>
+      <img src="${starbucksPodiumInteriorImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Starbucks Reserve Interior" />
+      
+      <h3 class="text-xl font-bold mb-2">4. ☕️ 로이맘's Pick: 나만 알고 싶은 아지트</h3>
+      <p>제가 개인적으로 가장 애정하는 매장 두 곳을 살짝 공개합니다. (소문내지 마세요! 🤫)</p>
+      
+      <div class="mb-6">
+        <h4 class="font-bold text-lg text-ican-600">📍 사이버스케이프 알파 (Cyberscape Alpha) 점</h4>
+        <p><strong>"새벽 5시 30분의 아늑함"</strong></p>
+        <p>로빈슨 사이버스케이프 알파 건물 1층에 위치해 있어요. 우드 톤의 따뜻한 인테리어가 정말 아늑해서 새벽 묵상하기에 그만입니다. 보통 오전 5시 30분에 열어서, 5시 오픈을 놓쳤을 때 가기 딱 좋아요.</p>
+        <img src="${starbucksCyberscapeImg}" class="w-full rounded-2xl my-4 shadow-sm" alt="Starbucks Cyberscape Alpha Interior" />
+        <ul class="list-disc ml-5 text-sm text-gray-600">
+          <li><strong>위치:</strong> Garnet Rd (Sapphire Rd 사이), Robinsons Cyberscape Alpha</li>
+          <li><strong>오픈:</strong> 평일 오전 5:30 (주말은 변동 가능하니 확인 필수!)</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="font-bold text-lg text-ican-600">📍 글라스 타워 (GLAS Tower) 점</h4>
+        <p><strong>"통유리로 쏟아지는 아침 햇살 맛집"</strong></p>
+        <p>모던하고 세련된 분위기를 좋아하신다면 여기만 한 곳이 없죠. 층고가 높고 전면이 유리라 개방감이 엄청나요. 오전 7시 오픈이라 아침형 인간보다는 '아침 출근/등교형 인간'에게 추천!</p>
+        <img src="${starbucksGlasTowerImg}" class="w-full rounded-2xl my-4 shadow-sm" alt="Starbucks GLAS Tower Exterior" />
+        <ul class="list-disc ml-5 text-sm text-gray-600">
+          <li><strong>위치:</strong> Opal Rd corner Ruby Rd, GLAS Tower</li>
+          <li><strong>오픈:</strong> 오전 7:00 (여유로운 아침을 원할 때 제격)</li>
+        </ul>
+      </div>
+
+      <br/>
+      <div class="bg-blue-50 p-6 rounded-xl border border-blue-100">
+        <h4 class="font-bold text-accent mb-2">💡 로이맘의 이용 꿀팁</h4>
+        <p>1. <strong>구글맵 시간 확인 필수</strong>: 필리핀 매장들은 운영 시간이 자주 바뀝니다. 출발 전 'Starbucks [매장명]'으로 한 번 더 체크하세요!<br/>
+        2. <strong>따뜻한 옷차림</strong>: 새벽 스벅은 냉장고 수준입니다. 가디건 꼭 챙기세요. 🥶<br/>
+        3. <strong>사이렌 오더</strong>: 한국 계정으로는 안 돼요. 줄 서지 않으려면 필리핀 스타벅스 앱을 설치해보세요!</p>
+      </div>
+    `,
+    date: "2025.12.28",
+    category: "Cafe",
+    image: starbucksMeditationImg,
+    author: "Roy House (Joy Mom)",
+    tags: ["Starbucks", "OrtigasCafe", "MorningRoutine", "24Hours"]
+  },
   {
     id: 'blog-14',
     title: "나만 알고 싶은 아지트, 토비 하우스(Toby's Estate) ☕️✨",
