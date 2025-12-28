@@ -1189,7 +1189,7 @@ export const KO_DATA = {
       { title: "Global Conversation", desc: "SAT 펀더멘털과 고전 읽기를 통해 자유, 정의, 인권의 가치를 논하며 시대를 초월하는 인싸이트와 비평적 사고를 완성합니다.", icon: ICONS.Globe, link: "/curriculum" }
     ],
     location: {
-      title: "안전한 교육생태계 '올티가스 센타' 에서 그 꿈을 실현해 나갑니다",
+      title: "안전한 교육생태계인 올티가스 중심에서 그 꿈이 펼쳐집니다",
       desc: "올티가스는 마닐라의 비즈니스 중심지로, 치안이 매우 우수하고 쾌적한 환경을 자랑합니다. 우리는 이곳을 'The Environment'라 부르며, 아이들의 안전과 몰입을 위한 최적의 기지로 활용합니다.",
       safety: "Safety & Security",
       safetyDesc: "24시간 가드 상주 및 인텔리전트 빌딩 관리",
@@ -1201,7 +1201,7 @@ export const KO_DATA = {
       subtitle: "아이캔 아카데미를 선택해야 하는 특별한 이유"
     },
     strengthsTitle: "핵심 가치 (The Core Manifests)",
-    specialProjectsTitle: "슈퍼키즈 특별 프로젝트",
+    specialProjectsTitle: "슈퍼키즈 특별 프로그램",
     specialProjects: [
       {
         title: "Space Aporia",
@@ -1241,7 +1241,7 @@ export const KO_DATA = {
   ],
   spaceProgram: {
     badge: "New Special Program",
-    title: "NASA Space Camp",
+    title: "닥터아이캔 SPACE CAMP",
     subtitle: "우주 과학 영어 캠프",
     description: "단순한 영어 학습을 넘어, 우주 과학을 주제로 한 창의 융합 수업입니다. 아이들의 호기심을 자극하고 과학적 사고력과 영어 표현력을 동시에 키웁니다.",
     modules: [

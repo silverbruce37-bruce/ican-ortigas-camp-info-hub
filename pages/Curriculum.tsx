@@ -239,7 +239,7 @@ const Curriculum: React.FC = () => {
 
         {/* Curriculum List - Apple List Style */}
         <div className="pt-8">
-          <h3 className="text-2xl font-semibold text-[#1d1d1f] mb-8 px-2">🧠 사고력 5단계 프레임워크</h3>
+          <h3 className="text-2xl font-semibold text-[#1d1d1f] mb-8 px-2">🧠 우주인 사고력 5단계 프레임워크</h3>
           <div className="grid grid-cols-1 gap-6">
             {curriculum.map((item, index) => (
               <motion.div
