@@ -23,6 +23,10 @@ import starbucksGlasTowerImg from './starbucks-glas-tower.png';
 import nanobananaXiaolongbaoImg from './nanobanana-dintaifung-xiaolongbao.png';
 import nanobananaFriedRiceImg from './nanobanana-dintaifung-friedrice.png';
 import nanobananaChocolateImg from './nanobanana-dintaifung-chocolate.png';
+import socialClubMomKidsImg from './social-club-mom-kids.png';
+import socialClubFoodImg from './social-club-food.png';
+import socialClubAtmosphereImg from './social-club-atmosphere.png';
+import socialClubCheersImg from './social-club-cheers.png';
 
 // --- Icons Map (To share across languages) ---
 export const ICONS = {
@@ -164,6 +168,51 @@ export const CARROT_ITEMS: CarrotItem[] = [
 
 // --- Blog Data (Roy House) ---
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: 'blog-17',
+    title: "엄마들의 힐링 아지트, 포디움 6층 'Social Club'에서의 완벽한 오후 🥂",
+    excerpt: "육아 동지들과 함께한 꿀맛 같은 브런치! 탁 트인 스카이라인 뷰, 감각적인 인테리어, 그리고 입맛을 사로잡은 다국적 요리들까지. 우리들만의 소중한 시간을 기록해 봅니다.",
+    content: `
+      <p>안녕하세요! <strong>로이 하우스(Joy Mom)</strong>입니다. ✨</p><br/>
+      <p>매일 반복되는 일상, 아이들 뒷바라지에 지칠 때쯤... 우리에게 필요한 건 뭐다? 바로 마음 맞는 친구들과의 '맛있는 수다'죠! 오늘은 제가 정말 좋아하는 아지트, <strong>더 포디움(The Podium) 6층 'Social Club'</strong>에 다녀온 이야기를 들려드릴게요.</p><br/>
+      
+      <img src="${socialClubAtmosphereImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Podium Social Club Atmosphere with NanoBanana" />
+      
+      <h3 class="text-xl font-bold mb-2">🏙️ 탁 트인 뷰와 힙한 분위기, 여기 필리핀 맞아?</h3>
+      <p>엘리베이터를 타고 6층에 내리는 순간, "우와~" 소리가 절로 나왔어요. 통유리 너머로 펼쳐지는 올티가스의 스카이라인과 세련된 인테리어! 마치 청담동이나 성수동의 힙한 카페에 온 것 같은 기분이었죠.</p>
+      <p>이곳 'Social Club'은 <strong><비스트로 오로라(Bistro Aurora)></strong>, <strong><오스테리아 안티카(Osteria Antica)></strong>, <strong><브로트차이트(Brotzeit)></strong> 등 유명한 맛집들이 한곳에 모여 있는 프리미엄 푸드 홀이에요. 각자 먹고 싶은 메뉴를 골라와서 자유롭게 즐길 수 있다는 게 가장 큰 장점이랍니다.</p><br/>
+
+      <h3 class="text-xl font-bold mb-2">🍕 이탈리안부터 독일식 족발까지, 미식의 세계로!</h3>
+      <p>저희는 오늘 작정하고 '다 시켜!' 모드였어요. (다이어트는 내일부터... 아시죠? 😉)</p>
+      
+      <img src="${socialClubMomKidsImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Mom and Kids enjoying meal with NanoBanana" />
+      
+      <ul class="list-disc ml-5 mb-4 text-gray-700 space-y-2">
+        <li><strong>오스테리아 안티카의 화덕 피자:</strong> 쫄깃한 도우에 신선한 모짜렐라 치즈가 듬뿍! 한 입 베어 무니 이탈리아가 따로 없더라고요.</li>
+        <li><strong>비스트로 오로라의 연어 토스트:</strong> 바삭한 빵 위에 부드러운 연어와 아보카도... 이건 맛이 없을 수가 없는 조합이죠.</li>
+        <li><strong>브로트차이트의 슈바인학센:</strong> 겉바속촉의 정석! 독일 맥주 한 잔 곁들이니 그동안 쌓인 스트레스가 싹~ 날아가는 기분이었어요.</li>
+      </ul>
+      
+      <img src="${socialClubFoodImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Delicious Food Spread with NanoBanana" />
+      
+      <h3 class="text-xl font-bold mb-2">🥂 우리들의 행복한 건배! (with 나노바나나)</h3>
+      <p>오랜만에 만난 육아 동지들과 즐거운 건배도 빠질 수 없죠! 시원한 과일 주스와 맥주잔을 부딪치며 서로를 응원해 봅니다. 우리 아이들도 옆에서 나노바나나와 함께 쥬스를 마시며 꺄르르 웃네요. 아이들이 잘 먹고 잘 노니, 엄마들도 맘 편히 수다 떨 수 있어 더 행복했던 시간이었어요.</p>
+      
+      <img src="${socialClubCheersImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Cheers with NanoBanana" />
+      
+      <div class="bg-pink-50 p-6 rounded-xl border border-pink-100 my-6">
+        <h4 class="font-bold text-pink-700 mb-2">💕 로이맘의 추천 포인트</h4>
+        <p class="text-sm text-pink-800">
+          "포디움 소셜 클럽은 맛도 맛이지만, 무엇보다 <strong>분위기</strong>가 다 하는 곳이에요. 친구들과 우아하게 브런치를 즐기고 싶거나, 저녁에 가볍게 한잔하며 분위기 내고 싶을 때 강력 추천! 아이들과 함께 가도 눈치 보지 않고 편안하게 즐길 수 있어 더 좋았답니다."
+        </p>
+      </div>
+    `,
+    date: "2025.12.30",
+    category: "Food",
+    image: socialClubMomKidsImg,
+    author: "Roy House (Joy Mom)",
+    tags: ["PodiumSocial", "OrtigasBrunch", "MomsDayOut", "BistroAurora"]
+  },
   {
     id: 'blog-16',
     title: "육즙 팡팡! 🥟 아이들도 반한 BGC 딘타이펑(Din Tai Fung) 미식 탐방기",
