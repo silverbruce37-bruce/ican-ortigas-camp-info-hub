@@ -32,6 +32,10 @@ const Blog: React.FC = () => {
               <span>LIVING IN WONDER</span>
             </h1>
             <p className="text-gray-500 text-sm">이곳에서의 평범한 일상이 아이들에게는 특별한 여정이 됩니다.</p>
+            <p className="text-gray-400 text-xs mt-2 leading-relaxed">
+              새로운 정보형 글을 나노바나나가 빨리 포착해서 실제 가본 사람들의 이야기를 각색해서 보여줍니다.<br />
+              실제로 로이하우스의 식구들이 쓴 글에는 <span className="font-bold text-blue-600">"레알"</span> 이라는 문구가 들어가 있게 될 것입니다.
+            </p>
           </div>
           <Link
             to={user && user.role === 'admin' ? "/blog/admin" : "/admin/login"}
