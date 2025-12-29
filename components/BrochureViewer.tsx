@@ -31,7 +31,7 @@ const BrochureViewer: React.FC<Props> = ({ pdfUrl }) => {
                     <p className="text-gray-500 text-sm">페이지를 넘겨보거나 드래그하여 브로셔를 확인해보세요.</p>
                 </div>
 
-                <div className="relative w-full flex justify-center bg-slate-50 rounded-xl overflow-hidden border border-gray-200 min-h-[400px]">
+                <div className="relative w-full flex justify-center bg-slate-50 rounded-xl border border-gray-200 min-h-[600px] py-8">
 
                     {loading && (
                         <div className="absolute inset-0 flex items-center justify-center z-10 bg-slate-50">
@@ -44,30 +44,29 @@ const BrochureViewer: React.FC<Props> = ({ pdfUrl }) => {
                         onLoadSuccess={onDocumentLoadSuccess}
                         loading={null}
                         error={<div className="flex items-center justify-center h-full text-red-500 p-10">브로셔를 불러오는데 실패했습니다.</div>}
-                        className="flex justify-center"
+                        className="flex justify-center w-full"
                     >
                         {numPages && (
                             // @ts-ignore
                             <HTMLFlipBook
-                                width={400}
-                                height={570}
+                                width={450}
+                                height={636}
                                 size="stretch"
                                 minWidth={300}
-                                maxWidth={500}
-                                minHeight={400}
-                                maxHeight={700}
+                                maxWidth={600}
+                                minHeight={424}
+                                maxHeight={900}
                                 showCover={true}
                                 mobileScrollSupport={true}
-                                className="shadow-2xl my-4"
+                                className="shadow-2xl"
                             >
                                 {Array.from(new Array(numPages), (el, index) => (
-                                    <div key={index} className="bg-white shadow-md overflow-hidden bg-white">
+                                    <div key={index} className="bg-white shadow-md bg-white">
                                         <Page
                                             pageNumber={index + 1}
-                                            width={400}
+                                            width={450}
                                             renderAnnotationLayer={false}
                                             renderTextLayer={false}
-                                            className="h-full w-full"
                                         />
                                     </div>
                                 ))}
