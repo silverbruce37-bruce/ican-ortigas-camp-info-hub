@@ -2,6 +2,8 @@ import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Clock, Star, Check, Rocket, Zap, Globe, MessageSquare } from 'lucide-react';
 import { motion } from 'framer-motion';
+import BrochureViewer from '../components/BrochureViewer';
+import brochurePdf from '../curriculum-brochure.pdf';
 
 const Curriculum: React.FC = () => {
   const { content } = useLanguage();
@@ -137,6 +139,15 @@ const Curriculum: React.FC = () => {
           </div>
         </motion.div>
 
+        {/* Brochure Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="w-full"
+        >
+          <BrochureViewer pdfUrl={brochurePdf} />
+        </motion.div>
 
         {/* SPACE PROGRAM Section - Large Feature Card */}
         <motion.div
