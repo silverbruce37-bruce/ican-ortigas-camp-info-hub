@@ -20,6 +20,9 @@ import starbucksMeditationImg from './starbucks-meditation.png';
 import starbucksCapitolImg from './starbucks-capitol-commons.png';
 import starbucksCyberscapeImg from './starbucks-cyberscape.png';
 import starbucksGlasTowerImg from './starbucks-glas-tower.png';
+import nanobananaXiaolongbaoImg from './nanobanana-dintaifung-xiaolongbao.png';
+import nanobananaFriedRiceImg from './nanobanana-dintaifung-friedrice.png';
+import nanobananaChocolateImg from './nanobanana-dintaifung-chocolate.png';
 
 // --- Icons Map (To share across languages) ---
 export const ICONS = {
@@ -161,6 +164,58 @@ export const CARROT_ITEMS: CarrotItem[] = [
 
 // --- Blog Data (Roy House) ---
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: 'blog-16',
+    title: "육즙 팡팡! 🥟 아이들도 반한 BGC 딘타이펑(Din Tai Fung) 미식 탐방기",
+    excerpt: "\"엄마, 이거 국물이 예술이야!\" 숟가락 위에서 터지는 육즙의 향연. 세계적인 맛집 딘타이펑, 보니파시오(BGC) 점을 로하우스 가족이 직접 다녀왔습니다. 실패 없는 메뉴 추천까지!",
+    content: `
+      <p>안녕하세요! 맛있는 것과 여행을 사랑하는 <strong>로이 하우스(Joy Mom)</strong>입니다. 💖</p><br/>
+      <p>주말을 맞아 아이들과 함께 올티가스를 벗어나 <strong class="text-ican-600">보니파시오 글로벌 시티(BGC)</strong>로 나들이를 다녀왔어요. BGC는 깨끗한 거리와 멋진 쇼핑몰들이 모여 있어 '필리핀의 강남'이라고 불리는 곳이죠.</p>
+      <p>오늘의 목적지는 바로, 전 세계 미식가들의 입맛을 사로잡은 <strong><딘타이펑(Din Tai Fung)></strong>입니다! 👨‍🍳 유명한 만큼 웨이팅도 길지만, 한 입 먹는 순간 기다림의 피로가 싹~ 사라지는 마법 같은 곳. 저희 가족의 '찐' 후기를 들려드릴게요.</p><br/>
+
+      <img src="${nanobananaXiaolongbaoImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Din Tai Fung Xiao Long Bao with NanoBanana" />
+
+      <h3 class="text-xl font-bold mb-2">🥟 1. 샤오롱바오(Xiao Long Bao): 숟가락 위의 작은 사치</h3>
+      <p>딘타이펑에 와서 이걸 안 먹으면 간첩이죠? 바로 <strong>'샤오롱바오'</strong>입니다. 찜기 뚜껑이 열리자마자 모락모락 피어오르는 김과 함께 영롱한 자태가 드러나는데요.</p>
+
+      <div class="bg-yellow-50 p-4 rounded-xl my-4 border border-yellow-100">
+        <h4 class="font-bold text-yellow-800 mb-1">💡 로이맘의 '맛있게 먹는 법' 강의!</h4>
+        <ol class="list-decimal ml-5 text-sm text-yellow-900 space-y-1">
+          <li>조심스럽게 숟가락 위에 만두를 올린다.</li>
+          <li>젓가락으로 만두피를 콕! 찔러 육즙을 터뜨린다.</li>
+          <li>흘러나온 따뜻한 육즙을 먼저 호로록~ 마신다. (황홀함 그 자체! 😍)</li>
+          <li>생강채를 곁들인 초간장을 살짝 얹어 한입에 쏙!</li>
+        </ol>
+      </div>
+      <p>아이들도 처음엔 뜨거울까 봐 조심하더니, 나중엔 "엄마, 국물이 끝내줘요!" 하면서 한 판을 순식간에 비우더라고요. 얇지만 쫄깃한 피와 진한 돼지고기 육수의 조화... 정말 감동입니다.</p><br/>
+
+      <h3 class="text-xl font-bold mb-2">🍛 2. 포크찹 볶음밥(Pork Chop Fried Rice): 아이들의 원픽!</h3>
+      <p>한국 엄마들이 가장 좋아하는 메뉴, <strong>'갈비 튀김 계란 볶음밥'</strong>입니다. 고슬고슬하게 볶아낸 황금빛 계란 볶음밥 위에, 큼지막한 돼지갈비 튀김이 올라가 있어요.</p>
+      <img src="${nanobananaFriedRiceImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Pork Chop Fried Rice with NanoBanana" />
+      <p>튀김이라고 해서 느끼할 줄 알았는데, 전~혀요! 고기는 입에서 살살 녹을 정도로 부드럽고 간도 딱 맞아서 아이들 밥반찬으로 최고예요. 볶음밥 한 숟갈에 고기 한 점 올려주면, 편식 심한 아이도 입을 쩍쩍 벌린답니다. (이럴 때 엄마는 제일 행복하죠? 😊)</p><br/>
+
+      <h3 class="text-xl font-bold mb-2">🦐 3. 매운 새우 완탕(Spicy Shrimp & Pork Wontons): 엄마 아빠의 힐링 푸드</h3>
+      <p>느끼함을 싹 잡아줄 어른들의 메뉴! 탱글탱글한 새우가 꽉 찬 완탕에, 딘타이펑만의 <strong>특제 고추기름 소스</strong>가 듬뿍 뿌려져 나옵니다.</p>
+      <p>많이 맵지 않고 딱 기분 좋을 정도의 매콤함이라 자꾸만 손이 가요. <strong>여기서 꿀팁 하나!</strong> 완탕을 다 드시고 남은 소스에, 아까 시킨 볶음밥을 비벼 드셔보세요. 그게 바로 '맛잘알'의 길... 진짜 별미랍니다! 👍</p><br/>
+
+      <h3 class="text-xl font-bold mb-2">🍫 4. 초콜릿 샤오롱바오: 달콤한 마무리</h3>
+      <p>식사가 끝나갈 때쯤, 아이들을 위한 서프라이즈로 시켜본 메뉴예요. 겉보기엔 일반 만두 같지만, 한입 베어 물면 따뜻하고 진~한 초콜릿이 용암처럼 흘러나와요.</p>
+      <img src="${nanobananaChocolateImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="NanoBanana with Dessert Dumpling" />
+      <p>"만두에서 초콜릿이 나와!" 하며 눈이 휘둥그레지는 아이들 표정을 보니 시키길 잘했다 싶더라고요. 달콤하게 식사를 마무리하기에 딱 좋았습니다.</p><br/>
+
+      <div class="border-l-4 border-ican-500 pl-4 py-2 bg-gray-50 my-6">
+        <h4 class="font-bold text-gray-800">📝 로이 하우스 총평</h4>
+        <p class="text-gray-600 mt-2">
+          "올티가스에서 조금 이동해야 하지만, BGC의 세련된 분위기와 딘타이펑의 변함없는 맛은 그만한 가치가 충분합니다. 특히 아이들이 잘 먹는 메뉴가 많아 가족 외식 장소로 강력 추천해요! (주말엔 대기가 기니 오픈런 추천드려요 🏃‍♀️)"
+        </p>
+      </div>
+    `,
+    date: "2025.12.29",
+    category: "Food",
+    image: nanobananaXiaolongbaoImg,
+    author: "Roy House (Joy Mom)",
+    tags: ["DinTaiFung", "BGC", "FamilyDining", "XiaoLongBao"]
+  },
   {
     id: 'blog-15',
     title: "새벽 5시의 기적? ☕️ 올티가스 스타벅스 명당 & 오픈시간 총정리!",
