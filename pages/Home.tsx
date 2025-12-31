@@ -4,7 +4,7 @@ import { ArrowRight, Rocket } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import ConundrumCard from '../components/ConundrumCard';
-import spaceLeadersImg from '../space-leaders-final.jpg';
+import heroMonitorImg from '../hero-monitor-final-wide.png';
 
 const Home: React.FC = () => {
   const { content } = useLanguage();
@@ -73,12 +73,19 @@ const Home: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="mt-8 w-full max-w-4xl"
+          className="mt-8 w-full max-w-4xl relative"
         >
           <img
-            src={spaceLeadersImg}
+            src={heroMonitorImg}
             alt="Space Leaders Journey"
             className="w-full rounded-lg shadow"
+          />
+          <a
+            href="https://www.icanacademy.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute top-[8%] right-0 w-[41%] h-[38%] z-10 cursor-pointer"
+            aria-label="Visit ICAN Academy"
           />
         </motion.div>
       </section>

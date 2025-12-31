@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap } from 'react-l
 import L from 'leaflet';
 import { ACADEMY_INFO } from '../constants';
 import { LivingInfoItem } from '../types';
-import { Rocket, Hospital, ShoppingBag, Home, Utensils, Wifi, Dumbbell, Church } from 'lucide-react';
+import { Rocket, Hospital, ShoppingBag, Home, Utensils, Wifi, Dumbbell, Church, Carrot } from 'lucide-react';
 import { renderToStaticMarkup } from 'react-dom/server';
 
 // Fix Leaflet Default Icon Issue in React
@@ -28,7 +28,7 @@ const MapBoundsUpdater: React.FC<{ items: LivingInfoItem[], center: { lat: numbe
       const markers = items.map(item => [item.coordinates!.lat, item.coordinates!.lng] as [number, number]);
       // Include Academy Center
       markers.push([center.lat, center.lng]);
-      
+
       const bounds = L.latLngBounds(markers);
       map.fitBounds(bounds, { padding: [50, 50], maxZoom: 16 });
     } else {
@@ -44,7 +44,7 @@ const OrtigasMap: React.FC<OrtigasMapProps> = ({ items, activeCategory }) => {
 
   // Filter items that have coordinates
   const validItems = items.filter(item => item.coordinates);
-  
+
   // Create Custom Icons using Lucide React rendered to HTML string
   const createCustomIcon = (category: string) => {
     let IconComponent = Rocket;
@@ -54,6 +54,7 @@ const OrtigasMap: React.FC<OrtigasMapProps> = ({ items, activeCategory }) => {
       case 'academy': IconComponent = Rocket; colorClass = 'bg-ican-600'; break;
       case 'medical': IconComponent = Hospital; colorClass = 'bg-rose-500'; break;
       case 'shopping': IconComponent = ShoppingBag; colorClass = 'bg-purple-500'; break;
+      case 'grocery': IconComponent = Carrot; colorClass = 'bg-green-600'; break; // Added grocery
       case 'rent': IconComponent = Home; colorClass = 'bg-indigo-500'; break;
       case 'food': IconComponent = Utensils; colorClass = 'bg-orange-500'; break;
       case 'mobile': IconComponent = Wifi; colorClass = 'bg-sky-500'; break;
@@ -79,10 +80,10 @@ const OrtigasMap: React.FC<OrtigasMapProps> = ({ items, activeCategory }) => {
 
   return (
     <div className="h-[500px] w-full rounded-3xl overflow-hidden shadow-xl border border-gray-200 z-10 relative">
-      <MapContainer 
-        center={[center.lat, center.lng]} 
-        zoom={16} 
-        scrollWheelZoom={false} 
+      <MapContainer
+        center={[center.lat, center.lng]}
+        zoom={16}
+        scrollWheelZoom={false}
         style={{ height: '100%', width: '100%' }}
       >
         <TileLayer
@@ -94,8 +95,8 @@ const OrtigasMap: React.FC<OrtigasMapProps> = ({ items, activeCategory }) => {
         <MapBoundsUpdater items={validItems} center={center} />
 
         {/* Academy Marker (Always Visible) */}
-        <Marker 
-          position={[center.lat, center.lng]} 
+        <Marker
+          position={[center.lat, center.lng]}
           icon={createCustomIcon('academy')}
         >
           <Popup>
@@ -111,29 +112,34 @@ const OrtigasMap: React.FC<OrtigasMapProps> = ({ items, activeCategory }) => {
 
         {/* Living Info Markers */}
         {validItems.map((item, idx) => (
-           <Marker 
-              key={idx}
-              position={[item.coordinates!.lat, item.coordinates!.lng]}
-              icon={createCustomIcon(item.category)}
-            >
-              <Popup>
-                <div className="min-w-[150px]">
-                   <span className="text-[10px] font-bold uppercase tracking-wider bg-gray-100 px-2 py-0.5 rounded text-gray-600 mb-1 inline-block">{item.category}</span>
-                   <h4 className="font-bold text-gray-800">{item.title}</h4>
-                   <p className="text-xs text-gray-500 mt-1">{item.location}</p>
-                </div>
-              </Popup>
-            </Marker>
+          <Marker
+            key={idx}
+            position={[item.coordinates!.lat, item.coordinates!.lng]}
+            icon={createCustomIcon(item.category)}
+          >
+            <Popup>
+              <div className="min-w-[150px]">
+                <span className="text-[10px] font-bold uppercase tracking-wider bg-gray-100 px-2 py-0.5 rounded text-gray-600 mb-1 inline-block">{item.category}</span>
+                <h4 className="font-bold text-gray-800">{item.title}</h4>
+                <p className="text-xs text-gray-500 mt-1">{item.location}</p>
+              </div>
+            </Popup>
+          </Marker>
         ))}
       </MapContainer>
-      
+
       {/* Overlay Legend */}
-      <div className="absolute bottom-4 left-4 z-[400] bg-white/90 backdrop-blur p-3 rounded-xl shadow-lg text-xs">
-          <div className="font-bold mb-2 text-gray-500 uppercase">Map Legend</div>
-          <div className="flex items-center gap-2 mb-1"><div className="w-3 h-3 rounded-full bg-ican-600"></div> ICAN Academy</div>
-          <div className="flex items-center gap-2 mb-1"><div className="w-3 h-3 rounded-full bg-purple-500"></div> Shopping Mall</div>
-          <div className="flex items-center gap-2 mb-1"><div className="w-3 h-3 rounded-full bg-rose-500"></div> Hospital</div>
-          <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-indigo-500"></div> Condo / Rent</div>
+      <div className="absolute bottom-4 left-4 z-[400] bg-white/90 backdrop-blur p-3 rounded-xl shadow-lg text-xs grid grid-cols-2 gap-x-4 gap-y-1">
+        <div className="font-bold mb-1 text-gray-500 uppercase col-span-2">Map Legend</div>
+        <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-ican-600"></div> ICAN Academy</div>
+        <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-indigo-500"></div> Condo / Rent</div>
+        <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-green-600"></div> Grocery</div>
+        <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-orange-500"></div> Food</div>
+        <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-purple-500"></div> Shopping</div>
+        <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-emerald-500"></div> Activity</div>
+        <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-rose-500"></div> Hospital</div>
+        <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-sky-500"></div> Mobile</div>
+        <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-cyan-600"></div> Church</div>
       </div>
     </div>
   );

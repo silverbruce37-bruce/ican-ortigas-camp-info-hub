@@ -27,6 +27,7 @@ import socialClubMomKidsImg from './social-club-mom-kids.png';
 import socialClubFoodImg from './social-club-food.png';
 import socialClubAtmosphereImg from './social-club-atmosphere.png';
 import socialClubCheersImg from './social-club-cheers.png';
+import blogMoonsikBirthdayImg from './blog-moonsik-birthday.png';
 
 // --- Icons Map (To share across languages) ---
 export const ICONS = {
@@ -168,6 +169,41 @@ export const CARROT_ITEMS: CarrotItem[] = [
 
 // --- Blog Data (Roy House) ---
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: 'blog-18',
+    title: "문식 선생님의 27번째 생일, 포디움 미우(Niu)에서의 특별한 파티! 🎉",
+    excerpt: "미우(Niu) 뷔페에서 열린 문식 선생님의 27번째 생일 파티! 아이캔 식구들과 로이하우스 가족이 함께한 맛있는 점심 식사와 축하의 현장을 공개합니다. 생일자 무료 혜택까지 챙긴 알뜰 살뜰 파티 후기!",
+    content: `
+      <p>안녕하세요! <strong>로이 하우스(Joy Mom)</strong>입니다. 🎂</p><br/>
+      <p>오늘은 정말 기쁜 날입니다! 바로 아이캔 캠프의 든든한 지원군, <strong>문식 선생님</strong>의 27번째 생일이거든요! 🥳 이 특별한 날을 그냥 보낼 수 없죠. 아이캔의 우주 교육 책임자 <strong>에드워드 선생님</strong>, <strong>원장님</strong>, 그리고 우리 <strong>로이하우스 식구들</strong>까지 총출동했습니다.</p><br/>
+      
+      <p>장소는 어디냐고요? 바로 올티가스의 핫플레이스 더 포디움(The Podium)에 위치한 프리미엄 뷔페, <strong><미우 바이 바이킹스(Niu by Vikings)></strong>입니다!</p><br/>
+
+      <img src="${blogMoonsikBirthdayImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Moonsik's 27th Birthday Celebration at Niu with NanoBanana" />
+
+      <h3 class="text-xl font-bold mb-2">🍽️ 문식 선생님, 27번째 생일을 축하해요!</h3>
+      <p>럭셔리한 샹들리에와 끝없이 펼쳐진 음식들의 향연... 미우(Niu)는 언제 와도 설레는 곳이에요. 하지만 오늘이 더 특별한 이유는 바로 주인공 문식 선생님 덕분이죠!</p>
+      <p>케이크에 꽂힌 숫자 <strong>'27'</strong>이 반짝이는 순간, 모두가 한마음으로 생일 축하 노래를 불렀습니다. 쑥스러워하면서도 행복해하는 문식 선생님의 표정을 보니 저희까지 마음이 따뜻해지더라고요. (나노바나나도 옆에서 열심히 박수 치고 있었답니다! 🍌👏)</p><br/>
+
+      <h3 class="text-xl font-bold mb-2">🎁 꿀팁: 생일자는 '무료'라고요?!</h3>
+      <p>여기서 중요한 정보! 미우 뷔페에서는 <strong>생일 당일 방문 시 본인 무료</strong> 혜택을 줍니다. (단, 1명의 정가 지불 동반인이 있어야 해요.) 덕분에 문식 선생님은 공짜로 이 호사를 누렸다는 사실! 맛있는 스테이크부터 신선한 회, 달콤한 디저트까지... 접시가 쉴 틈이 없었답니다.</p><br/>
+
+      <h3 class="text-xl font-bold mb-2">🥂 아이캔 & 로이하우스, 우리는 가족!</h3>
+      <p>에드워드 선생님의 유쾌한 건배사와 원장님의 따뜻한 덕담이 오가는 행복한 점심시간이었습니다. 단순히 일로 만난 사이가 아니라, 타지에서 서로를 챙겨주는 '진짜 가족' 같은 끈끈함이 느껴졌어요. 아이캔 캠프가 아이들에게 사랑받는 이유도 이런 따뜻한 선생님들의 팀워크 덕분이 아닐까요?</p><br/>
+
+      <div class="bg-yellow-50 p-6 rounded-xl border border-yellow-100 my-6">
+        <h4 class="font-bold text-yellow-800 mb-2">💌 문식 선생님에게 보내는 편지</h4>
+        <p class="text-sm text-yellow-900">
+          "문식 쌤! 27번째 생일을 진심으로 축하해요. 항상 아이들을 위해 애써주시고, 캠프의 활력소가 되어주셔서 감사합니다. 오늘 맛있게 먹은 만큼, 올 한 해도 더 힘내서 아이들과 멋진 추억 많이 만들어주세요! 화이팅! 💪"
+        </p>
+      </div>
+    `,
+    date: "2025.12.30",
+    category: "Event",
+    image: blogMoonsikBirthdayImg,
+    author: "Roy House (Joy Mom)",
+    tags: ["BirthdayParty", "NiuByVikings", "ICANTEAM", "MoonsikDay"]
+  },
   {
     id: 'blog-17',
     title: "엄마들의 힐링 아지트, 포디움 6층 'Social Club'에서의 완벽한 오후 🥂",
@@ -1118,6 +1154,21 @@ export const LIVING_INFO_DATA_KO: LivingInfoItem[] = [
     link: 'https://www.themedicalcity.com/',
     linkLabel: '병원 홈페이지'
   },
+  {
+    category: 'medical',
+    title: '아벤투스 클리닉 (Aventus Medical Care)',
+    description: '감기, 피부병 등 가벼운 질환으로 처방전이 필요할 때 방문하기 좋은 의원급 클리닉입니다. 대형 병원인 메디컬 시티보다 대기 시간이 짧고 비용이 합리적입니다.',
+    details: [
+      '위치: AIC Grande Tower 1층 (Sapphire Rd, 학원 도보 5분)',
+      '진료: 내과, 소아과, 피부과 등 일반 진료 및 처방',
+      '시간: 월~토 07:00 - 17:00 (일요일 휴무)'
+    ],
+    location: 'G/F AIC Grande Tower, Sapphire Rd',
+    coordinates: { lat: 14.5873, lng: 121.0618 },
+    type: 'offline',
+    link: 'https://aventusmedical.com/',
+    linkLabel: '클리닉 정보'
+  },
 
   // --- ACTIVITY ---
   {
@@ -1304,8 +1355,8 @@ export const KO_DATA = {
       title: "Why ICAN?",
       subtitle: "아이캔 아카데미를 선택해야 하는 특별한 이유"
     },
-    strengthsTitle: "핵심 가치 (The Core Manifests)",
-    specialProjectsTitle: "슈퍼키즈 특별 프로그램",
+    strengthsTitle: "아이캔 우주교육의 핵심가치 (The Core Manifests)",
+    specialProjectsTitle: "슈퍼키즈 육성 특별 강화 학습",
     specialProjects: [
       {
         title: "Space Aporia",
@@ -1333,7 +1384,7 @@ export const KO_DATA = {
       }
     ],
     ctaFooter: {
-      title: "멤버십 합류하기",
+      title: "에듀스페이스 멤버십 합류하기",
       subtitle: "2026년 영어 캠프 참가 문의"
     }
   },
@@ -1341,7 +1392,7 @@ export const KO_DATA = {
     { title: "AI 'Dr. ICAN'", description: "20년 교육 데이터와 AI의 결합. 학생의 학습 패턴을 정밀 분석하여 개인별 최적화된 스킬 중심 커리큘럼을 제공합니다.", icon: ICONS.Cpu },
     { title: "Resilience & Grit", description: "힘든 과제 앞에서도 포기하지 않는 회복탄력성을 기릅니다. 작은 성공의 축적이 아이의 내면을 단단한 슈퍼파워로 채웁니다.", icon: ICONS.HeartPulse },
     { title: "Bilingual Schema", description: "이중언어 환경에서 축적된 지식 체계는 복잡한 세상의 문제를 지혜롭게 해결하는 창의적 솔루션의 원천이 됩니다.", icon: ICONS.Brain },
-    { title: "Christian Monitoring", description: "엄격한 수업 모니터링과 크리스천 품성 교육으로, AI 시대에도 기술에 휘둘리지 않고 올바른 가치관으로 리드하는 인성을 갖춥니다.", icon: ICONS.ShieldCheck }
+    { title: "Christian Higher-minds", description: "엄격한 수업 모니터링과 크리스천 품성 교육으로, AI 시대에도 기술에 휘둘리지 않고 올바른 가치관으로 리드하는 인성을 갖춥니다.", icon: ICONS.ShieldCheck }
   ],
   spaceProgram: {
     badge: "New Special Program",

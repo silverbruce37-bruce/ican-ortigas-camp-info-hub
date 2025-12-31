@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import { ChatMessage, KnowledgeItem } from '../types';
 import { KO_DATA, ACADEMY_INFO } from '../constants';
 
@@ -12,6 +12,7 @@ interface ChatContextType {
   isLoading: boolean;
   knowledgeBase: KnowledgeItem[];
   addKnowledge: (title: string, content: string) => void;
+  importKnowledge: (items: { title: string, content: string }[]) => void;
   deleteKnowledge: (id: string) => void;
 }
 
@@ -87,6 +88,17 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     setKnowledgeBase(prev => [...prev, newItem]);
   };
 
+  const importKnowledge = (items: { title: string, content: string }[]) => {
+    const newItems: KnowledgeItem[] = items.map((item, idx) => ({
+      id: `${Date.now()}-${idx}`,
+      title: item.title,
+      content: item.content,
+      date: new Date().toISOString().split('T')[0],
+      source: 'user'
+    }));
+    setKnowledgeBase(prev => [...prev, ...newItems]);
+  };
+
   const deleteKnowledge = (id: string) => {
     setKnowledgeBase(prev => prev.filter(k => k.id !== id));
   };
@@ -108,29 +120,28 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         throw new Error("Gemini API Key (VITE_GEMINI_API_KEY) not found in env.");
       }
 
-      const ai = new GoogleGenAI({ apiKey: apiKey });
+      const genAI = new GoogleGenerativeAI(apiKey);
+      const model = genAI.getGenerativeModel({
+        model: "gemini-1.5-flash",
+        systemInstruction: generateSystemContext() + "\n\nADDITIONAL KNOWLEDGE:\n" + knowledgeBase.map(k => `[Topic: ${k.title}]\n${k.content}`).join('\n\n')
+      });
 
-      // Combine System Context + Dynamic Knowledge Base
-      const dynamicContext = knowledgeBase.map(k => `[Topic: ${k.title}]\n${k.content}`).join('\n\n');
-      const systemInstruction = generateSystemContext() + "\n\nADDITIONAL KNOWLEDGE:\n" + dynamicContext;
-
-      // Construct history for the API
+      // Construct history for the API - correct format for @google/generative-ai
       const history = messages.map(m => ({
         role: m.role,
         parts: [{ text: m.text }]
       }));
 
-      const chat = ai.chats.create({
-        model: 'gemini-flash-latest',
-        config: {
-          systemInstruction: systemInstruction,
+      const chat = model.startChat({
+        history: history,
+        generationConfig: {
           temperature: 0.7,
-        },
-        history: history
+        }
       });
 
-      const result = await chat.sendMessage({ message: text });
-      const responseText = result.text;
+      const result = await chat.sendMessage(text);
+      const response = await result.response;
+      const responseText = response.text();
 
       const botMsg: ChatMessage = { role: 'model', text: responseText, timestamp: Date.now() };
       setMessages(prev => [...prev, botMsg]);
@@ -150,7 +161,7 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   return (
     <ChatContext.Provider value={{
       isOpen, toggleChat, messages, sendMessage, addLocalMessage, isLoading,
-      knowledgeBase, addKnowledge, deleteKnowledge
+      knowledgeBase, addKnowledge, importKnowledge, deleteKnowledge
     }}>
       {children}
     </ChatContext.Provider>

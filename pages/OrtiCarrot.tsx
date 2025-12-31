@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import { CarrotItem } from '../types';
 import { Search, Plus, X, Heart, MessageCircle, ChevronRight, Image as ImageIcon, Loader2, User, Sparkles, ArrowRight } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
@@ -256,7 +256,8 @@ const OrtiCarrot: React.FC = () => {
                 return;
             }
 
-            const ai = new GoogleGenAI({ apiKey });
+            const genAI = new GoogleGenerativeAI(apiKey);
+            const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
             const prompt = `
                 당신은 '올티가스 캐롯마켓'의 전문 판매글 작성 도우미입니다.
@@ -271,7 +272,7 @@ const OrtiCarrot: React.FC = () => {
                 }
             `;
 
-            const imageParts = allImages.map(img => {
+            const simpleImageParts = allImages.map(img => {
                 const base64Data = img.includes('base64,') ? img.split('base64,')[1] : img;
                 return {
                     inlineData: {
@@ -281,21 +282,21 @@ const OrtiCarrot: React.FC = () => {
                 };
             });
 
-            const res = await ai.models.generateContent({
-                model: 'gemini-flash-latest',
+            const result = await model.generateContent({
                 contents: [
                     {
                         role: "user",
                         parts: [
                             { text: prompt },
-                            ...imageParts
+                            ...simpleImageParts
                         ]
                     }
                 ],
-                config: { responseMimeType: "application/json" }
+                generationConfig: { responseMimeType: "application/json" }
             });
 
-            const responseText = res.text;
+            const response = await result.response;
+            const responseText = response.text();
 
             if (responseText) {
                 const data = JSON.parse(responseText);

@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import { useCarrot } from '../context/CarrotContext';
 import { BlogPost } from '../types';
 import { Plus, Trash2, Edit, X, Check, Link as LinkIcon, Grid, Brain, Sparkles, FileText, Loader2, CloudUpload, Image as ImageIcon, Users, HardDrive, Search, Shield, UserX, UserCheck } from 'lucide-react';
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import heic2any from 'heic2any';
 import { useNavigate } from 'react-router-dom';
 
@@ -317,6 +317,7 @@ const BlogAdmin: React.FC = () => {
     const chatContext = useChat();
     const knowledgeBase = chatContext?.knowledgeBase || [];
     const addKnowledge = chatContext?.addKnowledge || (() => { });
+    const importKnowledge = chatContext?.importKnowledge || (() => { });
     const deleteKnowledge = chatContext?.deleteKnowledge || (() => { });
     const { user, allUsers, isInitialized, updateUserRole, updateUserStatus, deleteUser } = useAuth();
     const { items: carrotItems } = useCarrot();
@@ -339,6 +340,45 @@ const BlogAdmin: React.FC = () => {
     const [newKnowledgeTitle, setNewKnowledgeTitle] = useState('');
     const [newKnowledgeContent, setNewKnowledgeContent] = useState('');
     const [isKnowledgeFormOpen, setIsKnowledgeFormOpen] = useState(false);
+    const knowledgeUploadRef = useRef<HTMLInputElement>(null);
+
+    // Knowledge JSON Helper
+    const flattenJsonToKnowledge = (obj: any, parentKey = ''): { title: string, content: string }[] => {
+        let items: { title: string, content: string }[] = [];
+        for (const key in obj) {
+            const newKey = parentKey ? `${parentKey} > ${key}` : key;
+            if (typeof obj[key] === 'object' && obj[key] !== null && !Array.isArray(obj[key])) {
+                items = [...items, ...flattenJsonToKnowledge(obj[key], newKey)];
+            } else {
+                items.push({
+                    title: newKey.replace(/_/g, ' ').toUpperCase(),
+                    content: Array.isArray(obj[key]) ? obj[key].map((i: any) => typeof i === 'object' ? JSON.stringify(i) : i).join('\n') : String(obj[key])
+                });
+            }
+        }
+        return items;
+    };
+
+    const handleKnowledgeJsonUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            try {
+                const json = JSON.parse(event.target?.result as string);
+                const items = flattenJsonToKnowledge(json);
+                if (confirm(`Found ${items.length} knowledge items. Import them?`)) {
+                    importKnowledge(items);
+                    alert("Successfully imported knowledge base!");
+                }
+            } catch (err) {
+                console.error(err);
+                alert("Failed to parse JSON file.");
+            }
+        };
+        reader.readAsText(file);
+    };
 
     // User Search
     const [userSearchTerm, setUserSearchTerm] = useState('');
@@ -407,14 +447,20 @@ const BlogAdmin: React.FC = () => {
         try {
             const apiKey = import.meta.env.VITE_GEMINI_API_KEY || '';
             if (!apiKey) throw new Error("No API Key configured in .env (VITE_GEMINI_API_KEY)");
-            const ai = new GoogleGenAI({ apiKey });
+
+            const genAI = new GoogleGenerativeAI(apiKey);
+            const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
             const prompt = `Write a poetic and warm Korean blog post about "${generationTopic || 'Ortigas Life'}". valid JSON: {title, excerpt, content(html), category, tags, imageSearchTerm}`;
-            const res = await ai.models.generateContent({
-                model: 'gemini-flash-latest',
+
+            const result = await model.generateContent({
                 contents: [{ role: 'user', parts: [{ text: prompt }] }],
-                config: { responseMimeType: "application/json" }
+                generationConfig: { responseMimeType: "application/json" }
             });
-            const data = JSON.parse(res.text);
+            const response = await result.response;
+            const text = response.text();
+
+            const data = JSON.parse(text);
             setFormData(p => ({ ...p, ...data, image: `https://source.unsplash.com/featured/?${data.imageSearchTerm}` }));
             setShowAutoGenerateInput(false);
         } catch (e) {
@@ -429,15 +475,20 @@ const BlogAdmin: React.FC = () => {
         try {
             const apiKey = import.meta.env.VITE_GEMINI_API_KEY || '';
             if (!apiKey) throw new Error("API Key missing.");
-            const ai = new GoogleGenAI({ apiKey });
-            const res = await ai.models.generateContent({
-                model: 'gemini-flash-latest',
+
+            const genAI = new GoogleGenerativeAI(apiKey);
+            const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+            const result = await model.generateContent({
                 contents: [{
                     role: 'user',
                     parts: [{ text: `Cinematic cover image description for: ${formData.title}` }]
                 }]
             });
-            alert("Image description generated: " + res.text);
+            const response = await result.response;
+            const text = response.text();
+
+            alert("Image description generated: " + text);
         } catch (e) {
             console.error(e);
             alert("AI Generation failed: " + (e as Error).message);
@@ -491,7 +542,8 @@ const BlogAdmin: React.FC = () => {
             const apiKey = import.meta.env.VITE_GEMINI_API_KEY || '';
             if (!apiKey) throw new Error("System Error: API Key (VITE_GEMINI_API_KEY) is missing in .env.");
 
-            const ai = new GoogleGenAI({ apiKey });
+            const genAI = new GoogleGenerativeAI(apiKey);
+            const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
             const promptText = `
         You are "NanoBanana", a legendary fairy tale magazine editor with a warm, lyrical, and poetic soul (like J.K. Rowling or a Studio Ghibli narrator).
@@ -522,8 +574,7 @@ const BlogAdmin: React.FC = () => {
         }
       `;
 
-            const res = await ai.models.generateContent({
-                model: 'gemini-flash-latest',
+            const result = await model.generateContent({
                 contents: [
                     {
                         role: 'user',
@@ -533,10 +584,11 @@ const BlogAdmin: React.FC = () => {
                         ]
                     }
                 ],
-                config: { responseMimeType: "application/json" }
+                generationConfig: { responseMimeType: "application/json" }
             });
 
-            const responseText = res.text;
+            const response = await result.response;
+            const responseText = response.text();
             let data;
             try {
                 data = JSON.parse(responseText);
@@ -858,6 +910,24 @@ const BlogAdmin: React.FC = () => {
                                 <textarea placeholder="Information Content" rows={6} className="w-full px-4 py-3 bg-[#F5F5F7] rounded-xl text-sm outline-none focus:ring-2 focus:ring-[#0071E3]" value={newKnowledgeContent} onChange={e => setNewKnowledgeContent(e.target.value)} required />
                                 <button type="submit" className="w-full py-3 bg-[#0071E3] text-white rounded-xl font-bold text-sm hover:bg-[#0077ED] transition-colors">Add to Knowledge Base</button>
                             </form>
+
+                            <div className="mt-8 pt-6 border-t border-gray-100">
+                                <h4 className="font-bold text-sm mb-3 text-gray-700">Bulk Import</h4>
+                                <p className="text-xs text-gray-500 mb-4">Upload a JSON file to populate the brain.</p>
+                                <input
+                                    type="file"
+                                    accept=".json"
+                                    ref={knowledgeUploadRef}
+                                    className="hidden"
+                                    onChange={handleKnowledgeJsonUpload}
+                                />
+                                <button
+                                    onClick={() => knowledgeUploadRef.current?.click()}
+                                    className="w-full py-3 bg-white border border-gray-300 text-gray-700 rounded-xl font-bold text-sm hover:bg-gray-50 transition-colors flex items-center justify-center gap-2"
+                                >
+                                    <CloudUpload className="w-4 h-4" /> Upload JSON
+                                </button>
+                            </div>
                         </div>
                         <div className="col-span-1 md:col-span-2 space-y-4">
                             <h3 className="font-bold text-lg text-gray-400 uppercase text-xs tracking-widest mb-4">Current Knowledge Base ({knowledgeBase.length})</h3>

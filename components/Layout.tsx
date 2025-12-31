@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
-import { Menu, X, ShieldCheck, ChevronRight } from 'lucide-react';
+import { Menu, X, ShieldCheck, ChevronRight, Rocket } from 'lucide-react';
 import { ACADEMY_INFO } from '../constants';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
@@ -50,9 +50,10 @@ const Layout: React.FC = () => {
           {/* Logo */}
           <NavLink
             to="/"
-            className={`text-[19px] font-semibold tracking-tight transition-colors ${scrolled || isMobileMenuOpen ? 'text-ink' : 'text-white'}`}
+            className={`text-[19px] font-semibold tracking-tight transition-colors flex items-center ${scrolled || isMobileMenuOpen ? 'text-ink' : 'text-white'}`}
             aria-label="ICAN Camp Home"
           >
+            <Rocket className="w-5 h-5 mr-2" />
             ICAN CAMP
           </NavLink>
 

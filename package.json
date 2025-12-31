@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@google/genai": "^1.33.0",
+    "@google/generative-ai": "^0.24.1",
     "firebase": "^12.7.0",
     "framer-motion": "10.16.4",
     "heic2any": "^0.0.4",

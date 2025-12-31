@@ -161,9 +161,19 @@ const Curriculum: React.FC = () => {
               <div className="inline-flex items-center gap-1 bg-[#0071E3]/10 text-[#0071E3] px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide mb-6">
                 <Star className="w-3 h-3 fill-current" /> {spaceProgram.badge}
               </div>
-              <h2 className="text-3xl md:text-4xl font-semibold text-[#1d1d1f] mb-4 tracking-tight">
-                {spaceProgram.title}
-              </h2>
+              <a
+                href="https://icaneduspace.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-3 mb-4 transition-transform hover:scale-[1.02]"
+              >
+                <h2 className="text-3xl md:text-4xl font-black bg-gradient-to-r from-[#0071E3] via-purple-600 to-pink-500 bg-clip-text text-transparent tracking-tight drop-shadow-sm">
+                  {spaceProgram.title}
+                </h2>
+                <div className="bg-purple-100 p-2 rounded-full border border-purple-200 group-hover:bg-purple-200 transition-colors">
+                  <Rocket className="w-6 h-6 md:w-7 md:h-7 text-purple-600 group-hover:animate-pulse" />
+                </div>
+              </a>
               <p className="text-xl text-[#86868b] font-medium mb-8">
                 {spaceProgram.subtitle}
               </p>

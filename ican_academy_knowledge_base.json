@@ -1,0 +1,450 @@
+{
+  "company_info": {
+    "name": "ICAN Academy",
+    "official_name": "I Can Language Inc.",
+    "slogan": "Here In I Can, You Can, We Can!",
+    "meaning": "ICAN stands for 'Imagine | Create | Analyze | Nurture | Polish @ Persuade'",
+    "established": 2006,
+    "years_of_experience": "18+ years",
+    "description": "A premier English language academy located in Ortigas, Manila, Philippines, known as the 'Daechi-dong of the Philippines'. ICAN provides high-quality English education with thinking-centered creative teaching methods."
+  },
+  "contact_info": {
+    "address": "16F Strata 100 Building, Emerald Ave, Ortigas Center, Pasig City, Metro Manila, Philippines",
+    "second_campus": "11F EduSpace AI Hub (same building)",
+    "phone_korea": "070-7014-2233",
+    "phone_philippines": "0945-479-7139",
+    "email": "icanacademy@naver.com",
+    "kakao_talk_id": "icanacademy",
+    "website": "www.icanacademy.com",
+    "social_media": {
+      "youtube": "youtube.com/@ICanBroadcast",
+      "facebook": "facebook.com/ICANORTIGAS",
+      "instagram": "instagram.com/ican.academy"
+    }
+  },
+  "location_info": {
+    "area": "Ortigas Center, Pasig City, Metro Manila, Philippines",
+    "nickname": "Daechi-dong of the Philippines (premier education district)",
+    "nearby_landmarks": [
+      {
+        "name": "The Medical City",
+        "description": "World-class hospital in the center of Ortigas, providing peace of mind for parents and quick response for emergencies"
+      },
+      {
+        "name": "SM Megamall",
+        "description": "One of the largest shopping malls in the Philippines with Korean restaurants, bookstores, and movie theaters"
+      },
+      {
+        "name": "Asian Development Bank (ADB)",
+        "description": "International financial institution within 3-minute walk, offering a global mindset environment"
+      },
+      {
+        "name": "Ortigas Park",
+        "description": "Right next to the academy, with car-free weekends for cycling, badminton, jogging, and weekend markets"
+      }
+    ]
+  },
+  "facilities": {
+    "main_campus": {
+      "floor": "16F",
+      "name": "ICAN Education Center",
+      "features": [
+        "Bright, modern classrooms with student artwork displays",
+        "Warm, cozy interior",
+        "Each classroom equipped with notebooks for one-on-one learning",
+        "Large monitors in small group classrooms",
+        "Efficiently designed for teacher-student collaboration"
+      ]
+    },
+    "second_campus": {
+      "floor": "11F",
+      "name": "EduSpace AI Hub",
+      "features": [
+        "Innovation lab where imagination meets education",
+        "Spacious classrooms for hands-on experience",
+        "AI Orienteering classes",
+        "Space topic projects",
+        "Problem-solving activities",
+        "Media education"
+      ]
+    }
+  },
+  "korea_operations": {
+    "name": "DASOLMIGA Academy",
+    "description": "ICAN's Korea branch offering online English classes with the same high-quality teachers and curriculum. Students who return to Korea can continue their education seamlessly."
+  },
+  "teaching_philosophy": {
+    "approach": "Thinking-centered creative learning",
+    "description": "ICAN doesn't simply teach English - we help students learn knowledge through English, develop critical thinking skills, and enhance creativity through content-centered teaching methods.",
+    "key_elements": [
+      "Content-focused teaching that builds knowledge through English",
+      "Development of critical thinking and creativity",
+      "Training in logical and persuasive expression",
+      "Diverse background knowledge and professional subject content",
+      "Advanced vocabulary and literary elements",
+      "Real-world application through TED presentations and media production"
+    ]
+  },
+  "programs": {
+    "reading_programs": [
+      {
+        "name": "Book Club",
+        "grades": "All levels",
+        "description": "Extensive reading with chapter books, pronunciation correction, storytelling training",
+        "textbooks": ["Nate the Great", "Magic Tree House", "Zack Files", "The Giver", "Roald Dahl Books", "Percy Jackson Series", "Classic Novels", "Harry Potter"]
+      },
+      {
+        "name": "Reading and Vocabulary",
+        "grades": "All levels",
+        "description": "Non-fiction topics (science, social studies), building background knowledge and vocabulary",
+        "textbooks": ["Easy Link", "Insight Link", "Subject Link", "Reading Explorer", "Four Corners", "Vocabulary Connections", "Wordly Wise", "4000 Essential Words"]
+      },
+      {
+        "name": "Reading to Writing",
+        "grades": "All levels",
+        "description": "Intensive reading with American textbooks, summary writing, analysis and inference skills",
+        "textbooks": ["NatGeo Reflect", "Houghton Mifflin", "McMillan Treasures", "Reading for Today", "Integrate Reading and Writing", "Q Skills for Success"]
+      },
+      {
+        "name": "SAT Book Bridge",
+        "grades": "High school",
+        "description": "Literature and classics analysis, literary devices, author techniques",
+        "textbooks": ["Animal Farm", "The Catcher in the Rye", "To Kill a Mockingbird", "Of Mice and Men", "Pride and Prejudice", "Uncle Tom's Cabin", "Lord of the Flies", "Little Women"]
+      },
+      {
+        "name": "News Clipping",
+        "grades": "All levels",
+        "description": "Current events discussion, critical thinking, article analysis and writing"
+      }
+    ],
+    "writing_programs": [
+      {
+        "name": "Comprehensive Writing",
+        "grades": "G1-G3",
+        "description": "Basic sentence structures for beginners, parts of speech, clauses, simple tenses, diary writing",
+        "textbooks": ["My First Writing (3-book series)", "Write Right", "Great Writing (Book 1, Book 2)", "Grammar Cue"]
+      },
+      {
+        "name": "Creative Writing 1",
+        "grades": "G2-G4",
+        "description": "Short story creation, students make their own books with illustrations",
+        "textbooks": ["SAP Creative Writing", "Grammar Lab", "Banish Boring Words", "Write Your Own Story Book"]
+      },
+      {
+        "name": "Creative Writing 2",
+        "grades": "G4+",
+        "description": "Genre-based writing (comic, fantasy, tragedy, drama), longer pieces with Book Launch event"
+      },
+      {
+        "name": "Grammar to Writing",
+        "grades": "G4-G6",
+        "description": "Four paragraph types (narration, description, explanation, argumentation)",
+        "textbooks": ["Write Right", "From Paragraph to Essay", "Great Writing", "Grammar for Great Writing", "Fundamentals of English Grammar", "Effective Academic Writing", "Grammar in Context"]
+      },
+      {
+        "name": "Essay Clinic",
+        "grades": "G6+",
+        "description": "Advanced essay editing with customized feedback, practical advanced grammar"
+      }
+    ],
+    "speaking_programs": [
+      {
+        "name": "Creative Sparks",
+        "grades": "ESL beginners",
+        "description": "Sensory-based learning with songs, games, art activities, Sight Words, picture books"
+      },
+      {
+        "name": "Speech Power",
+        "grades": "Pre-TED",
+        "description": "Creative storytelling, monologue, hosting, news casting, one speech per week"
+      },
+      {
+        "name": "TED Class",
+        "grades": "Advanced",
+        "description": "Professional presentations with PPT, weekly presentations to audience teachers with Q&A and scoring"
+      }
+    ],
+    "test_preparation": [
+      {
+        "name": "TOEFL",
+        "description": "15+ years experience, 4 skills (Reading, Listening, Speaking, Writing), self-developed Cornell notebooks, regular mock tests"
+      },
+      {
+        "name": "SAT",
+        "description": "Customized data-driven score improvement program with continuous feedback and diagnostic assessments"
+      },
+      {
+        "name": "IELTS",
+        "description": "Academic and General Training preparation, practice tests and feedback"
+      },
+      {
+        "name": "AP Classes",
+        "subjects": ["AP Calculus", "AP Art History", "AP United States History", "AP French", "AP Statistics"],
+        "description": "College-level coursework preparation"
+      }
+    ],
+    "special_programs": [
+      {
+        "name": "EduSpace",
+        "grades": "Upper elementary (G4-G5)",
+        "duration": "8 weeks",
+        "description": "Space education and robotics, problem-solving skills, hands-on experience",
+        "topics": ["Basic concept learning", "Problem discovery", "Solution research", "Space and technology application", "Result presentation"]
+      },
+      {
+        "name": "Coding",
+        "description": "Programming basics to app development, data analysis, AI utilization"
+      },
+      {
+        "name": "AI Orienteering",
+        "description": "Learning through AI dialogue - prompt writing, follow-up thinking, guided exploration"
+      },
+      {
+        "name": "Drama Classes",
+        "description": "Theatrical activities for confidence, expression, and communication skills"
+      }
+    ]
+  },
+  "unique_learning_materials": [
+    {
+      "name": "Caterpillar",
+      "description": "Self-produced monitoring notebook for expanding and memorizing vocabulary effectively and systematically"
+    },
+    {
+      "name": "Visionary Journal",
+      "description": "Self-produced Writing notebook for brainstorming, journaling, and essay learning"
+    },
+    {
+      "name": "ICAN Interview",
+      "description": "Evaluation form that analyzes comprehension, description, and imitation skills through interviews"
+    },
+    {
+      "name": "ICAN Herald",
+      "description": "Student newspaper published twice yearly featuring essays, drawings, and creative works"
+    },
+    {
+      "name": "TOEFL Cornell Notebooks",
+      "description": "Self-developed notebooks for TOEFL skill training"
+    }
+  ],
+  "class_structure": {
+    "daily_hours": 8,
+    "schedule": "8AM to 5PM",
+    "lunch_time": "12PM - 1PM",
+    "class_duration": "50 minutes instruction + 10 minutes break",
+    "classes_per_day": 4,
+    "teachers_per_student": 4,
+    "textbooks_per_class": 2,
+    "small_group_hours": 2,
+    "small_group_size": "2-3 students",
+    "class_flow": [
+      "Vocabulary quiz at start",
+      "Background discussion using notebooks",
+      "Knowledge word finding",
+      "Textbook content learning",
+      "Reading and discussion with teacher",
+      "Worksheets/modules/activities",
+      "Video summary of daily content",
+      "Homework assignments"
+    ]
+  },
+  "class_composition_examples": {
+    "lower_elementary": [
+      "Book Club (using Raz-Kids)",
+      "Comprehensive Writing",
+      "Reading to Writing",
+      "Reading & Vocabulary"
+    ],
+    "upper_elementary": [
+      "Book Club (using original books)",
+      "Grammar to Writing (may be TED class depending on level)",
+      "Reading and Vocabulary (Subject Link & Vocabulary Connection)",
+      "Reading to Writing (American textbook & reading skills)"
+    ],
+    "middle_high_school": "Customized based on level and needs - may include Essay Clinic, TOEFL, SAT"
+  },
+  "training_periods": {
+    "summer": {
+      "minimum": "8 weeks",
+      "recommended": "8 weeks or more"
+    },
+    "winter": {
+      "minimum": "12 weeks preferred",
+      "notes": "Preferentially accepted"
+    },
+    "age_range": "7 years old through university students"
+  },
+  "registration_process": {
+    "steps": [
+      "After consultation, fill out application form via Google link",
+      "Pay 200,000 won deposit under student's name",
+      "Leave memo on KakaoTalk to complete registration",
+      "About one month before training, complete online level test",
+      "ICAN composes class curriculum based on level test results",
+      "Receive organized training fees by subject",
+      "Complete payment 2 weeks before training starts"
+    ],
+    "level_test_components": ["Grammar", "Reading", "Vocabulary", "Listening", "Writing"],
+    "first_day_assessments": ["Reading index check", "Interview", "Class monitoring"],
+    "notes": "Reservations without deposit payment are not confirmed"
+  },
+  "student_management": {
+    "platform": "Facebook Messenger Study Consultation Group Chat",
+    "participants": ["Principal", "Head teacher", "4 assigned teachers", "Parents"],
+    "daily_reports_include": [
+      "That day's learned content",
+      "Class videos",
+      "Presentation videos",
+      "Student attitude and progress",
+      "Homework status"
+    ]
+  },
+  "teachers": {
+    "qualifications": "Skilled head-level and team-leader level teachers since 2006",
+    "hiring_process": [
+      "Written test",
+      "Interview",
+      "Trial class",
+      "Training program (2-3 weeks before first class)"
+    ],
+    "ongoing_training": "Regular educational programs by head teachers and team leaders on advanced curriculum and teaching methods",
+    "student_origins": ["Philippines (international schools)", "Korea", "China", "Vietnam", "Singapore", "Indonesia", "Hong Kong", "USA", "Canada"]
+  },
+  "saturday_special_classes": {
+    "time": "8AM - 12PM (4 hours)",
+    "subjects": ["Funfun English", "Creative Spark English", "Speech Power", "TED", "AI Media Class", "Essay Clinic"],
+    "notes": "Requires separate advance application"
+  },
+  "substitute_teacher_policy": {
+    "notice": "At least 2 hours before class",
+    "selection": "Most suitable substitute based on student's personality and subject",
+    "preparation": "Absent teacher provides class materials in advance",
+    "monitoring": "Korean staff and head teacher monitor substitute classes"
+  },
+  "accommodation": {
+    "options": [
+      {
+        "type": "Boarding houses",
+        "description": "ICAN-affiliated reliable boarding houses"
+      },
+      {
+        "type": "Condos through ICAN",
+        "description": "First-come-first-served basis"
+      },
+      {
+        "type": "Self-arranged",
+        "description": "Airbnb or rent pads after deadline"
+      }
+    ],
+    "lunch_options": [
+      "Nearby condo buildings (within 5 minutes)",
+      "Eating at academy",
+      "Lunch delivery service to academy"
+    ]
+  },
+  "visa_and_permits": {
+    "visa_free_entry": "Koreans can enter Philippines visa-free for 30 days",
+    "visa_extension": "Apply through local immigration office or request ICAN to handle",
+    "ssp": {
+      "name": "Student Study Permit",
+      "description": "Required permit and card for foreign tourists studying in Philippines",
+      "cost": "10,000 pesos",
+      "validity": {
+        "permit": "6 months",
+        "card": "1 year"
+      }
+    }
+  },
+  "philippine_entry_requirements": {
+    "documents": [
+      "Passport valid for 6+ months from arrival date",
+      "English family relation certificate (if not accompanied by parents)",
+      "E-TRAVEL CARD from etravel.gov.ph",
+      "Student photo 5x5cm for SSP issuance"
+    ],
+    "e_travel_card_notes": {
+      "green_qr": "Entry preparation complete",
+      "red_qr": "May face questions at immigration"
+    }
+  },
+  "travel_info": {
+    "flight_time": "Korea to Philippines approximately 4 hours",
+    "time_difference": "Philippines is 1 hour behind Korea",
+    "airport_to_academy": "About 30-40 minutes if no traffic",
+    "temperature_note": "Air conditioning is strong - bring long sleeves and pants"
+  },
+  "packing_checklist": {
+    "school_supplies": [
+      "Highlighters (blue, yellow, pink)",
+      "Writing tools",
+      "2-3 blank notebooks",
+      "Personal textbooks"
+    ],
+    "clothing": [
+      "Swimsuit",
+      "Short sleeves and long sleeves",
+      "Shorts and long pants",
+      "Underwear",
+      "Socks",
+      "Towel"
+    ],
+    "shoes": ["Sneakers", "Slippers", "Sandals"],
+    "other": ["Hat", "Umbrella", "Cushion", "Personal water bottle"],
+    "medicine": ["Muscle patches", "Digestive medicine", "Antidiarrheal", "Cold medicine", "Headache medicine"]
+  },
+  "refund_policy": {
+    "before_training_starts": "Full refund",
+    "before_one_third_of_period": "2/3 refund",
+    "before_half_of_period": "1/2 refund",
+    "after_half_of_period": "No refund",
+    "notes": "Deposit and enrollment fee are not refundable; only tuition fees are refundable"
+  },
+  "holiday_policy": {
+    "regular_holidays": "NOT compensated or extended",
+    "special_holidays": "Classes may be conducted; if not, makeup through online classes after training",
+    "personal_absences": "Cannot be made up",
+    "natural_disasters": "No refunds for earthquake, volcano, typhoon"
+  },
+  "faq": [
+    {
+      "question": "What is ICAN Academy?",
+      "answer": "ICAN Academy is a premier English language academy located in Ortigas, Manila, Philippines - often called the 'Daechi-dong of the Philippines.' Since 2006, we have provided high-quality English education with thinking-centered creative teaching methods."
+    },
+    {
+      "question": "What does ICAN stand for?",
+      "answer": "ICAN stands for 'Imagine | Create | Analyze | Nurture | Polish @ Persuade' - reflecting our educational philosophy of helping students develop comprehensive skills."
+    },
+    {
+      "question": "What age groups does ICAN serve?",
+      "answer": "ICAN serves students from age 7 through university students, with programs tailored to different levels."
+    },
+    {
+      "question": "How long is the training period?",
+      "answer": "Summer vacation minimum 8 weeks, winter vacation 12 weeks or more preferred. At least 8 weeks is recommended for learning effectiveness."
+    },
+    {
+      "question": "How many hours of class per day?",
+      "answer": "8 hours per day (8AM-5PM with lunch 12-1PM), consisting of 4 classes with 4 different teachers."
+    },
+    {
+      "question": "Can students continue online after returning home?",
+      "answer": "Yes, students can continue with the same teacher through ICAN's online system after returning to Korea."
+    },
+    {
+      "question": "What is the EduSpace AI Hub?",
+      "answer": "The EduSpace AI Hub on the 11th floor is ICAN's second campus - an innovation lab for AI Orienteering, space projects, problem-solving activities, and media education."
+    },
+    {
+      "question": "What unique learning materials does ICAN have?",
+      "answer": "ICAN has developed Caterpillar (vocabulary notebook), Visionary Journal (writing notebook), ICAN Interview (assessment tool), ICAN Herald (student newspaper), and TOEFL Cornell Notebooks."
+    },
+    {
+      "question": "How does the student management system work?",
+      "answer": "A Facebook Messenger group chat is created with principal, head teacher, 4 assigned teachers, and parents. Teachers provide daily real-time updates on learned content, class videos, progress, and homework."
+    },
+    {
+      "question": "What is SSP?",
+      "answer": "SSP (Student Study Permit) is a required permit for foreign students studying in the Philippines. Cost is 10,000 pesos, valid for 6 months (permit) and 1 year (card)."
+    }
+  ]
+}
