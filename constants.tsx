@@ -28,6 +28,8 @@ import socialClubFoodImg from './social-club-food.png';
 import socialClubAtmosphereImg from './social-club-atmosphere.png';
 import socialClubCheersImg from './social-club-cheers.png';
 import blogMoonsikBirthdayImg from './blog-moonsik-birthday.png';
+import wildflourBrunchImg from './wildflour-brunch.png';
+import arabicaCoffeeImg from './arabica-coffee.png';
 
 // --- Icons Map (To share across languages) ---
 export const ICONS = {
@@ -169,6 +171,58 @@ export const CARROT_ITEMS: CarrotItem[] = [
 
 // --- Blog Data (Roy House) ---
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: 'blog-19',
+    title: "올티가스 포디움의 완벽한 오후: 와일드플라워 & % 아라비카 (응커피) ☕️🥐",
+    excerpt: "올티가스 더 포디움(The Podium)에서 즐기는 완벽한 미식 코스! 입안 가득 터지는 페이스트리의 풍미와 교토 감성 가득한 라떼 한 잔의 여유. 실패 없는 브런치 메뉴와 '응 커피'의 매력을 소개합니다.",
+    content: `
+      <p>안녕하세요! 맛있는 행복을 찾아다니는 <strong>로이 하우스(Joy Mom)</strong>입니다. 💖</p><br/>
+      <p>오늘은 제가 올티가스에서 가장 애정하는 <strong>'더 포디움(The Podium)'</strong> 몰의 보석 같은 두 곳을 소개해 드리려고 해요. 브런치부터 커피까지, 엄마들의 소확행을 위한 완벽한 코스랍니다!</p><br/>
+      
+      <h3 class="text-xl font-bold mb-2">1. 와일드플라워 (Wildflour Café + Bakery): 눈과 입이 즐거운 브런치</h3>
+      <p>포디움 1층(Ground Floor) 입구 쪽에 위치한 <strong>와일드플라워</strong>는 들어서는 순간 고소한 빵 냄새와 활기찬 분위기가 반겨주는 곳이에요. 마치 유럽의 노천카페나 뉴욕의 힙한 베이커리에 온 듯한 기분이 들죠.</p>
+      
+      <img src="${wildflourBrunchImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Wildflour Brunch Spread" />
+      
+      <div class="bg-yellow-50 p-6 rounded-xl border border-yellow-100 my-4">
+        <h4 class="font-bold text-yellow-800 mb-2">🍽️ 로이맘의 추천 메뉴 (실패율 0%!)</h4>
+        <ul class="list-disc ml-5 text-sm text-yellow-900 space-y-1">
+          <li><strong>김치 볶음밥 (Kimchi Fried Rice):</strong> "여기서 김치볶음밥을?" 하실 수 있지만, 도톰한 삼겹살과 매콤 고소한 감칠맛이 예술이에요. 한국 엄마들 사이에서 인기 1위 메뉴랍니다!</li>
+          <li><strong>크로넛 (Cronut):</strong> 크로와상과 도넛의 만남! 한 입 베어 물면 겹겹이 쌓인 페이스트리의 바삭함과 달콤한 크림이 입안에서 팡팡 터져요.</li>
+          <li><strong>오징어 먹물 파스타 (Squid Ink Pasta):</strong> 짭조름하면서도 깊은 풍미가 일품입니다. 데이트 기분 내기에 딱이에요.</li>
+        </ul>
+      </div>
+      <p>워낙 인기가 많아 점심시간엔 웨이팅이 있을 수 있으니, 조금 서둘러 가시는 걸 추천드려요! 😉</p><br/>
+      
+      <h3 class="text-xl font-bold mb-2">2. % 아라비카 (% Arabica): 교토의 고즈넉함을 담은 한 잔 / 일명 '응커피'</h3>
+      <p>배부르게 브런치를 즐겼다면, 이제 깔끔한 커피로 마무리를 해야겠죠? <strong>'% 아라비카'</strong>는 로고 모양이 한국어 '응'과 비슷해서 우리에겐 <strong>'응커피'</strong>로 더 유명한 곳이에요.</p>
+      
+      <img src="${arabicaCoffeeImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="% Arabica Coffee and Beans" />
+      
+      <p>이곳의 인테리어는 정말 <strong>'심플 그 자체'</strong>입니다. 군더더기 없는 하얀색 공간에 은은한 조명, 그리고 정가운데 놓인 멋진 에스프레소 머신까지... 가만히 앉아만 있어도 마음이 차분해지는 '교토 감성'을 느낄 수 있어요.</p>
+      
+      <div class="mb-4">
+        <h4 class="font-bold text-lg text-ican-600">☕️ 꼭 마셔봐야 할 시그니처</h4>
+        <ul class="list-disc ml-5 text-gray-700 space-y-2">
+          <li><strong>교토 라떼 (Kyoto Latte):</strong> 연유가 들어가 달달하면서도 묵직한 바디감이 느껴지는 라떼예요. 당 충전이 필요할 때 최고!</li>
+          <li><strong>스페니쉬 라떼 (Spanish Latte):</strong> 교토 라떼보다 조금 더 부드럽고 고소한 맛이 특징입니다.</li>
+        </ul>
+      </div>
+      <p>원두도 직접 선택할 수 있으니, 산미를 좋아하시거나 고소한 맛을 선호하시는 분들 모두 취향에 맞는 커피를 즐기실 수 있을 거예요.</p><br/>
+      
+      <div class="border-l-4 border-ican-500 pl-4 py-2 bg-gray-50 my-6">
+        <h4 class="font-bold text-gray-800">✨ 로이 하우스의 꿀팁</h4>
+        <p class="text-gray-600 mt-2">
+          "포디움은 치안이 좋고 쾌적해서 아이들과 함께 가기에도 정말 좋아요. 와일드플라워에서 든든하게 식사하고, % 아라비카에서 커피 한 잔 테이크아웃해서 5층 야외 정원을 산책해보세요. 그게 바로 올티가스 라이프의 낭만 아닐까요? 🥰"
+        </p>
+      </div>
+    `,
+    date: "2026.01.07",
+    category: "Food",
+    image: wildflourBrunchImg,
+    author: "Roy House (Joy Mom)",
+    tags: ["Wildflour", "ArabicaPH", "ThePodium", "BrunchTime", "EungCoffee"]
+  },
   {
     id: 'blog-18',
     title: "문식 선생님의 27번째 생일, 포디움 미우(Niu)에서의 특별한 파티! 🎉",
