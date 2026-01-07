@@ -30,6 +30,7 @@ import socialClubCheersImg from './social-club-cheers.png';
 import blogMoonsikBirthdayImg from './blog-moonsik-birthday.png';
 import wildflourBrunchImg from './wildflour-brunch.png';
 import arabicaCoffeeImg from './arabica-coffee.png';
+import nanobananaDinosaurImg from './nanobanana-dinosaur.png';
 
 // --- Icons Map (To share across languages) ---
 export const ICONS = {
@@ -183,7 +184,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <p>쇼핑몰 지하에 공룡이라니, 처음엔 반신반의했는데 직접 보니 퀄리티가 장난이 아니더라고요! 움직이는 공룡 모형부터 생생한 소리까지, 마치 쥬라기 공원에 들어온 듯한 착각이 들 정도였어요.</p>
       <p>항상 책상 앞에만 앉아있던 아이들이 "우와! 티라노사우루스다!" 하며 눈이 반짝반짝 빛나는 걸 보니, 데려오길 정말 잘했다 싶었답니다. (덩달아 신난 나노바나나도 공룡이랑 한 컷! 📸)</p><br/>
       
-      <img src="https://images.unsplash.com/photo-1615551919864-42f155988e0b?q=80&w=2070&auto=format&fit=crop" class="w-full rounded-2xl my-6 shadow-sm" alt="Dinosaur Exhibition" />
+      <img src="${nanobananaDinosaurImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Dinosaur Exhibition with NanoBanana" />
       
       <h3 class="text-xl font-bold mb-2">🍔 식사+관람을 한 번에! 완벽한 반나절 코스</h3>
       <p>금강산도 식후경! 로빈손 갤러리아는 워낙 맛집이 많기로 유명하잖아요. 지하 1층 푸드코트나 위층 레스토랑에서 든든하게 배를 채우고, 소화도 시킬 겸 공룡관을 한 바퀴 돌면 딱 좋은 코스가 완성됩니다.</p>
@@ -202,7 +203,7 @@ export const BLOG_POSTS: BlogPost[] = [
     `,
     date: "2026.01.08",
     category: "Activity",
-    image: "https://images.unsplash.com/photo-1615551919864-42f155988e0b?q=80&w=2070&auto=format&fit=crop",
+    image: nanobananaDinosaurImg,
     author: "Roy House (Joy Mom)",
     tags: ["RobinsonsGalleria", "Dinosaur", "WeekendTrip", "KidsActivity"]
   },
