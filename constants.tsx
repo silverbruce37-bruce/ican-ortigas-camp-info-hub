@@ -172,6 +172,41 @@ export const CARROT_ITEMS: CarrotItem[] = [
 // --- Blog Data (Roy House) ---
 export const BLOG_POSTS: BlogPost[] = [
   {
+    id: 'blog-20',
+    title: "공룡이 살아있다? 🦖 로빈손 갤러리아 지하 1층 공룡관 탐험기 (아이들과 주말 나들이 추천)",
+    excerpt: "공부하느라 지친 아이들에게 특별한 선물이 없을까? 로빈손 갤러리아 지하 1층에 새로 생긴 공룡관을 다녀왔어요! 맛있는 식사와 공룡 탐험까지, 완벽한 주말 코스를 소개합니다.",
+    content: `
+      <p>안녕하세요! <strong>로이 하우스(Joy Mom)</strong>입니다. 💖</p><br/>
+      <p>우리 아이들, 평일 내내 캠프에서 영어 공부하느라 정말 고생 많았죠? 주말만큼은 스트레스를 확~ 날려주고 싶은데, 멀리 가긴 부담스럽고... 🤔 그런 고민을 하던 찰나, <strong>로빈손 갤러리아(Robinsons Galleria) 지하 1층</strong>에 아주 특별한 곳이 생겼다는 소식을 듣고 후다닥 다녀왔습니다.</p><br/>
+      
+      <h3 class="text-xl font-bold mb-2">🦖 도심 속 쥬라기 공원? '공룡관'의 등장!</h3>
+      <p>쇼핑몰 지하에 공룡이라니, 처음엔 반신반의했는데 직접 보니 퀄리티가 장난이 아니더라고요! 움직이는 공룡 모형부터 생생한 소리까지, 마치 쥬라기 공원에 들어온 듯한 착각이 들 정도였어요.</p>
+      <p>항상 책상 앞에만 앉아있던 아이들이 "우와! 티라노사우루스다!" 하며 눈이 반짝반짝 빛나는 걸 보니, 데려오길 정말 잘했다 싶었답니다. (덩달아 신난 나노바나나도 공룡이랑 한 컷! 📸)</p><br/>
+      
+      <img src="https://images.unsplash.com/photo-1615551919864-42f155988e0b?q=80&w=2070&auto=format&fit=crop" class="w-full rounded-2xl my-6 shadow-sm" alt="Dinosaur Exhibition" />
+      
+      <h3 class="text-xl font-bold mb-2">🍔 식사+관람을 한 번에! 완벽한 반나절 코스</h3>
+      <p>금강산도 식후경! 로빈손 갤러리아는 워낙 맛집이 많기로 유명하잖아요. 지하 1층 푸드코트나 위층 레스토랑에서 든든하게 배를 채우고, 소화도 시킬 겸 공룡관을 한 바퀴 돌면 딱 좋은 코스가 완성됩니다.</p>
+      <p>아이들은 공룡 보느라 신나고, 엄마들은 시원한 쇼핑몰에서 편안하게 아이들을 챙길 수 있으니 이보다 더 좋을 순 없겠죠? 😉</p><br/>
+      
+      <div class="bg-green-50 p-6 rounded-xl border border-green-100 my-6">
+        <h4 class="font-bold text-green-800 mb-2">🌿 로이맘의 추천 포인트</h4>
+        <ul class="list-disc ml-5 text-sm text-green-900 space-y-1">
+          <li><strong>접근성 최고:</strong> 올티가스 중심에 있어 학원/숙소에서 가깝습니다.</li>
+          <li><strong>가성비 갑:</strong> 멀리 가지 않아도 쇼핑몰 내에서 해결 가능하니 부담이 없어요.</li>
+          <li><strong>사진 맛집:</strong> 거대한 공룡 앞에서 아이들 인생샷 남겨주기 딱입니다!</li>
+        </ul>
+      </div>
+      
+      <p>공부하느라 지친 우리 아이들, 이번 주말엔 로빈손 갤러리아 공룡관에서 특별한 추억을 선물해 보는 건 어떨까요? 잠깐의 외출로도 아이들에게는 큰 활력소가 될 거예요! 💪</p>
+    `,
+    date: "2026.01.08",
+    category: "Activity",
+    image: "https://images.unsplash.com/photo-1615551919864-42f155988e0b?q=80&w=2070&auto=format&fit=crop",
+    author: "Roy House (Joy Mom)",
+    tags: ["RobinsonsGalleria", "Dinosaur", "WeekendTrip", "KidsActivity"]
+  },
+  {
     id: 'blog-19',
     title: "올티가스 포디움의 완벽한 오후: 와일드플라워 & % 아라비카 (응커피) ☕️🥐",
     excerpt: "올티가스 더 포디움(The Podium)에서 즐기는 완벽한 미식 코스! 입안 가득 터지는 페이스트리의 풍미와 교토 감성 가득한 라떼 한 잔의 여유. 실패 없는 브런치 메뉴와 '응 커피'의 매력을 소개합니다.",
