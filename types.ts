@@ -44,6 +44,7 @@ export interface LivingInfoItem {
   linkLabel?: string; // Optional label for the link button
   rating?: number; // 0 to 5
   priceLevel?: number; // 1: $, 2: $$, 3: $$$
+  image?: string; // Optional image URL or import
 }
 
 export interface FAQItem {

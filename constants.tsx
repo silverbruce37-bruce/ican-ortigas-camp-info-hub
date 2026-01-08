@@ -31,6 +31,7 @@ import blogMoonsikBirthdayImg from './blog-moonsik-birthday.png';
 import wildflourBrunchImg from './wildflour-brunch.png';
 import arabicaCoffeeImg from './arabica-coffee.png';
 import nanobananaDinosaurImg from './nanobanana-dinosaur.png';
+import nowServingImg from './nowserving.png';
 
 // --- Icons Map (To share across languages) ---
 export const ICONS = {
@@ -1258,6 +1259,21 @@ export const LIVING_INFO_DATA_KO: LivingInfoItem[] = [
     type: 'offline',
     link: 'https://aventusmedical.com/',
     linkLabel: '클리닉 정보'
+  },
+  {
+    category: 'medical',
+    title: 'NowServing (온라인 의료 상담)',
+    description: '병원을 가기 어렵거나 급한 상담이 필요할 때, 온라인으로 현지 의사와 상담하세요. 영어가 가능하다면 옆에 계신 분의 도움을 받아보세요.',
+    details: [
+      '온라인으로 바로 의사와 연결',
+      '처방전 발급 가능',
+      '영어 상담 지원 (도우미 권장)'
+    ],
+    location: 'Online App',
+    type: 'online',
+    link: 'https://nowserving.ph/',
+    linkLabel: '이제 상담받기',
+    image: nowServingImg
   },
 
   // --- ACTIVITY ---

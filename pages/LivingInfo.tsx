@@ -227,6 +227,14 @@ const InfoCard: React.FC<{ item: LivingInfoItem }> = ({ item }) => {
 
       <h3 className="text-xl font-bold text-[#1d1d1f] mb-2 leading-tight">{item.title}</h3>
 
+      {item.image && (
+        <img
+          src={item.image}
+          alt={item.title}
+          className="w-full h-auto max-h-40 object-cover rounded-xl mb-4 border border-gray-100"
+        />
+      )}
+
       {item.location && (
         <div className="flex items-start gap-1.5 text-xs text-gray-500 font-medium mb-4">
           <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0 text-gray-400" />
