@@ -217,7 +217,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: "아이들과 함께 가도 눈치 보지 않고 취향껏 즐길 수 있는 곳! 신선한 야채와 고기가 무한리필되는 '샤브리'에서 보낸 아이캔 맘들의 맛있는 수다 시간을 공개합니다.",
     content: `
       <p>안녕하세요! 맛있는 곳이라면 어디든 찾아가는 <strong>로이 하우스(Joy Mom)</strong>입니다. 😊</p><br/>
-      <p>오늘은 아이들 학원 보내놓고 육아 동지와 함께 다녀온, BGC의 따끈따끈한 신상 맛집을 소개해 드리려고 해요. 바로 일본계 백화점 <strong>미츠코시(Mitsukoshi) BGC 지하 1층</strong>에 위치한 프리미엄 샤브샤브 뷔페, <strong><샤브리(Shaburi)></strong>입니다!</p><br/>
+      <p>오늘은 아이들 학원 보내놓고 육아 동지와 함께 다녀온, BGC의 따끈따끈한 신상 맛집을 소개해 드리려고 해요. 바로 일본계 백화점 <strong>미츠코시(Mitsukoshi) BGC 2층</strong>에 위치한 프리미엄 샤브샤브 뷔페, <strong><샤브리(Shaburi)></strong>입니다!</p><br/>
 
       <img src="${nanobananaShaburiImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="NanoBanana enjoying Shaburi Shabu-shabu" />
 
