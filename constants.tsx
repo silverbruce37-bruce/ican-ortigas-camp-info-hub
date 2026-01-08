@@ -32,6 +32,9 @@ import wildflourBrunchImg from './wildflour-brunch.png';
 import arabicaCoffeeImg from './arabica-coffee.png';
 import nanobananaDinosaurImg from './nanobanana-dinosaur.png';
 import nowServingImg from './nowserving.png';
+import nanobananaShaburiImg from './nanobanana-shaburi.png';
+import shaburiBuffetImg from './shaburi-buffet.jpg';
+import shaburiMenuImg from './shaburi-menu.jpg';
 
 // --- Icons Map (To share across languages) ---
 export const ICONS = {
@@ -207,6 +210,54 @@ export const BLOG_POSTS: BlogPost[] = [
     image: nanobananaDinosaurImg,
     author: "Roy House (Joy Mom)",
     tags: ["RobinsonsGalleria", "Dinosaur", "WeekendTrip", "KidsActivity"]
+  },
+  {
+    id: 'blog-21',
+    title: "1인 1냄비의 행복! 🍲 BGC 미츠코시 샤브리(Shaburi)에서 즐긴 완벽한 샤브샤브",
+    excerpt: "아이들과 함께 가도 눈치 보지 않고 취향껏 즐길 수 있는 곳! 신선한 야채와 고기가 무한리필되는 '샤브리'에서 보낸 아이캔 맘들의 맛있는 수다 시간을 공개합니다.",
+    content: `
+      <p>안녕하세요! 맛있는 곳이라면 어디든 찾아가는 <strong>로이 하우스(Joy Mom)</strong>입니다. 😊</p><br/>
+      <p>오늘은 아이들 학원 보내놓고 육아 동지와 함께 다녀온, BGC의 따끈따끈한 신상 맛집을 소개해 드리려고 해요. 바로 일본계 백화점 <strong>미츠코시(Mitsukoshi) BGC 지하 1층</strong>에 위치한 프리미엄 샤브샤브 뷔페, <strong><샤브리(Shaburi)></strong>입니다!</p><br/>
+
+      <img src="${nanobananaShaburiImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="NanoBanana enjoying Shaburi Shabu-shabu" />
+
+      <h3 class="text-xl font-bold mb-2">🍲 "엄마는 매운 육수, 너는 맑은 육수!" - 1인 1냄비의 평화</h3>
+      <p>보통 샤브샤브 집에 가면 육수 통일하느라 눈치 싸움(?) 하잖아요. 하지만 샤브리는 그럴 걱정이 전~혀 없어요. 바로 <strong>개인용 핫팟(Individual Hot Pot)</strong>이 제공되기 때문이죠!</p>
+      <p>저는 얼큰한 '핫 미소(Hot Miso) 수프', 매운 걸 못 먹는 아이는 담백한 '치킨 콜라겐 수프'를 선택했어요. 각자 취향대로 즐길 수 있어서 아이들도 너무 좋아하고, 엄마들도 위생적이라며 대만족이었습니다.</p><br/>
+
+      <h3 class="text-xl font-bold mb-2">🥩 고기 퀄리티, 실화인가요? (ft. 메뉴판 정독)</h3>
+      <p>무한리필이라고 해서 고기 질이 떨어질 거라 생각했다면 오산! 주문하자마자 바로 썰어서 나오는 선홍빛 소고기는 입에서 살살 녹더라고요. 저희는 <strong>'Special Selection'</strong> 코스를 시켰는데, 앵거스 비프(Angus Beef)가 정말 부드러웠어요.</p>
+      
+      <img src="${shaburiMenuImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Shaburi Menu" />
+      
+      <p>메뉴판을 보시면 아시겠지만, 고기 뿐만 아니라 해산물 플래터나 다양한 피쉬볼도 추가할 수 있어요. 하지만 기본 무한리필 코스만으로도 충분히 배가 터질 만큼 만족스러웠답니다! (특히 저 'Beef Top Blade' 강추해요 👍)</p><br/>
+
+      <h3 class="text-xl font-bold mb-2">🥗 신선함이 가득한 야채 & 뷔페 바</h3>
+      <p>야채 바에도 신선한 배추, 청경채, 버섯이 가득해서 고기랑 야채를 몇 번이나 리필해 먹었는지 몰라요. (사장님 죄송해요... 너무 맛있어서... 😂)</p>
+      
+      <img src="${shaburiBuffetImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Shaburi Buffet Bar" />
+
+      <p>보이시나요? 저 깔끔하게 정돈된 야채와 각종 토핑들! 수박 같은 과일 후식도 준비되어 있어서 아이들 식사 챙겨주기에도 밸런스가 딱 좋았습니다. 튀김이나 스시 롤 같은 사이드 메뉴도 뷔페 바에 있으니 놓치지 마세요!</p><br/>
+
+      <div class="bg-orange-50 p-6 rounded-xl border border-orange-100 my-6">
+        <h4 class="font-bold text-orange-800 mb-2">🥢 로이맘이 전수하는 '맛있게 먹는 법'</h4>
+        <ul class="list-disc ml-5 text-sm text-orange-900 space-y-1">
+          <li><strong>소스 제조:</strong> 폰즈 소스에 무즙과 파를 듬뿍 넣으면 고기 도둑! 고소한 참깨 소스(Goma)에는 다진 마늘을 살짝 넣어보세요. 감칠맛 폭발입니다.</li>
+          <li><strong>야채 육수 내기:</strong> 고기를 넣기 전, 야채를 먼저 듬뿍 넣어 채수를 우려내세요. 국물 맛이 훨씬 깊어져요.</li>
+          <li><strong>마무리는 죽(Porridge):</strong> 배가 터질 것 같아도 남은 육수에 밥과 계란, 김 가루를 넣어 죽을 만들어 먹는 건 국룰!</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-bold mb-2">🍦 디저트 배는 따로 있죠?</h3>
+      <p>식사가 끝날 때쯤, 아이들은 이미 <strong>소프트 아이스크림 기계</strong> 앞으로 달려갔답니다. 진한 우유 맛 아이스크림에 초콜릿 토핑까지 얹어 먹으니 세상 행복한 표정들이더라고요. 어른들을 위한 따뜻한 커피와 유자차도 준비되어 있어 깔끔하게 마무리할 수 있었어요.</p><br/>
+
+      <p>깨끗한 시설, 친절한 직원, 그리고 맛있는 음식까지. 가족 외식 장소로 이보다 좋을 순 없을 것 같아요. 이번 주말, 미츠코시 몰 구경도 하고 샤브리에서 따뜻한 한 끼 어떠세요? 나노바나나도 강추합니다! 🍌👍</p>
+    `,
+    date: "2026.01.09",
+    category: "Food",
+    image: nanobananaShaburiImg,
+    author: "Roy House (Joy Mom)",
+    tags: ["ShaburiBGC", "Mitsukoshi Mall", "ShabuShabu", "FamilyDining"]
   },
   {
     id: 'blog-19',
