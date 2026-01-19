@@ -932,13 +932,15 @@ export const LIVING_INFO_DATA_KO: LivingInfoItem[] = [
   {
     category: 'mobile',
     title: '슈퍼 택시 (JoyRide Super Taxi)',
-    description: '그랩(Grab)의 대안으로 떠오르는 새로운 택시 호출 앱입니다. 미터기 요금 기반으로 운영되어 비교적 합리적이며, 승차 거부가 적습니다.',
+    description: '그랩(Grab)의 대안으로 떠오르는 새로운 프리미엄 택시 서비스입니다. 일본의 JPN Taxi를 벤치마킹하여 넓고 쾌적한 공간을 제공하며, 미터기 요금 기반으로 운영되어 합리적입니다.',
     details: [
-      '앱: JoyRide Superapp 다운로드 후 이용',
-      '특징: 도요타 벨로즈 등 쾌적한 신형 차량 위주 배차',
-      '장점: 공항 픽업/샌딩 예약 가능, 일반 택시보다 안전함'
+      '앱: JoyRide Superapp 다운로드 후 이용 (길거리 탑승도 가능)',
+      '차량: 도요타 벨로즈(Veloz) 등 5인승 블랙 프리미엄 차량 배차',
+      '특징: 넓은 레그룸, 높은 천고, 인포테인먼트 시스템 탑재',
+      '요금: 일반 택시와 동일한 미터기 요금 적용 (No Surge Pricing)',
+      '공항: NAIA 3터미널 도착층에 전용 라운지 및 승강장 운영'
     ],
-    location: 'App Store / Google Play',
+    location: 'App Store / Google Play / NAIA T3',
     type: 'online',
     link: 'https://joyride.com.ph/',
     linkLabel: 'JoyRide 다운로드'
@@ -1344,6 +1346,22 @@ export const LIVING_INFO_DATA_KO: LivingInfoItem[] = [
     linkLabel: '웹사이트'
   },
   // --- CHURCH (REAL UPDATES) ---
+  {
+    category: 'church',
+    title: 'GCF (Greenhills Christian Fellowship)',
+    description: '올티가스 내에서 가장 전통 깊고 규모가 큰 교회 중 하나입니다. 1978년에 설립되었으며, 한국인들에게도 잘 알려진 건전한 침례교단 소속입니다. 학원에서 도보로 이동 가능한 거리에 위치합니다.',
+    details: [
+      '위치: Ruby cor. Garnet Rd (학원 도보 5분)',
+      '영어 예배: 주일 오전 8:00, 10:30, 오후 5:30',
+      '토요 예배(Traditional): 토요일 오후 5:30',
+      '웹사이트에서 설교 다시보기 가능'
+    ],
+    location: 'Ruby cor. Garnet Rd, Ortigas',
+    coordinates: { lat: 14.5878, lng: 121.0602 },
+    type: 'offline',
+    link: 'https://www.gcf.org.ph/',
+    linkLabel: '공식 홈페이지'
+  },
   {
     category: 'church',
     title: 'CCF 센터 (Christ\'s Commission Fellowship)',

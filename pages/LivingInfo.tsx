@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Home, ShoppingBag, Utensils, Wifi, MapPin, Dumbbell, HeartPulse, Church, Star, Download, Carrot, Search } from 'lucide-react';
+import React, { useState, useEffect, useMemo } from 'react';
+import { Home, ShoppingBag, Utensils, Wifi, MapPin, Dumbbell, HeartPulse, Church, Star, Download, Carrot, Search, Sparkles, Megaphone } from 'lucide-react';
 import { LivingInfoItem } from '../types';
 import { useLanguage } from '../context/LanguageContext';
 import OrtigasMap from '../components/OrtigasMap';
@@ -22,9 +22,12 @@ const LivingInfo: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold tracking-tight mb-4">{living.title}</h1>
-          <p className="text-xl text-gray-500 max-w-2xl mx-auto font-medium">
+          <p className="text-xl text-gray-500 max-w-2xl mx-auto font-medium mb-8">
             {living.subtitle}
           </p>
+
+          {/* Ad Banner Carousel (5 Items) */}
+          <AdBannerCarousel items={living.items} />
         </div>
 
         {/* Controls */}
@@ -266,5 +269,125 @@ const EmergencyContact: React.FC<{ number: string, label: string }> = ({ number,
     <div className="text-xs opacity-70 font-medium uppercase tracking-wide">{label}</div>
   </a>
 )
+
+const AdBannerCarousel: React.FC<{ items: LivingInfoItem[] }> = ({ items }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Logic to select 5 unique items based on the date
+  const today = new Date();
+  const dateSeed = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
+
+  // Simple hash function
+  const getHash = (str: string) => {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      hash = ((hash << 5) - hash) + str.charCodeAt(i);
+      hash |= 0;
+    }
+    return Math.abs(hash);
+  };
+
+  const seed = getHash(dateSeed);
+
+  // Select 5 distinct items using the seed
+  // We'll create a shuffled copy of indices then pick first 5
+  // Note: For a truly stable daily shuffle without full re-render issues, use memoization usually,
+  // but here inside component is fine if we assume seed doesn't change.
+  const selectedItems = useMemo(() => {
+    const shuffled = [...items].sort((a, b) => {
+      // Consistent random sort based on seed and item content properties
+      return (getHash(dateSeed + a.title) % 100) - (getHash(dateSeed + b.title) % 100);
+    });
+    return shuffled.slice(0, 5);
+  }, [items, dateSeed]);
+
+
+  // Auto-play effect
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % selectedItems.length);
+    }, 4000); // 4 seconds per slide
+    return () => clearInterval(timer);
+  }, [selectedItems.length]);
+
+  if (selectedItems.length === 0) return null;
+
+  const currentItem = selectedItems[currentIndex];
+
+  return (
+    <div className="max-w-3xl mx-auto mt-8 relative group">
+      {/* Banner Container */}
+      <div className="relative overflow-hidden rounded-2xl shadow-lg border-2 border-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-[3px]">
+        {/* Floating Badge */}
+        <div className="absolute top-0 left-0 z-20 bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-br-xl shadow-sm">
+          SPONSORED AD
+        </div>
+
+        <div className="bg-white rounded-xl overflow-hidden relative h-[100px]">
+          <AnimatePresence mode='wait'>
+            <motion.a
+              key={currentIndex}
+              href={currentItem.link}
+              target="_blank"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.3 }}
+              className="flex items-center gap-5 p-4 h-full w-full cursor-pointer hover:bg-gray-50 transition-colors"
+            >
+              {/* Icon/Image Area */}
+              <div className="w-16 h-16 rounded-xl bg-gray-100 flex items-center justify-center shrink-0 text-3xl shadow-sm overflow-hidden">
+                {currentItem.image ? (
+                  <img src={currentItem.image} alt="" className="w-full h-full object-cover" />
+                ) : (
+                  <span>
+                    {currentItem.category === 'food' ? '🍔' :
+                      currentItem.category === 'shopping' ? '🛍️' :
+                        currentItem.category === 'mobile' ? '📱' :
+                          currentItem.category === 'rent' ? '🏠' :
+                            currentItem.category === 'activity' ? '🎡' :
+                              currentItem.category === 'medical' ? '🏥' : '💡'}
+                  </span>
+                )}
+              </div>
+
+              {/* Text Area */}
+              <div className="text-left flex-grow min-w-0">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 border border-gray-200 px-1.5 py-0.5 rounded">
+                    {currentIndex + 1}/5
+                  </span>
+                  <h3 className="font-bold text-lg text-gray-900 truncate">
+                    {currentItem.title}
+                  </h3>
+                </div>
+                <p className="text-sm text-gray-500 line-clamp-1">
+                  {currentItem.description}
+                </p>
+              </div>
+
+              {/* CTA Button */}
+              <div className="shrink-0 hidden sm:flex items-center justify-center w-10 h-10 rounded-full bg-blue-50 text-blue-600">
+                <Megaphone className="w-5 h-5" />
+              </div>
+            </motion.a>
+          </AnimatePresence>
+        </div>
+      </div>
+
+      {/* Indicators */}
+      <div className="flex justify-center gap-2 mt-3">
+        {selectedItems.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrentIndex(idx)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${idx === currentIndex ? 'bg-gray-800 w-6' : 'bg-gray-300 hover:bg-gray-400'
+              }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default LivingInfo;
