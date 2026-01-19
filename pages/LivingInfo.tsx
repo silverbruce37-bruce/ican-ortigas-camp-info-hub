@@ -206,21 +206,18 @@ const InfoCard: React.FC<{ item: LivingInfoItem }> = ({ item }) => {
 
   const style = categoryStyles[item.category] || { bg: 'bg-gray-100', text: 'text-gray-600', border: 'border-l-gray-400', icon: '📌' };
 
-  const navigate = useNavigate();
-  const isInternal = item.link && item.link.startsWith('/');
-
-  const handleClick = (e: React.MouseEvent) => {
-    if (isInternal) {
-      e.preventDefault();
-      navigate(item.link!);
-    }
-  };
+  /* 
+   * SIMPLIFIED LOGIC:
+   * InfoCard simply checks if the link starts with '#' or '/' to decide target.
+   * Internal links (HashRouter) should use target="_self".
+   */
+  const isInternal = item.link && (item.link.startsWith('/') || item.link.startsWith('#'));
 
   return (
     <motion.a
       href={item.link}
       target={isInternal ? "_self" : "_blank"}
-      onClick={handleClick}
+      // onClick handler removed to rely on default hash navigation
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       className={`bg-white rounded-3xl p-6 shadow-sm hover:shadow-lg transition-all cursor-pointer flex flex-col h-full border border-gray-100 border-l-4 ${style.border}`}

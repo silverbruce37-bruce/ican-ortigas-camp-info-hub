@@ -1391,7 +1391,7 @@ export const LIVING_INFO_DATA_KO: LivingInfoItem[] = [
     ],
     location: 'Airport / Metro Manila / Golf Courses',
     type: 'offline',
-    link: '/golf-tour', // Internal Link
+    link: '#/golf-tour', // Hash Link for HashRouter
     linkLabel: '상세 정보 보기'
   },
   {

@@ -47,7 +47,7 @@ const App: React.FC = () => {
                     <Route path="curriculum" element={<Curriculum />} />
                     <Route path="fees" element={<VisaAndEntry />} />
                     <Route path="living" element={<LivingInfo />} />
-                    <Route path="golf-tour" element={<GolfTour />} /> {/* NEW ROUTE */}
+                    {/* golf-tour moved out */}
                     <Route path="orticarrot" element={<OrtiCarrot />} />
                     <Route path="mypage" element={<MyPage />} />
                     <Route path="blog" element={<Blog />} />
@@ -56,6 +56,9 @@ const App: React.FC = () => {
                     <Route path="blog/:id" element={<BlogPost />} />
                     <Route path="faq" element={<FAQ />} />
                   </Route>
+
+                  {/* Standalone Pages */}
+                  <Route path="/golf-tour" element={<GolfTour />} />
                 </Routes>
               </Router>
             </BlogProvider>
