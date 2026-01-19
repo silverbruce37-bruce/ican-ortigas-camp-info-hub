@@ -35,6 +35,10 @@ import nowServingImg from './nowserving.png';
 import nanobananaShaburiImg from './nanobanana-shaburi.png';
 import shaburiBuffetImg from './shaburi-buffet.jpg';
 import shaburiMenuImg from './shaburi-menu.jpg';
+import nanoBananaIntroImg from './nano_banana_intro.png';
+import nanoBananaBbqImg from './nano_banana_bbq.png';
+import nanoBananaMallFoodImg from './nano_banana_mall_food.png';
+import hProperInteriorImg from './h_proper_interior.png';
 
 // --- Icons Map (To share across languages) ---
 export const ICONS = {
@@ -176,6 +180,72 @@ export const CARROT_ITEMS: CarrotItem[] = [
 
 // --- Blog Data (Roy House) ---
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: 'blog-22',
+    title: "🍌 [올티가스 맛집 탐방] 나노바나나와 함께 떠나는 식도락 여행!",
+    excerpt: "로이하우스 캠프 가족을 위한 실패 없는 맛집 리스트! 나노바나나가 직접 다녀온 마실, 주몽, 팔도 그리고 핫한 카페까지 총정리했습니다.",
+    content: `
+      <p>안녕하세요, <strong>로이하우스 캠프 가족 여러분!</strong> 👋</p><br/>
+      <p>오늘은 우리 아이들과 가족들이 올티가스에서 맛있는 끼니를 해결할 수 있는 <strong>'실패 없는 맛집 리스트'</strong>를 준비했습니다.</p>
+      <p>특별히 오늘은 귀여운 식탐 요정 <strong>'나노바나나(Nano Banana)'</strong>가 가이드로 함께 합니다! 🍌💛 함께 떠나볼까요? 슝~! 🚀</p><br/>
+
+      <img src="${nanoBananaIntroImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Nano Banana Arriving in Ortigas" />
+
+      <h3 class="text-xl font-bold mb-2">1. 🍖 올티가스 한식의 자존심: 마실 (Masil)</h3>
+      <p>명실상부, 올티가스에서 가장 믿고 먹을 수 있는 곳이죠! 고기 퀄리티가 정말 훌륭하고 밑반찬도 정갈해서 손님 접대나 가족 외식 장소로 <strong>부동의 1위</strong>입니다.</p>
+      <p><strong>추천 메뉴:</strong> 숯불 돼지갈비, 소생갈비, 육회</p>
+      <p><strong>위치:</strong> 카피톨리오 유니마트점</p>
+      
+      <img src="${nanoBananaBbqImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Nano Banana Grilling Meat at Masil" />
+      <br/>
+
+      <h3 class="text-xl font-bold mb-2">2. 🥢 믿고 가는 한식 전문점: 주몽 & 팔도</h3>
+      
+      <div class="mb-4">
+        <h4 class="font-bold text-lg text-ican-600">① 주몽 (Jumong Korean BBQ)</h4>
+        <p>펄 드라이브(Pearl Drive)에 위치한 정통 한국 식당! 한국인 사장님의 푸짐한 인심과 '진짜 한국의 맛'을 느낄 수 있습니다. 된장찌개와 육개장이 일품이에요.</p>
+      </div>
+
+      <div class="mb-4">
+        <h4 class="font-bold text-lg text-ican-600">② 팔도 (Paldo)</h4>
+        <p>한국의 다채로운 맛을 한자리에서! 정갈한 한상차림은 물론, 짜장면과 짬뽕 같은 중식 메뉴도 훌륭해서 아이들이 정말 좋아한답니다.</p>
+      </div>
+      <br/>
+
+      <h3 class="text-xl font-bold mb-2">3. 🛍️ 쇼핑몰 내 실패 없는 글로벌 맛집</h3>
+      <p>한식 말고 다른 게 땡길 땐 시원한 쇼핑몰로 가보세요!</p>
+      <ul class="list-disc ml-5 mb-4 text-gray-700 space-y-2">
+        <li><strong>야부 (Yabu):</strong> 두툼한 고기와 바삭한 튀김옷이 일품인 필리핀 최고의 돈카츠 전문점 (포디엄/메가몰)</li>
+        <li><strong>마루가메 제면 (Marugame Udon):</strong> 가성비 甲! 오픈 키친에서 바로 만들어주는 탱글한 우동과 튀김 (메가몰 지하)</li>
+        <li><strong>루강 카페 (Lugang Cafe):</strong> 육즙 가득 샤오롱바오와 세련된 대만식 중식 (메가몰)</li>
+      </ul>
+
+      <img src="${nanoBananaMallFoodImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Nano Banana Eating Katsu and Udon" />
+      <br/>
+
+      <h3 class="text-xl font-bold mb-2">4. ☕️ 식후 커피 한 잔의 여유: H Proper Coffee Roasters</h3>
+      <p>맛있는 식사 후엔 <strong>더 포디움(The Podium) 6층</strong>에 위치한 <strong>'H Proper'</strong>에서 수준 높은 스페셜티 커피를 즐겨보세요. 차분하고 세련된 인테리어 속에서 즐기는 여유! ☕️</p>
+      <p><strong>위치:</strong> The Podium, Level 6, ADB Avenue</p>
+
+      <img src="${hProperInteriorImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="H Proper Coffee Roaster Interior" />
+      <br/>
+
+      <div class="bg-yellow-50 p-6 rounded-xl border border-yellow-100 my-6">
+        <h4 class="font-bold text-yellow-800 mb-2">💡 유용한 이용 팁!</h4>
+        <ul class="list-disc ml-5 text-sm text-yellow-900 space-y-1">
+          <li><strong>배달 이용:</strong> 나가기 귀찮을 땐 GrabFood나 Foodpanda로 주문하세요!</li>
+          <li><strong>예약 권장:</strong> 인기 맛집(마실 등)은 피크 타임에 예약 필수! 😉</li>
+        </ul>
+      </div>
+
+      <p>올티가스에서 맛있는 한 끼와 함께 행복하고 즐거운 시간 보내시길 바랍니다! ❤️</p>
+    `,
+    date: "2026.01.20",
+    category: "Food",
+    image: nanoBananaIntroImg,
+    author: "Roy House & Nano Banana",
+    tags: ["Masil", "OrtigasFood", "NanoBanana", "Jumong", "HProper"]
+  },
   {
     id: 'blog-20',
     title: "공룡이 살아있다? 🦖 로빈손 갤러리아 지하 1층 공룡관 탐험기 (아이들과 주말 나들이 추천)",

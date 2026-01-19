@@ -81,7 +81,7 @@ const Home: React.FC = () => {
             className="w-full rounded-lg shadow"
           />
           <a
-            href="https://www.icanacademy.com/"
+            href="https://eduspace-astronaut-mind-seven.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="absolute top-[8%] right-0 w-[41%] h-[38%] z-10 cursor-pointer"
