@@ -4,6 +4,7 @@ import { LivingInfoItem } from '../types';
 import { useLanguage } from '../context/LanguageContext';
 import OrtigasMap from '../components/OrtigasMap';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const LivingInfo: React.FC = () => {
   const { content } = useLanguage();
@@ -205,10 +206,21 @@ const InfoCard: React.FC<{ item: LivingInfoItem }> = ({ item }) => {
 
   const style = categoryStyles[item.category] || { bg: 'bg-gray-100', text: 'text-gray-600', border: 'border-l-gray-400', icon: '📌' };
 
+  const navigate = useNavigate();
+  const isInternal = item.link && item.link.startsWith('/');
+
+  const handleClick = (e: React.MouseEvent) => {
+    if (isInternal) {
+      e.preventDefault();
+      navigate(item.link!);
+    }
+  };
+
   return (
     <motion.a
       href={item.link}
-      target="_blank"
+      target={isInternal ? "_self" : "_blank"}
+      onClick={handleClick}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       className={`bg-white rounded-3xl p-6 shadow-sm hover:shadow-lg transition-all cursor-pointer flex flex-col h-full border border-gray-100 border-l-4 ${style.border}`}
