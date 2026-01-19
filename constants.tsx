@@ -1377,6 +1377,22 @@ export const LIVING_INFO_DATA_KO: LivingInfoItem[] = [
     link: 'https://ccf.org.ph/',
     linkLabel: '공식 웹사이트'
   },
+  // --- GOLF & TOUR (NEW) ---
+  {
+    category: 'golf_tour',
+    title: '럭셔리 스타리아 렌트 & 골프 투어 (Alex Lee)',
+    description: '최신형 현대 스타리아(Staria)로 편안하고 안전한 여행을 제공합니다. 한국인 기사님이 직접 운전하여 의사소통 걱정이 없으며, 골프 투어 전문가의 레슨 서비스도 가능합니다.',
+    details: [
+      '공항 픽업: 4,900 PHP / 샌딩: 3,900 PHP (기본)',
+      'FREE TOUR: 마닐라 근교 및 외곽 투어 문의 환영',
+      'GOLF SPECIAL: 픽업&드랍 + 골프 전문가 레슨 (4인 기준)',
+      '특징: 넒은 실내 공간, 골프백 수납 최적화, 압도적인 편안함',
+      '문의: KakaoTalk ID alexleepro83 / Mobile 0917-680-1238'
+    ],
+    location: 'Airport / Metro Manila / Golf Courses',
+    type: 'offline',
+    linkLabel: '카카오톡 예약하기'
+  },
   {
     category: 'church',
     title: 'EDSA 성당 (Shrine of Mary, Queen of Peace)',
@@ -1711,7 +1727,8 @@ export const KO_DATA = {
       { id: 'rent', label: '숙소/렌트' },
       { id: 'mobile', label: '통신' },
       { id: 'church', label: '현지교회' }, // Renamed from '종교'
-      { id: 'korean_church', label: '한인교회' } // NEW TAB
+      { id: 'korean_church', label: '한인교회' },
+      { id: 'golf_tour', label: '골프/투어' } // NEW TAB
     ],
     items: LIVING_INFO_DATA_KO,
     appsTitle: "필수 앱 추천"

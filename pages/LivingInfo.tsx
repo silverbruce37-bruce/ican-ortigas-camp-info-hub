@@ -50,7 +50,8 @@ const LivingInfo: React.FC = () => {
                 activity: { active: 'bg-gradient-to-r from-cyan-500 to-teal-500', icon: '🎯' },
                 medical: { active: 'bg-gradient-to-r from-red-500 to-rose-600', icon: '🏥' },
                 church: { active: 'bg-gradient-to-r from-amber-500 to-yellow-500', icon: '⛪' },
-                korean_church: { active: 'bg-gradient-to-r from-indigo-500 to-blue-600', icon: '🇰🇷' }
+                korean_church: { active: 'bg-gradient-to-r from-indigo-500 to-blue-600', icon: '🇰🇷' },
+                golf_tour: { active: 'bg-gradient-to-r from-emerald-500 to-green-600', icon: '⛳' }
               };
               const colors = tabColors[tab.id] || { active: 'bg-gradient-to-r from-gray-600 to-gray-700', icon: '📌' };
 
@@ -198,7 +199,8 @@ const InfoCard: React.FC<{ item: LivingInfoItem }> = ({ item }) => {
     activity: { bg: 'bg-cyan-100', text: 'text-cyan-700', border: 'border-l-cyan-500', icon: '🎯' },
     medical: { bg: 'bg-red-100', text: 'text-red-700', border: 'border-l-red-500', icon: '🏥' },
     church: { bg: 'bg-amber-100', text: 'text-amber-700', border: 'border-l-amber-500', icon: '⛪' },
-    korean_church: { bg: 'bg-indigo-100', text: 'text-indigo-700', border: 'border-l-indigo-500', icon: '🇰🇷' }
+    korean_church: { bg: 'bg-indigo-100', text: 'text-indigo-700', border: 'border-l-indigo-500', icon: '🇰🇷' },
+    golf_tour: { bg: 'bg-emerald-100', text: 'text-emerald-800', border: 'border-l-emerald-600', icon: '⛳' }
   };
 
   const style = categoryStyles[item.category] || { bg: 'bg-gray-100', text: 'text-gray-600', border: 'border-l-gray-400', icon: '📌' };
@@ -346,7 +348,8 @@ const AdBannerCarousel: React.FC<{ items: LivingInfoItem[] }> = ({ items }) => {
                         currentItem.category === 'mobile' ? '📱' :
                           currentItem.category === 'rent' ? '🏠' :
                             currentItem.category === 'activity' ? '🎡' :
-                              currentItem.category === 'medical' ? '🏥' : '💡'}
+                              currentItem.category === 'medical' ? '🏥' :
+                                currentItem.category === 'golf_tour' ? '⛳' : '💡'}
                   </span>
                 )}
               </div>

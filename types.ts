@@ -33,7 +33,7 @@ export interface VisaCostItem {
 }
 
 export interface LivingInfoItem {
-  category: 'rent' | 'food' | 'grocery' | 'shopping' | 'mobile' | 'activity' | 'medical' | 'church' | 'korean_church';
+  category: 'rent' | 'food' | 'grocery' | 'shopping' | 'mobile' | 'activity' | 'medical' | 'church' | 'korean_church' | 'golf_tour';
   title: string;
   description: string;
   details?: (string | { text: string; url?: string })[]; // Updated to support links
