@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Curriculum from './pages/Curriculum';
 import VisaAndEntry from './pages/VisaAndEntry';
 import LivingInfo from './pages/LivingInfo';
+import GolfTour from './pages/GolfTour'; // NEW
 import FAQ from './pages/FAQ';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
@@ -46,6 +47,7 @@ const App: React.FC = () => {
                     <Route path="curriculum" element={<Curriculum />} />
                     <Route path="fees" element={<VisaAndEntry />} />
                     <Route path="living" element={<LivingInfo />} />
+                    <Route path="golf-tour" element={<GolfTour />} /> {/* NEW ROUTE */}
                     <Route path="orticarrot" element={<OrtiCarrot />} />
                     <Route path="mypage" element={<MyPage />} />
                     <Route path="blog" element={<Blog />} />

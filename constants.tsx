@@ -1391,7 +1391,8 @@ export const LIVING_INFO_DATA_KO: LivingInfoItem[] = [
     ],
     location: 'Airport / Metro Manila / Golf Courses',
     type: 'offline',
-    linkLabel: '카카오톡 예약하기'
+    link: '/golf-tour', // Internal Link
+    linkLabel: '상세 정보 보기'
   },
   {
     category: 'church',
