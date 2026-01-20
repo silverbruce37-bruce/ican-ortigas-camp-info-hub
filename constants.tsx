@@ -41,6 +41,7 @@ import nanoBananaMallFoodImg from './nano_banana_mall_food.png';
 import hProperInteriorImg from './h_proper_interior.png';
 import nanoBananaJjangkaeImg from './nano_banana_jjangkae.png';
 import nanoBananaKingkongImg from './nano_banana_kingkong.png';
+import nanoBananaSachunsungImg from './nano_banana_sachunsung.png';
 
 // --- Icons Map (To share across languages) ---
 export const ICONS = {
@@ -215,7 +216,14 @@ export const BLOG_POSTS: BlogPost[] = [
       <br/>
 
       <div class="mb-4">
-        <h4 class="font-bold text-lg text-ican-600">③ 짱개 (Jjangkae)</h4>
+        <h4 class="font-bold text-lg text-ican-600">③ 사천성 (Sa Chun Sung)</h4>
+        <p>도마 바로 옆에 위치한 <strong>한국식 중화요리 맛집</strong>! 탕수육과 짬뽕이 정말 맛있어서 도마와 함께 펄 플라자의 '양대 산맥'으로 불립니다. 푸짐한 양에 놀라실 거예요!</p>
+      </div>
+
+      <img src="${nanoBananaSachunsungImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Nano Banana Eating Tangsuyuk" />
+
+      <div class="mb-4">
+        <h4 class="font-bold text-lg text-ican-600">④ 짱개 (Jjangkae)</h4>
         <p>에스크리바 드라이브(Jose Escriva Drive)에 위치한 <strong>한국식 중화요리 전문점</strong>입니다. 한국 사장님이 운영하셔서 짜장면, 짬뽕, 탕수육 맛이 제대로예요! 🍜 배달도 가능해서 야식으로도 인기 만점입니다.</p>
       </div>
 
@@ -263,7 +271,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Food",
     image: nanoBananaIntroImg,
     author: "Roy House & Nano Banana",
-    tags: ["Masil", "OrtigasFood", "NanoBanana", "Jumong", "Doma", "Jjangkae", "KingKong"]
+    tags: ["Masil", "OrtigasFood", "NanoBanana", "Jumong", "Doma", "SaChunSung", "Jjangkae", "KingKong"]
   },
   {
     id: 'blog-20',
