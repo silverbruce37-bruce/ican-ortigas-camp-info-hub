@@ -301,6 +301,25 @@ const Curriculum: React.FC = () => {
 
 
 
+
+        {/* 5-Step Framework PDF Viewer */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="w-full mt-16"
+        >
+          <BrochureViewer
+            pdfUrl={fiveStepFrameworkPdf}
+            title="5단계 사고력 미래 리더 설계"
+            description="우주인 사고력 프로그램의 상세 내용을 확인해보세요."
+            fileName="5_Step_Framework.pdf"
+            orientation="landscape"
+            width={700}
+            height={500}
+          />
+        </motion.div>
+
       </div>
     </div>
   );
