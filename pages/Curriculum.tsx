@@ -4,7 +4,6 @@ import { Clock, Star, Check, Rocket, Zap, Globe, MessageSquare } from 'lucide-re
 import { motion } from 'framer-motion';
 import BrochureViewer from '../components/BrochureViewer';
 import brochurePdf from '../curriculum-brochure.pdf';
-import fiveStepFrameworkPdf from '../five_step_framework.pdf';
 
 const Curriculum: React.FC = () => {
   const { content } = useLanguage();
