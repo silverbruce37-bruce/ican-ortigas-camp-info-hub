@@ -53,8 +53,11 @@ const Layout: React.FC = () => {
             className={`text-[19px] font-semibold tracking-tight transition-colors flex items-center ${scrolled || isMobileMenuOpen ? 'text-ink' : 'text-white'}`}
             aria-label="ICAN Camp Home"
           >
-            <Rocket className="w-5 h-5 mr-2" />
-            ICAN CAMP
+            <Rocket className="w-6 h-6 mr-3 text-[#0071E3]" />
+            <div className="flex flex-col leading-none">
+              <span className={`text-[15px] font-bold tracking-tight ${scrolled || isMobileMenuOpen ? 'text-[#1d1d1f]' : 'text-white'}`}>닥터아이캔</span>
+              <span className={`text-[10px] font-bold tracking-widest ${scrolled || isMobileMenuOpen ? 'text-[#0071E3]' : 'text-[#4ea4ff]'}`}>SPACE CAMP</span>
+            </div>
           </NavLink>
 
           {/* Desktop Nav */}
