@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import HTMLFlipBook from 'react-pageflip';
-import { BookOpen, Download } from 'lucide-react';
+import { BookOpen, Download, ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Set worker source
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
@@ -14,6 +14,7 @@ interface Props {
     width?: number;
     height?: number;
     orientation?: 'portrait' | 'landscape';
+    layout?: 'flipbook' | 'single';
 }
 
 const BrochureViewer: React.FC<Props> = ({
@@ -23,14 +24,28 @@ const BrochureViewer: React.FC<Props> = ({
     fileName = "document.pdf",
     width = 450,
     height = 636,
-    orientation = 'portrait'
+    orientation = 'portrait',
+    layout = 'flipbook'
 }) => {
     const [numPages, setNumPages] = useState<number | null>(null);
+    const [pageNumber, setPageNumber] = useState(1);
     const [loading, setLoading] = useState(true);
 
     function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
         setNumPages(numPages);
         setLoading(false);
+    }
+
+    function changePage(offset: number) {
+        setPageNumber(prevPageNumber => prevPageNumber + offset);
+    }
+
+    function previousPage() {
+        changePage(-1);
+    }
+
+    function nextPage() {
+        changePage(1);
     }
 
     // Calculate display dimensions based on orientation/props
@@ -65,33 +80,70 @@ const BrochureViewer: React.FC<Props> = ({
                         onLoadSuccess={onDocumentLoadSuccess}
                         loading={null}
                         error={<div className="flex items-center justify-center h-full text-red-500 p-10">문서를 불러오는데 실패했습니다.</div>}
-                        className="flex justify-center w-full"
+                        className="flex flex-col items-center justify-center w-full"
                     >
                         {numPages && (
-                            // @ts-ignore
-                            <HTMLFlipBook
-                                width={width}
-                                height={height}
-                                size="stretch"
-                                minWidth={300}
-                                maxWidth={1000}
-                                minHeight={400}
-                                maxHeight={1200}
-                                showCover={true}
-                                mobileScrollSupport={true}
-                                className="shadow-2xl"
-                            >
-                                {Array.from(new Array(numPages), (el, index) => (
-                                    <div key={index} className="bg-white shadow-md bg-white">
-                                        <Page
-                                            pageNumber={index + 1}
-                                            width={width}
-                                            renderAnnotationLayer={false}
-                                            renderTextLayer={false}
-                                        />
+                            <>
+                                {layout === 'flipbook' ? (
+                                    // @ts-ignore
+                                    <HTMLFlipBook
+                                        width={width}
+                                        height={height}
+                                        size="stretch"
+                                        minWidth={300}
+                                        maxWidth={1000}
+                                        minHeight={400}
+                                        maxHeight={1200}
+                                        showCover={true}
+                                        mobileScrollSupport={true}
+                                        className="shadow-2xl"
+                                    >
+                                        {Array.from(new Array(numPages), (el, index) => (
+                                            <div key={index} className="bg-white shadow-md bg-white">
+                                                <Page
+                                                    pageNumber={index + 1}
+                                                    width={width}
+                                                    renderAnnotationLayer={false}
+                                                    renderTextLayer={false}
+                                                />
+                                            </div>
+                                        ))}
+                                    </HTMLFlipBook>
+                                ) : (
+                                    <div className="flex flex-col items-center gap-4">
+                                        <div className="shadow-xl rounded-lg overflow-hidden border border-gray-100">
+                                            <Page
+                                                pageNumber={pageNumber}
+                                                width={width}
+                                                renderAnnotationLayer={false}
+                                                renderTextLayer={false}
+                                            />
+                                        </div>
+
+                                        <div className="flex items-center gap-6 bg-gray-100 rounded-full px-6 py-2">
+                                            <button
+                                                type="button"
+                                                disabled={pageNumber <= 1}
+                                                onClick={previousPage}
+                                                className="p-2 rounded-full hover:bg-gray-200 disabled:opacity-30 disabled:hover:bg-transparent transition-colors text-[#1d1d1f]"
+                                            >
+                                                <ChevronLeft size={24} />
+                                            </button>
+                                            <p className="text-[#1d1d1f] font-medium font-mono">
+                                                {pageNumber} / {numPages}
+                                            </p>
+                                            <button
+                                                type="button"
+                                                disabled={pageNumber >= numPages}
+                                                onClick={nextPage}
+                                                className="p-2 rounded-full hover:bg-gray-200 disabled:opacity-30 disabled:hover:bg-transparent transition-colors text-[#1d1d1f]"
+                                            >
+                                                <ChevronRight size={24} />
+                                            </button>
+                                        </div>
                                     </div>
-                                ))}
-                            </HTMLFlipBook>
+                                )}
+                            </>
                         )}
                     </Document>
                 </div>

@@ -315,8 +315,9 @@ const Curriculum: React.FC = () => {
             description="우주인 사고력 프로그램의 상세 내용을 확인해보세요."
             fileName="5_Step_Framework.pdf"
             orientation="landscape"
-            width={700}
-            height={500}
+            layout="single"
+            width={800}
+            height={600}
           />
         </motion.div>
 
