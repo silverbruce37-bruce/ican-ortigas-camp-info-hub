@@ -4,6 +4,7 @@ import { Clock, Star, Check, Rocket, Zap, Globe, MessageSquare } from 'lucide-re
 import { motion } from 'framer-motion';
 import BrochureViewer from '../components/BrochureViewer';
 import brochurePdf from '../curriculum-brochure.pdf';
+import fiveStepFrameworkPdf from '../five_step_framework.pdf';
 
 const Curriculum: React.FC = () => {
   const { content } = useLanguage();
@@ -297,6 +298,20 @@ const Curriculum: React.FC = () => {
             ))}
           </div>
         </div>
+
+        {/* 5-Step Framework PDF Viewer */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="w-full mt-16"
+        >
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-semibold text-[#1d1d1f]">📚 5단계 사고력 미래 리더 설계</h3>
+            <p className="text-[#86868b] mt-2">우주인 사고력 프로그램의 상세 내용을 확인해보세요.</p>
+          </div>
+          <BrochureViewer pdfUrl={fiveStepFrameworkPdf} />
+        </motion.div>
 
       </div>
     </div>
