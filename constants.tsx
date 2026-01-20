@@ -39,6 +39,8 @@ import nanoBananaIntroImg from './nano_banana_intro.png';
 import nanoBananaBbqImg from './nano_banana_bbq.png';
 import nanoBananaMallFoodImg from './nano_banana_mall_food.png';
 import hProperInteriorImg from './h_proper_interior.png';
+import nanoBananaJjangkaeImg from './nano_banana_jjangkae.png';
+import nanoBananaKingkongImg from './nano_banana_kingkong.png';
 
 // --- Icons Map (To share across languages) ---
 export const ICONS = {
@@ -212,7 +214,24 @@ export const BLOG_POSTS: BlogPost[] = [
       </div>
       <br/>
 
-      <h3 class="text-xl font-bold mb-2">3. 🛍️ 쇼핑몰 내 실패 없는 글로벌 맛집</h3>
+      <div class="mb-4">
+        <h4 class="font-bold text-lg text-ican-600">③ 짱개 (Jjangkae)</h4>
+        <p>에스크리바 드라이브(Jose Escriva Drive)에 위치한 <strong>한국식 중화요리 전문점</strong>입니다. 한국 사장님이 운영하셔서 짜장면, 짬뽕, 탕수육 맛이 제대로예요! 🍜 배달도 가능해서 야식으로도 인기 만점입니다.</p>
+      </div>
+
+      <img src="${nanoBananaJjangkaeImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Nano Banana Eating Jjajangmyeon" />
+
+      <h3 class="text-xl font-bold mb-2">3. 🥘 아이들이 더 좋아하는: 킹콩 부대찌개 (King Kong Budae Jjigae)</h3>
+      <p><strong>SM 메가몰 3층 (Atrium Level 3)</strong>에 위치한 부대찌개 전문점입니다.</p>
+      <ul class="list-disc ml-5 mb-4 text-gray-700 space-y-2">
+        <li><strong>무한리필의 행복:</strong> 밥과 라면 사리가 무한리필! 성장기 아이들이 배불리 먹기 딱 좋아요.</li>
+        <li><strong>키즈 프렌들리:</strong> 맵지 않은 '백부대찌개' 메뉴도 있고, 돈까스와 탕수육 같은 사이드 메뉴도 훌륭합니다. 귀여운 킹콩 캐릭터 덕분에 아이들이 정말 좋아해요! 🦍</li>
+      </ul>
+
+      <img src="${nanoBananaKingkongImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Nano Banana at King Kong Budae Jjigae" />
+      <br/>
+
+      <h3 class="text-xl font-bold mb-2">4. 🛍️ 쇼핑몰 내 실패 없는 글로벌 맛집</h3>
       <p>한식 말고 다른 게 땡길 땐 시원한 쇼핑몰로 가보세요!</p>
       <ul class="list-disc ml-5 mb-4 text-gray-700 space-y-2">
         <li><strong>야부 (Yabu):</strong> 두툼한 고기와 바삭한 튀김옷이 일품인 필리핀 최고의 돈카츠 전문점 (포디엄/메가몰)</li>
@@ -223,7 +242,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <img src="${nanoBananaMallFoodImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Nano Banana Eating Katsu and Udon" />
       <br/>
 
-      <h3 class="text-xl font-bold mb-2">4. ☕️ 식후 커피 한 잔의 여유: H Proper Coffee Roasters</h3>
+      <h3 class="text-xl font-bold mb-2">5. ☕️ 식후 커피 한 잔의 여유: H Proper Coffee Roasters</h3>
       <p>맛있는 식사 후엔 <strong>더 포디움(The Podium) 6층</strong>에 위치한 <strong>'H Proper'</strong>에서 수준 높은 스페셜티 커피를 즐겨보세요. 차분하고 세련된 인테리어 속에서 즐기는 여유! ☕️</p>
       <p><strong>위치:</strong> The Podium, Level 6, ADB Avenue</p>
 
@@ -244,7 +263,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Food",
     image: nanoBananaIntroImg,
     author: "Roy House & Nano Banana",
-    tags: ["Masil", "OrtigasFood", "NanoBanana", "Jumong", "HProper", "Doma"]
+    tags: ["Masil", "OrtigasFood", "NanoBanana", "Jumong", "Doma", "Jjangkae", "KingKong"]
   },
   {
     id: 'blog-20',
