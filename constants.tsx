@@ -207,8 +207,8 @@ export const BLOG_POSTS: BlogPost[] = [
       </div>
 
       <div class="mb-4">
-        <h4 class="font-bold text-lg text-ican-600">② 팔도 (Paldo)</h4>
-        <p>한국의 다채로운 맛을 한자리에서! 정갈한 한상차림은 물론, 짜장면과 짬뽕 같은 중식 메뉴도 훌륭해서 아이들이 정말 좋아한답니다.</p>
+        <h4 class="font-bold text-lg text-ican-600">② 도마 (Doma)</h4>
+        <p>펄 플라자 2층에 위치한 <strong>한국인 사장님이 운영하는 일식 맛집</strong>! 신선한 회와 초밥은 물론, 깔끔한 요리 덕분에 교민들 사이에서 '찐맛집'으로 통하는 곳입니다. 🍣</p>
       </div>
       <br/>
 
@@ -244,7 +244,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Food",
     image: nanoBananaIntroImg,
     author: "Roy House & Nano Banana",
-    tags: ["Masil", "OrtigasFood", "NanoBanana", "Jumong", "HProper"]
+    tags: ["Masil", "OrtigasFood", "NanoBanana", "Jumong", "HProper", "Doma"]
   },
   {
     id: 'blog-20',
