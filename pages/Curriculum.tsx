@@ -168,8 +168,9 @@ const Curriculum: React.FC = () => {
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 mb-4 transition-transform hover:scale-[1.02]"
               >
-                <h2 className="text-3xl md:text-4xl font-black bg-gradient-to-r from-[#0071E3] via-purple-600 to-pink-500 bg-clip-text text-transparent tracking-tight drop-shadow-sm">
-                  {spaceProgram.title}
+                <h2 className="flex flex-col text-3xl md:text-5xl font-black leading-none drop-shadow-sm">
+                  <span className="text-[#1d1d1f] tracking-tight">닥터아이캔</span>
+                  <span className="text-[#0071E3] tracking-widest mt-1">SPACE CAMP</span>
                 </h2>
                 <div className="bg-purple-100 p-2 rounded-full border border-purple-200 group-hover:bg-purple-200 transition-colors">
                   <Rocket className="w-6 h-6 md:w-7 md:h-7 text-purple-600 group-hover:animate-pulse" />
