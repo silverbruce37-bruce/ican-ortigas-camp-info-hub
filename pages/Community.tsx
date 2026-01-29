@@ -244,10 +244,71 @@ const HelpBoard = () => {
 
 const BusinessDirectory = () => {
     return (
-        <div className="text-center py-20 bg-white rounded-2xl shadow-sm border border-gray-100">
-            <Store className="w-16 h-16 mx-auto text-blue-300 mb-4" />
-            <h3 className="text-xl font-bold text-gray-800 mb-2">Comming Soon</h3>
-            <p className="text-gray-500">학부모님들의 비즈니스 파트너 목록이 곧 오픈됩니다.</p>
+        <div className="space-y-8 animate-fade-in">
+            <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 flex flex-col md:flex-row">
+                <div className="md:w-1/2 bg-gradient-to-br from-slate-800 to-slate-900 p-10 text-white flex flex-col justify-center relative overflow-hidden">
+                    <div className="absolute top-0 right-0 p-32 bg-blue-500/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
+                    <div className="absolute bottom-0 left-0 p-24 bg-purple-500/20 rounded-full blur-2xl -ml-10 -mb-10"></div>
+
+                    <div className="relative z-10">
+                        <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 backdrop-blur-sm">
+                            <Users className="w-6 h-6 text-blue-300" />
+                        </div>
+                        <h2 className="text-3xl font-bold mb-4 leading-tight">
+                            선한 영향력을 나누는<br />
+                            <span className="text-blue-300">비즈니스 파트너십</span>
+                        </h2>
+                        <p className="text-slate-300 leading-relaxed opacity-90">
+                            아이캔의 선진 시스템은 언제든 선한 뜻을 품은 파트너와 함께할 준비가 되어 있습니다.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="md:w-1/2 p-10 flex flex-col justify-center">
+                    <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                        <span className="w-1.5 h-6 bg-blue-600 rounded-full"></span>
+                        Collaboration & Vision
+                    </h3>
+
+                    <p className="text-gray-600 leading-loose mb-6">
+                        우리는 단순한 이익 창출을 넘어, <strong>"미래의 역군을 세우는 일"</strong>에 소명을 가진 분들을 기다립니다.<br /><br />
+                        여러분이 가진 탁월한 능력과 아이캔의 교육 플랫폼이 만나면 세상에 더 놀라운 가치를 전할 수 있습니다.
+                        서로의 강점을 나누고 협력하여 하나님이 기뻐하시는 선하고 복된 프로젝트를 함께 만들어갑시다.
+                    </p>
+
+                    <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100 mb-6">
+                        <div className="flex items-start gap-3">
+                            <div className="bg-blue-100 p-2 rounded-full text-blue-600 mt-1">
+                                <Store size={18} />
+                            </div>
+                            <div>
+                                <h4 className="font-bold text-gray-900 text-sm mb-1">열린 제휴 제안</h4>
+                                <p className="text-xs text-gray-500">교육 콘텐츠, IT 기술, 문화 예술, 봉사 등 분야에 제한 없이 협력을 환영합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a
+                        href="mailto:partner@icancamp.com"
+                        className="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 group"
+                    >
+                        제휴 제안하기 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                    </a>
+                </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 opacity-60">
+                {[
+                    { title: "교육 협력", desc: "커리큘럼 및 강사 교류" },
+                    { title: "기술 제휴", desc: "IT 플랫폼 및 서비스 연동" },
+                    { title: "문화 사역", desc: "전시, 공연, 캠프 기획" }
+                ].map((item, i) => (
+                    <div key={i} className="bg-white p-6 rounded-2xl border border-gray-100 text-center">
+                        <h4 className="font-bold text-gray-900 mb-1">{item.title}</h4>
+                        <p className="text-xs text-gray-400">{item.desc}</p>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };
