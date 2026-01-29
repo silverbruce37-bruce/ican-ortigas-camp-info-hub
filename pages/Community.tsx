@@ -259,8 +259,9 @@ const MissionaryJourneyPost = ({ onBack }: { onBack: () => void }) => {
         <div className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 animate-fade-in">
             <div className="relative h-64 md:h-96 bg-gray-900">
                 {/* Placeholder for Bible/Map image */}
+                {/* Valid Ancient Map Image */}
                 <img
-                    src="https://images.unsplash.com/photo-1507490807718-dd1609218df8?q=80&w=2070&auto=format&fit=crop"
+                    src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop"
                     alt="Missionary Journey Map"
                     className="w-full h-full object-cover opacity-60"
                 />
@@ -415,7 +416,7 @@ const TentmakerStories = () => {
                 <div className="md:flex">
                     <div className="md:w-1/2 h-64 md:h-auto overflow-hidden relative">
                         <img
-                            src="https://images.unsplash.com/photo-1507490807718-dd1609218df8?q=80&w=2070&auto=format&fit=crop"
+                            src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop"
                             alt="Ancient Map"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         />
