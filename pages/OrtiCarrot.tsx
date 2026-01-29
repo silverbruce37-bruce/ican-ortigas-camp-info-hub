@@ -74,6 +74,18 @@ const OrtiCarrot: React.FC<OrtiCarrotProps> = ({ embedded = false }) => {
     const categories = ['All', 'Mission', 'Sharing', 'Book', 'Electronics', 'Digital', 'Clothing', 'Kitchen', 'Furniture'];
     const sellCategories = categories.filter(c => c !== 'All' && c !== 'Sharing' && c !== 'Mission');
 
+    const categoryLabels: Record<string, string> = {
+        'All': '전체',
+        'Mission': '선교 후원',
+        'Sharing': '무료 나눔',
+        'Book': '도서',
+        'Electronics': '생활가전',
+        'Digital': '디지털/컴퓨터',
+        'Clothing': '의류/잡화',
+        'Kitchen': '주방용품',
+        'Furniture': '가구/인테리어'
+    };
+
     const filteredItems = items.filter(item => {
         const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory;
@@ -386,7 +398,7 @@ const OrtiCarrot: React.FC<OrtiCarrotProps> = ({ embedded = false }) => {
                                     onClick={() => setSelectedCategory(cat)}
                                     className={`text-sm font-medium transition-colors ${selectedCategory === cat ? 'text-orange-500' : 'text-gray-500 hover:text-black'}`}
                                 >
-                                    {cat}
+                                    {categoryLabels[cat]}
                                 </button>
                             ))}
                         </div>
@@ -488,7 +500,7 @@ const OrtiCarrot: React.FC<OrtiCarrotProps> = ({ embedded = false }) => {
 
                                 <div className="mb-6">
                                     <h2 className="text-xl font-bold mb-2">{selectedItem.title}</h2>
-                                    <div className="text-gray-400 text-xs mb-4">{selectedItem.category} · {new Date(selectedItem.time).toLocaleString()}</div>
+                                    <div className="text-gray-400 text-xs mb-4">{categoryLabels[selectedItem.category]} · {new Date(selectedItem.time).toLocaleString()}</div>
                                     <div className="text-base text-gray-700 whitespace-pre-wrap leading-relaxed">
                                         {selectedItem.description}
                                     </div>
@@ -618,7 +630,7 @@ const OrtiCarrot: React.FC<OrtiCarrotProps> = ({ embedded = false }) => {
                                 value={sellForm.category}
                                 onChange={e => setSellForm({ ...sellForm, category: e.target.value })}
                             >
-                                {sellCategories.map(c => <option key={c} value={c}>{c}</option>)}
+                                {sellCategories.map(c => <option key={c} value={c}>{categoryLabels[c]}</option>)}
                             </select>
                             <textarea
                                 placeholder="Description..."
