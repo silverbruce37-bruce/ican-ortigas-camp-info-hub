@@ -1,19 +1,17 @@
-
 import React from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, ScrollRestoration, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Curriculum from './pages/Curriculum';
 import VisaAndEntry from './pages/VisaAndEntry';
 import LivingInfo from './pages/LivingInfo';
-import GolfTour from './pages/GolfTour';
+import GolfTour from './pages/GolfTour'; // NEW
 import FAQ from './pages/FAQ';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import BlogAdmin from './pages/BlogAdmin';
-import AdminLogin from './pages/AdminLogin';
+import AdminLogin from './pages/AdminLogin'; // New Page
 import OrtiCarrot from './pages/OrtiCarrot';
-import Community from './pages/Community';
 import MyPage from './pages/MyPage';
 import Vision from './pages/Vision';
 import { LanguageProvider } from './context/LanguageContext';
@@ -49,11 +47,11 @@ const App: React.FC = () => {
                     <Route path="curriculum" element={<Curriculum />} />
                     <Route path="fees" element={<VisaAndEntry />} />
                     <Route path="living" element={<LivingInfo />} />
-                    <Route path="community" element={<Community />} />
-                    {/* Keep old route for backward compatibility if needed, or remove */}
+                    {/* golf-tour moved out */}
                     <Route path="orticarrot" element={<OrtiCarrot />} />
                     <Route path="mypage" element={<MyPage />} />
                     <Route path="blog" element={<Blog />} />
+                    {/* Specific route for admin must come before dynamic :id route */}
                     <Route path="blog/admin" element={<BlogAdmin />} />
                     <Route path="blog/:id" element={<BlogPost />} />
                     <Route path="faq" element={<FAQ />} />

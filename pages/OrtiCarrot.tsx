@@ -8,7 +8,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import heic2any from 'heic2any';
 
-const OrtiCarrot: React.FC = () => {
+interface OrtiCarrotProps {
+    embedded?: boolean;
+}
+
+const OrtiCarrot: React.FC<OrtiCarrotProps> = ({ embedded = false }) => {
     const { user, loginWithGoogle, updateProfile } = useAuth();
     const { items, addItem, createOrGetChat } = useCarrot();
     const navigate = useNavigate();
@@ -334,59 +338,61 @@ const OrtiCarrot: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 font-sans text-gray-900 pb-20">
-            {/* Header */}
-            <header className="bg-white sticky top-0 z-30 shadow-sm">
-                <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-                    <h1 className="text-xl font-bold text-orange-500 tracking-tight">Orti Market</h1>
-                    <div className="flex items-center gap-4">
-                        <button
-                            onClick={handleSellClick}
-                            className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow hover:bg-orange-600 transition-all flex items-center gap-1"
-                        >
-                            <Plus size={16} /> Sell
-                        </button>
-                        {!user ? (
-                            <button onClick={() => setIsLoginModalOpen(true)} className="text-gray-500 hover:text-black">
-                                <User size={24} />
-                            </button>
-                        ) : (
-                            <Link to="/mypage">
-                                <img src={user.profileImage} alt={user.name} className="w-8 h-8 rounded-full object-cover border border-gray-200" />
-                            </Link>
-                        )}
-                    </div>
-                </div>
-
-                {/* Search Bar */}
-                <div className="max-w-5xl mx-auto px-4 pb-4">
-                    <div className="relative">
-                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
-                        <input
-                            type="text"
-                            placeholder="우리 동네 중고 직거래"
-                            className="w-full bg-gray-100 rounded-lg pl-10 pr-4 py-2 text-sm outline-none focus:ring-2 focus:ring-orange-200"
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                        />
-                    </div>
-                </div>
-
-                {/* Categories */}
-                <div className="border-t border-gray-100 overflow-x-auto">
-                    <div className="max-w-5xl mx-auto px-4 flex gap-6 py-3 whitespace-nowrap">
-                        {categories.map(cat => (
+        <div className={`min-h-screen bg-gray-50 font-sans text-gray-900 pb-20 ${embedded ? 'min-h-0 pb-0' : ''}`}>
+            {/* Header - Only show if not embedded */}
+            {!embedded && (
+                <header className="bg-white sticky top-0 z-30 shadow-sm">
+                    <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+                        <h1 className="text-xl font-bold text-orange-500 tracking-tight">Orti Market</h1>
+                        <div className="flex items-center gap-4">
                             <button
-                                key={cat}
-                                onClick={() => setSelectedCategory(cat)}
-                                className={`text-sm font-medium transition-colors ${selectedCategory === cat ? 'text-orange-500' : 'text-gray-500 hover:text-black'}`}
+                                onClick={handleSellClick}
+                                className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow hover:bg-orange-600 transition-all flex items-center gap-1"
                             >
-                                {cat}
+                                <Plus size={16} /> Sell
                             </button>
-                        ))}
+                            {!user ? (
+                                <button onClick={() => setIsLoginModalOpen(true)} className="text-gray-500 hover:text-black">
+                                    <User size={24} />
+                                </button>
+                            ) : (
+                                <Link to="/mypage">
+                                    <img src={user.profileImage} alt={user.name} className="w-8 h-8 rounded-full object-cover border border-gray-200" />
+                                </Link>
+                            )}
+                        </div>
                     </div>
-                </div>
-            </header>
+
+                    {/* Search Bar */}
+                    <div className="max-w-5xl mx-auto px-4 pb-4">
+                        <div className="relative">
+                            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+                            <input
+                                type="text"
+                                placeholder="우리 동네 중고 직거래"
+                                className="w-full bg-gray-100 rounded-lg pl-10 pr-4 py-2 text-sm outline-none focus:ring-2 focus:ring-orange-200"
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                            />
+                        </div>
+                    </div>
+
+                    {/* Categories */}
+                    <div className="border-t border-gray-100 overflow-x-auto">
+                        <div className="max-w-5xl mx-auto px-4 flex gap-6 py-3 whitespace-nowrap">
+                            {categories.map(cat => (
+                                <button
+                                    key={cat}
+                                    onClick={() => setSelectedCategory(cat)}
+                                    className={`text-sm font-medium transition-colors ${selectedCategory === cat ? 'text-orange-500' : 'text-gray-500 hover:text-black'}`}
+                                >
+                                    {cat}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                </header>
+            )}
 
             {/* Item List */}
             <main className="max-w-5xl mx-auto px-4 py-6">
