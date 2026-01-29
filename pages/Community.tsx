@@ -396,8 +396,83 @@ const PaulEpistlesAppPost = ({ onBack }: { onBack: () => void }) => {
     )
 }
 
+const OrtigasNewsPost = ({ onBack }: { onBack: () => void }) => {
+    return (
+        <div className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 animate-fade-in">
+            <div className="relative h-64 md:h-96 bg-emerald-900">
+                <img
+                    src="https://images.unsplash.com/photo-1518558997970-4ddc236affcd?q=80&w=2070&auto=format&fit=crop"
+                    alt="Manila Skyline and Street"
+                    className="w-full h-full object-cover opacity-60"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 to-transparent flex items-end">
+                    <div className="p-8 text-white">
+                        <div className="flex gap-2 mb-3">
+                            <div className="bg-emerald-600 text-xs font-bold px-3 py-1 rounded-full inline-block">Today's Insight</div>
+                            <div className="bg-white/20 text-xs font-bold px-3 py-1 rounded-full inline-block backdrop-blur-md">2026.01.29</div>
+                        </div>
+                        <h2 className="text-2xl md:text-4xl font-bold mb-2 leading-tight">
+                            오늘의 희망과 좌절: 올티가스의 두 얼굴,<br className="hidden md:block" />
+                            그럼에도 우리는 내일을 심습니다.
+                        </h2>
+                    </div>
+                </div>
+                <button
+                    onClick={onBack}
+                    className="absolute top-6 left-6 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white px-4 py-2 rounded-full text-sm font-bold transition-all"
+                >
+                    ← Back to Stories
+                </button>
+            </div>
+
+            <div className="max-w-3xl mx-auto px-6 py-12">
+                <div className="prose prose-lg mx-auto text-gray-700">
+                    <p className="lead text-xl font-medium text-emerald-900 leading-relaxed mb-8 border-l-4 border-emerald-500 pl-4 py-1 bg-emerald-50 rounded-r-lg">
+                        "높아지는 마천루의 그림자 아래에서도, 아이들의 웃음소리는 여전히 태양보다 밝게 빛납니다."
+                    </p>
+
+                    <h3 className="font-bold text-gray-900 mt-10 mb-4 text-lg">
+                        🏙️ 올티가스의 아침: 성장통을 겪는 도시
+                    </h3>
+                    <p className="text-sm md:text-base leading-relaxed mb-6">
+                        오늘 아침, 올티가스 센터의 출근길은 여느 때보다 분주했습니다. 필리핀 경제지표가 상승 곡선을 그리고 있다는 뉴스가 들려옵니다.
+                        새로 올라가는 거대한 빌딩들은 이 도시의 역동성을 증명하는 듯합니다. 글로벌 기업들이 입주하고, 젊은 인재들이 모여들고 있습니다.
+                        <br /><br />
+                        하지만 그 화려한 유리창 반대편, 좁은 골목길의 풍경은 여전한 숙제를 안고 있습니다.
+                        치솟는 물가는 서민들의 장바구니를 가볍게 만들고, 여전히 학교 대신 거리로 나와야 하는 아이들이 눈에 밟힙니다.
+                        성장의 빛이 강할수록, 소외의 그림자도 짙어지는 것이 현대 도시의 아픈 현실일지도 모릅니다.
+                    </p>
+
+                    <h3 className="font-bold text-gray-900 mt-10 mb-4 text-lg">
+                        🌱 그럼에도 불구하고: 우리는 '오늘'을 사랑합니다
+                    </h3>
+                    <p className="text-sm md:text-base leading-relaxed mb-6">
+                        가끔은 이 거대한 빈부의 격차와 해결되지 않는 사회적 문제들 앞에서 무력감을 느끼기도 합니다.
+                        "우리의 작은 노력이 과연 무엇을 바꿀 수 있을까?"라는 질문이 맴돌기도 합니다.
+                        <br /><br />
+                        하지만 오늘, 캠프에 도착해 아이들의 눈망울을 보았을 때 그 질문에 대한 답을 찾았습니다.
+                        우리는 세상을 단번에 뒤집는 혁명가가 아닙니다. 우리는 <strong>오늘 하루, 한 아이의 마음에 '배움'과 '사랑'이라는 씨앗을 심는 농부</strong>입니다.
+                    </p>
+
+                    <div className="bg-gray-50 p-8 rounded-2xl my-10 border-t-2 border-emerald-500 text-center">
+                        <h4 className="font-bold text-gray-900 mb-4">📢 오늘의 기도 제목</h4>
+                        <p className="text-gray-600 italic mb-4">
+                            "필리핀의 위정자들에게 지혜를 주셔서 경제 성장이 소외된 이들에게도 흘러가게 하소서.<br />
+                            오늘 우리 아이들이 배우는 지식이, 훗날 이 땅을 치유하는 도구가 되게 하소서."
+                        </p>
+                    </div>
+
+                    <p className="text-center font-medium text-gray-400 mt-12 text-sm">
+                        Editor: Paul (Community Tentmaker)
+                    </p>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 const TentmakerStories = () => {
-    const [view, setView] = useState<'list' | 'paul_journey' | 'paul_epistles'>('list');
+    const [view, setView] = useState<'list' | 'paul_journey' | 'paul_epistles' | 'ortigas_news'>('list');
 
     if (view === 'paul_journey') {
         return <MissionaryJourneyPost onBack={() => setView('list')} />;
@@ -405,70 +480,103 @@ const TentmakerStories = () => {
     if (view === 'paul_epistles') {
         return <PaulEpistlesAppPost onBack={() => setView('list')} />;
     }
+    if (view === 'ortigas_news') {
+        return <OrtigasNewsPost onBack={() => setView('list')} />;
+    }
 
     return (
         <div className="space-y-8">
-            {/* Paul's Journey Card */}
+            {/* Today's Insight (Featured) */}
             <div
-                onClick={() => setView('paul_journey')}
-                className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer group border border-gray-100"
+                onClick={() => setView('ortigas_news')}
+                className="bg-emerald-900 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all cursor-pointer group relative border border-emerald-800"
             >
-                <div className="md:flex">
+                <div className="md:flex h-full">
                     <div className="md:w-1/2 h-64 md:h-auto overflow-hidden relative">
+                        <img
+                            src="https://images.unsplash.com/photo-1518558997970-4ddc236affcd?q=80&w=2070&auto=format&fit=crop"
+                            alt="Manila City"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80"
+                        />
+                    </div>
+                    <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center text-white relative z-10">
+                        <div className="absolute top-0 right-0 p-32 bg-emerald-500/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
+                        <div className="flex items-center gap-2 mb-4">
+                            <div className="bg-emerald-500 text-xs font-bold px-3 py-1 rounded-full">New</div>
+                            <span className="text-emerald-200 text-xs">2026.01.29</span>
+                        </div>
+                        <h3 className="text-2xl font-bold mb-3 leading-snug">
+                            오늘의 희망과 좌절: 올티가스의 두 얼굴
+                        </h3>
+                        <p className="text-emerald-100/80 mb-6 line-clamp-2 text-sm">
+                            변화하는 필리핀의 정세 속에서 우리는 무엇을 바라봐야 할까요? 그곳에 피어나는 작은 희망을 이야기합니다.
+                        </p>
+                        <div className="flex items-center gap-2 text-white font-bold text-sm group-hover:underline decoration-emerald-400 underline-offset-4">
+                            칼럼 읽기 <ArrowRight size={16} />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Paul's Journey Card */}
+                <div
+                    onClick={() => setView('paul_journey')}
+                    className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer group border border-gray-100 flex flex-col"
+                >
+                    <div className="h-48 overflow-hidden relative">
                         <img
                             src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop"
                             alt="Ancient Map"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         />
                         <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold">
-                            Devotion & Tech
+                            Devotion
                         </div>
                     </div>
-                    <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            바울과 함께 한 40일간의 선교여행
+                    <div className="p-6 flex flex-col flex-grow">
+                        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                            바울과 함께 한 40일
                         </h3>
-                        <p className="text-gray-600 mb-6 line-clamp-3">
-                            지도를 펼치고 바울의 발자취를 따라가며 오늘 나의 삶을 비추어보는 영적 순례의 길입니다.
+                        <p className="text-gray-500 text-sm line-clamp-2 mb-4 flex-grow">
+                            지도를 펼치고 떠나는 영적 순례의 길.
                         </p>
-                        <div className="flex items-center gap-2 text-blue-600 font-bold text-sm">
-                            이야기 읽기 <ArrowRight size={16} />
+                        <div className="flex items-center gap-2 text-blue-600 font-bold text-xs mt-auto">
+                            Read More <ArrowRight size={14} />
                         </div>
                     </div>
                 </div>
-            </div>
 
-            {/* Paul's Epistles App Card */}
-            <div
-                onClick={() => setView('paul_epistles')}
-                className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer group border border-gray-100"
-            >
-                <div className="md:flex flex-row-reverse">
-                    <div className="md:w-1/2 h-64 md:h-auto overflow-hidden relative">
+                {/* Paul's Epistles App Card */}
+                <div
+                    onClick={() => setView('paul_epistles')}
+                    className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer group border border-gray-100 flex flex-col"
+                >
+                    <div className="h-48 overflow-hidden relative">
                         <img
                             src="https://images.unsplash.com/photo-1519791883288-dc8bd696e667?q=80&w=2070&auto=format&fit=crop"
                             alt="Reading Bible"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         />
-                        <div className="absolute top-4 right-4 bg-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">
-                            New App
+                        <div className="absolute top-4 left-4 bg-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                            App
                         </div>
                     </div>
-                    <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                    <div className="p-6 flex flex-col flex-grow">
+                        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors">
                             바울 서신서 깊이 읽기
                         </h3>
-                        <p className="text-gray-600 mb-6 line-clamp-3">
-                            2천 년 전의 편지가 오늘 당신에게 말을 겁니다. 심사숙고하여 만든 묵상 앱을 통해 바울의 깊은 영성을 만나보세요.
+                        <p className="text-gray-500 text-sm line-clamp-2 mb-4 flex-grow">
+                            2천 년 전의 편지가 오늘 당신에게 말을 겁니다.
                         </p>
-                        <div className="flex items-center gap-2 text-indigo-600 font-bold text-sm">
-                            앱 소개 보기 <ArrowRight size={16} />
+                        <div className="flex items-center gap-2 text-indigo-600 font-bold text-xs mt-auto">
+                            Check App <ArrowRight size={14} />
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="text-center py-10 bg-gray-50 rounded-2xl border border-dashed border-gray-200">
+            <div className="text-center py-10 bg-gray-50 rounded-2xl border border-dashed border-gray-200 mt-6">
                 <MessageCircle className="w-12 h-12 mx-auto text-gray-300 mb-3" />
                 <p className="text-gray-400">더 많은 텐트메이커들의 이야기가 준비 중입니다.</p>
             </div>
