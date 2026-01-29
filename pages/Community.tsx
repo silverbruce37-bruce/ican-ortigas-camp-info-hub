@@ -1,8 +1,9 @@
+
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { useAuth } from '../context/AuthContext';
 import { COMMUNITY_DATA } from '../constants_community';
-import { Users, Store, Heart, MessageCircle, ArrowRight, BookOpen, Compass, Map } from 'lucide-react';
+import { Users, Store, Heart, MessageCircle, ArrowRight, BookOpen, Compass, Map, ExternalLink } from 'lucide-react';
 import OrtiCarrot from './OrtiCarrot';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -316,25 +317,6 @@ const MissionaryJourneyPost = ({ onBack }: { onBack: () => void }) => {
                         </ul>
                     </div>
 
-                    {/* Link to External App/Site */}
-                    <div className="text-center space-y-4">
-                        <p className="text-gray-600 mb-2">
-                            👇 지금 바로 바울의 여정을 따라가 보세요!
-                        </p>
-                        <a
-                            href="https://missionary-journey-map.vercel.app/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all text-lg"
-                        >
-                            <Map size={24} />
-                            40일간의 선교여행 떠나기
-                        </a>
-                        <p className="text-xs text-gray-400 mt-2">
-                            * 별도의 설치 없이 웹에서 바로 보실 수 있습니다.
-                        </p>
-                    </div>
-
                     <p className="text-center font-medium italic text-gray-500 mt-12">
                         "우리의 이야기가 당신의 이야기가 되기를 기도합니다."
                     </p>
@@ -344,17 +326,90 @@ const MissionaryJourneyPost = ({ onBack }: { onBack: () => void }) => {
     )
 }
 
-const TentmakerStories = () => {
-    const [view, setView] = useState<'list' | 'paul'>('list');
+const PaulEpistlesAppPost = ({ onBack }: { onBack: () => void }) => {
+    return (
+        <div className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 animate-fade-in">
+            <div className="relative h-64 md:h-96 bg-gray-900">
+                <img
+                    src="https://images.unsplash.com/photo-1519791883288-dc8bd696e667?q=80&w=2070&auto=format&fit=crop"
+                    alt="Paul's Epistles"
+                    className="w-full h-full object-cover opacity-60"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end">
+                    <div className="p-8 text-white">
+                        <div className="bg-indigo-500 text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">Deep Devotion</div>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-2">바울 서신서 깊이 읽기</h2>
+                        <p className="text-lg md:text-xl opacity-90">당신에게 보내는 2천 년 전의 편지. 삶을 관통하는 통찰을 만나다.</p>
+                    </div>
+                </div>
+                <button
+                    onClick={onBack}
+                    className="absolute top-6 left-6 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white px-4 py-2 rounded-full text-sm font-bold transition-all"
+                >
+                    ← Back to Stories
+                </button>
+            </div>
 
-    if (view === 'paul') {
+            <div className="max-w-3xl mx-auto px-6 py-12">
+                <div className="prose prose-lg mx-auto text-gray-700">
+                    <p className="lead text-2xl font-medium text-gray-900 leading-relaxed mb-8">
+                        "내가 약할 때, 그때가 곧 강함이라."<br />
+                        역설적인 이 고백 속에 담긴 진정한 자유를 경험해 보세요.
+                    </p>
+
+                    <h3 className="flex items-center gap-2 text-xl font-bold text-gray-900 mt-10 mb-4">
+                        <BookOpen className="text-indigo-600" /> 신앙을 처음 접하는 분들에게
+                    </h3>
+                    <p>
+                        바울 서신서는 단순한 종교 경전이 아닙니다. 감옥에 갇혀서도 기쁨을 노래하고,
+                        죽음 앞에서도 소망을 잃지 않았던 한 인간의 치열한 삶의 기록입니다.
+                        로마서, 고린도전후서, 갈라디아서... 이 오래된 편지들 속에 담긴 지혜는
+                        혼란스러운 현대 사회를 살아가는 우리에게도 놀라운 통찰을 줍니다.
+                    </p>
+
+                    <div className="bg-indigo-50 p-8 rounded-2xl my-8 border border-indigo-100 text-center">
+                        <h4 className="font-bold text-indigo-900 mb-4 text-xl">
+                            📱 바울 서신서 묵상 앱 (웹)
+                        </h4>
+                        <p className="text-gray-600 mb-6">
+                            복잡한 기능은 덜어내고, 오직 말씀과 묵상에만 집중할 수 있도록 만들었습니다.
+                            언제 어디서든 바울의 편지를 꺼내 읽어보세요.
+                        </p>
+                        <a
+                            href="https://pauline-epistles-viewer.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all text-lg"
+                        >
+                            <ExternalLink size={20} />
+                            서신서 묵상 시작하기
+                        </a>
+                    </div>
+
+                    <p className="text-center font-medium italic text-gray-500 mt-12">
+                        "오래된 편지가 당신의 삶을 새롭게 할 것입니다."
+                    </p>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+const TentmakerStories = () => {
+    const [view, setView] = useState<'list' | 'paul_journey' | 'paul_epistles'>('list');
+
+    if (view === 'paul_journey') {
         return <MissionaryJourneyPost onBack={() => setView('list')} />;
+    }
+    if (view === 'paul_epistles') {
+        return <PaulEpistlesAppPost onBack={() => setView('list')} />;
     }
 
     return (
         <div className="space-y-8">
+            {/* Paul's Journey Card */}
             <div
-                onClick={() => setView('paul')}
+                onClick={() => setView('paul_journey')}
                 className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer group border border-gray-100"
             >
                 <div className="md:flex">
@@ -373,11 +428,40 @@ const TentmakerStories = () => {
                             바울과 함께 한 40일간의 선교여행
                         </h3>
                         <p className="text-gray-600 mb-6 line-clamp-3">
-                            단순한 성경 공부가 아닙니다. 지도를 펼치고 바울의 발자취를 따라가며
-                            오늘 나의 삶을 비추어보는 영적 순례의 길입니다. 예수님을 모르는 분들에게도 추천합니다.
+                            지도를 펼치고 바울의 발자취를 따라가며 오늘 나의 삶을 비추어보는 영적 순례의 길입니다.
                         </p>
                         <div className="flex items-center gap-2 text-blue-600 font-bold text-sm">
                             이야기 읽기 <ArrowRight size={16} />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Paul's Epistles App Card */}
+            <div
+                onClick={() => setView('paul_epistles')}
+                className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer group border border-gray-100"
+            >
+                <div className="md:flex flex-row-reverse">
+                    <div className="md:w-1/2 h-64 md:h-auto overflow-hidden relative">
+                        <img
+                            src="https://images.unsplash.com/photo-1519791883288-dc8bd696e667?q=80&w=2070&auto=format&fit=crop"
+                            alt="Reading Bible"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div className="absolute top-4 right-4 bg-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                            New App
+                        </div>
+                    </div>
+                    <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                        <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                            바울 서신서 깊이 읽기
+                        </h3>
+                        <p className="text-gray-600 mb-6 line-clamp-3">
+                            2천 년 전의 편지가 오늘 당신에게 말을 겁니다. 심사숙고하여 만든 묵상 앱을 통해 바울의 깊은 영성을 만나보세요.
+                        </p>
+                        <div className="flex items-center gap-2 text-indigo-600 font-bold text-sm">
+                            앱 소개 보기 <ArrowRight size={16} />
                         </div>
                     </div>
                 </div>
