@@ -24,6 +24,11 @@ const MapBoundsUpdater: React.FC<{ items: LivingInfoItem[], center: { lat: numbe
   const map = useMap();
 
   useEffect(() => {
+    // Force a resize calculation to ensure tiles load correctly (fixes "halfway" map issue)
+    setTimeout(() => {
+      map.invalidateSize();
+    }, 100);
+
     if (items.length > 0) {
       const markers = items.map(item => [item.coordinates!.lat, item.coordinates!.lng] as [number, number]);
       // Include Academy Center
