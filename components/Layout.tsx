@@ -53,19 +53,19 @@ const Layout: React.FC = () => {
             <span className="opacity-90 tracking-tight">아이캔 캠프앱은 <span className="text-white font-medium">폴샘의 지휘하에 다양한 AI 에이전트의 협업</span>으로 만들어졌습니다.</span>
           </div>
         </div>
-        <div className="max-w-[1024px] mx-auto px-6 h-[48px] flex items-center justify-between">
-          {/* Logo */}
+        <div className="max-w-[1024px] mx-auto px-6 h-[48px] flex items-center justify-between gap-4 md:gap-8">
+          {/* Logo - Bezaleel's Touch: Added shrink-0 to protect the brand identity */}
           <NavLink
             to="/"
-            className={`text-[19px] font-semibold tracking-tight transition-colors flex items-center ${scrolled || isMobileMenuOpen ? 'text-ink' : 'text-white'}`}
+            className={`text-[19px] font-semibold tracking-tight transition-colors flex items-center shrink-0 ${scrolled || isMobileMenuOpen ? 'text-ink' : 'text-white'}`}
             aria-label="ICAN Camp Home"
           >
-            <Rocket className="w-5 h-5 mr-2" />
-            ICAN CAMP
+            <Rocket className="w-5 h-5 mr-2 text-ican-500" />
+            <span className="font-bold tracking-tighter">ICAN CAMP</span>
           </NavLink>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8" aria-label="Main Navigation">
+          {/* Desktop Nav - Bezaleel's Touch: Centered with margins for breathing room */}
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8 mx-4" aria-label="Main Navigation">
             {navItems.map((item) => (
               <NavLink
                 key={item.path}
