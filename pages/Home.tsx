@@ -11,13 +11,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="font-sans bg-white text-black">
-      {/* Top Tech Banner */}
-      <div className="bg-gray-900 text-gray-300 text-[10px] md:text-xs py-2 text-center relative z-20">
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-center gap-2">
-          <span className="bg-blue-600 text-white px-1.5 py-0.5 rounded-[3px] font-bold tracking-wider">TECH</span>
-          <span className="opacity-90 tracking-tight">아이캔 캠프앱은 <span className="text-white font-medium">폴샘의 지휘하에 다양한 AI 에이전트의 협업</span>으로 만들어졌습니다.</span>
-        </div>
-      </div>
+
 
       {/* Hero Section */}
       <section className="min-h-[60vh] flex flex-col items-center justify-center text-center p-8 pt-32 pb-16">

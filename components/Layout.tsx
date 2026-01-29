@@ -43,9 +43,16 @@ const Layout: React.FC = () => {
     <div className="min-h-screen flex flex-col font-sans text-ink bg-paper selection:bg-accent selection:text-white relative">
       {/* Apple-style Global Nav Header */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || isMobileMenuOpen ? 'bg-white/80 backdrop-blur-md shadow-sm' : 'bg-[#1D1D1F]/90 backdrop-blur-md'
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 flex flex-col ${scrolled || isMobileMenuOpen ? 'bg-white/80 backdrop-blur-md shadow-sm' : 'bg-[#1D1D1F]/90 backdrop-blur-md'
           }`}
       >
+        {/* Top Tech Banner - Global */}
+        <div className="bg-gray-900 text-gray-300 text-[10px] md:text-xs py-2 text-center relative z-20 w-full border-b border-white/10">
+          <div className="max-w-7xl mx-auto px-4 flex items-center justify-center gap-2">
+            <span className="bg-blue-600 text-white px-1.5 py-0.5 rounded-[3px] font-bold tracking-wider text-[9px] md:text-[10px]">TECH</span>
+            <span className="opacity-90 tracking-tight">아이캔 캠프앱은 <span className="text-white font-medium">폴샘의 지휘하에 다양한 AI 에이전트의 협업</span>으로 만들어졌습니다.</span>
+          </div>
+        </div>
         <div className="max-w-[1024px] mx-auto px-6 h-[48px] flex items-center justify-between">
           {/* Logo */}
           <NavLink
@@ -153,8 +160,8 @@ const Layout: React.FC = () => {
         </AnimatePresence>
       </header>
 
-      {/* Main Content - adjusted for fixed header */}
-      <main className="flex-grow pt-[48px]">
+      {/* Main Content - adjusted for fixed header + banner */}
+      <main className="flex-grow pt-[84px]">
         <Outlet />
       </main>
 
