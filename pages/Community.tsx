@@ -246,21 +246,26 @@ const BusinessDirectory = () => {
     return (
         <div className="space-y-8 animate-fade-in">
             <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 flex flex-col md:flex-row">
-                <div className="md:w-1/2 bg-gradient-to-br from-slate-800 to-slate-900 p-10 text-white flex flex-col justify-center relative overflow-hidden">
-                    <div className="absolute top-0 right-0 p-32 bg-blue-500/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
-                    <div className="absolute bottom-0 left-0 p-24 bg-purple-500/20 rounded-full blur-2xl -ml-10 -mb-10"></div>
-
-                    <div className="relative z-10">
-                        <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 backdrop-blur-sm">
-                            <Users className="w-6 h-6 text-blue-300" />
+                <div className="md:w-1/2 relative overflow-hidden min-h-[300px] md:min-h-0">
+                    <img
+                        src="/assets/partnership_handshake.png"
+                        alt="Partnership Handshake"
+                        className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/40 p-10 flex flex-col justify-end">
+                        <div className="relative z-10">
+                            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 backdrop-blur-sm border border-white/20">
+                                <Users className="w-6 h-6 text-blue-300" />
+                            </div>
+                            <h2 className="text-3xl font-bold mb-4 leading-tight text-white">
+                                선한 영향력을 나누는<br />
+                                <span className="text-blue-300">비즈니스 파트너십</span>
+                            </h2>
+                            <p className="text-slate-200 leading-relaxed font-medium text-shadow-sm">
+                                "청년의 열정과 아이캔의 연륜이 만나<br />
+                                더 큰 내일을 만들어갑니다."
+                            </p>
                         </div>
-                        <h2 className="text-3xl font-bold mb-4 leading-tight">
-                            선한 영향력을 나누는<br />
-                            <span className="text-blue-300">비즈니스 파트너십</span>
-                        </h2>
-                        <p className="text-slate-300 leading-relaxed opacity-90">
-                            아이캔의 선진 시스템은 언제든 선한 뜻을 품은 파트너와 함께할 준비가 되어 있습니다.
-                        </p>
                     </div>
                 </div>
 
