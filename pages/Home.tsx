@@ -6,6 +6,7 @@ import { useLanguage } from '../context/LanguageContext';
 import ConundrumCard from '../components/ConundrumCard';
 import heroMonitorImg from '../hero-monitor-final-wide.png';
 import TeamShowcase from '../components/TeamShowcase';
+import CurriculumSystem from '../components/CurriculumSystem';
 
 const Home: React.FC = () => {
   const { content } = useLanguage();
@@ -101,6 +102,9 @@ const Home: React.FC = () => {
           />
         </motion.div>
       </section>
+
+      {/* NEW: Systematic Curriculum AI Engine */}
+      <CurriculumSystem />
 
       <section className="py-16 px-4 mt-8">
         <div className="text-center mb-10">
