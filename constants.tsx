@@ -1609,6 +1609,7 @@ export const KO_DATA = {
     fees: "비용안내",
     living: "생활정보",
     carrot: "올티캐롯", // NEW
+    counseling: "상담일지",
     blog: "로이하우스 블로그",
     faq: "FAQ",
     contact: "Contact Us"
@@ -1852,6 +1853,7 @@ export const EN_DATA = {
     fees: "Fees",
     living: "Living Info",
     carrot: "OrtiCarrot", // NEW
+    counseling: "Counseling",
     blog: "Blog",
     faq: "FAQ",
     contact: "Contact Us"

@@ -16,6 +16,7 @@ import OrtiCarrot from './pages/OrtiCarrot';
 import Community from './pages/Community';
 import MyPage from './pages/MyPage';
 import Vision from './pages/Vision';
+import Counseling from './pages/Counseling';
 import { LanguageProvider } from './context/LanguageContext';
 import { BlogProvider } from './context/BlogContext';
 import { ChatProvider } from './context/ChatContext';
@@ -61,6 +62,7 @@ const App: React.FC = () => {
 
                   {/* Standalone Pages */}
                   <Route path="/golf-tour" element={<GolfTour />} />
+                  <Route path="/counseling" element={<Counseling />} />
                 </Routes>
               </Router>
             </BlogProvider>
