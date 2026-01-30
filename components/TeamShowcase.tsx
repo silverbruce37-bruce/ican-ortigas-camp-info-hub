@@ -12,18 +12,6 @@ const TeamShowcase: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="max-w-7xl mx-auto px-4 mt-8 mb-16 relative z-10"
         >
-            {/* 1. Header Moved Outside for Clarity */}
-            <div className="text-center mb-6">
-                <span className="inline-block py-1 px-3 rounded-full bg-blue-50 border border-blue-100 text-[11px] font-bold tracking-widest text-blue-800 mb-3">
-                    VIRTUAL INTELLIGENCE  ×  HUMAN EXPERTISE
-                </span>
-                <h3 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight flex justify-center items-center gap-3">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">AI VIRTUAL TEAM</span>
-                    <span className="text-gray-300 font-light text-2xl">|</span>
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-600">FIELD EXPERTS</span>
-                </h3>
-            </div>
-
             <div className="relative group">
                 {/* Glow Effect - Subtle */}
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-200 via-purple-200 to-amber-200 rounded-[2rem] blur opacity-30"></div>
