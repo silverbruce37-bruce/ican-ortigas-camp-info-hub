@@ -45,6 +45,36 @@ const CurriculumSystem: React.FC = () => {
                     </div>
                 </motion.div>
 
+                {/* Text Title Section (Restored Below Image) */}
+                <div className="text-center mb-16">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        className="inline-block mb-4 px-4 py-1 bg-ican-100 text-ican-800 rounded-full text-xs font-bold tracking-widest uppercase"
+                    >
+                        ICAN SYSTEM
+                    </motion.div>
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-3xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight"
+                    >
+                        데이터 기반의 <span className="text-ican-600">초개인화 커리큘럼</span>
+                    </motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="text-gray-500 text-lg max-w-2xl mx-auto break-keep leading-relaxed"
+                    >
+                        정형/비정형 데이터가 결합된 벡터 DB 엔진을 통해,<br className="hidden md:block" />
+                        아이의 숨겨진 잠재력과 미래 역량을 연결합니다.
+                    </motion.p>
+                </div>
+
                 {/* 2. STEP 1: 7 Diagnosis (Input) */}
                 <div className="mb-20">
                     <h3 className="text-xl md:text-2xl font-bold text-center mb-10 flex items-center justify-center gap-3">
