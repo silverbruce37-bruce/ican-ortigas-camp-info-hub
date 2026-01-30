@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 // @ts-ignore
-import teamImg from '../ican_dual_team_final.png';
+import teamImg from '../ican_team_24_9.png';
 
 const TeamShowcase: React.FC = () => {
     return (
@@ -10,7 +10,7 @@ const TeamShowcase: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="max-w-6xl mx-auto px-4 mt-8 mb-16 relative z-10"
+            className="max-w-7xl mx-auto px-4 mt-8 mb-16 relative z-10"
         >
             <div className="relative group">
                 {/* Glow Effect */}
@@ -32,7 +32,7 @@ const TeamShowcase: React.FC = () => {
                     </div>
 
                     {/* Image Area */}
-                    <div className="aspect-[2.35/1] w-full bg-gray-50 rounded-2xl overflow-hidden relative">
+                    <div className="aspect-[24/9] w-full bg-gray-50 rounded-2xl overflow-hidden relative">
                         <img
                             src={teamImg}
                             alt="Collaboration between Virtual AI Team (Paul Sam, Bezaleel, Stephen, Timothy, Dr. iCAN) and Human Experts"
