@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import BrochureViewer from '../components/BrochureViewer';
 import brochurePdf from '../curriculum-brochure.pdf';
 import fiveStepFrameworkPdf from '../five_step_framework.pdf';
+import CurriculumSystem from '../components/CurriculumSystem';
 
 const Curriculum: React.FC = () => {
   const { content } = useLanguage();
@@ -36,6 +37,9 @@ const Curriculum: React.FC = () => {
           </p>
         </motion.div>
       </div>
+
+      {/* Systematic AI Engine */}
+      <CurriculumSystem />
 
       <div className="max-w-[1024px] mx-auto px-6 space-y-8">
 
