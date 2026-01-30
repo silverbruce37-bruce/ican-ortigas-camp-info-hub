@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import ConundrumCard from '../components/ConundrumCard';
 import heroMonitorImg from '../hero-monitor-final-wide.png';
+import TeamShowcase from '../components/TeamShowcase';
 
 const Home: React.FC = () => {
   const { content } = useLanguage();
@@ -71,6 +72,10 @@ const Home: React.FC = () => {
             {content.home.hero.ctaFees} <ArrowRight size={18} />
           </Link>
         </motion.div>
+
+        {/* Paul Sam Team Showcase */}
+        <TeamShowcase />
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
