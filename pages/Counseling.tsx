@@ -1,10 +1,49 @@
 
 import React, { useEffect, useState } from 'react';
-import { Share2, Sun, Sunset, Moon, Sunrise, PlayCircle, HeartHandshake, CheckCircle, ExternalLink, ChevronLeft, ChevronRight, BookOpen, Compass, Heart, Cpu } from 'lucide-react';
+import { Share2, Sun, Sunset, Moon, Sunrise, PlayCircle, HeartHandshake, CheckCircle, ExternalLink, ChevronLeft, ChevronRight, BookOpen, Compass, Heart, Cpu, Hammer, Rocket, Target } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // --- Data Structure for Journal Entries ---
 const JOURNAL_ENTRIES = [
+    {
+        id: 3,
+        date: "2026.02.12 • Thu",
+        title: "거북이의 반란: 비대칭 전력(Asymmetric Power)",
+        subtitle: "평균의 종말: AI와 함께 10배(10x) 더 높이 비상하라",
+        themeChip: "Future Vision",
+        morning: {
+            title: "AI보다 빨리 읽으려 하지 마십시오",
+            content: "오늘날 우리는 '광속의 시대'를 삽니다. 하지만 입력(Input)이 느리다는 것은, 역설적으로 '하나를 읽어도 멈춰 서서 곱씹는다'는 뜻입니다. AI가 1초에 수만 페이지를 읽는 시대에 속도 경쟁은 무의미합니다. 아이의 느린 읽기는 '뒤처짐'이 아니라 '깊이(Depth)'를 위한 거룩한 멈춤입니다.",
+            quote: "내 은혜가 네게 족하도다 이는 내 능력이 약한 데서 온전하여짐이라 (고후 12:9)",
+            mission: "Mission: 아이가 책을 읽다 멈칫거릴 때, \"왜 빨리 안 읽니?\" 대신 \"방금 읽은 장면을 네 말로 표현해줄래?\"라고 물어 아이의 강점(구어)을 켜주세요.",
+            icon: Target,
+            color: "orange"
+        },
+        noon: {
+            title: "광야의 훈련: 나만의 무기 만들기",
+            content: "태준(가명)이에게 글자는 감옥 같을 수 있습니다. 하지만 이 '미스매치'가 아이를 특별하게 만듭니다. 우리는 요행을 바라지 않습니다. 바울이 천막을 짓듯 기본기(해독/유창성)를 다지되, 남들과 똑같아지기 위함이 아닙니다. 남들이 갖지 못한 '비대칭 전력'을 기르기 위함입니다.",
+            quote: null,
+            warning: "주의하세요: \"옆집 애는 벌써 챕터북 읽는다던데...\" 비교의 말은 아이가 가진 고유한 무기를 녹슬게 합니다.",
+            icon: Hammer,
+            color: "emerald"
+        },
+        evening: {
+            title: "평균의 종말: AI와 10x 업그레이드",
+            content: "인공지능 시대는 '평균'이 설 자리가 없는 시대입니다. 자신의 부족함을 억지로 채워 평범해지려 하지 마십시오. AI의 인지적 지원(Cognitive Support)은 아이의 부족한 '읽기'를 채워주는 강력한 지팡이가 될 것입니다. 자신의 고유한 창의성에 AI 기술을 더해 인지 능력을 10배(10x) 확장하십시오. 그때 비로소 아이는 결핍을 넘어, 누구도 대체할 수 없는 '새로운 가능성'의 주인공이 될 것입니다.",
+            actionTitle: "오늘의 기도: 10배의 비상",
+            actionContent: "잠든 아이의 머리맡에서 기도해주세요.\n\"하나님, 우리 아이의 부족함이 AI라는 날개를 달고 10배 더 높이 비상하는 도약대가 되게 하소서.\"",
+            icon: Rocket,
+            color: "indigo"
+        },
+        media: {
+            title: "약점이 강점이 되는 이유 (David and Goliath)",
+            url: "https://www.ted.com/talks/malcolm_gladwell_the_unheard_story_of_david_and_goliath",
+            image: "https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/04902094-39cb-4ae0-90fe-7756f0821557/MalcolmGladwell_2013S-embed.jpg",
+            desc: "Malcolm Gladwell • TED Talk",
+            icon: PlayCircle
+        }
+
+    },
     {
         id: 2,
         date: "2026.02.05 • Thu",
@@ -161,8 +200,8 @@ const Counseling: React.FC = () => {
                     onClick={handlePrev}
                     disabled={currentEntryIndex === JOURNAL_ENTRIES.length - 1}
                     className={`p-3 rounded-full backdrop-blur-md shadow-lg transition-all ${currentEntryIndex === JOURNAL_ENTRIES.length - 1
-                            ? 'bg-gray-200/50 text-gray-400 cursor-not-allowed'
-                            : 'bg-white/80 hover:scale-110 text-gray-800'
+                        ? 'bg-gray-200/50 text-gray-400 cursor-not-allowed'
+                        : 'bg-white/80 hover:scale-110 text-gray-800'
                         }`}
                 >
                     <ChevronLeft className="w-6 h-6" />
@@ -174,8 +213,8 @@ const Counseling: React.FC = () => {
                     onClick={handleNext}
                     disabled={currentEntryIndex === 0}
                     className={`p-3 rounded-full backdrop-blur-md shadow-lg transition-all ${currentEntryIndex === 0
-                            ? 'bg-gray-200/50 text-gray-400 cursor-not-allowed'
-                            : 'bg-white/80 hover:scale-110 text-gray-800'
+                        ? 'bg-gray-200/50 text-gray-400 cursor-not-allowed'
+                        : 'bg-white/80 hover:scale-110 text-gray-800'
                         }`}
                 >
                     <ChevronRight className="w-6 h-6" />
