@@ -1,38 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import {
-    BookOpen, Mic, Activity, Zap, MessageCircle, Layers, Lightbulb,
-    Database, Network, Cpu, ArrowRight
-} from 'lucide-react';
-// @ts-ignore
-import vectorProcessImg from '../src/assets/ican_vector_process.png';
-
-const DiagnosisItem = ({ icon: Icon, title, delay }: { icon: any, title: string, delay: number }) => (
-    <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay }}
-        className="flex flex-col items-center p-4 bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center group"
-    >
-        <div className="p-3 bg-blue-50 text-blue-600 rounded-full mb-3 group-hover:bg-blue-100 transition-colors">
-            <Icon size={24} strokeWidth={1.5} />
-        </div>
-        <h4 className="text-sm font-bold text-gray-800 break-keep leading-tight">{title}</h4>
-    </motion.div>
-);
+import vectorBannerImg from '../src/assets/ican_curriculum_vector_32_9.png';
 
 const CurriculumSystem: React.FC = () => {
     return (
-        <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
-            {/* Background Decor */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2"></div>
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-50 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2"></div>
-
+        <section className="py-20 px-4 bg-white relative overflow-hidden">
             <div className="max-w-7xl mx-auto relative z-10">
 
                 {/* Header */}
-                <div className="text-center mb-16">
+                <div className="text-center mb-12">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -45,149 +21,99 @@ const CurriculumSystem: React.FC = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight"
+                        className="text-4xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight"
                     >
                         데이터 기반의 <span className="text-ican-600">초개인화 커리큘럼</span>
                     </motion.h2>
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        className="text-lg text-gray-600 max-w-3xl mx-auto break-keep"
-                    >
-                        아이들의 모든 활동 데이터는 폴샘의 AI 엔진을 통해 분석되며, <br className="hidden md:block" />
-                        단 한 명을 위한 최적의 학습 로드맵으로 재탄생합니다.
-                    </motion.p>
+                    <p className="text-gray-500 text-lg max-w-2xl mx-auto break-keep">
+                        정형/비정형 데이터가 결합된 벡터 DB 엔진을 통해, 아이의 숨겨진 잠재력과 미래 역량을 연결합니다.
+                    </p>
                 </div>
 
-                {/* 1. INPUT: 7 Diagnosis */}
-                <div className="mb-20">
-                    <h3 className="text-xl font-bold text-center mb-8 flex items-center justify-center gap-2">
-                        <span className="w-8 h-1 bg-blue-500 rounded-full"></span>
-                        <span>STEP 1 : 7가지 정밀 진단 (Input)</span>
-                        <span className="w-8 h-1 bg-blue-500 rounded-full"></span>
-                    </h3>
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-                        <DiagnosisItem icon={BookOpen} title="문해력 테스트" delay={0.1} />
-                        <DiagnosisItem icon={Mic} title="조음력/인터뷰" delay={0.2} />
-                        <DiagnosisItem icon={Activity} title="러닝습관/행동" delay={0.3} />
-                        <DiagnosisItem icon={Zap} title="싸이트워즈 유창성" delay={0.4} />
-                        <DiagnosisItem icon={MessageCircle} title="스토리텔링 파워" delay={0.5} />
-                        <DiagnosisItem icon={Layers} title="코어 지식 빌드업" delay={0.6} />
-                        <DiagnosisItem icon={Lightbulb} title="통합지식 아웃풋" delay={0.7} />
-                    </div>
-                </div>
+                {/* Main Visual: 32:9 Cinematic Banner */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="relative w-full rounded-[2rem] overflow-hidden shadow-2xl border border-gray-100 mb-12"
+                >
+                    {/* The Image */}
+                    <div className="aspect-[32/12] md:aspect-[32/9] w-full bg-gray-900 relative">
+                        <img
+                            src={vectorBannerImg}
+                            alt="ICAN AI Vector Process: Input -> Core -> Future"
+                            className="w-full h-full object-cover"
+                        />
+                        {/* Subtle Gloss Overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
 
-                {/* STEP 2: Vector Data Intelligence */}
-                <div className="mb-20">
-                    <div className="relative bg-[#0f1014] rounded-3xl overflow-hidden shadow-2xl border border-gray-800">
-                        <div className="grid md:grid-cols-2 gap-0">
-                            {/* Image Side */}
-                            <div className="relative h-full min-h-[300px] md:min-h-[400px]">
-                                <img
-                                    src={vectorProcessImg}
-                                    alt="ICAN Vector Data Process"
-                                    className="absolute inset-0 w-full h-full object-cover"
-                                />
-                                {/* Overlay Gradient */}
-                                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0f1014]/90"></div>
-                            </div>
-
-                            {/* Content Side */}
-                            <div className="p-8 md:p-10 flex flex-col justify-center text-left">
-                                <h3 className="text-2xl font-bold mb-2 text-blue-400">STEP 2 : 벡터(Vector) 관계형 데이터 분석</h3>
-                                <h4 className="text-white text-lg font-medium mb-6">
-                                    "정형/비정형 데이터를 통합하여 아이의 숨겨진 잠재력을 발견합니다"
-                                </h4>
-
-                                <ul className="space-y-5 text-gray-300">
-                                    <li className="flex items-start gap-4">
-                                        <div className="bg-blue-900/50 p-2 rounded-lg text-blue-400 mt-1">
-                                            <Database size={20} />
-                                        </div>
-                                        <div>
-                                            <strong className="block text-white mb-1">데이터 벡터화 (Vectorization)</strong>
-                                            <span className="text-sm text-gray-400 leading-snug">
-                                                성적(정형)과 행동/감정(비정형) 데이터를 관계형 벡터 DB로 통합하여 입체적으로 분석합니다.
-                                            </span>
-                                        </div>
-                                    </li>
-                                    <li className="flex items-start gap-4">
-                                        <div className="bg-purple-900/50 p-2 rounded-lg text-purple-400 mt-1">
-                                            <Network size={20} />
-                                        </div>
-                                        <div>
-                                            <strong className="block text-white mb-1">결핍과 강점의 정밀 탐지</strong>
-                                            <span className="text-sm text-gray-400 leading-snug">
-                                                겉으론 보이지 않는 구석구석의 약점과 숨겨진 강력한 힘을 AI가 찾아냅니다.
-                                            </span>
-                                        </div>
-                                    </li>
-                                    <li className="flex items-start gap-4">
-                                        <div className="bg-green-900/50 p-2 rounded-lg text-green-400 mt-1">
-                                            <ArrowRight size={20} />
-                                        </div>
-                                        <div>
-                                            <strong className="block text-white mb-1">미래 역량 매칭 & 훈련</strong>
-                                            <span className="text-sm text-gray-400 leading-snug">
-                                                아이의 고유한 특성을 미래의 핵심 역량과 매칭하여, 가장 필요한 모듈 훈련을 제공합니다.
-                                            </span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                        {/* Overlay Text (Mobile Friendly) */}
+                        <div className="absolute bottom-4 left-0 right-0 text-center text-white/80 text-[10px] md:text-sm font-light tracking-wider md:hidden">
+                            Input &rarr; AI Vector Core &rarr; Future Path
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
-                {/* 3. OUTPUT: Solution */}
-                <div>
-                    <h3 className="text-xl font-bold text-center mb-8 flex items-center justify-center gap-2">
-                        <span className="w-8 h-1 bg-amber-500 rounded-full"></span>
-                        <span>STEP 3 : 폴샘의 맞춤형 솔루션 (Output)</span>
-                        <span className="w-8 h-1 bg-amber-500 rounded-full"></span>
-                    </h3>
-                    <div className="grid md:grid-cols-3 gap-6">
-                        <motion.div
-                            whileHover={{ y: -5 }}
-                            className="bg-white p-8 rounded-2xl border border-gray-100 shadow-lg text-center"
-                        >
-                            <div className="w-16 h-16 mx-auto bg-green-50 text-green-600 rounded-2xl flex items-center justify-center mb-6">
-                                <Layers size={32} />
-                            </div>
-                            <h4 className="text-xl font-bold mb-2">필요한 모듈 학습 제공</h4>
-                            <p className="text-gray-500 text-sm break-keep">
-                                약한 학습 능력을 보완하기 위한 개인별 모듈을 즉시 처방하여 학습 공백을 메웁니다.
-                            </p>
-                        </motion.div>
+                {/* 3-Step Process Description (Below Image) */}
+                <div className="grid md:grid-cols-3 gap-8 text-center px-4">
+                    {/* Step 1 */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="flex flex-col items-center"
+                    >
+                        <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-4 shadow-sm">
+                            <span className="font-bold text-lg">01</span>
+                        </div>
+                        <h3 className="font-bold text-xl mb-2 text-gray-900">1. 정형/비정형 데이터 수집</h3>
+                        <p className="text-sm text-gray-600 leading-relaxed break-keep max-w-xs">
+                            문해력, 성적 같은 <strong>정형 데이터</strong>와<br />
+                            말투, 습관 같은 <strong>비정형 데이터</strong>를<br />
+                            실시간으로 수집하고 분류합니다.
+                        </p>
+                    </motion.div>
 
-                        <motion.div
-                            whileHover={{ y: -5 }}
-                            className="bg-gradient-to-br from-ican-600 to-ican-700 text-white p-8 rounded-2xl shadow-xl text-center transform scale-105 z-10"
-                        >
-                            <div className="w-16 h-16 mx-auto bg-white/20 rounded-2xl flex items-center justify-center mb-6 backdrop-blur-sm">
-                                <Lightbulb size={32} className="text-yellow-300" />
-                            </div>
-                            <h4 className="text-xl font-bold mb-2">창발교육(Emergent) 제안</h4>
-                            <p className="text-blue-100 text-sm break-keep">
-                                단순 보충을 넘어, 아이의 잠재력이 미래 역량과 연결되도록 새로운 교육 틀을 제시합니다.
-                            </p>
-                        </motion.div>
+                    {/* Step 2 */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.4 }}
+                        className="flex flex-col items-center"
+                    >
+                        <div className="w-12 h-12 bg-ican-50 text-ican-600 rounded-2xl flex items-center justify-center mb-4 shadow-sm relative">
+                            <span className="font-bold text-lg">02</span>
+                            <div className="absolute -inset-1 bg-ican-200/30 rounded-3xl animate-pulse"></div>
+                        </div>
+                        <h3 className="font-bold text-xl mb-2 text-gray-900">2. 벡터(Vector) 관계 분석</h3>
+                        <p className="text-sm text-gray-600 leading-relaxed break-keep max-w-xs">
+                            수집된 데이터를 <strong>3차원 벡터 코어</strong>에서 연결하여<br />
+                            단편적으론 알 수 없는 아이의<br />
+                            <strong>숨겨진 결핍과 강점</strong>을 찾아냅니다.
+                        </p>
+                    </motion.div>
 
-                        <motion.div
-                            whileHover={{ y: -5 }}
-                            className="bg-white p-8 rounded-2xl border border-gray-100 shadow-lg text-center"
-                        >
-                            <div className="w-16 h-16 mx-auto bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
-                                <BookOpen size={32} />
-                            </div>
-                            <h4 className="text-xl font-bold mb-2">폴샘 템플릿 & 가이드</h4>
-                            <p className="text-gray-500 text-sm break-keep">
-                                구체적인 실행을 위한 템플릿과 활용 방법을 폴샘이 직접 가이드합니다.
-                            </p>
-                        </motion.div>
-                    </div>
+                    {/* Step 3 */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.6 }}
+                        className="flex flex-col items-center"
+                    >
+                        <div className="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-4 shadow-sm">
+                            <span className="font-bold text-lg">03</span>
+                        </div>
+                        <h3 className="font-bold text-xl mb-2 text-gray-900">3. 미래 역량 매칭 솔루션</h3>
+                        <p className="text-sm text-gray-600 leading-relaxed break-keep max-w-xs">
+                            발견된 특성을 미래 인재상과 매칭하여<br />
+                            가장 필요한 <strong>모듈 학습과 창발 교육</strong>을<br />
+                            즉각적으로 처방합니다.
+                        </p>
+                    </motion.div>
                 </div>
 
             </div>
