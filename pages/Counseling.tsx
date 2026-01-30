@@ -6,6 +6,45 @@ import { motion, AnimatePresence } from 'framer-motion';
 // --- Data Structure for Journal Entries ---
 const JOURNAL_ENTRIES = [
     {
+        id: 7,
+        date: "2026.03.12 • Thu",
+        title: "산 중턱에서 숨을 고르는 너에게",
+        subtitle: "세훈이를 위한 폴샘의 응원가: 기초가 있어야 요령도 생긴다",
+        themeChip: "Student Mentoring",
+        morning: {
+            title: "정상이 보이지 않아 답답하니?",
+            content: "세훈(가명)아, 요즘 마음은 굴뚝같은데 몸이 안 따라주는 것 같지? 지금 네 기분은 산 밑에서 출발해 '중턱'까지 올라온 등산객과 같아. 밑을 보면 까마득하고, 위를 봐도 정상이 안 보여. 가장 숨이 차고 포기하고 싶은 순간이야. 하지만 기억해. \"힘들다는 건 네가 오르막길을 걷고 있다는 증거야.\" 지금까지는 누군가 끌어줘서 왔지만, 이제부터는 네 발로 디뎌야 해. 이 고비를 넘기면 \"어? 나도 할 수 있네?\"라는 자신감이 너를 정상까지 밀어줄 거야.",
+            quote: "우리가 선을 행하되 낙심하지 말지니 포기하지 아니하면 때가 이르매 거두리라 (갈 6:9)",
+            mission: "Mission: 오늘 거울 속의 너에게 말해줘. \"괜찮아, 난 지금 올라가는 중이야.\"",
+            icon: Sunrise,
+            color: "orange"
+        },
+        noon: {
+            title: "요령은 '기초' 위에서만 춤춘다",
+            content: "넌 가끔 \"쉽게 가는 법 없나요?\"라고 묻고 싶을 거야. 하지만 세훈아, 기초 체력 없는 손흥민을 상상할 수 있니? 대본도 못 외우는 임시완이 명배우가 될 수 있었을까? 기초가 부족하면 불안감만 커져. 마치 기름 없는 자동차처럼 엑셀을 밟아도 앞으로 나아가지 못해. 이번 방학이 골든타임이야. 학교 시간표 챙기기, 선생님께 질문하기... 이 사소해 보이는 습관들이 너의 '기름'이 될 거야. 기초가 채워지면, 그때 비로소 '요령'이라는 날개가 돋아난단다.",
+            quote: null,
+            warning: "주의하세요: \"대충 해도 되겠지?\" - 헐거운 기초는 언젠가 반드시 무너집니다. 지금 흘리는 땀방울이 미래의 눈물을 닦아줍니다.",
+            icon: Sun,
+            color: "blue"
+        },
+        evening: {
+            title: "혼자가 아니야, 우리는 원팀(One-Team)",
+            content: "공부는 혼자 하는 싸움 같지만, 사실은 '팀 스포츠'야. 아침에 친구에게 건네는 초콜릿 하나가 너에게 아군(Ally)을 만들어 줘. 너를 돕고 싶어 하는 선생님, 부모님, 그리고 우리 아이캔 선생님들... 우리는 모두 'Team Sehun'의 멤버들이야. 혼자 끙끙 앓지 말고 손을 내밀어. \"도와주세요\"라고 말하는 건 부끄러운 게 아니라 가장 용기 있는 행동이란다. 넌 두 가지 언어와 문화를 배우는 국가대표 선수야. 이 훈련이 끝나면, 넌 그 어느 무대에서도 빛나는 주연이 될 거야.",
+            actionTitle: "오늘의 다짐: 용기 있는 도움 요청",
+            actionContent: "아이에게 전해주세요.\n\"힘들 땐 언제든 '도와주세요'라고 말해도 돼. 우린 언제나 네 편이야.\"",
+            icon: Moon,
+            color: "indigo"
+        },
+        media: {
+            title: "그릿: 열정과 끈기의 힘 (Grit: The power of passion and perseverance)",
+            url: "https://www.ted.com/talks/angela_lee_duckworth_grit_the_power_of_passion_and_perseverance",
+            image: "https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/19c72df6-088e-4a8b-a459-3fb68686d11a/AngelaDuckworth_2013S-embed.jpg",
+            desc: "Angela Duckworth • TED Talk",
+            icon: PlayCircle
+        }
+
+    },
+    {
         id: 6,
         date: "2026.03.05 • Thu",
         title: "닫힌 말문을 여는 30초의 기적",
