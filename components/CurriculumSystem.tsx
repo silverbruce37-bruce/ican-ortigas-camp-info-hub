@@ -37,7 +37,7 @@ const CurriculumSystem: React.FC = () => {
                         viewport={{ once: true }}
                         className="inline-block mb-4 px-4 py-1 bg-ican-100 text-ican-800 rounded-full text-xs font-bold tracking-widest uppercase"
                     >
-                        iCAN SYSTEM
+                        ICAN SYSTEM
                     </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}

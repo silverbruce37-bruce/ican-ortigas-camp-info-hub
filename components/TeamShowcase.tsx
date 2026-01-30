@@ -45,7 +45,7 @@ const TeamShowcase: React.FC = () => {
                             {/* Team Roster */}
                             <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-6 text-[10px] md:text-xs text-blue-100 font-medium tracking-wide opacity-90">
                                 <span className="bg-blue-900/40 px-3 py-1 rounded-full border border-blue-500/30 backdrop-blur-sm">
-                                    <span className="text-blue-300 font-bold mr-1">Virtual Team:</span> Paul Sam, Bezaleel, Stephen, Timothy, Dr. iCAN
+                                    <span className="text-blue-300 font-bold mr-1">Virtual Team:</span> Paul Sam, Bezaleel, Stephen, Timothy, Dr. ICAN
                                 </span>
                                 <span className="bg-amber-900/40 px-3 py-1 rounded-full border border-amber-500/30 backdrop-blur-sm">
                                     <span className="text-amber-300 font-bold mr-1">Field Experts:</span> Moon-sik, Edward, Esra, Min
