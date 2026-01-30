@@ -6,6 +6,45 @@ import { motion, AnimatePresence } from 'framer-motion';
 // --- Data Structure for Journal Entries ---
 const JOURNAL_ENTRIES = [
     {
+        id: 4,
+        date: "2026.02.19 • Thu",
+        title: "환골탈태(換骨脫胎): 두 개의 뇌를 장착하라",
+        subtitle: "미들스쿨러의 위대한 전환: 고통스러운 적응인가, 확장인가?",
+        themeChip: "Bilingual Brain",
+        morning: {
+            title: "지금 겪는 혼란은 '고장'이 아니라 '확장'입니다",
+            content: "준혁(가명)이는 지금 혼란스럽습니다. 한국어로는 명확했던 개념들이 낯선 영어 옷을 입고 춤을 춥니다. 부모님, 걱정하지 마십시오. 이것은 '환골탈태(본질이 완전히 새로워짐)'의 시간입니다. 도교에서 신선이 되기 위해 뼈를 바꾸듯, 준혁이는 지금 한국어 뇌에서 '이중언어(Bilingual) 뇌'로 구조를 리모델링하고 있습니다. 고통스럽지만, 이 과정을 통과하면 준혁이는 남들이 볼 수 없는 '두 배 더 넓은 세상'을 보게 될 것입니다.",
+            quote: "보라 내가 새 일을 행하리니 이제 나타낼 것이라 (사 43:19)",
+            mission: "Mission: 아이가 영어 표현을 힘들어할 때, \"단어 몰라?\"라고 묻지 말고 \"네 머릿속에 있는 그 그림, 어떤 모양이니?\"라고 물어주세요.",
+            icon: Target,
+            color: "orange"
+        },
+        noon: {
+            title: "건축가는 기초를 탓하지 않고 보강합니다",
+            content: "국제학교 2년, 마음이 급해져서 어려운 단어만 외우게 하면 모래 위에 집을 짓는 격입니다. 아이캔의 해답은 '밸런싱(Balancing)'입니다. 맵테스트로 확인한 구멍 난 기초를 '퀵러닝'으로 메워야 합니다. 바울이 아덴에서 논쟁하기 위해 헬라 시와 철학을 깊이 팠듯, 준혁이에게 필요한 건 단순 회화가 아니라 '학습 도구로서의 문해력'입니다. 이 기초 공사 기간을 묵묵히 견뎌내는 힘, 그것이 바로 Grit(그릿)이고 회복탄력성입니다.",
+            quote: null,
+            warning: "주의하세요: \"한국에선 잘했는데 왜 여기선 못해?\" 과거의 영광은 독입니다. 지금은 '0'에서 다시 시작하는 용기가 필요한 때입니다.",
+            icon: Hammer,
+            color: "emerald"
+        },
+        evening: {
+            title: "조음력(Articulation): 세상을 향해 쏘아 올리다",
+            content: "영어를 잘한다는 것은 발음이 유창한 것이 아닙니다. 핵심은 '조음력(Articulation)'입니다. 내 안의 복잡한 생각과 감정을 상대가 이해하기 쉬운 논리로 구조화하여 전달하는 능력입니다. 이것이 없으면 AI 시대에 아무리 많은 지식을 가져도 소용이 없습니다. 준혁이는 이제 단순 답변을 넘어, 서술하고 묘사하며 자신의 논리를 증명하는 '크리티컬 씽킹'의 단계로 나아가야 합니다. 이것이 바로 닥터 아이캔이 지향하는 '우주적 사고'의 시작입니다.",
+            actionTitle: "오늘의 기도: 환골탈태의 인내",
+            actionContent: "잠든 아이의 머리맡에서 기도해주세요.\n\"주님, 우리 아이가 두 가지 언어라는 날개를 달고, 좁은 땅을 넘어 더 넓은 우주를 품는 아이가 되게 하소서. 뼈를 깎는 변화의 시간에 인내할 힘을 주소서.\"",
+            icon: Rocket,
+            color: "indigo"
+        },
+        media: {
+            title: "이중언어 뇌의 이점 (The benefits of a bilingual brain)",
+            url: "https://www.ted.com/talks/mia_nacamulli_the_benefits_of_a_bilingual_brain",
+            image: "https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/635336b9-f7c8-472d-9426-3a6f443574c3/MiaNacamulli_2015E-embed.jpg",
+            desc: "Mia Nacamulli • TED-Ed",
+            icon: PlayCircle
+        }
+
+    },
+    {
         id: 3,
         date: "2026.02.12 • Thu",
         title: "거북이의 반란: 비대칭 전력(Asymmetric Power)",
