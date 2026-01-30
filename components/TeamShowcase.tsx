@@ -36,11 +36,21 @@ const TeamShowcase: React.FC = () => {
                             <h4 className="text-white text-lg md:text-xl font-bold mb-2 drop-shadow-lg">
                                 "가상과 현실의 완벽한 융합"
                             </h4>
-                            <p className="text-white/90 text-xs md:text-sm font-medium leading-relaxed max-w-4xl mx-auto drop-shadow-md keep-all">
+                            <p className="text-white/90 text-xs md:text-sm font-medium leading-relaxed max-w-4xl mx-auto drop-shadow-md keep-all mb-4">
                                 왼쪽의 은은한 홀로그램 AI 에이전트팀과 오른쪽의 든든한 현실 전문가들이, 투명한 벽 하나 없는 한 공간에서 가장 자연스럽게 어우러지는 모습입니다.
                                 <br className="hidden md:block" />
                                 아이캔이 꿈꾸는 교육의 미래, 기술과 사람이 만나 더 선한 가치를 창조하는 따뜻한 비전이 이 한 장의 파노라마에 담겼습니다.
                             </p>
+
+                            {/* Team Roster */}
+                            <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-6 text-[10px] md:text-xs text-blue-100 font-medium tracking-wide opacity-90">
+                                <span className="bg-blue-900/40 px-3 py-1 rounded-full border border-blue-500/30 backdrop-blur-sm">
+                                    <span className="text-blue-300 font-bold mr-1">Virtual Team:</span> Paul Sam, Bezaleel, Stephen, Timothy, Dr. iCAN
+                                </span>
+                                <span className="bg-amber-900/40 px-3 py-1 rounded-full border border-amber-500/30 backdrop-blur-sm">
+                                    <span className="text-amber-300 font-bold mr-1">Field Experts:</span> Moon-sik, Edward, Esra, Min
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
