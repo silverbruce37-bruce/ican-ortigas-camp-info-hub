@@ -15,7 +15,13 @@ const Home: React.FC = () => {
 
 
       {/* Hero Section */}
-      <section className="min-h-[60vh] flex flex-col items-center justify-center text-center p-8 pt-32 pb-16">
+      <section className="min-h-[60vh] flex flex-col items-center justify-center text-center p-8 pt-24 pb-16">
+
+        {/* Paul Sam Team Showcase (Moved to Top) */}
+        <div className="w-full mb-12">
+          <TeamShowcase />
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -73,8 +79,7 @@ const Home: React.FC = () => {
           </Link>
         </motion.div>
 
-        {/* Paul Sam Team Showcase */}
-        <TeamShowcase />
+
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}

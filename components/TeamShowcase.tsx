@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 // @ts-ignore
-import teamImg from '../ican_team_24_9.png';
+import teamImg from '../src/assets/ican_team_24_9.png';
 
 const TeamShowcase: React.FC = () => {
     return (
