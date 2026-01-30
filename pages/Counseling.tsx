@@ -6,6 +6,45 @@ import { motion, AnimatePresence } from 'framer-motion';
 // --- Data Structure for Journal Entries ---
 const JOURNAL_ENTRIES = [
     {
+        id: 6,
+        date: "2026.03.05 • Thu",
+        title: "닫힌 말문을 여는 30초의 기적",
+        subtitle: "민주의 잠재력을 깨우는 '로제처럼 말하기' 프로젝트",
+        themeChip: "Vocabulary Retrieval",
+        morning: {
+            title: "머뭇거림은 '신중함'의 다른 이름입니다",
+            content: "민주(가명)가 질문 앞에서 머뭇거릴 때, 부모님은 답답하실 수 있습니다. 하지만 폴샘은 다르게 봅니다. 이것은 '모르는 것'이 아니라 '신중한 것'입니다. 뇌의 보물창고에 너무 많은 단어가 있어, 딱 맞는 열쇠(단어)를 찾느라 '골든 타임'을 보내고 있는 것입니다. 윽박지르면 뇌는 얼어붙습니다(Freeze). 대신 \"천천히 골라봐, 기다려줄게\"라는 여유가 필요합니다. 그 기다림이 민주의 닫힌 인출 경로를 여는 마법의 열쇠가 됩니다.",
+            quote: "구하라 그리하면 너희에게 주실 것이요 찾으라 그리하면 찾아낼 것이요 (마 7:7)",
+            mission: "Mission: 아이가 단어를 못 찾아 머뭇거릴 때, 대신 말해주지 말고 마음속으로 '하나, 둘, 셋'을 세며 미소 지어주세요.",
+            icon: Target,
+            color: "orange"
+        },
+        noon: {
+            title: "30초의 마법: 패턴으로 길을 닦다",
+            content: "막힌 어휘 길을 뚫는 최고의 방법은 '자주 다니는 것'입니다. 우리는 '30초 스토리텔링'을 시작합니다. \"Because...\", \"For instance...\" 같은 템플릿(Template)으로 길을 닦아주면, 생각의 흐름이 빨라집니다. 여기에 'Good' 대신 'Fascinating' 같은 [세컨드 레벨 형용사]를 입히면, 민주의 말하기는 블랙핑크 로제처럼 매력적이고 풍성해집니다. 월요일엔 패턴 훈련, 금요일엔 실전처럼! 이 반복된 땀방울이 민주의 말문을 시원하게 열어줄 것입니다.",
+            quote: null,
+            warning: "주의하세요: 단순한 단어 암기는 정답이 아닙니다. '어떤 상황'에 쓰는지 맥락(Context)을 모르면 무용지물입니다.",
+            icon: Hammer,
+            color: "emerald"
+        },
+        evening: {
+            title: "틀려도 괜찮아, 아니 틀려야 배울 수 있어",
+            content: "어휘 인출을 방해하는 가장 큰 적은 '스트레스'입니다. \"틀리면 혼난다\"는 두려움은 뇌의 전두엽을 마비시킵니다. 민주에게 필요한 건 '심리적 안전지대'입니다. 단어가 생각나지 않아 \"그거... 동그랗고 빨간 거!\"라고 설명하면, \"설명 참 잘했다!\"라고 박수를 쳐주세요. 어휘력보다 중요한 건 '소통하려는 의지'입니다. 우리는 민주에게 점수보다 '연결(Connection)'의 기쁨을 가르칠 것입니다. 자신감이 붙으면 어휘는 저절로 따라옵니다.",
+            actionTitle: "오늘의 기도: 기다림의 미학",
+            actionContent: "잠든 아이의 머리맡에서 기도해주세요.\n\"주님, 우리 민주의 마음속 두려움을 걷어가시고, 그 입술에 지혜와 평안을 주소서. 부모인 제가 먼저 기다림의 여유를 갖게 하소서.\"",
+            icon: Rocket,
+            color: "indigo"
+        },
+        media: {
+            title: "자신감 있게 말하는 법 (How to speak with confidence)",
+            url: "https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are",
+            image: "https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/22e032d8-2315-4654-9781-897d251d102e/AmyCuddy_2012G-embed.jpg",
+            desc: "Amy Cuddy • TED Talk",
+            icon: PlayCircle
+        }
+
+    },
+    {
         id: 5,
         date: "2026.02.26 • Thu",
         title: "발화 너머의 도약: 내 안의 거인을 깨우다",
