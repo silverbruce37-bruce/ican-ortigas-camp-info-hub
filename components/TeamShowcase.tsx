@@ -19,8 +19,8 @@ const TeamShowcase: React.FC = () => {
                 {/* Card Container */}
                 <div className="relative bg-white border border-gray-100 rounded-[1.8rem] shadow-2xl overflow-hidden p-1.5">
 
-                    {/* Image Area - Sharp & Clear */}
-                    <div className="aspect-[24/9] w-full bg-gray-100 rounded-2xl overflow-hidden relative">
+                    {/* Image Area - Sharp & Clear (Wider 32:9 Ratio) */}
+                    <div className="aspect-[32/9] w-full bg-gray-50 rounded-2xl overflow-hidden relative">
                         <img
                             src={teamImg}
                             alt="Collaboration between Virtual AI Team and Human Education Experts"
