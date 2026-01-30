@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 // @ts-ignore
-import teamImg from '../src/assets/ican_team_24_9.png';
+import teamImg from '../src/assets/ican_team_panorama.png';
 
 const TeamShowcase: React.FC = () => {
     return (
@@ -36,7 +36,7 @@ const TeamShowcase: React.FC = () => {
                         <img
                             src={teamImg}
                             alt="Collaboration between Virtual AI Team and Human Education Experts"
-                            className="w-full h-full object-cover object-top"
+                            className="w-full h-full object-cover object-center"
                             loading="eager"
                         />
 
