@@ -6,6 +6,45 @@ import { motion, AnimatePresence } from 'framer-motion';
 // --- Data Structure for Journal Entries ---
 const JOURNAL_ENTRIES = [
     {
+        id: 5,
+        date: "2026.02.26 • Thu",
+        title: "발화 너머의 도약: 내 안의 거인을 깨우다",
+        subtitle: "오해랑의 이중언어 혁명: 듣는 귀(Input)에서 말하는 입(Output)으로",
+        themeChip: "Speech Articulation",
+        morning: {
+            title: "나를 마주할 용기가 성장의 시작입니다",
+            content: "해랑(가명)이는 듣고 이해하는 능력은 뛰어납니다. 이제 필요한 건 '자신의 목소리를 객관적으로 듣는 용기'입니다. 아이캔의 '비디오 녹화 훈련'은 단순한 촬영이 아닙니다. 내가 말하는 표정, 논리, 호흡을 제3자의 눈으로 바라보는 '메타인지(Meta-cognition)'의 과정입니다. 처음엔 어색하고 부끄럽겠지만, 자신의 부족함을 직면하는 순간 비로소 진짜 성장이 시작됩니다. \"아, 내가 주어를 자꾸 빼먹는구나!\" 이 깨달음이 해랑이를 '발화의 감옥'에서 해방시킬 것입니다.",
+            quote: "우리가 다 수건을 벗은 얼굴로 거울을 보는 것 같이 주의 영광을 보매 (고후 3:18)",
+            mission: "Mission: 아이가 학교에서 배운 내용을 설명하는 모습을 스마트폰으로 1분간 찍어 함께 봐주세요. 그리고 \"내용이 참 좋다!\"라고 칭찬해 주세요.",
+            icon: Target,
+            color: "orange"
+        },
+        noon: {
+            title: "단순한 나열을 넘어 감동적인 서사로",
+            content: "지금 해랑이의 말하기는 \"밥 먹었다. 학교 갔다.\" (레벨 1: 사건 나열) 수준일 수 있습니다. 아이캔의 '써머라이징 강화 수업'은 여기에 뼈대(사이트워즈)와 살(형용사/부사)을 입힙니다. \"학교에 갔어요\"가 아니라, \"설레는 마음으로 학교에 갔지만, 갑자기 비가 와서 당황했어요\"(레벨 4: 감정 묘사)라고 말하게 됩니다. 매주 영상을 찍고 피드백을 받는 지루한 반복 훈련이 필요하지만, 이 과정이 쌓이면 해랑이는 어떤 상황에서도 논리적이고 감동적인 '글로벌 리더의 언어'를 갖게 될 것입니다.",
+            quote: null,
+            warning: "주의하세요: \"발음이 그게 뭐니?\" - 유창성보다 중요한 건 '자신감'입니다. 지적보다 격려가 먼저입니다.",
+            icon: Hammer,
+            color: "emerald"
+        },
+        evening: {
+            title: "완벽하지 않아도 괜찮아, 넌 이미 훌륭한 화자(Speaker)야",
+            content: "발화의 가장 큰 적은 '틀리면 어떡하지?'라는 두려움입니다. 바울 사도도 말이 어눌하다고 비판받았지만, 그의 메시지는 세상을 뒤집었습니다. 중요한 건 유창함보다 '진정성'과 '연결'입니다. 해랑이가 카메라 앞에서 더듬거려도, 문법이 조금 틀려도 우리는 박수를 칠 것입니다. \"너의 생각은 정말 멋져. 조금만 더 큰 소리로 말해줄래?\" 이 긍정의 피드백이 아이의 자존감을 세웁니다. 아이캔은 해랑이가 마음껏 실수하고, 그 실수 위에서 춤추듯 성장하는 '심리적 안전지대'가 될 것입니다.",
+            actionTitle: "오늘의 기도: 담대한 입술",
+            actionContent: "잠든 아이의 머리맡에서 기도해주세요.\n\"주님, 우리 해랑이의 입술을 열어주소서. 두려움 없이 자신의 생각을 세상에 외치게 하시고, 그 목소리가 사람들의 마음을 움직이는 도구가 되게 하소서.\"",
+            icon: Rocket,
+            color: "indigo"
+        },
+        media: {
+            title: "사람의 마음을 움직이는 말하기 (How to speak so that people want to listen)",
+            url: "https://www.ted.com/talks/julian_treasure_how_to_speak_so_that_people_want_to_listen",
+            image: "https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/049187fb-3c06-4768-804d-2e2124508e2f/JulianTreasure_2013G-embed.jpg",
+            desc: "Julian Treasure • TED Talk",
+            icon: PlayCircle
+        }
+
+    },
+    {
         id: 4,
         date: "2026.02.19 • Thu",
         title: "환골탈태(換骨脫胎): 두 개의 뇌를 장착하라",
