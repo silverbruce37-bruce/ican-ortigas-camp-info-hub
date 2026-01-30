@@ -9,7 +9,7 @@ const JOURNAL_ENTRIES = [
         id: 5,
         date: "2026.02.26 • Thu",
         title: "발화 너머의 도약: 내 안의 거인을 깨우다",
-        subtitle: "오해랑의 이중언어 혁명: 듣는 귀(Input)에서 말하는 입(Output)으로",
+        subtitle: "해랑의 이중언어 혁명: 듣는 귀(Input)에서 말하는 입(Output)으로",
         themeChip: "Speech Articulation",
         morning: {
             title: "나를 마주할 용기가 성장의 시작입니다",
