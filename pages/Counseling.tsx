@@ -311,7 +311,18 @@ const Counseling: React.FC = () => {
     return (
         <div className={`min-h-screen transition-colors duration-700 ease-in-out ${getThemeStyles()}`}>
 
-            {/* Navigation Bar (Floating) */}
+            {/* Top Navigation Bar for Counseling Page */}
+            <div className={`fixed top-0 left-0 right-0 z-40 p-4 flex justify-between items-center transition-colors duration-500 ${theme === 'evening' ? 'text-white bg-black/50 backdrop-blur-md' : 'text-gray-900 bg-white/50 backdrop-blur-md'}`}>
+                <a href="/" className="flex items-center gap-2 font-bold hover:opacity-70 transition-opacity">
+                    <ChevronLeft className="w-5 h-5" />
+                    <span className="text-sm">BACK TO HOME</span>
+                </a>
+                <div className="flex gap-4 text-xs font-semibold opacity-70">
+                    <span className="hidden md:inline">COUNSELING JOURNAL</span>
+                </div>
+            </div>
+
+            {/* Navigation Bar (Floating - Bottom) */}
             <div className="fixed bottom-8 left-0 right-0 z-50 flex justify-center gap-4">
                 <button
                     onClick={handlePrev}
