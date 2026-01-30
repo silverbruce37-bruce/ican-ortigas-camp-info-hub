@@ -4,6 +4,8 @@ import {
     BookOpen, Mic, Activity, Zap, MessageCircle, Layers, Lightbulb,
     Database, Network, Cpu, ArrowRight
 } from 'lucide-react';
+// @ts-ignore
+import vectorProcessImg from '../src/assets/ican_vector_process.png';
 
 const DiagnosisItem = ({ icon: Icon, title, delay }: { icon: any, title: string, delay: number }) => (
     <motion.div
@@ -77,40 +79,61 @@ const CurriculumSystem: React.FC = () => {
                     </div>
                 </div>
 
-                {/* 2. PROCESS: AI Core */}
+                {/* STEP 2: Vector Data Intelligence */}
                 <div className="mb-20">
-                    <div className="relative bg-black rounded-3xl p-8 md:p-12 overflow-hidden text-white shadow-2xl">
-                        {/* Background Grid */}
-                        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
-
-                        <div className="relative z-10 flex flex-col md:flex-row items-center gap-10">
-                            {/* Left: Engine Visual */}
-                            <div className="flex-1 flex justify-center">
-                                <div className="relative w-48 h-48 md:w-64 md:h-64 flex items-center justify-center">
-                                    <div className="absolute inset-0 bg-blue-500/20 rounded-full animate-ping"></div>
-                                    <div className="absolute inset-4 bg-blue-600/20 rounded-full animate-pulse"></div>
-                                    <div className="relative z-10 flex flex-col items-center justify-center text-center">
-                                        <Cpu size={64} className="text-blue-400 mb-2" />
-                                        <h4 className="text-2xl font-black tracking-tighter">PAUL SAM<br />AI ENGINE</h4>
-                                    </div>
-                                </div>
+                    <div className="relative bg-[#0f1014] rounded-3xl overflow-hidden shadow-2xl border border-gray-800">
+                        <div className="grid md:grid-cols-2 gap-0">
+                            {/* Image Side */}
+                            <div className="relative h-full min-h-[300px] md:min-h-[400px]">
+                                <img
+                                    src={vectorProcessImg}
+                                    alt="ICAN Vector Data Process"
+                                    className="absolute inset-0 w-full h-full object-cover"
+                                />
+                                {/* Overlay Gradient */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0f1014]/90"></div>
                             </div>
 
-                            {/* Right: Process Description */}
-                            <div className="flex-1 text-center md:text-left">
-                                <h3 className="text-2xl font-bold mb-4 text-blue-300">STEP 2 : 데이터 통합 및 결핍 분석</h3>
-                                <ul className="space-y-4 text-gray-300">
-                                    <li className="flex items-start gap-3">
-                                        <Database className="mt-1 text-blue-500 shrink-0" size={20} />
-                                        <span className="text-left">캠프 내의 <strong className="text-white">정형/비정형 데이터</strong> 실시간 수집</span>
+                            {/* Content Side */}
+                            <div className="p-8 md:p-10 flex flex-col justify-center text-left">
+                                <h3 className="text-2xl font-bold mb-2 text-blue-400">STEP 2 : 벡터(Vector) 관계형 데이터 분석</h3>
+                                <h4 className="text-white text-lg font-medium mb-6">
+                                    "정형/비정형 데이터를 통합하여 아이의 숨겨진 잠재력을 발견합니다"
+                                </h4>
+
+                                <ul className="space-y-5 text-gray-300">
+                                    <li className="flex items-start gap-4">
+                                        <div className="bg-blue-900/50 p-2 rounded-lg text-blue-400 mt-1">
+                                            <Database size={20} />
+                                        </div>
+                                        <div>
+                                            <strong className="block text-white mb-1">데이터 벡터화 (Vectorization)</strong>
+                                            <span className="text-sm text-gray-400 leading-snug">
+                                                성적(정형)과 행동/감정(비정형) 데이터를 관계형 벡터 DB로 통합하여 입체적으로 분석합니다.
+                                            </span>
+                                        </div>
                                     </li>
-                                    <li className="flex items-start gap-3">
-                                        <Network className="mt-1 text-purple-500 shrink-0" size={20} />
-                                        <span className="text-left">관계형 데이터 통합 및 <strong className="text-white">발달/결핍 상태</strong> 즉각 파악</span>
+                                    <li className="flex items-start gap-4">
+                                        <div className="bg-purple-900/50 p-2 rounded-lg text-purple-400 mt-1">
+                                            <Network size={20} />
+                                        </div>
+                                        <div>
+                                            <strong className="block text-white mb-1">결핍과 강점의 정밀 탐지</strong>
+                                            <span className="text-sm text-gray-400 leading-snug">
+                                                겉으론 보이지 않는 구석구석의 약점과 숨겨진 강력한 힘을 AI가 찾아냅니다.
+                                            </span>
+                                        </div>
                                     </li>
-                                    <li className="flex items-start gap-3">
-                                        <ArrowRight className="mt-1 text-green-500 shrink-0" size={20} />
-                                        <span className="text-left">미래 교육과 연결된 <strong className="text-white">새로운 창발 교육</strong> 제안</span>
+                                    <li className="flex items-start gap-4">
+                                        <div className="bg-green-900/50 p-2 rounded-lg text-green-400 mt-1">
+                                            <ArrowRight size={20} />
+                                        </div>
+                                        <div>
+                                            <strong className="block text-white mb-1">미래 역량 매칭 & 훈련</strong>
+                                            <span className="text-sm text-gray-400 leading-snug">
+                                                아이의 고유한 특성을 미래의 핵심 역량과 매칭하여, 가장 필요한 모듈 훈련을 제공합니다.
+                                            </span>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
