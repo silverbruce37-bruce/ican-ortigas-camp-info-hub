@@ -22,26 +22,11 @@ const Curriculum: React.FC = () => {
   return (
     <div className="bg-[#F5F5F7] min-h-screen pt-12 pb-24 font-sans">
 
-      {/* Header */}
-      <div className="max-w-[1024px] mx-auto px-6 mb-16 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h1 className="text-4xl md:text-5xl font-semibold text-[#1d1d1f] mb-4 tracking-tight">
-            {curriculumPage.title}
-          </h1>
-          <p className="text-xl text-[#86868b] max-w-2xl mx-auto font-medium leading-relaxed">
-            {curriculumPage.desc}
-          </p>
-        </motion.div>
-      </div>
 
-      {/* Systematic AI Engine */}
+      {/* Systematic AI Engine - serves as the new Header */}
       <CurriculumSystem />
 
-      <div className="max-w-[1024px] mx-auto px-6 space-y-8">
+      <div className="max-w-[1024px] mx-auto px-6 space-y-8 mt-12">
 
         {/* ICAN Vision Infographic for Parents */}
         <motion.div
