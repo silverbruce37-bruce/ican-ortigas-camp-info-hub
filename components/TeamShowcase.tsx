@@ -28,71 +28,21 @@ const TeamShowcase: React.FC = () => {
                             loading="eager"
                         />
 
-                        {/* Gradient Overlay - ONLY at the bottom for text readability */}
-                        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/50 to-transparent pointer-events-none"></div>
+                        {/* Gradient Overlay for Text Visibility */}
+                        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none"></div>
 
-                        {/* Team Roles Legend */}
-                        <div className="absolute bottom-0 left-0 right-0 p-3 md:p-5 text-white grid grid-cols-2 gap-8">
-
-                            {/* LEFT: Virtual Team */}
-                            <div className="border-r border-white/20 pr-4 flex flex-col justify-end">
-                                <div className="grid grid-cols-5 gap-1 md:gap-2">
-                                    <div className="text-center">
-                                        <p className="font-bold text-[9px] md:text-xs text-cyan-200 shadow-black drop-shadow-md">Bezaleel</p>
-                                        <div className="h-0.5 w-full bg-cyan-400 rounded-full mt-1 opacity-70"></div>
-                                    </div>
-                                    <div className="text-center">
-                                        <p className="font-bold text-[9px] md:text-xs shadow-black drop-shadow-md">Stephen</p>
-                                        <div className="h-0.5 w-full bg-indigo-500 rounded-full mt-1 opacity-70"></div>
-                                    </div>
-                                    <div className="text-center">
-                                        <p className="font-bold text-[9px] md:text-xs shadow-black drop-shadow-md">Timothy</p>
-                                        <div className="h-0.5 w-full bg-sky-500 rounded-full mt-1 opacity-70"></div>
-                                    </div>
-                                    <div className="text-center">
-                                        <p className="font-bold text-[9px] md:text-xs shadow-black drop-shadow-md">Dr. iCAN</p>
-                                        <div className="h-0.5 w-full bg-blue-500 rounded-full mt-1 opacity-70"></div>
-                                    </div>
-                                    <div className="text-center">
-                                        <p className="font-bold text-[9px] md:text-xs text-yellow-300 shadow-black drop-shadow-md">Paul Sam</p>
-                                        <div className="h-1 w-full bg-yellow-400 rounded-full mt-1 shadow-[0_0_8px_rgba(250,204,21,0.8)]"></div>
-                                    </div>
-                                </div>
-                                <p className="text-[8px] md:text-[10px] text-center text-blue-200 mt-2 tracking-widest uppercase opacity-80">Virtual Command Center</p>
-                            </div>
-
-                            {/* RIGHT: Human Team */}
-                            <div className="pl-4 flex flex-col justify-end">
-                                <div className="grid grid-cols-4 gap-1 md:gap-2">
-                                    <div className="text-center">
-                                        <p className="font-bold text-[9px] md:text-xs text-amber-300 shadow-black drop-shadow-md">Moon-sik</p>
-                                        <div className="h-1 w-full bg-amber-500 rounded-full mt-1 shadow-[0_0_8px_rgba(245,158,11,0.8)]"></div>
-                                    </div>
-                                    <div className="text-center">
-                                        <p className="font-bold text-[9px] md:text-xs shadow-black drop-shadow-md">Edward</p>
-                                        <div className="h-0.5 w-full bg-orange-400 rounded-full mt-1 opacity-70"></div>
-                                    </div>
-                                    <div className="text-center">
-                                        <p className="font-bold text-[9px] md:text-xs shadow-black drop-shadow-md">Esra</p>
-                                        <div className="h-0.5 w-full bg-pink-400 rounded-full mt-1 opacity-70"></div>
-                                    </div>
-                                    <div className="text-center">
-                                        <p className="font-bold text-[9px] md:text-xs shadow-black drop-shadow-md">Min</p>
-                                        <div className="h-0.5 w-full bg-green-400 rounded-full mt-1 opacity-70"></div>
-                                    </div>
-                                </div>
-                                <p className="text-[8px] md:text-[10px] text-center text-amber-200 mt-2 tracking-widest uppercase opacity-80">Real-World Education Field</p>
-                            </div>
-
+                        {/* Vision Text Overlay (On the Picture) */}
+                        <div className="absolute bottom-6 left-0 right-0 px-6 text-center z-20">
+                            <h4 className="text-white text-lg md:text-xl font-bold mb-2 drop-shadow-lg">
+                                "가상과 현실의 완벽한 융합"
+                            </h4>
+                            <p className="text-white/90 text-xs md:text-sm font-medium leading-relaxed max-w-4xl mx-auto drop-shadow-md keep-all">
+                                왼쪽의 은은한 홀로그램 AI 에이전트팀과 오른쪽의 든든한 현실 전문가들이, 투명한 벽 하나 없는 한 공간에서 가장 자연스럽게 어우러지는 모습입니다.
+                                <br className="hidden md:block" />
+                                아이캔이 꿈꾸는 교육의 미래, 기술과 사람이 만나 더 선한 가치를 창조하는 따뜻한 비전이 이 한 장의 파노라마에 담겼습니다.
+                            </p>
                         </div>
                     </div>
-                </div>
-
-                {/* Bottom Caption */}
-                <div className="text-center mt-3 px-4">
-                    <p className="text-[10px] md:text-xs text-gray-400 font-medium">
-                        Developing the 'Space Orienteering' AI Education System based on 20 years of expertise.
-                    </p>
                 </div>
             </div>
         </motion.div>
