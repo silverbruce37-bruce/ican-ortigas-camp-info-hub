@@ -1634,7 +1634,7 @@ export const KO_DATA = {
       { title: "Global Conversation", desc: "SAT 펀더멘털과 고전 읽기를 통해 자유, 정의, 인권의 가치를 논하며 시대를 초월하는 인싸이트와 비평적 사고를 완성합니다.", icon: ICONS.Globe, link: "/curriculum" }
     ],
     location: {
-      title: "안전한 교육생태계인 올티가스 중심에서 그 꿈이 펼쳐집니다",
+      title: "안전한 교육 생태계",
       desc: "올티가스는 마닐라의 비즈니스 중심지로, 치안이 매우 우수하고 쾌적한 환경을 자랑합니다. 우리는 이곳을 'The Environment'라 부르며, 아이들의 안전과 몰입을 위한 최적의 기지로 활용합니다.",
       safety: "Safety & Security",
       safetyDesc: "24시간 가드 상주 및 인텔리전트 빌딩 관리",
