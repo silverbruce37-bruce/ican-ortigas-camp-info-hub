@@ -169,7 +169,7 @@ const Home: React.FC = () => {
 
       {/* Conundrum Cards */}
       <section className="bg-gray-50 py-12 px-4">
-        <h2 className="text-4xl font-black text-gray-800 text-center mb-8 tracking-tight">{content.home.specialProjectsTitle}</h2>
+        <h2 className="text-5xl md:text-6xl font-black text-gray-800 text-center mb-10 tracking-tight">{content.home.specialProjectsTitle}</h2>
         <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6">
           {content.home.specialProjects.map((project, idx) => (
             <ConundrumCard
