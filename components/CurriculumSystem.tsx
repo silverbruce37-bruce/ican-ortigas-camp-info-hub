@@ -41,7 +41,12 @@ const CurriculumSystem: React.FC = () => {
                             alt="ICAN AI Education System Visual"
                             className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+                        <div className="absolute inset-x-0 bottom-0 bg-black/60 backdrop-blur-sm p-4 text-white">
+                            <h3 className="text-sm font-bold text-blue-300 mb-1">AI 기반 우주교육 시스템</h3>
+                            <p className="text-[10px] md:text-xs text-gray-300 leading-tight">
+                                에드워드 중심의 드림팀이 개발한 혁신적인 AI 교육시스템으로, 아이캔의 20년 교육 노하우를 학습한 '닥터아이캔'이 개인별 맞춤 강화학습을 제공합니다.
+                            </p>
+                        </div>
                     </div>
                 </motion.div>
 
