@@ -21,11 +21,17 @@ const JOURNAL_ENTRIES = [
             title: "AI 위에서 춤추는 아이들",
             content: "우리는 교실 문을 걸어 잠그지 않고 꿀로드를 초대합니다. 아이들은 AI를 두려운 경쟁자가 아닌, 내 생각을 확장해주는 '똑똑한 비서'로 부리게 될 것입니다. 'AI를 이기는 교육'이 아닌 'AI를 타고 비상하는 교육', 아이캔이 앞장서겠습니다.",
             bibleVerse: "지혜는 진주보다 귀하니 네가 사모하는 모든 것으로도 이에 비교할 수 없도다 (잠언 3:15)",
-            actionItem: "자녀와 함께 '꿀로드'에게 엉뚱한 질문 던져보기",
-            mediaRecommendation: {
-                title: "추천 도서: AI 시대의 질문법",
-                type: "book"
-            }
+            actionTitle: "오늘의 미션",
+            actionContent: "자녀와 함께 '꿀로드'에게 엉뚱한 질문 던져보기"
+        },
+        themeChip: "AI Education",
+        subtitle: "우리 아이는 '어떤 AI'를 쓸 것인가? 폴샘이 제안하는 기준",
+        media: {
+            title: "AI와 함께하는 미래 교육",
+            url: "https://www.ted.com/talks/sal_khan_how_ai_could_save_not_destroy_education",
+            image: "https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/1eabb690-09a8-4447-8178-028448ec834c/SalKhan_2023-embed.jpg",
+            desc: "Sal Khan • TED Talk",
+            icon: PlayCircle
         }
     },
     {
