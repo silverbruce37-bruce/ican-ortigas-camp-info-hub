@@ -123,7 +123,7 @@ const Home: React.FC = () => {
 
       {/* Location Section */}
       <section className="bg-gray-100 py-12 px-4">
-        <h2 className="text-4xl font-black text-gray-800 text-center mb-8 tracking-tight">{content.home.location.title}</h2>
+        <h2 className="text-5xl md:text-6xl font-black text-gray-800 text-center mb-10 tracking-tight">{content.home.location.title}</h2>
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
           <div className="flex-1">
             <p className="mb-4">{content.home.location.desc}</p>
