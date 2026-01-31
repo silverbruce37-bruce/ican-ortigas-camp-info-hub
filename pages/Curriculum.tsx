@@ -136,7 +136,7 @@ const Curriculum: React.FC = () => {
           viewport={{ once: true }}
           className="w-full"
         >
-          <BrochureViewer pdfUrl={brochurePdf} />
+          <BrochureViewer pdfUrl={brochurePdf} title="아이캔 에듀스페이스 커리큐럼 브로셔" />
         </motion.div>
 
         {/* SPACE PROGRAM Section - Large Feature Card */}
