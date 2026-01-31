@@ -47,7 +47,7 @@ const Curriculum: React.FC = () => {
                 20년 전통의 아이캔이 준비하는 미래
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-[#1d1d1f] mb-4 tracking-tight">
-                🚀 우주시대를 향한 교육 비전
+                🚀 우주 시대에 필요한 코어 역량
               </h2>
               <p className="text-lg text-[#86868b] max-w-2xl mx-auto leading-relaxed">
                 우리 아이들이 마주할 미래는 예측하기 어렵습니다. 아이캔은 불확실한 미래에도 <br className="hidden md:block" />
