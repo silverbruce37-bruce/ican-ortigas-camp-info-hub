@@ -158,7 +158,7 @@ const Curriculum: React.FC = () => {
                 className="group inline-flex items-center gap-3 mb-4 transition-transform hover:scale-[1.02]"
               >
                 <h2 className="flex flex-col font-black leading-none drop-shadow-sm">
-                  <span className="text-[#1d1d1f] tracking-tight text-xl md:text-3xl mb-2">폴샘과 함께 하는</span>
+                  <span className="text-[#1d1d1f] tracking-tight text-lg md:text-2xl mb-2">폴샘과 함께 하는</span>
                   <span className="text-[#0071E3] tracking-tighter text-3xl md:text-5xl break-keep">에듀스페이스 캠프</span>
                 </h2>
                 <div className="bg-purple-100 p-2 rounded-full border border-purple-200 group-hover:bg-purple-200 transition-colors">
