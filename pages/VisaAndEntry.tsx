@@ -72,7 +72,7 @@ const VisaAndEntry: React.FC = () => {
               {/* Headings (Desktop) */}
               <div className="hidden md:grid grid-cols-12 gap-4 px-8 py-4 text-xs font-bold uppercase tracking-widest text-gray-400 border-b border-gray-100">
                 <div className="col-span-4">Duration</div>
-                <div className="col-span-4">Tuition (교육비+숙식)</div>
+                <div className="col-span-4">Tuition (교육비)</div>
                 <div className="col-span-4 text-right">SSP & Material</div>
               </div>
 
