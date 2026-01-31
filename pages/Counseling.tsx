@@ -6,6 +6,45 @@ import { motion, AnimatePresence } from 'framer-motion';
 // --- Data Structure for Journal Entries ---
 const JOURNAL_ENTRIES = [
     {
+        id: 9,
+        date: "2026.03.26 • Thu",
+        title: "[Special] 아이캔의 20년, 제3의 눈으로 파헤치다",
+        subtitle: "\"우주시대와 이중언어, 과연 그 연결고리는 무엇인가?\" (NotebookLM 대담 리포트)",
+        themeChip: "Media Review",
+        morning: {
+            title: "언어의 전환, 뇌의 '유연성'을 깨우다",
+            content: "최근 공개된 아이캔 아카데미에 대한 분석 대담에서 가장 주목한 키워드는 '인지적 유연성(Cognitive Flexibility)'입니다. 20년의 역사를 가진 아이캔이 이중언어 교육을 고집하는 이유는 단순히 영어를 잘하기 위함이 아닙니다. 두 언어(한국어-영어) 사이를 끊임없이 오가는 과정 자체가, 뇌가 편협한 사고에서 벗어나 다양한 각도에서 문제를 바라보게 만드는 가장 강력한 '두뇌 훈련'이기 때문입니다.",
+            quote: "언어를 바꾸며 생각하는 것, 그 자체가 고도의 지적 훈련이다.",
+            mission: "Insight: 우리 아이가 영어와 한국어를 섞어 쓸 때 혼내지 마세요. 지금 아이의 뇌는 엄청난 속도로 '전환 훈련'을 하고 있는 중입니다.",
+            icon: Cpu,
+            color: "orange"
+        },
+        noon: {
+            title: "우주시대(Space Age): 상징인가 실체인가?",
+            content: "많은 분들이 '우주시대'라는 단어를 낯설어합니다. 대담에서는 이를 \"예측 불가능하고 복잡한 미래 사회에 대한 은유\"로 해석했습니다. 정해진 정답이 없는 우주 공간처럼, 우리 아이들이 살아갈 미래는 교과서 밖의 문제들로 가득합니다. 아이캔이 말하는 '우주적 사고'란, 낯선 환경(이중언어 환경)에 던져졌을 때, 당황하지 않고 자신만의 해답을 찾아내는 '생존력'과 '적응력'을 기르는 것입니다.",
+            quote: null,
+            warning: "핵심 질문: 우리는 아직 오지 않은 미래를 위해 아이들에게 무엇을 남겨줄 수 있을까요?",
+            icon: Rocket,
+            color: "blue"
+        },
+        evening: {
+            title: "불확실성(Uncertainty)을 즐기는 아이들",
+            content: "\"언어 능력을 넘어, 불확실한 미래에 진짜 필요한 핵심 기술은 무엇일까?\" 대담의 마지막 질문은 우리에게 깊은 울림을 줍니다. 아이캔의 20년은 바로 이 질문에 대한 대답이었습니다. 공간이 바뀌면 생각이 바뀝니다. 언어가 바뀌면 뇌가 바뀝니다. 우리는 아이들을 어떤 상황에서도 '길을 잃지 않는(Orienteering)' 탄탄한 내면을 가진 탐험가로 키워내겠습니다.",
+            actionTitle: "함께 고민해 주세요",
+            actionContent: "지금 우리 아이에게 필요한 것은 '더 많은 지식'일까요, 아니면 '더 유연한 사고'일까요?",
+            icon: Moon,
+            color: "indigo"
+        },
+        media: {
+            title: "AI 시대의 교육, 무엇이 바뀌어야 하는가?",
+            url: "https://www.ted.com/talks/ken_robinson_do_schools_kill_creativity",
+            image: "https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/248cfa0b-0442-4e48-8df2-06830a68f001/KaiFuLee_2018-embed.jpg", // Placeholder - Ken Robinson is recommended
+            desc: "Sir Ken Robinson • TED Talk",
+            icon: PlayCircle
+        }
+
+    },
+    {
         id: 8,
         date: "2026.03.19 • Thu",
         title: "선생님께: 우리는 '정답'이 아니라 '질문'을 가르칩니다",
