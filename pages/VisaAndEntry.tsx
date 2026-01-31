@@ -72,28 +72,28 @@ const VisaAndEntry: React.FC = () => {
               {/* Headings (Desktop) */}
               <div className="hidden md:grid grid-cols-12 gap-4 px-8 py-4 text-xs font-bold uppercase tracking-widest text-gray-400 border-b border-gray-100">
                 <div className="col-span-4">Duration</div>
-                <div className="col-span-4">Tuition (교육비)</div>
-                <div className="col-span-4 text-right">SSP & Material</div>
-              </div>
+                 <div className="col-span-4">Tuition (교육비)</div>
+                 <div className="col-span-4 text-right">Material Fee</div>
+               </div>
 
-              {/* Items */}
-              <div className="divide-y divide-gray-50">
-                {fees.items.map((fee, idx) => (
-                  <motion.div
-                    key={idx}
-                    whileHover={{ scale: 1.005, backgroundColor: "rgba(249, 250, 251, 0.8)" }}
-                    className="grid grid-cols-1 md:grid-cols-12 gap-4 px-6 py-6 md:px-8 md:py-8 items-center transition-all duration-200 rounded-xl"
-                  >
-                    <div className="col-span-4">
-                      <span className="text-lg md:text-2xl font-bold text-[#1d1d1f]">{fee.duration}</span>
-                      <div className="md:hidden text-xs text-gray-400 uppercase font-bold mt-1 tracking-wider">Programme</div>
-                    </div>
-                    <div className="col-span-4 flex flex-col justify-center">
-                      <div className="md:hidden text-xs text-gray-400 mb-1">Tuition</div>
-                      <span className="text-xl md:text-2xl font-semibold text-[#0071E3] tabular-nums tracking-tight">{fee.tuition}</span>
-                    </div>
-                    <div className="col-span-4 md:text-right flex flex-col md:block">
-                      <div className="md:hidden text-xs text-gray-400 mb-1 mt-2">SSP & Material</div>
+               {/* Items */}
+               <div className="divide-y divide-gray-50">
+                  {fees.items.map((fee, idx) => (
+                    <motion.div 
+                      key={idx} 
+                      whileHover={{ scale: 1.005, backgroundColor: "rgba(249, 250, 251, 0.8)" }}
+                      className="grid grid-cols-1 md:grid-cols-12 gap-4 px-6 py-6 md:px-8 md:py-8 items-center transition-all duration-200 rounded-xl"
+                    >
+                      <div className="col-span-4">
+                        <span className="text-lg md:text-2xl font-bold text-[#1d1d1f]">{fee.duration}</span>
+                        <div className="md:hidden text-xs text-gray-400 uppercase font-bold mt-1 tracking-wider">Programme</div>
+                      </div>
+                      <div className="col-span-4 flex flex-col justify-center">
+                         <div className="md:hidden text-xs text-gray-400 mb-1">Tuition</div>
+                         <span className="text-xl md:text-2xl font-semibold text-[#0071E3] tabular-nums tracking-tight">{fee.tuition}</span>
+                      </div>
+                      <div className="col-span-4 md:text-right flex flex-col md:block">
+                         <div className="md:hidden text-xs text-gray-400 mb-1 mt-2">Material Fee</div>
                       <span className="text-lg font-medium text-gray-600 tabular-nums">{fee.materialFee}</span>
                     </div>
                   </motion.div>
