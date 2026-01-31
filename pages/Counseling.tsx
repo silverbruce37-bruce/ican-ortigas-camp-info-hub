@@ -6,6 +6,29 @@ import { motion, AnimatePresence } from 'framer-motion';
 // --- Data Structure for Journal Entries ---
 const JOURNAL_ENTRIES = [
     {
+        id: 10,
+        date: "2026.04.02 • Thu",
+        title: "[Hot Issue] '꿀로드봇'의 습격? 아니, 아이들의 새로운 파트너!",
+        morning: {
+            title: "AI 춘추전국시대, 흔들리지 않는 교육",
+            content: "딥시크에 이어 등장한 '꿀로드(Claude)'가 세상을 놀라게 하고 있습니다. 학부모님들은 '우리 아이가 설 자리가 있을까' 걱정하시지만, 아이캔은 이를 '도구의 혁명'으로 봅니다. 칼이 요리사의 손에 들리면 예술이 되듯, AI도 우리 아이들의 손에서 창조의 도구가 됩니다."
+        },
+        noon: {
+            title: "정답 자판기 vs 질문하는 지휘자",
+            content: "AI는 정답을 너무나 잘 줍니다. 그래서 역설적으로 '질문하는 능력'이 스펙이 되는 시대입니다. 우리는 아이들에게 AI와 경쟁하는 법이 아니라, AI에게 수준 높은 질문을 던지고 그 결과를 검증하며 지휘(Directing)하는 법을 가르칩니다."
+        },
+        evening: {
+            title: "AI 위에서 춤추는 아이들",
+            content: "우리는 교실 문을 걸어 잠그지 않고 꿀로드를 초대합니다. 아이들은 AI를 두려운 경쟁자가 아닌, 내 생각을 확장해주는 '똑똑한 비서'로 부리게 될 것입니다. 'AI를 이기는 교육'이 아닌 'AI를 타고 비상하는 교육', 아이캔이 앞장서겠습니다.",
+            bibleVerse: "지혜는 진주보다 귀하니 네가 사모하는 모든 것으로도 이에 비교할 수 없도다 (잠언 3:15)",
+            actionItem: "자녀와 함께 '꿀로드'에게 엉뚱한 질문 던져보기",
+            mediaRecommendation: {
+                title: "추천 도서: AI 시대의 질문법",
+                type: "book"
+            }
+        }
+    },
+    {
         id: 9,
         date: "2026.03.26 • Thu",
         title: "[Special] 아이캔의 20년, 제3의 눈으로 파헤치다",
