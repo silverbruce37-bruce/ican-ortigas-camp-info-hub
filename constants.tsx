@@ -1645,7 +1645,7 @@ export const KO_DATA = {
       title: "Why ICAN?",
       subtitle: "아이캔 아카데미를 선택해야 하는 특별한 이유"
     },
-    strengthsTitle: "아이캔 우주교육의 핵심가치 (The Core Manifests)",
+    strengthsTitle: "아이캔 우주교육의 코어가치 (The Core Manifests)",
     specialProjectsTitle: "슈퍼키즈 육성 특별 강화 학습",
     specialProjects: [
       {

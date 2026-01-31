@@ -156,7 +156,7 @@ const Home: React.FC = () => {
 
       {/* Core Manifests Section */}
       <section className="py-12 px-4">
-        <h2 className="text-4xl font-black text-gray-900 text-center mb-8 tracking-tight">{content.home.strengthsTitle}</h2>
+        <h2 className="text-5xl md:text-6xl font-black text-gray-900 text-center mb-10 tracking-tight">{content.home.strengthsTitle}</h2>
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
           {content.strengths.map((item, idx) => (
             <div key={idx} className="p-6 border rounded hover:shadow-lg">
