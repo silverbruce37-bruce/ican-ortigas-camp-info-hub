@@ -6,6 +6,45 @@ import { motion, AnimatePresence } from 'framer-motion';
 // --- Data Structure for Journal Entries ---
 const JOURNAL_ENTRIES = [
     {
+        id: 8,
+        date: "2026.03.19 • Thu",
+        title: "선생님께: 우리는 '정답'이 아니라 '질문'을 가르칩니다",
+        subtitle: "AI 시대를 준비하는 아이캔 교사들의 3가지 약속 (학부모님과 공유하는 내부 서신)",
+        themeChip: "Teacher's Mindset",
+        morning: {
+            title: "지식의 전달자가 아닌, '의미의 설계자'가 되십시오",
+            content: "선생님, AI가 모든 지식을 1초 만에 찾아주는 시대입니다. 이제 우리가 아이들에게 가르쳐야 할 것은 'What(무엇)'이 아니라 'Why(왜)'입니다. 칠판에 적힌 정답보다, 아이 스스로 \"왜 그럴까?\"라고 질문하게 만드는 수업, 그것이 진짜 경쟁력입니다. 우리는 지식을 파는 상인이 아니라, 아이들의 생각 그릇을 넓혀주는 '의미의 설계자(Meaning Architect)'가 되어야 합니다.",
+            quote: "너희 마음에 그리스도를 주로 삼아 거룩하게 하고... 묻는 자에게는 대답할 것을 항상 준비하되 (벧전 3:15)",
+            mission: "Mission: 아이가 정답을 맞혔을 때, \"어떻게 그런 멋진 생각을 했니?\"라고 한 번 더 물어봐 주세요.",
+            icon: Compass,
+            color: "orange"
+        },
+        noon: {
+            title: "속도보다 '방향'을, 요령보다 '기초'를",
+            content: "조급해하지 마십시오. AI 번역기가 있으니 단어를 안 외워도 된다는 유혹이 아이들을 흔듭니다. 하지만 기초 없이는 도구를 지배할 수 없습니다. 바울이 천막을 짓는 고된 땀방울 속에서 사명을 다졌듯, 우리 아이들이 '기초의 땀방울'을 흘리도록 격려해 주십시오. \"빨리 가는 것\"보다 \"바르게 가는 것\"이 중요함을 몸소 보여주는 '페이스메이커(Pace Maker)'가 되어주십시오.",
+            quote: null,
+            warning: "함께 지켜주세요: 점수보다 중요한 건, 아이가 오늘 흘린 땀방울의 가치입니다.",
+            icon: Hammer,
+            color: "blue"
+        },
+        evening: {
+            title: "결국 남는 것은 '사랑'입니다",
+            content: "먼 훗날 아이들이 졸업했을 때, 아이캔의 최첨단 시설은 잊혀질지 모릅니다. 하지만 선생님이 힘들 때 잡아준 손, 따뜻한 눈빛, \"할 수 있다\"는 격려의 목소리는 영원히 기억될 것입니다. AI는 절대 줄 수 없는 그 '온기(Warmth)'가 바로 우리 교육의 마지막 퍼즐입니다. 아이들의 영혼에 사랑의 흔적을 남기는 선생님, 그것이 우리의 유일한 자랑입니다.",
+            actionTitle: "학부모님께 드리는 약속",
+            actionContent: "아이캔의 모든 선생님은, 우리 아이가 지식보다 '사랑' 안에서 안전하게 자라도록 최선을 다하겠습니다.",
+            icon: Heart,
+            color: "indigo"
+        },
+        media: {
+            title: "모든 아이에게는 챔피언이 필요합니다",
+            url: "https://www.ted.com/talks/rita_pierson_every_kid_needs_a_champion",
+            image: "https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/770e0f6d-741c-4b53-9092-22441b8c3817/CarolDweck_2014S-embed.jpg", // Placeholder - Rita Pierson's image recommended if available
+            desc: "Rita Pierson • TED Talk",
+            icon: PlayCircle
+        }
+
+    },
+    {
         id: 7,
         date: "2026.03.12 • Thu",
         title: "산 중턱에서 숨을 고르는 너에게",
