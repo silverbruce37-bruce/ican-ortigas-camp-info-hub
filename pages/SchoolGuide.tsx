@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, GraduationCap, Globe, ExternalLink, Star, Crown, BookOpen, DollarSign, Shield, Heart } from 'lucide-react';
+import { MapPin, GraduationCap, Globe, ExternalLink, Star, Crown, BookOpen, DollarSign, Shield, Heart, Church, Cross } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 // --- Types ---
@@ -9,6 +9,7 @@ interface School {
     name: string;
     location: 'ortigas' | 'greenhills' | 'bgc' | 'makati' | 'qc';
     type: 'international' | 'private_sectarian' | 'private_christian';
+    religion?: 'catholic' | 'protestant'; // Catholic (가톨릭) vs Protestant (개신교)
     curriculum: string[];
     gradeLevel: string;
     fees: '$$' | '$$$' | '$$$$';
@@ -28,7 +29,8 @@ const SCHOOLS: School[] = [
         id: 'poveda',
         name: 'Saint Pedro Poveda College',
         location: 'ortigas',
-        type: 'private_sectarian', // Catholic
+        type: 'private_sectarian',
+        religion: 'catholic',
         curriculum: ['PAASCU', 'Personalized Education'],
         gradeLevel: 'K-12 (Girls)',
         fees: '$$',
@@ -39,15 +41,45 @@ const SCHOOLS: School[] = [
         insight: "전통적인 가톨릭 명문 여학교로, 개별화 교육(PEP)이 강점입니다. 인성과 학업의 조화를 중시하는 학부모님께 추천합니다."
     },
     {
+        id: 'stpaul',
+        name: 'Saint Paul College Pasig',
+        location: 'ortigas',
+        type: 'private_sectarian',
+        religion: 'catholic',
+        curriculum: ['PAASCU', 'K-12'],
+        gradeLevel: 'K-12 (Girls)',
+        fees: '$$',
+        website: 'https://www.spcpasig.edu.ph',
+        tags: ['Catholic', 'Paulinian', 'Holistic'],
+        description: "A premier Catholic educational institution known for forming integrated Paulinians with Christian Catholic values.",
+        insight: "포베다와 더불어 올티가스 지역을 대표하는 가톨릭 명문 여학교입니다. 안정적인 교육 환경과 체계적인 학생 관리가 돋보입니다."
+    },
+    {
+        id: 'gcf',
+        name: 'GCF International Christian School',
+        location: 'ortigas',
+        type: 'private_christian',
+        religion: 'protestant',
+        curriculum: ['DepEd K-12', 'Scripture Integrated'],
+        gradeLevel: 'K-12',
+        fees: '$$',
+        website: 'https://gcf-ics.edu.ph',
+        tags: ['Protestant', 'Christ-centered', 'Garnet Road'],
+        paulSamPick: true,
+        description: "A Christ-centered school providing quality education integrated with biblical principles in the heart of Ortigas.",
+        insight: "올티가스 중심(Garnet Rd)에 위치한 개신교 학교입니다. 성경 중심의 교육과 따뜻한 공동체 분위기가 강점입니다."
+    },
+    {
         id: 'ccf',
         name: 'CCF Life Academy',
         location: 'ortigas',
         type: 'private_christian',
+        religion: 'protestant',
         curriculum: ['Christian', 'K-12'],
         gradeLevel: 'K-12',
         fees: '$$',
         website: 'https://lifeacademy.edu.ph',
-        tags: ['Christian', 'Character', 'Bible-based'],
+        tags: ['Protestant', 'Character', 'Bible-based'],
         paulSamPick: true,
         description: "A school committed to Christ-centered education, focusing on academic excellence and spiritual maturity.",
         insight: "신앙 안에서 아이를 키우고 싶은 부모님께 최고의 선택입니다. 올바른 기독교 세계관과 성품 교육이 탁월합니다."
@@ -84,7 +116,8 @@ const SCHOOLS: School[] = [
         id: 'xavier',
         name: 'Xavier School',
         location: 'greenhills',
-        type: 'private_sectarian', // Jesuit Catholic
+        type: 'private_sectarian',
+        religion: 'catholic',
         curriculum: ['IB (DP)', 'Jesuit', 'Chinese'],
         gradeLevel: 'K-12 (Boys)',
         fees: '$$$',
@@ -99,6 +132,7 @@ const SCHOOLS: School[] = [
         name: 'Immaculate Conception Academy',
         location: 'greenhills',
         type: 'private_sectarian',
+        religion: 'catholic',
         curriculum: ['Catholic', 'Chinese'],
         gradeLevel: 'K-12 (Girls)',
         fees: '$$$',
@@ -106,13 +140,28 @@ const SCHOOLS: School[] = [
         tags: ['Elite', 'Chinese-Filipino', 'Girls School'],
         topTier: true,
         description: "A premier Chinese-Filipino Catholic school for girls, known for academic rigor and values formation.",
-        insight: "자비에르(Xavier)의 자매학교로, 화교 사회의 여성 리더를 배출하는 산실입니다. 학구열이 높고 전통을 중시합니다."
+        insight: "자비에러(Xavier)의 자매학교로, 화교 사회의 여성 리더를 배출하는 산실입니다. 학구열이 높고 전통을 중시합니다."
+    },
+    {
+        id: 'makatihope',
+        name: 'Makati Hope Christian School',
+        location: 'greenhills',
+        type: 'private_christian',
+        religion: 'protestant',
+        curriculum: ['DepEd K-12', 'Chinese'],
+        gradeLevel: 'K-12',
+        fees: '$$$',
+        website: 'https://www.makatihope.edu.ph',
+        tags: ['Protestant', 'Chinese Education', 'Academic Excellence'],
+        description: "A Christian school known for its quality Chinese and Christian education, fostering holistic development.",
+        insight: "기독교 가치관과 중국어 교육을 동시에 잡고 싶은 분들께 권합니다. 학업적 성취와 신앙 훈련의 밸런스가 좋습니다."
     },
     {
         id: 'lsgh',
         name: 'La Salle Green Hills',
         location: 'greenhills',
         type: 'private_sectarian',
+        religion: 'catholic',
         curriculum: ['Lasallian', 'PAASCU'],
         gradeLevel: 'K-12 (Boys/Co-ed)',
         fees: '$$$',
@@ -156,11 +205,12 @@ const SCHOOLS: School[] = [
         name: 'Victory Christian International School',
         location: 'bgc',
         type: 'private_christian',
+        religion: 'protestant',
         curriculum: ['Christian', 'IB'],
         gradeLevel: 'K-12',
         fees: '$$',
         website: 'https://vcis.edu.ph',
-        tags: ['Christian', 'IB'],
+        tags: ['Protestant', 'IB'],
         paulSamPick: true,
         description: "A Christian school in BGC offering the IB Diploma Programme with a strong biblical foundation.",
         insight: "BGC라는 현대적인 환경에서 기독교적 가치관과 IB 커리큘럼을 동시에 추구하는 학교입니다."
@@ -192,9 +242,7 @@ const SchoolGuide: React.FC = () => {
 
                 {/* Map Visualization (Conceptual) */}
                 <div className="mb-16 bg-white rounded-[2.5rem] p-8 shadow-xl border border-gray-100 relative overflow-hidden">
-                    {/* Simple Stylized Map Graphic */}
                     <div className="absolute inset-0 opacity-10 pointer-events-none">
-                        {/* Abstract BG pattern */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-tr from-blue-100 to-amber-100 rounded-full blur-3xl" />
                     </div>
 
@@ -279,6 +327,16 @@ const SchoolGuide: React.FC = () => {
                                                 <Shield size={12} className="fill-blue-600 stroke-none" /> Paul Pick
                                             </span>
                                         )}
+                                        {school.religion === 'protestant' && (
+                                            <span className="bg-sky-50 text-sky-700 text-[10px] font-bold px-2 py-1 rounded-full flex items-center gap-1 border border-sky-100">
+                                                <Cross size={12} className="text-sky-600" /> 개신교
+                                            </span>
+                                        )}
+                                        {school.religion === 'catholic' && (
+                                            <span className="bg-purple-50 text-purple-700 text-[10px] font-bold px-2 py-1 rounded-full flex items-center gap-1 border border-purple-100">
+                                                <Church size={12} className="text-purple-600" /> 가톨릭
+                                            </span>
+                                        )}
                                         <span className="bg-gray-100 text-gray-600 text-[10px] font-bold px-2 py-1 rounded-full uppercase">
                                             {school.location.toUpperCase()}
                                         </span>
@@ -302,11 +360,6 @@ const SchoolGuide: React.FC = () => {
                                                 {tag}
                                             </span>
                                         ))}
-                                        {school.type === 'private_christian' && (
-                                            <span className="text-[10px] font-medium border border-blue-100 bg-blue-50 text-blue-600 px-2 py-0.5 rounded">
-                                                ✝ Christian
-                                            </span>
-                                        )}
                                     </div>
 
                                     {/* Paul's Insight Box */}
@@ -340,7 +393,6 @@ const SchoolGuide: React.FC = () => {
 
                 {/* Bottom Insight Section */}
                 <div className="bg-[#1d1d1f] rounded-[2.5rem] p-10 md:p-16 text-white text-center relative overflow-hidden">
-                    {/* Starry Background */}
                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"></div>
 
                     <div className="relative z-10 max-w-2xl mx-auto">
