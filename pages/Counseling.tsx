@@ -514,7 +514,7 @@ const Counseling: React.FC = () => {
                         transition={{ duration: 0.5 }}
                     >
                         {/* Hero Section */}
-                        <section className="pt-10 pb-20 px-6 text-center">
+                        <section className="pt-28 pb-20 px-6 text-center">
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
