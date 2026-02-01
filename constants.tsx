@@ -1607,6 +1607,7 @@ export const KO_DATA = {
     home: "홈",
     curriculum: "커리큘럼",
     fees: "비용안내",
+    schools: "학교정보",
     living: "생활정보",
     carrot: "올티캐롯", // NEW
     counseling: "상담일지",
@@ -1851,6 +1852,7 @@ export const EN_DATA = {
     home: "Home",
     curriculum: "Curriculum",
     fees: "Fees",
+    schools: "Schools",
     living: "Living Info",
     carrot: "OrtiCarrot", // NEW
     counseling: "Counseling",

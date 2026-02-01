@@ -33,6 +33,7 @@ const Layout: React.FC = () => {
     { label: content.nav.home, path: '/' },
     { label: content.nav.curriculum, path: '/curriculum' },
     { label: content.nav.fees, path: '/fees' },
+    { label: content.nav.schools, path: '/schools' },
     { label: content.nav.living, path: '/living' },
     { label: content.nav.counseling, path: '/counseling' },
     { label: 'Community', path: '/community' }, // Changed from OrtiCarrot to generic Community
@@ -178,6 +179,7 @@ const Layout: React.FC = () => {
               <ul className="space-y-2 text-[#86868b]">
                 <li><NavLink to="/curriculum" className="hover:underline">Curriculum</NavLink></li>
                 <li><NavLink to="/fees" className="hover:underline">Fees</NavLink></li>
+                <li><NavLink to="/schools" className="hover:underline">Schools</NavLink></li>
                 <li><NavLink to="/living" className="hover:underline">Living in Ortigas</NavLink></li>
               </ul>
             </div>

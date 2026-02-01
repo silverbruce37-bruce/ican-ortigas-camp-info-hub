@@ -17,6 +17,7 @@ import Community from './pages/Community';
 import MyPage from './pages/MyPage';
 import Vision from './pages/Vision';
 import Counseling from './pages/Counseling';
+import SchoolGuide from './pages/SchoolGuide';
 import { LanguageProvider } from './context/LanguageContext';
 import { BlogProvider } from './context/BlogContext';
 import { ChatProvider } from './context/ChatContext';
@@ -49,6 +50,7 @@ const App: React.FC = () => {
                     <Route path="vision" element={<Vision />} />
                     <Route path="curriculum" element={<Curriculum />} />
                     <Route path="fees" element={<VisaAndEntry />} />
+                    <Route path="schools" element={<SchoolGuide />} />
                     <Route path="living" element={<LivingInfo />} />
                     <Route path="community" element={<Community />} />
                     {/* Keep old route for backward compatibility if needed, or remove */}
