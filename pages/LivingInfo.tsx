@@ -17,8 +17,20 @@ const LivingInfo: React.FC = () => {
     : living.items.filter(item => item.category === activeTab);
 
   return (
-    <div className="bg-[#F5F5F7] min-h-screen pt-24 pb-24 font-sans text-[#1d1d1f]">
-      <div className="max-w-[1024px] mx-auto px-6">
+    <div className="bg-[#F5F5F7] min-h-screen font-sans text-[#1d1d1f]">
+      {/* Hero Panorama Image (36:9 Aspect Ratio) */}
+      <div className="w-full h-[180px] md:h-[320px] relative">
+        <img
+          src="/assets/ortigas_panorama.png"
+          alt="Ortigas Panorama"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent" />
+
+        {/* Optional Overlay Text or strictly image only as requested */}
+      </div>
+
+      <div className="max-w-[1024px] mx-auto px-6 pt-12 pb-24">
 
         {/* Header */}
         <div className="text-center mb-12">
