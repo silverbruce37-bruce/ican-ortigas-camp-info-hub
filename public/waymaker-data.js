@@ -66,5 +66,70 @@ window.WAYMAKER_DATA = [
         date: "2026.02.02",
         videoUrl: "PtIN1fFSeJs",
         x: -15, y: 30, z: -10
+    },
+    {
+        id: 'park-ji-sung-english',
+        title: "영어에 대한 나의 도전",
+        student: "박지성 (Park Ji Sung)",
+        category: 'TED',
+        tags: ['#도전', '#영어', '#성장', '#자신감', '#아이캔정신'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "처음에는 두려웠던 영어, 하지만 이제는 나의 무기가 되었습니다. 박지성 학생의 진솔한 성장기.",
+        duration: "04:45",
+        date: "2025.01.20",
+        videoUrl: "pXwjQGfDyWM",
+        x: 40, y: 20, z: -10
+    },
+    {
+        id: 'sarah-choi-dream',
+        title: "나의 꿈, 나의 미래",
+        student: "최사라 (Sarah Choi)",
+        category: '비전',
+        tags: ['#꿈', '#미래', '#건축가', '#희망'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "내가 짓고 싶은 집, 내가 만들고 싶은 세상. 건축가를 꿈꾸는 최사라 학생의 비전 발표.",
+        duration: "03:50",
+        date: "2025.01.28",
+        videoUrl: "seOAHUY5kXI",
+        x: -40, y: -20, z: 10
+    },
+    {
+        id: 'brian-kim-vlog',
+        title: "캠프에서의 하루 (VLOG)",
+        student: "김브라이언 (Brian Kim)",
+        category: '다큐멘터리',
+        tags: ['#일상', '#브이로그', '#친구', '#추억', '#액티비티'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "아침 기상부터 저녁 점호까지, 아이캔 캠프의 활기찬 24시를 담았습니다.",
+        duration: "07:12",
+        date: "2025.02.01",
+        videoUrl: "HtLG95LIAQw",
+        x: 0, y: 50, z: 5
+    },
+    {
+        id: 'amy-lee-letter',
+        title: "선생님께 드리는 편지",
+        student: "이에이미 (Amy Lee)",
+        category: '인터뷰',
+        tags: ['#감사', '#추억', '#만남', '#성장', '#눈물'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "저를 이끌어주신 선생님께 감사의 마음을 전합니다. 가슴 따뜻해지는 영상 편지.",
+        duration: "02:55",
+        date: "2025.02.03",
+        videoUrl: "PtIN1fFSeJs",
+        x: -30, y: 30, z: -30
+    },
+    {
+        id: 'david-park-basketball',
+        title: "3:3 농구 대항전 하이라이트",
+        student: "데이비드 박 (David Park)",
+        category: '스포츠',
+        tags: ['#농구', '#팀워크', '#승부', '#열정', '#에너지'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "코트 위 땀방울과 환호성! 아이캔 캠프 최고의 빅매치 하이라이트.",
+        duration: "05:20",
+        date: "2025.01.25",
+        videoUrl: "HtLG95LIAQw",
+        x: 30, y: -30, z: 30
     }
 ];
