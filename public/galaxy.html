@@ -16,8 +16,10 @@
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- LOAD DATA FIRST (Robust Pattern) -->
-    <script src="./waymaker-data.js"></script>
+    <!-- LOAD DATA (Cache Busted) -->
+    <script>
+        document.write('<script src="./waymaker-data.js?v=' + new Date().getTime() + '"><\/script>');
+    </script>
 
     <style>
         body {
