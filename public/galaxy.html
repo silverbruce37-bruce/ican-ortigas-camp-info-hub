@@ -377,7 +377,7 @@
 
                                 // Orbit Logic (Only if target exists)
                                 if (targetNode) {
-                                    consttime = Date.now() * 0.001;
+                                    const time = Date.now() * 0.001;
                                     const orbitRadius = 60;
                                     const orbitSpeed = 0.5;
                                     const orbitX = Math.cos(time * orbitSpeed) * orbitRadius;
