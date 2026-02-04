@@ -1609,6 +1609,7 @@ export const KO_DATA = {
     fees: "비용안내",
     schools: "학교정보",
     living: "생활정보",
+    waymaker: "디지털 웨이메이커", // New Protocol
     carrot: "올티캐롯", // NEW
     counseling: "상담일지",
     blog: "로이하우스 블로그",
@@ -1854,6 +1855,7 @@ export const EN_DATA = {
     fees: "Fees",
     schools: "Schools",
     living: "Living Info",
+    waymaker: "Digital Waymaker", // New Protocol
     carrot: "OrtiCarrot", // NEW
     counseling: "Counseling",
     blog: "Blog",

@@ -35,6 +35,7 @@ const Layout: React.FC = () => {
     { label: content.nav.fees, path: '/fees' },
     { label: content.nav.schools, path: '/schools' },
     { label: content.nav.living, path: '/living' },
+    { label: content.nav.waymaker, path: '/waymaker' }, // Digital Waymaker
     { label: content.nav.counseling, path: '/counseling' },
     { label: 'Community', path: '/community' }, // Changed from OrtiCarrot to generic Community
     { label: content.nav.blog, path: '/blog' },
