@@ -148,5 +148,71 @@ window.WAYMAKER_DATA = [
         date: "2024.12.20",
         videoUrl: "gQ8j_XLVlLI",
         x: -20, y: 10, z: 40
+    },
+    // --- ADDITIONAL STARS V2 (Fetched 2026-02-04) ---
+    {
+        id: 'yoo-ayoung-fake-lives',
+        title: "The Rise of Fake Perfect Lives Online",
+        student: "유아영 (Yoo Ayoung)",
+        category: 'TED',
+        tags: ['#SNS', '#비현실', '#자존감', '#TED'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "SNS 속 완벽해 보이는 삶과 우리의 현실. 유아영 학생이 진정한 행복에 대해 묻습니다.",
+        duration: "04:20",
+        date: "2024.07.01",
+        videoUrl: "0r4rYQ8WFQs",
+        x: 50, y: -10, z: 20
+    },
+    {
+        id: 'cho-gaeun-fomo',
+        title: "Feeling Left Out: The Truth About FOMO",
+        student: "조가은 (Cho Gaeun)",
+        category: 'TED',
+        tags: ['#FOMO', '#소외감', '#진심', '#관계'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "나만 뒤쳐지는 것 같은 두려움(FOMO). 조가은 학생이 전하는 '나만의 속도' 찾기.",
+        duration: "03:55",
+        date: "2024.07.01",
+        videoUrl: "TI069JuMurQ",
+        x: -60, y: 40, z: -20
+    },
+    {
+        id: 'choi-jiwon-diversity',
+        title: "Celebrating Diversity Among Educators",
+        student: "최지원 (Choi Jiwon)",
+        category: 'TED',
+        tags: ['#다양성', '#교육', '#존중', '#사회'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "교육 현장의 다양성이 학생들에게 미치는 긍정적인 영향에 대한 깊이 있는 고찰.",
+        duration: "05:05",
+        date: "2024.05.15",
+        videoUrl: "nP-MijFsdbQ",
+        x: 10, y: -60, z: 30
+    },
+    {
+        id: 'park-ji-woo-gaudi',
+        title: "Antoni Gaudi And His Amazing Buildings",
+        student: "박지우 (Park Ji Woo)",
+        category: 'TED Kids',
+        tags: ['#건축', '#가우디', '#예술', '#창의성'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "천재 건축가 가우디의 작품 세계로 여러분을 초대합니다. 박지우 학생의 건축 탐험.",
+        duration: "03:40",
+        date: "2024.08.10",
+        videoUrl: "NKXx4_WASt8",
+        x: -30, y: -45, z: -50
+    },
+    {
+        id: 'yeon-soo-been-book',
+        title: "Book Launch: Whisper of The Forest",
+        student: "연수빈 (Yeon Soo Been)",
+        category: 'Book Launch',
+        tags: ['#출판', '#작가', '#판타지', '#꿈'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "자신만의 판타지 소설을 출판한 꼬마 작가 연수빈. 그 마법 같은 숲의 이야기.",
+        duration: "06:10",
+        date: "2024.03.20",
+        videoUrl: "Mebc8pAEIjg",
+        x: 45, y: 55, z: 15
     }
 ];
