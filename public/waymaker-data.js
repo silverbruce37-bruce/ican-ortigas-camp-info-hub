@@ -80,9 +80,7 @@ window.WAYMAKER_DATA = [
         date: "2025.01.01",
         videoUrl: "J0fXgg6W_BE",
         x: 40, y: 20, z: -10,
-        isNew: true,
-        type: 'satellite',
-        orbitTarget: 'kwon-soo-a-happiness'
+        isNew: true
     },
     {
         id: 'kim-joi-table-tennis-official',
@@ -96,9 +94,7 @@ window.WAYMAKER_DATA = [
         date: "2024.12.31",
         videoUrl: "HtLG95LIAQw",
         x: -40, y: -20, z: 10,
-        isNew: true,
-        type: 'satellite',
-        orbitTarget: 'kwon-soo-a-animals'
+        isNew: true
     },
     {
         id: 'bae-da-hye-swimming',
@@ -112,9 +108,7 @@ window.WAYMAKER_DATA = [
         date: "2024.12.31",
         videoUrl: "7KwYMNAkRe4",
         x: 0, y: 50, z: 5,
-        isNew: true,
-        type: 'satellite',
-        orbitTarget: 'kim-joi-table-tennis'
+        isNew: true
     },
     {
         id: 'mok-min-chan-space-junk',
@@ -144,7 +138,7 @@ window.WAYMAKER_DATA = [
         videoUrl: "jvKzvW6Yt-g",
         x: 30, y: -30, z: 30,
         type: 'satellite',
-        orbitTarget: 'kwon-soo-a-animals'
+        orbitTarget: 'kwon-soo-a-happiness'
     },
     {
         id: 'bae-da-hye-friends',
@@ -157,9 +151,7 @@ window.WAYMAKER_DATA = [
         duration: "03:10",
         date: "2024.12.20",
         videoUrl: "gQ8j_XLVlLI",
-        x: -20, y: 10, z: 40,
-        type: 'satellite',
-        orbitTarget: 'kim-joi-table-tennis'
+        x: -20, y: 10, z: 40
     },
     // --- ADDITIONAL STARS V2 (Fetched 2026-02-04) ---
     {
