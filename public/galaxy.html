@@ -211,17 +211,44 @@
                                 canvas.style.cursor = 'pointer';
                             }
 
-                            const size = ((isSelected ? 4 : 2) + (isHovered ? 3 : 0)) * p.scale;
+                            // --- RENDERING NODE ---
+                            // Special effects for "New" stars (샛별)
+                            let currentSize = size;
+                            let color = isSelected || isHovered ? '#60a5fa' : '#475569';
+                            let glowColor = 'rgba(96, 165, 250, 0.5)';
+
+                            if (node.isNew) {
+                                // Pulsing effect
+                                const pulse = (Math.sin(Date.now() * 0.005) + 1) / 2; // 0 to 1
+                                currentSize = size * (1.2 + pulse * 0.3); // Pulse size
+                                color = '#fbbf24'; // Amber-400 (Gold)
+                                glowColor = `rgba(251, 191, 36, ${0.4 + pulse * 0.4})`; // Pulsing glow
+                            }
 
                             ctx.beginPath();
-                            ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
-                            ctx.fillStyle = isSelected || isHovered ? '#60a5fa' : '#475569';
-                            ctx.fill();
+                            ctx.arc(p.x, p.y, currentSize, 0, Math.PI * 2);
+                            ctx.fillStyle = color;
 
-                            if (p.scale > 0.8 || isSelected || isHovered) {
-                                ctx.fillStyle = isSelected || isHovered ? 'white' : 'rgba(255,255,255,0.5)';
-                                ctx.font = isSelected || isHovered ? 'bold 12px sans-serif' : '10px sans-serif';
-                                ctx.fillText(node.student || "", p.x + 12, p.y + 4);
+                            // Glow effect
+                            if (isSelected || isHovered || node.isNew) {
+                                ctx.shadowBlur = node.isNew ? 20 : 10;
+                                ctx.shadowColor = glowColor;
+                            } else {
+                                ctx.shadowBlur = 0;
+                            }
+
+                            ctx.fill();
+                            ctx.shadowBlur = 0; // Reset for text
+
+                            // Text Label
+                            if (p.scale > 0.8 || isSelected || isHovered || node.isNew) {
+                                ctx.fillStyle = isSelected || isHovered || node.isNew ? 'white' : 'rgba(255,255,255,0.5)';
+                                ctx.font = isSelected || isHovered || node.isNew ? 'bold 12px sans-serif' : '10px sans-serif';
+
+                                let label = node.student || "";
+                                if (node.isNew) label = "★ " + label; // Add star badge
+
+                                ctx.fillText(label, p.x + 12, p.y + 4);
                             }
                         });
 

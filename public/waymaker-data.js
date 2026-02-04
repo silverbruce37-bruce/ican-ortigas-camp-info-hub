@@ -67,31 +67,86 @@ window.WAYMAKER_DATA = [
         videoUrl: "PtIN1fFSeJs",
         x: -15, y: 30, z: -10
     },
-    // --- REAL DATA COLLECTED (IDs Pending) ---
+    // --- OFFICIAL ICAN STAR DATA (Verified Source: https://www.youtube.com/@ICanBroadcast) ---
     {
-        id: 'ahn-jay-mok-min-chan-satellite',
-        title: "How Satellites Protect our Earth?",
-        student: "안제이 & 목민찬 (Ahn Jay & Mok Min Chan)",
-        category: 'TED Documentary',
-        tags: ['#과학', '#위성', '#환경', '#Earth'],
+        id: 'park-si-yeon-climate',
+        title: "TED:: Climate Change",
+        student: "박시연 (Park Si Yeon)",
+        category: 'TED',
+        tags: ['#기후변화', '#환경', '#미래', '#책임', '#New'],
         thumbnail: '/assets/ted-v3.jpg',
-        desc: "인공위성이 어떻게 우리 지구를 보호하고 감시하는지에 대한 흥미로운 탐구.",
-        duration: "-",
-        date: "2024",
-        videoUrl: "", // TODO: Please provide YouTube ID
-        x: 40, y: 20, z: -10
+        desc: "기후 변화의 심각성과 우리가 가져야 할 책임감에 대한 박시연 학생의 통찰력 있는 발표.",
+        duration: "03:45",
+        date: "2025.01.01",
+        videoUrl: "J0fXgg6W_BE",
+        x: 40, y: 20, z: -10,
+        isNew: true
     },
     {
-        id: 'baek-ji-won-presentation',
-        title: "2025 영어 프레젠테이션 발표",
-        student: "백지원 (Baek Ji Won)",
-        category: 'Presentation',
-        tags: ['#영어', '#발표', '#도전', '#성장'],
+        id: 'kim-joi-table-tennis-official',
+        title: "TED Kids :: The Amazing World of Table Tennis",
+        student: "김조이 (Kim Joi)",
+        category: 'TED Kids',
+        tags: ['#탁구', '#스포츠', '#취미', '#재미', '#New'],
         thumbnail: '/assets/ted-v3.jpg',
-        desc: "2025 영어 프레젠테이션 대회 발표 영상.",
-        duration: "-",
-        date: "2025",
-        videoUrl: "", // TODO: Please provide YouTube ID
-        x: -40, y: -20, z: 10
+        desc: "작은 탁구공 안에 담긴 놀라운 세상! 김조이 학생이 전하는 탁구의 매력.",
+        duration: "03:30",
+        date: "2024.12.31",
+        videoUrl: "HtLG95LIAQw",
+        x: -40, y: -20, z: 10,
+        isNew: true
+    },
+    {
+        id: 'bae-da-hye-swimming',
+        title: "TED Kids :: Fun and Amazing: Swimming!",
+        student: "배다혜 (Bae Da Hye)",
+        category: 'TED Kids',
+        tags: ['#수영', '#건강', '#운동', '#즐거움', '#New'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "물속에서 느끼는 자유와 즐거움. 배다혜 학생이 강력 추천하는 수영의 장점.",
+        duration: "02:50",
+        date: "2024.12.31",
+        videoUrl: "7KwYMNAkRe4",
+        x: 0, y: 50, z: 5,
+        isNew: true
+    },
+    {
+        id: 'mok-min-chan-space-junk',
+        title: "Space Junk: Who Should Be Responsible?",
+        student: "목민찬 (Mok Min Chan)",
+        category: 'TED Documentary',
+        tags: ['#우주', '#환경', '#우주쓰레기', '#과학', '#책임'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "우주 개발의 이면에 감춰진 우주 쓰레기 문제, 누가 책임져야 할까요?",
+        duration: "05:15",
+        date: "2024.12.29",
+        videoUrl: "sSgwXQfQHmA",
+        x: -30, y: 30, z: -30
+    },
+    {
+        id: 'ahn-jay-space-pollution',
+        title: "Human Actions and Space Pollution",
+        student: "안제이 (Ahn Jay)",
+        category: 'TED Documentary',
+        tags: ['#우주오염', '#인류', '#환경보호', '#지속가능성'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "인류의 활동이 우주 환경에 미치는 영향과 우리가 나아가야 할 방향.",
+        duration: "04:40",
+        date: "2024.12.28",
+        videoUrl: "jvKzvW6Yt-g",
+        x: 30, y: -30, z: 30
+    },
+    {
+        id: 'bae-da-hye-friends',
+        title: "TED Kids :: How To Make Friends",
+        student: "배다혜 (Bae Da Hye)",
+        category: 'TED Kids',
+        tags: ['#친구', '#우정', '#관계', '#소통'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "새로운 친구를 사귀는 방법이 어렵나요? 배다혜 학생이 전하는 따뜻한 조언.",
+        duration: "03:10",
+        date: "2024.12.20",
+        videoUrl: "gQ8j_XLVlLI",
+        x: -20, y: 10, z: 40
     }
 ];
