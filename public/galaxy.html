@@ -372,75 +372,70 @@
                             } else if (node.type === 'satellite') {
                                 // 3. SATELLITE RENDERING
                                 const targetNode = waymakerNodes.find(n => n.id === node.orbitTarget);
+
+                                // Orbit Logic (Only if target exists)
                                 if (targetNode) {
-                                    // Orbital Mechanics
-                                    const time = Date.now() * 0.001;
+                                    consttime = Date.now() * 0.001;
                                     const orbitRadius = 60;
                                     const orbitSpeed = 0.5;
-
-                                    // Calculate Orbit Position (Offsets relative to target)
-                                    // Using z-plane orbit for 3D effect
                                     const orbitX = Math.cos(time * orbitSpeed) * orbitRadius;
                                     const orbitZ = Math.sin(time * orbitSpeed) * orbitRadius;
 
-                                    // Update Node Position (This is a visual override, not persistent data mutation)
+                                    // Visual Override (Temporary mutation for rendering frame)
                                     node.x = targetNode.x + orbitX;
-                                    node.y = targetNode.y + (Math.sin(time * 0.3) * 10); // Slight vertical bob
+                                    node.y = targetNode.y + (Math.sin(time * 0.3) * 10);
                                     node.z = targetNode.z + orbitZ;
+                                } else {
+                                    // Fallback: If no target, just float in place (Self-orbit)
+                                    const time = Date.now() * 0.001;
+                                    node.y += Math.sin(time) * 0.1; // Gentle bob
+                                }
 
-                                    // Re-project with new coordinates
-                                    const searchP = project(node.x, node.y, node.z);
+                                // Re-project with (potentially new) coordinates
+                                const searchP = project(node.x, node.y, node.z);
+                                p.x = searchP.x;
+                                p.y = searchP.y;
+                                p.scale = searchP.scale;
+                                p.isVisible = searchP.isVisible;
 
-                                    // Update p for rendering context (since we moved the node)
-                                    // Note: We need to re-calculate p because we changed x,y,z
-                                    p.x = searchP.x;
-                                    p.y = searchP.y;
-                                    p.scale = searchP.scale;
-                                    p.isVisible = searchP.isVisible;
+                                if (p.isVisible) {
+                                    ctx.save();
+                                    ctx.translate(p.x, p.y);
 
-                                    if (p.isVisible) {
-                                        ctx.save();
-                                        ctx.translate(p.x, p.y);
+                                    // Satellite Icon
+                                    const satSize = baseSize * 2;
+                                    ctx.strokeStyle = isSelected || isHovered ? '#a78bfa' : '#8b5cf6'; // Violet
+                                    ctx.fillStyle = '#1e1b4b'; // Dark Violet
+                                    ctx.lineWidth = 1.5 * p.scale;
 
-                                        // Draw Orbit Path (Optional, faint line)
-                                        // Since we can't easily draw the full ellipse in 2D projection here without more math, 
-                                        // we skip the trail or draw a simple one if requested. 
+                                    // Solar Panels (Left & Right)
+                                    ctx.beginPath();
+                                    ctx.rect(-satSize * 1.5, -satSize * 0.4, satSize * 1.2, satSize * 0.8);
+                                    ctx.rect(satSize * 0.3, -satSize * 0.4, satSize * 1.2, satSize * 0.8);
+                                    ctx.fill();
+                                    ctx.stroke();
 
-                                        // Satellite Icon
-                                        const satSize = baseSize * 2;
-                                        ctx.strokeStyle = isSelected || isHovered ? '#a78bfa' : '#8b5cf6'; // Violet
-                                        ctx.fillStyle = '#1e1b4b'; // Dark Violet
-                                        ctx.lineWidth = 1.5 * p.scale;
+                                    // Main Body (Center)
+                                    ctx.beginPath();
+                                    ctx.fillStyle = isSelected || isHovered ? '#c4b5fd' : '#8b5cf6';
+                                    ctx.rect(-satSize * 0.4, -satSize * 0.5, satSize * 0.8, satSize);
+                                    ctx.fill();
 
-                                        // Solar Panels (Left & Right)
-                                        ctx.beginPath();
-                                        ctx.rect(-satSize * 1.5, -satSize * 0.4, satSize * 1.2, satSize * 0.8);
-                                        ctx.rect(satSize * 0.3, -satSize * 0.4, satSize * 1.2, satSize * 0.8);
-                                        ctx.fill();
-                                        ctx.stroke();
+                                    // Antenna
+                                    ctx.beginPath();
+                                    ctx.moveTo(0, satSize * 0.5);
+                                    ctx.lineTo(0, satSize);
+                                    ctx.arc(0, satSize, satSize * 0.2, 0, Math.PI * 2);
+                                    ctx.stroke();
 
-                                        // Main Body (Center)
-                                        ctx.beginPath();
-                                        ctx.fillStyle = isSelected || isHovered ? '#c4b5fd' : '#8b5cf6';
-                                        ctx.rect(-satSize * 0.4, -satSize * 0.5, satSize * 0.8, satSize);
-                                        ctx.fill();
+                                    ctx.restore();
 
-                                        // Antenna
-                                        ctx.beginPath();
-                                        ctx.moveTo(0, satSize * 0.5);
-                                        ctx.lineTo(0, satSize);
-                                        ctx.arc(0, satSize, satSize * 0.2, 0, Math.PI * 2);
-                                        ctx.stroke();
-
-                                        ctx.restore();
-
-                                        // Label for Satellite
-                                        if (p.scale > 0.8 || isSelected || isHovered) {
-                                            ctx.fillStyle = '#a78bfa'; // Light Violet
-                                            ctx.font = isSelected || isHovered ? 'bold 12px sans-serif' : '10px sans-serif';
-                                            ctx.shadowBlur = 0;
-                                            ctx.fillText("🛰️ " + (node.student || "Satellite"), p.x + 12, p.y + 4);
-                                        }
+                                    // Label for Satellite
+                                    if (p.scale > 0.8 || isSelected || isHovered) {
+                                        ctx.fillStyle = '#a78bfa'; // Light Violet
+                                        ctx.font = isSelected || isHovered ? 'bold 12px sans-serif' : '10px sans-serif';
+                                        ctx.shadowBlur = 0;
+                                        ctx.fillText("🛰️ " + (node.student || "Satellite"), p.x + 12, p.y + 4);
                                     }
                                 }
 
