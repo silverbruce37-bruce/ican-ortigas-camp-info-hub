@@ -379,7 +379,7 @@
                                 if (targetNode) {
                                     const time = Date.now() * 0.001;
                                     const orbitRadius = 60;
-                                    const orbitSpeed = 0.5;
+                                    const orbitSpeed = 0.3; // Slower speed (was 0.5) for easier clicking
                                     const orbitX = Math.cos(time * orbitSpeed) * orbitRadius;
                                     const orbitZ = Math.sin(time * orbitSpeed) * orbitRadius;
 
