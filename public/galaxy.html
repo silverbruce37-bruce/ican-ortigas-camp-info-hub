@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Waymaker - Galaxy View</title>
+    <title>Space Waymaker - Galaxy View</title>
 
     <!-- React & ReactDOM -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
@@ -87,6 +87,89 @@
 </head>
 
 <body>
+    <!-- EMERGENCY HOME BUTTON SCRIPT -->
+    <script>
+        (function () {
+            // Function to create and append the button
+            function createHomeButton() {
+                // Check if button already exists to prevent duplicates
+                if (document.getElementById('emergency-home-btn')) return;
+
+                const btn = document.createElement('a');
+                btn.id = 'emergency-home-btn';
+                btn.href = '/';
+                btn.title = 'Main Base';
+
+                // Premium Glassmorphism Styling (Restored)
+                btn.style.cssText = `
+                    position: fixed !important;
+                    top: 24px !important;
+                    right: 24px !important;
+                    width: 50px !important;
+                    height: 50px !important;
+                    background-color: rgba(15, 23, 42, 0.8) !important; /* Slate 900 with opacity */
+                    backdrop-filter: blur(12px) !important;
+                    -webkit-backdrop-filter: blur(12px) !important;
+                    border: 1px solid rgba(51, 65, 85, 0.5) !important; /* Slate 700 */
+                    border-radius: 50% !important;
+                    z-index: 2147483647 !important; /* Max Z-Index */
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3) !important; /* Blue glow */
+                    cursor: pointer !important;
+                    text-decoration: none !important;
+                    transition: all 0.3s ease !important;
+                `;
+
+                // Hover effects
+                btn.onmouseenter = () => {
+                    btn.style.transform = 'scale(1.1)';
+                    btn.style.borderColor = 'rgba(96, 165, 250, 1)'; /* Blue 400 */
+                    btn.style.boxShadow = '0 0 30px rgba(34, 211, 238, 0.5)'; /* Cyan glow */
+                };
+                btn.onmouseleave = () => {
+                    btn.style.transform = 'scale(1)';
+                    btn.style.borderColor = 'rgba(51, 65, 85, 0.5)';
+                    btn.style.boxShadow = '0 0 20px rgba(59, 130, 246, 0.3)';
+                };
+
+                btn.innerHTML = `
+                    <div style="position: absolute; inset: 0; background: rgba(59, 130, 246, 0.1); border-radius: 50%;"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position: relative; z-index: 10;">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                    <div style="position: absolute; top: 110%; right: 0; background: rgba(0,0,0,0.8); color: #bfdbfe; font-size: 10px; padding: 4px 8px; border-radius: 4px; pointer-events: none; opacity: 0; transition: opacity 0.3s; white-space: nowrap;" id="home-tooltip">
+                        Main Base
+                    </div>
+                `;
+
+                // Tooltip visibility
+                btn.onmouseover = () => {
+                    const tip = btn.querySelector('#home-tooltip');
+                    if (tip) tip.style.opacity = '1';
+                }
+                btn.onmouseout = () => {
+                    const tip = btn.querySelector('#home-tooltip');
+                    if (tip) tip.style.opacity = '0';
+                }
+
+                document.body.appendChild(btn);
+                console.log("Emergency Home Button added to DOM");
+            }
+
+            // Run immediately
+            createHomeButton();
+
+            // Run again after window load
+            window.addEventListener('load', createHomeButton);
+
+            // Run periodically
+            setInterval(createHomeButton, 1000);
+        })();
+    </script>
+
     <div id="root"></div>
 
     <script type="text/babel">
@@ -100,6 +183,7 @@
             const RefreshIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21.5 2v6h-6" /><path d="M2.5 22v-6h6" /><path d="M2.5 13.5a10 10 0 1 1 14.9 4.3" /><path d="M21.5 10.5a10 10 0 1 1-14.9-4.3" /></svg>;
             const ChevronRightIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>;
             const ChevronDownIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>;
+            const HomeIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>;
 
             // --- CANVAS COMPONENT ---
             const WaymakerCanvas = ({ selectedTag, onNodeClick }) => {
@@ -284,6 +368,82 @@
                                     ctx.fillText("🛸 " + (node.student || "Explorer"), p.x + 12, p.y + 4);
                                 }
 
+
+                            } else if (node.type === 'satellite') {
+                                // 3. SATELLITE RENDERING
+                                const targetNode = waymakerNodes.find(n => n.id === node.orbitTarget);
+                                if (targetNode) {
+                                    // Orbital Mechanics
+                                    const time = Date.now() * 0.001;
+                                    const orbitRadius = 60;
+                                    const orbitSpeed = 0.5;
+
+                                    // Calculate Orbit Position (Offsets relative to target)
+                                    // Using z-plane orbit for 3D effect
+                                    const orbitX = Math.cos(time * orbitSpeed) * orbitRadius;
+                                    const orbitZ = Math.sin(time * orbitSpeed) * orbitRadius;
+
+                                    // Update Node Position (This is a visual override, not persistent data mutation)
+                                    node.x = targetNode.x + orbitX;
+                                    node.y = targetNode.y + (Math.sin(time * 0.3) * 10); // Slight vertical bob
+                                    node.z = targetNode.z + orbitZ;
+
+                                    // Re-project with new coordinates
+                                    const searchP = project(node.x, node.y, node.z);
+
+                                    // Update p for rendering context (since we moved the node)
+                                    // Note: We need to re-calculate p because we changed x,y,z
+                                    p.x = searchP.x;
+                                    p.y = searchP.y;
+                                    p.scale = searchP.scale;
+                                    p.isVisible = searchP.isVisible;
+
+                                    if (p.isVisible) {
+                                        ctx.save();
+                                        ctx.translate(p.x, p.y);
+
+                                        // Draw Orbit Path (Optional, faint line)
+                                        // Since we can't easily draw the full ellipse in 2D projection here without more math, 
+                                        // we skip the trail or draw a simple one if requested. 
+
+                                        // Satellite Icon
+                                        const satSize = baseSize * 2;
+                                        ctx.strokeStyle = isSelected || isHovered ? '#a78bfa' : '#8b5cf6'; // Violet
+                                        ctx.fillStyle = '#1e1b4b'; // Dark Violet
+                                        ctx.lineWidth = 1.5 * p.scale;
+
+                                        // Solar Panels (Left & Right)
+                                        ctx.beginPath();
+                                        ctx.rect(-satSize * 1.5, -satSize * 0.4, satSize * 1.2, satSize * 0.8);
+                                        ctx.rect(satSize * 0.3, -satSize * 0.4, satSize * 1.2, satSize * 0.8);
+                                        ctx.fill();
+                                        ctx.stroke();
+
+                                        // Main Body (Center)
+                                        ctx.beginPath();
+                                        ctx.fillStyle = isSelected || isHovered ? '#c4b5fd' : '#8b5cf6';
+                                        ctx.rect(-satSize * 0.4, -satSize * 0.5, satSize * 0.8, satSize);
+                                        ctx.fill();
+
+                                        // Antenna
+                                        ctx.beginPath();
+                                        ctx.moveTo(0, satSize * 0.5);
+                                        ctx.lineTo(0, satSize);
+                                        ctx.arc(0, satSize, satSize * 0.2, 0, Math.PI * 2);
+                                        ctx.stroke();
+
+                                        ctx.restore();
+
+                                        // Label for Satellite
+                                        if (p.scale > 0.8 || isSelected || isHovered) {
+                                            ctx.fillStyle = '#a78bfa'; // Light Violet
+                                            ctx.font = isSelected || isHovered ? 'bold 12px sans-serif' : '10px sans-serif';
+                                            ctx.shadowBlur = 0;
+                                            ctx.fillText("🛰️ " + (node.student || "Satellite"), p.x + 12, p.y + 4);
+                                        }
+                                    }
+                                }
+
                             } else {
                                 // 2. STANDARD STAR RENDERING
                                 let currentSize = baseSize;
@@ -435,6 +595,20 @@
                 return (
                     <div className="relative min-h-screen text-white overflow-hidden bg-slate-900 font-sans">
                         <WaymakerCanvas selectedTag={selectedTag} onNodeClick={handleNodeClick} />
+
+                        {/* Home Button (Top Right) - Bulletproof Positioning */}
+                        <a href="/" style={{ position: 'fixed', top: '24px', right: '24px', zIndex: 9999 }} className="pointer-events-auto group">
+                            <div className="relative overflow-hidden bg-slate-900/80 backdrop-blur-md border border-slate-700/50 p-3 rounded-full shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300 group-hover:scale-110 group-hover:border-blue-400 group-hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] text-white">
+                                <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <HomeIcon />
+                            </div>
+                            <div className="absolute top-full right-0 mt-2 px-2 py-1 bg-black/80 text-[10px] text-blue-200 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+                                Main Base
+                            </div>
+                        </a>
+
+
+
                         <div className="relative z-10 container mx-auto px-4 py-10 min-h-screen flex flex-col pointer-events-none">
                             {/* Spaceship HUD Title Panel (Top Left) */}
                             <div className="fixed top-6 left-6 z-30 max-w-2xl animate-fade-in-down pointer-events-auto hidden md:block">
@@ -502,9 +676,11 @@
                                     </div>
                                 </div>
                             </div>
+
+
                             <div className="fixed right-8 bottom-8 z-30 flex flex-col gap-2 items-end pointer-events-auto transition-all duration-700 delay-300 transform-none max-h-[70vh] overflow-y-auto pr-2 scrollbar-hide">
                                 <div className="text-[10px] text-slate-500 font-mono mb-2 uppercase tracking-widest bg-slate-900/80 px-2 py-1 rounded backdrop-blur border border-slate-800 self-end">
-                                    Waymaker Archive
+                                    Space Waymaker Archive
                                 </div>
                                 <button
                                     onClick={() => setSelectedTag(null)}
@@ -521,6 +697,8 @@
                                     onTagSelect={setSelectedTag}
                                 />
                             </div>
+
+
                         </div>
                     </div>
                 );
@@ -531,7 +709,17 @@
 
         } catch (err) {
             console.error(err);
-            document.body.innerHTML = `<div style="color:red; padding:20px;"><h1>Critical Error</h1><pre>${err.message}</pre></div>`;
+            // Modified error handling to NOT wipe the body, allowing our Safe Mode Home Button to survive
+            const errDiv = document.createElement('div');
+            errDiv.style.color = 'red';
+            errDiv.style.padding = '20px';
+            errDiv.style.position = 'fixed';
+            errDiv.style.bottom = '0';
+            errDiv.style.left = '0';
+            errDiv.style.zIndex = '999999';
+            errDiv.style.backgroundColor = 'rgba(0,0,0,0.8)';
+            errDiv.innerHTML = `<h1>Critical Error</h1><pre>${err.message}</pre>`;
+            document.body.appendChild(errDiv);
         }
     </script>
 </body>

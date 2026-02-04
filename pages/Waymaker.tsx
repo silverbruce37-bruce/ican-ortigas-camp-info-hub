@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Play, Hash, RefreshCw, X, Youtube } from 'lucide-react';
+import { Play, Hash, RefreshCw, X, Youtube, Home } from 'lucide-react';
 
 // INLINED DATA & COMPONENT TO PREVENT IMPORT/CRASH ISSUES
 interface WaymakerNode {
@@ -251,7 +251,11 @@ const Waymaker: React.FC = () => {
         <div className="relative min-h-screen text-white overflow-hidden bg-slate-900 font-sans">
             <WaymakerCanvas selectedTag={selectedTag} onNodeClick={setSelectedVideo} />
 
+
+
             <div className="relative z-10 container mx-auto px-4 py-10 min-h-screen flex flex-col pointer-events-none">
+
+
 
                 <motion.div
                     initial={{ opacity: 0, y: -50 }}
@@ -264,7 +268,7 @@ const Waymaker: React.FC = () => {
                         The Infinity Loop Protocol
                     </div>
                     <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 mb-6 tracking-tight drop-shadow-2xl">
-                        디지털 웨이메이커
+                        SPACE WAYMAKER
                     </h1>
                     <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
                         아이들의 생각이 연결되어 거대한 은하계를 이룹니다.<br />
@@ -278,14 +282,16 @@ const Waymaker: React.FC = () => {
                     transition={{ delay: 0.3 }}
                     className="fixed right-8 bottom-8 z-30 flex flex-col gap-2 items-end pointer-events-auto"
                 >
+
+
                     <div className="text-[10px] text-slate-500 font-mono mb-2 uppercase tracking-widest bg-slate-900/80 px-2 py-1 rounded backdrop-blur border border-slate-800">
                         Constellation Navigation
                     </div>
                     <button
                         onClick={() => setSelectedTag(null)}
                         className={`px-4 py-2 rounded-l-full text-xs font-medium transition-all duration-300 border-r-4 backdrop-blur-md w-32 text-right ${selectedTag === null
-                                ? 'bg-white text-slate-900 border-blue-500 shadow-[0_0_20px_rgba(255,255,255,0.4)] translate-x-2'
-                                : 'bg-slate-900/60 text-slate-400 border-slate-700 hover:border-slate-500 hover:bg-slate-800/80 hover:w-36'
+                            ? 'bg-white text-slate-900 border-blue-500 shadow-[0_0_20px_rgba(255,255,255,0.4)] translate-x-2'
+                            : 'bg-slate-900/60 text-slate-400 border-slate-700 hover:border-slate-500 hover:bg-slate-800/80 hover:w-36'
                             }`}
                     >
                         전체 보기 (Reset)
@@ -295,8 +301,8 @@ const Waymaker: React.FC = () => {
                             key={tag}
                             onClick={() => setSelectedTag(selectedTag === tag ? null : tag)}
                             className={`px-4 py-2 rounded-l-full text-xs font-medium transition-all duration-300 border-r-4 flex items-center justify-end gap-2 backdrop-blur-md w-auto min-w-[120px] ${selectedTag === tag
-                                    ? 'bg-gradient-to-l from-blue-600/90 to-blue-900/40 text-white border-cyan-400 shadow-[0_0_25px_rgba(59,130,246,0.6)] translate-x-2'
-                                    : 'bg-slate-900/60 text-slate-400 border-slate-700 hover:border-blue-500/50 hover:text-blue-200 hover:bg-slate-800/80 hover:pr-6'
+                                ? 'bg-gradient-to-l from-blue-600/90 to-blue-900/40 text-white border-cyan-400 shadow-[0_0_25px_rgba(59,130,246,0.6)] translate-x-2'
+                                : 'bg-slate-900/60 text-slate-400 border-slate-700 hover:border-blue-500/50 hover:text-blue-200 hover:bg-slate-800/80 hover:pr-6'
                                 }`}
                         >
                             {tag.replace('#', '')} <Hash size={10} className="opacity-50" />
@@ -373,6 +379,14 @@ const Waymaker: React.FC = () => {
                     </motion.div>
                 )}
             </AnimatePresence>
+
+            {/* Home Button (Top Right) - Bulletproof Inline Styles - SVG Version */}
+            <a href="/" style={{ position: 'fixed', top: '24px', right: '24px', zIndex: 99999, display: 'flex', alignItems: 'center', justifyContent: 'center', width: '50px', height: '50px', backgroundColor: 'rgba(15, 23, 42, 0.9)', border: '1px solid rgba(59, 130, 246, 0.5)', borderRadius: '50%', boxShadow: '0 0 15px rgba(59, 130, 246, 0.5)', cursor: 'pointer', textDecoration: 'none' }} title="Main Base">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+            </a>
         </div>
     );
 };
