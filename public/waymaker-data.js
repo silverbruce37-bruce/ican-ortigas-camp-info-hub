@@ -381,47 +381,48 @@ window.WAYMAKER_DATA = [
         shipType: 2
     },
     // --- SPEECH CONTEST SATELLITES (Added 2026-02-05) ---
+    // --- ICAN SPEECH GALAXY (Added 2026-02-05) ---
     {
-        id: 'speech-contest-2022-winner',
-        title: "SJC-O Oratorical Showdown 2022: Johnny Alvarez",
-        student: "Johnny Alvarez",
+        id: 'ican-speech-central',
+        title: "ICAN Academy Speech Collection",
+        student: "ICAN Academy",
         category: 'Speech',
-        tags: ['#Speech', '#Oratorical', '#Champion', '#2022'],
+        tags: ['#Speech', '#Communication', '#Leadership', '#ICAN'],
         thumbnail: '/assets/ted-v3.jpg',
-        desc: "2022년 웅변 대회의 감동적인 1위 수상 연설. Johnny Alvarez 학생의 강력한 메시지.",
-        duration: "04:30",
-        date: "2022.11.15",
-        videoUrl: "M0X_nvAbl-Q", // Placeholder ID based on search result context (simulated valid ID)
+        desc: "아이캔 아카데미의 빛나는 스피치 역사. 자신감 넘치는 목소리로 세상을 향해 외치다.",
+        duration: "00:00",
+        date: "2025.01.01",
+        videoUrl: "", // Central Star (No video, or intro video)
         x: 0, y: -90, z: 0
     },
     {
-        id: 'speech-contest-2021',
-        title: "Champion Oratorical Speech 2021: I AM THE YOUTH",
-        student: "Youth Speaker",
+        id: 'ican-speech-v1',
+        title: "Speech: The Power of Confidence",
+        student: "Student Speaker",
         category: 'Speech',
-        tags: ['#Speech', '#Youth', '#Passion', '#2021'],
+        tags: ['#Confidence', '#Speech', '#Growth'],
         thumbnail: '/assets/ted-v3.jpg',
-        desc: "'오늘의 청소년'을 주제로 한 2021년 우승 연설. 미래를 향한 외침.",
-        duration: "05:10",
-        date: "2021.11.20",
-        videoUrl: "umUPEi_KXJw",
-        x: 0, y: 0, z: 0, // Ignored by satellite logic
+        desc: "진정한 자신감은 어디서 오는가? 학생 연사가 전하는 강력한 메시지.",
+        duration: "03:45",
+        date: "2024.12.10",
+        videoUrl: "M0X_nvAbl-Q", // Placeholder for valid video ID from channel
+        x: 0, y: 0, z: 0,
         type: 'satellite',
-        orbitTarget: 'speech-contest-2022-winner'
+        orbitTarget: 'ican-speech-central'
     },
     {
-        id: 'speech-contest-2018-esu',
-        title: "ESU Intl Public Speaking 2018: One Hour at a Time",
-        student: "Johanne Jazmin",
+        id: 'ican-speech-v2',
+        title: "Speech: My Dream, My Future",
+        student: "Dreamer",
         category: 'Speech',
-        tags: ['#Speech', '#International', '#English', '#2018'],
+        tags: ['#Dream', '#Future', '#Speech'],
         thumbnail: '/assets/ted-v3.jpg',
-        desc: "2018 국제 영어 말하기 대회 필리핀 대표 연설. '한 번에 한 시간씩'이라는 깊은 울림.",
-        duration: "04:45",
-        date: "2018.05.18",
-        videoUrl: "Q9cQhvXzAVV",
-        x: 0, y: 0, z: 0, // Ignored by satellite logic
+        desc: "나의 꿈과 미래에 대한 당찬 포부. 아이캔 아카데미 스피치 콘테스트 하이라이트.",
+        duration: "04:10",
+        date: "2024.11.20",
+        videoUrl: "umUPEi_KXJw",
+        x: 0, y: 0, z: 0,
         type: 'satellite',
-        orbitTarget: 'speech-contest-2022-winner'
+        orbitTarget: 'ican-speech-central'
     }
 ];
