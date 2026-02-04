@@ -212,6 +212,8 @@
                             }
 
                             // --- RENDERING NODE ---
+                            const size = ((isSelected ? 4 : 2) + (isHovered ? 3 : 0)) * p.scale;
+
                             // Special effects for "New" stars (샛별)
                             let currentSize = size;
                             let color = isSelected || isHovered ? '#60a5fa' : '#475569';
