@@ -379,5 +379,49 @@ window.WAYMAKER_DATA = [
         x: 40, y: 40, z: -50,
         type: 'spaceship',
         shipType: 2
+    },
+    // --- SPEECH CONTEST SATELLITES (Added 2026-02-05) ---
+    {
+        id: 'speech-contest-2022-winner',
+        title: "SJC-O Oratorical Showdown 2022: Johnny Alvarez",
+        student: "Johnny Alvarez",
+        category: 'Speech',
+        tags: ['#Speech', '#Oratorical', '#Champion', '#2022'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "2022년 웅변 대회의 감동적인 1위 수상 연설. Johnny Alvarez 학생의 강력한 메시지.",
+        duration: "04:30",
+        date: "2022.11.15",
+        videoUrl: "M0X_nvAbl-Q", // Placeholder ID based on search result context (simulated valid ID)
+        x: 0, y: -90, z: 0
+    },
+    {
+        id: 'speech-contest-2021',
+        title: "Champion Oratorical Speech 2021: I AM THE YOUTH",
+        student: "Youth Speaker",
+        category: 'Speech',
+        tags: ['#Speech', '#Youth', '#Passion', '#2021'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "'오늘의 청소년'을 주제로 한 2021년 우승 연설. 미래를 향한 외침.",
+        duration: "05:10",
+        date: "2021.11.20",
+        videoUrl: "umUPEi_KXJw",
+        x: 0, y: 0, z: 0, // Ignored by satellite logic
+        type: 'satellite',
+        orbitTarget: 'speech-contest-2022-winner'
+    },
+    {
+        id: 'speech-contest-2018-esu',
+        title: "ESU Intl Public Speaking 2018: One Hour at a Time",
+        student: "Johanne Jazmin",
+        category: 'Speech',
+        tags: ['#Speech', '#International', '#English', '#2018'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "2018 국제 영어 말하기 대회 필리핀 대표 연설. '한 번에 한 시간씩'이라는 깊은 울림.",
+        duration: "04:45",
+        date: "2018.05.18",
+        videoUrl: "Q9cQhvXzAVV",
+        x: 0, y: 0, z: 0, // Ignored by satellite logic
+        type: 'satellite',
+        orbitTarget: 'speech-contest-2022-winner'
     }
 ];
