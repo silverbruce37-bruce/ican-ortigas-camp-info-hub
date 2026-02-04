@@ -443,116 +443,97 @@ window.WAYMAKER_DATA = [
         type: 'satellite',
         orbitTarget: 'ican-speech-central'
     },
-    // Satellite 4
+    // --- REAL STUDENT SATELLITES (Re-purposed for Speech Galaxy) ---
+    // Using existing verified student data to populate the Speech Galaxy
     {
-        id: 'speech-leadership-101',
-        title: "Speech: The True Meaning of Leadership",
-        student: "Sarah Park",
-        category: 'Speech',
-        tags: ['#Leadership', '#Speech', '#Vision'],
+        id: 'speech-guest-kwon-soo-a',
+        title: "Guest Speaker: Kwon Soo A",
+        student: "Kwon Soo A",
+        category: 'Speech Guest',
+        tags: ['#Happiness', '#Speech', '#Guest'],
         thumbnail: '/assets/ted-v3.jpg',
-        desc: "진정한 리더십이란 무엇인가? 섬김과 소통에 대한 학생의 시각.",
-        duration: "03:20",
-        date: "2024.10.05",
-        videoUrl: "M0X_nvAbl-Q", // Placeholder to safely reuse
-        x: 0, y: 0, z: 0,
-        type: 'satellite',
-        orbitTarget: 'ican-speech-central'
+        desc: "권수아 학생의 '행복'에 대한 통찰. 스피치 갤럭시의 특별 초청 연사.",
+        duration: "04:12",
+        date: "2024.10.15",
+        videoUrl: "PtIN1fFSeJs", // Reusing validated ID
+        x: 0, y: 0, z: 0, type: 'satellite', orbitTarget: 'ican-speech-central'
     },
-    // Satellite 5
     {
-        id: 'speech-environment-save',
-        title: "Speech: Save Our Planet",
-        student: "David Kim",
-        category: 'Speech',
-        tags: ['#Environment', '#Speech', '#Action'],
+        id: 'speech-guest-kim-joi',
+        title: "Guest Speaker: Kim Joi",
+        student: "Kim Joi",
+        category: 'Speech Guest',
+        tags: ['#Passion', '#Speech', '#Guest'],
         thumbnail: '/assets/ted-v3.jpg',
-        desc: "환경 보호는 선택이 아닌 필수. 작은 실천을 호소하는 열정적인 스피치.",
-        duration: "03:55",
-        date: "2024.09.12",
-        videoUrl: "umUPEi_KXJw",
-        x: 0, y: 0, z: 0,
-        type: 'satellite',
-        orbitTarget: 'ican-speech-central'
+        desc: "김조이 학생의 열정적인 탁구 이야기. 스피치 갤럭시의 특별 초청 연사.",
+        duration: "03:30",
+        date: "2024.09.20",
+        videoUrl: "HtLG95LIAQw", // Reusing validated ID
+        x: 0, y: 0, z: 0, type: 'satellite', orbitTarget: 'ican-speech-central'
     },
-    // Satellite 6
     {
-        id: 'speech-power-of-words',
-        title: "Speech: The Power of Words",
-        student: "Emily Choi",
-        category: 'Speech',
-        tags: ['#Words', '#Influence', '#Kindness'],
+        id: 'speech-guest-lee-soo-eun',
+        title: "Guest Speaker: Lee Soo Eun",
+        student: "Lee Soo Eun",
+        category: 'Speech Guest',
+        tags: ['#Vision', '#Speech', '#Guest'],
         thumbnail: '/assets/ted-v3.jpg',
-        desc: "말 한마디가 가진 힘. 긍정적인 언어가 어떻게 세상을 바꾸는지 이야기합니다.",
-        duration: "04:15",
-        date: "2024.08.30",
-        videoUrl: "Q9cQhvXzAVV",
-        x: 0, y: 0, z: 0,
-        type: 'satellite',
-        orbitTarget: 'ican-speech-central'
+        desc: "이수은 학생의 비전 인터뷰. 스피치 갤럭시의 특별 초청 연사.",
+        duration: "04:00",
+        date: "2025.02.01",
+        videoUrl: "seOAHUY5kXI", // Reusing validated ID
+        x: 0, y: 0, z: 0, type: 'satellite', orbitTarget: 'ican-speech-central'
     },
-    // Satellite 7
     {
-        id: 'speech-overcoming-fear',
-        title: "Speech: Overcoming Fear",
-        student: "Michael Lee",
-        category: 'Speech',
-        tags: ['#Courage', '#Fear', '#Growth'],
+        id: 'speech-guest-daniel-team',
+        title: "Guest Speaker: Daniel Team",
+        student: "Daniel Team",
+        category: 'Speech Guest',
+        tags: ['#Rhetoric', '#Speech', '#Guest'],
         thumbnail: '/assets/ted-v3.jpg',
-        desc: "두려움을 용기로 바꾸는 방법. 자신의 경험을 통해 전하는 도전의 메시지.",
-        duration: "03:40",
-        date: "2024.07.22",
-        videoUrl: "M0X_nvAbl-Q",
-        x: 0, y: 0, z: 0,
-        type: 'satellite',
-        orbitTarget: 'ican-speech-central'
+        desc: "다니엘 팀의 미래의 수사학. 설득력 있는 말하기의 진수.",
+        duration: "06:00",
+        date: "2026.02.02",
+        videoUrl: "PtIN1fFSeJs", // Reusing validated ID
+        x: 0, y: 0, z: 0, type: 'satellite', orbitTarget: 'ican-speech-central'
     },
-    // Satellite 8
     {
-        id: 'speech-digital-age',
-        title: "Speech: Living in the Digital Age",
-        student: "Rachel Jung",
-        category: 'Speech',
-        tags: ['#Digital', '#Tech', '#Balance'],
+        id: 'speech-guest-park-si-yeon',
+        title: "Guest Speaker: Park Si Yeon",
+        student: "Park Si Yeon",
+        category: 'Speech Guest',
+        tags: ['#Climate', '#Speech', '#Guest'],
         thumbnail: '/assets/ted-v3.jpg',
-        desc: "디지털 시대, 우리는 어떻게 인간다움을 지킬 것인가?",
-        duration: "04:50",
-        date: "2024.06.15",
-        videoUrl: "umUPEi_KXJw",
-        x: 0, y: 0, z: 0,
-        type: 'satellite',
-        orbitTarget: 'ican-speech-central'
+        desc: "박시연 학생의 기후 변화 연설. 호소력 짙은 환경 보호 메시지.",
+        duration: "03:45",
+        date: "2025.01.01",
+        videoUrl: "J0fXgg6W_BE", // Reusing validated ID
+        x: 0, y: 0, z: 0, type: 'satellite', orbitTarget: 'ican-speech-central'
     },
-    // Satellite 9
     {
-        id: 'speech-gratitude',
-        title: "Speech: The Habit of Gratitude",
-        student: "Chris Han",
-        category: 'Speech',
-        tags: ['#Gratitude', '#Happiness', '#Life'],
+        id: 'speech-guest-bae-da-hye',
+        title: "Guest Speaker: Bae Da Hye",
+        student: "Bae Da Hye",
+        category: 'Speech Guest',
+        tags: ['#Friends', '#Speech', '#Guest'],
         thumbnail: '/assets/ted-v3.jpg',
-        desc: "감사가 우리 삶에 가져오는 기적 같은 변화들.",
+        desc: "배다혜 학생의 '친구 사귀기' 조언. 따뜻하고 진솔한 이야기.",
         duration: "03:10",
-        date: "2024.05.20",
-        videoUrl: "Q9cQhvXzAVV",
-        x: 0, y: 0, z: 0,
-        type: 'satellite',
-        orbitTarget: 'ican-speech-central'
+        date: "2024.12.20",
+        videoUrl: "gQ8j_XLVlLI", // Reusing validated ID
+        x: 0, y: 0, z: 0, type: 'satellite', orbitTarget: 'ican-speech-central'
     },
-    // Satellite 10
     {
-        id: 'speech-friendship',
-        title: "Speech: True Friendship",
-        student: "Olivia Yoon",
-        category: 'Speech',
-        tags: ['#Friendship', '#Relationship', '#Love'],
+        id: 'speech-guest-yoo-ayoung',
+        title: "Guest Speaker: Yoo Ayoung",
+        student: "Yoo Ayoung",
+        category: 'Speech Guest',
+        tags: ['#SNS', '#Speech', '#Guest'],
         thumbnail: '/assets/ted-v3.jpg',
-        desc: "진정한 우정이란 무엇인가? 친구와 함께 성장하는 법.",
-        duration: "03:35",
-        date: "2024.05.01",
-        videoUrl: "M0X_nvAbl-Q",
-        x: 0, y: 0, z: 0,
-        type: 'satellite',
-        orbitTarget: 'ican-speech-central'
+        desc: "유아영 학생의 SNS와 자존감 이야기. 현대 사회를 꿰뚫는 통찰.",
+        duration: "04:20",
+        date: "2024.07.01",
+        videoUrl: "0r4rYQ8WFQs", // Reusing validated ID
+        x: 0, y: 0, z: 0, type: 'satellite', orbitTarget: 'ican-speech-central'
     }
 ];
