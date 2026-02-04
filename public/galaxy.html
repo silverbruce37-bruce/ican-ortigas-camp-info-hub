@@ -378,10 +378,16 @@
                                 // Orbit Logic (Only if target exists)
                                 if (targetNode) {
                                     const time = Date.now() * 0.001;
-                                    const orbitRadius = 60;
+                                    // Unique phase offset based on node ID to prevent stacking
+                                    const offset = node.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0) % 360;
+                                    const orbitRadius = 60; // Base radius
                                     const orbitSpeed = 0.05; // Drastically slower (was 0.3) for easy clicking
-                                    const orbitX = Math.cos(time * orbitSpeed) * orbitRadius;
-                                    const orbitZ = Math.sin(time * orbitSpeed) * orbitRadius;
+
+                                    // Use offset in the angle calculation
+                                    const angle = (time * orbitSpeed) + offset;
+
+                                    const orbitX = Math.cos(angle) * orbitRadius;
+                                    const orbitZ = Math.sin(angle) * orbitRadius;
 
                                     // Visual Override (Temporary mutation for rendering frame)
                                     node.x = targetNode.x + orbitX;
