@@ -35,7 +35,7 @@ const Layout: React.FC = () => {
     { label: content.nav.fees, path: '/fees' },
     { label: content.nav.schools, path: '/schools' },
     { label: content.nav.living, path: '/living' },
-    { label: content.nav.waymaker, path: '/waymaker' }, // Digital Waymaker
+    { label: content.nav.waymaker, path: '/galaxy.html' }, // Digital Waymaker
     { label: content.nav.counseling, path: '/counseling' },
     { label: 'Community', path: '/community' }, // Changed from OrtiCarrot to generic Community
     { label: content.nav.blog, path: '/blog' },
@@ -70,18 +70,31 @@ const Layout: React.FC = () => {
           {/* Desktop Nav - Bezaleel's Touch: Centered with margins for breathing room */}
           <nav className="hidden md:flex items-center gap-6 lg:gap-8 mx-4" aria-label="Main Navigation">
             {navItems.map((item) => (
-              <NavLink
-                key={item.path}
-                to={item.path}
-                className={({ isActive }) =>
-                  `text-[12px] font-normal transition-opacity duration-300 ${scrolled
-                    ? isActive ? 'text-ink opacity-100 font-medium' : 'text-ink opacity-80 hover:opacity-100 hover:text-accent'
-                    : isActive ? 'text-white opacity-100 font-medium' : 'text-white opacity-80 hover:opacity-100'
-                  }`
-                }
-              >
-                {item.label}
-              </NavLink>
+              item.path.endsWith('.html') ? (
+                <a
+                  key={item.path}
+                  href={item.path}
+                  className={`text-[12px] font-normal transition-opacity duration-300 ${scrolled
+                    ? 'text-ink opacity-80 hover:opacity-100 hover:text-accent'
+                    : 'text-white opacity-80 hover:opacity-100'
+                    }`}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  className={({ isActive }) =>
+                    `text-[12px] font-normal transition-opacity duration-300 ${scrolled
+                      ? isActive ? 'text-ink opacity-100 font-medium' : 'text-ink opacity-80 hover:opacity-100 hover:text-accent'
+                      : isActive ? 'text-white opacity-100 font-medium' : 'text-white opacity-80 hover:opacity-100'
+                    }`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              )
             ))}
           </nav>
 
@@ -132,14 +145,25 @@ const Layout: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: idx * 0.05 }}
                   >
-                    <NavLink
-                      to={item.path}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="block py-4 text-[17px] font-medium text-[#1d1d1f] hover:text-accent transition-colors flex justify-between items-center"
-                    >
-                      {item.label}
-                      <span className="text-gray-400"><ChevronRight size={14} /></span>
-                    </NavLink>
+                    {item.path.endsWith('.html') ? (
+                      <a
+                        href={item.path}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="block py-4 text-[17px] font-medium text-[#1d1d1f] hover:text-accent transition-colors flex justify-between items-center"
+                      >
+                        {item.label}
+                        <span className="text-gray-400"><ChevronRight size={14} /></span>
+                      </a>
+                    ) : (
+                      <NavLink
+                        to={item.path}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="block py-4 text-[17px] font-medium text-[#1d1d1f] hover:text-accent transition-colors flex justify-between items-center"
+                      >
+                        {item.label}
+                        <span className="text-gray-400"><ChevronRight size={14} /></span>
+                      </NavLink>
+                    )}
                   </motion.div>
                 ))}
               </div>
