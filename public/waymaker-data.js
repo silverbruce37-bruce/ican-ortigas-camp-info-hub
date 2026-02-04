@@ -1,7 +1,7 @@
-// Waymaker Data Source
-// 모든 영상 데이터는 이곳에서 관리됩니다.
+// Waymaker Data Source (Global Object Pattern)
+// React/Babel 없이도 어디서든 접근 가능하도록 window 객체에 할당합니다.
 
-export const waymakerNodes = [
+window.WAYMAKER_DATA = [
     {
         id: 'kwon-soo-a-happiness',
         title: "행복은 선물인가, 재능인가?",
@@ -68,8 +68,3 @@ export const waymakerNodes = [
         x: -15, y: 30, z: -10
     }
 ];
-
-export const WaymakerIcons = {
-    Play: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3" /></svg>`,
-    ChevronLeft: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>`
-};

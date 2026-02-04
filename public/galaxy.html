@@ -16,6 +16,9 @@
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- LOAD DATA FIRST (Robust Pattern) -->
+    <script src="./waymaker-data.js"></script>
+
     <style>
         body {
             margin: 0;
@@ -28,7 +31,6 @@
             display: block;
         }
 
-        /* Scrollbar Hide */
         .scrollbar-hide::-webkit-scrollbar {
             display: none;
         }
@@ -47,57 +49,15 @@
         try {
             const { useState, useEffect, useRef } = React;
 
+            // Use Global Data, Fallback to empty array if missing
+            const waymakerNodes = window.WAYMAKER_DATA || [];
+
             // --- ICONS ---
             const RefreshIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21.5 2v6h-6" /><path d="M2.5 22v-6h6" /><path d="M2.5 13.5a10 10 0 1 1 14.9 4.3" /><path d="M21.5 10.5a10 10 0 1 1-14.9-4.3" /></svg>;
             const ChevronRightIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>;
             const ChevronDownIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>;
 
-            // --- DATA ---
-            const waymakerNodes = [
-                {
-                    id: 'kwon-soo-a-happiness',
-                    title: "행복은 선물인가, 재능인가?",
-                    student: "권수아 (Kwon Soo A)",
-                    category: 'TED',
-                    tags: ['#행복', '#관점', '#재능', '#철학', '#아이캔정신'],
-                    x: 0, y: 0, z: 0
-                },
-                {
-                    id: 'kwon-soo-a-animals',
-                    title: "문화적 삶: 동물 vs 인간",
-                    student: "권수아 (Kwon Soo A)",
-                    category: 'TED',
-                    tags: ['#문화', '#생물학', '#관점', '#과학'],
-                    x: -25, y: 15, z: 10
-                },
-                {
-                    id: 'kim-joi-table-tennis',
-                    title: "탁구의 놀라운 세계",
-                    student: "김조이 (Kim Joi)",
-                    category: '방송',
-                    tags: ['#스포츠', '#열정', '#기술', '#몰입', '#아이캔정신'],
-                    x: 25, y: -10, z: -15
-                },
-                {
-                    id: 'lee-soo-eun-interview',
-                    title: "2025 겨울방학 파이널 인터뷰",
-                    student: "이수은 (Lee Soo Eun)",
-                    category: '비전',
-                    tags: ['#성장', '#인터뷰', '#미래리더', '#아이캔정신'],
-                    x: 10, y: -25, z: 20
-                },
-                {
-                    id: 'ted-cinematic-benchmark',
-                    title: "미래의 수사학 (시네마틱 벤치마크)",
-                    student: "다니엘 팀 (Daniel Team)",
-                    category: '다큐멘터리',
-                    tags: ['#시네마틱', '#수사학', '#퀄리티', '#미래리더'],
-                    x: -15, y: 30, z: -10
-                }
-            ];
-
-            // --- COMPONENTS ---
-
+            // --- CANVAS COMPONENT ---
             const WaymakerCanvas = ({ selectedTag, onNodeClick }) => {
                 const canvasRef = useRef(null);
 
@@ -241,6 +201,7 @@
                 return <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" />;
             };
 
+            // --- NAV COMPONENT ---
             const CategoryNav = ({ nodes, selectedTag, onTagSelect }) => {
                 const [openCategories, setOpenCategories] = useState({});
 
@@ -315,21 +276,22 @@
                 );
             };
 
+            // --- APP ---
             const App = () => {
                 const [selectedTag, setSelectedTag] = useState(null);
 
-                // --- Navigation Handler ---
                 const handleNodeClick = (node) => {
-                    // Navigate to view.html with ID parameter
                     window.location.href = `view.html?id=${node.id}`;
                 };
+
+                if (waymakerNodes.length === 0) {
+                    return <div className="p-10 text-center text-red-500 font-bold">Error: Data failed to load. Please check waymaker-data.js</div>;
+                }
 
                 return (
                     <div className="relative min-h-screen text-white overflow-hidden bg-slate-900 font-sans">
                         <WaymakerCanvas selectedTag={selectedTag} onNodeClick={handleNodeClick} />
-
                         <div className="relative z-10 container mx-auto px-4 py-10 min-h-screen flex flex-col pointer-events-none">
-
                             <div className="text-center pt-10 transition-all duration-700 opacity-100 transform-none">
                                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6 border border-blue-500/20 backdrop-blur-sm pointer-events-auto">
                                     <RefreshIcon />
@@ -343,12 +305,10 @@
                                     별(이름)을 누르면 아이들의 이야기를 볼 수 있습니다.
                                 </p>
                             </div>
-
                             <div className="fixed right-8 bottom-8 z-30 flex flex-col gap-2 items-end pointer-events-auto transition-all duration-700 delay-300 transform-none max-h-[70vh] overflow-y-auto pr-2 scrollbar-hide">
                                 <div className="text-[10px] text-slate-500 font-mono mb-2 uppercase tracking-widest bg-slate-900/80 px-2 py-1 rounded backdrop-blur border border-slate-800 self-end">
                                     Waymaker Archive
                                 </div>
-
                                 <button
                                     onClick={() => setSelectedTag(null)}
                                     className={`px-4 py-2 rounded-l-full text-xs font-medium transition-all duration-300 border-r-4 backdrop-blur-md w-32 text-right mb-4 ${selectedTag === null
@@ -358,7 +318,6 @@
                                 >
                                     전체 보기 (Reset)
                                 </button>
-
                                 <CategoryNav
                                     nodes={waymakerNodes}
                                     selectedTag={selectedTag}
