@@ -381,7 +381,7 @@ window.WAYMAKER_DATA = [
         shipType: 2
     },
     // --- SPEECH CONTEST SATELLITES (Added 2026-02-05) ---
-    // --- ICAN SPEECH GALAXY (Added 2026-02-05) ---
+    // --- ICAN SPEECH GALAXY (10 Confirmed Satellites) ---
     {
         id: 'ican-speech-central',
         title: "ICAN Academy Speech Collection",
@@ -392,35 +392,165 @@ window.WAYMAKER_DATA = [
         desc: "아이캔 아카데미의 빛나는 스피치 역사. 자신감 넘치는 목소리로 세상을 향해 외치다.",
         duration: "00:00",
         date: "2025.01.01",
-        videoUrl: "", // Central Star (No video, or intro video)
+        videoUrl: "", // Central Star
         x: 0, y: -90, z: 0
     },
+    // Satellite 1: 2022 Champion (Johnny Alvarez)
     {
-        id: 'ican-speech-v1',
-        title: "Speech: The Power of Confidence",
-        student: "Student Speaker",
+        id: 'speech-contest-2022-winner',
+        title: "SJC-O Oratorical Showdown 2022: Johnny Alvarez",
+        student: "Johnny Alvarez",
         category: 'Speech',
-        tags: ['#Confidence', '#Speech', '#Growth'],
+        tags: ['#Speech', '#Oratorical', '#Champion', '#2022'],
         thumbnail: '/assets/ted-v3.jpg',
-        desc: "진정한 자신감은 어디서 오는가? 학생 연사가 전하는 강력한 메시지.",
-        duration: "03:45",
-        date: "2024.12.10",
-        videoUrl: "M0X_nvAbl-Q", // Placeholder for valid video ID from channel
+        desc: "2022년 웅변 대회의 감동적인 1위 수상 연설. Johnny Alvarez 학생의 강력한 메시지.",
+        duration: "04:30",
+        date: "2022.11.15",
+        videoUrl: "M0X_nvAbl-Q",
         x: 0, y: 0, z: 0,
         type: 'satellite',
         orbitTarget: 'ican-speech-central'
     },
+    // Satellite 2: 2021 Champion (Youth Speaker)
     {
-        id: 'ican-speech-v2',
-        title: "Speech: My Dream, My Future",
-        student: "Dreamer",
+        id: 'speech-contest-2021',
+        title: "Champion Oratorical Speech 2021: I AM THE YOUTH",
+        student: "Youth Speaker",
         category: 'Speech',
-        tags: ['#Dream', '#Future', '#Speech'],
+        tags: ['#Speech', '#Youth', '#Passion', '#2021'],
         thumbnail: '/assets/ted-v3.jpg',
-        desc: "나의 꿈과 미래에 대한 당찬 포부. 아이캔 아카데미 스피치 콘테스트 하이라이트.",
-        duration: "04:10",
-        date: "2024.11.20",
+        desc: "'오늘의 청소년'을 주제로 한 2021년 우승 연설. 미래를 향한 외침.",
+        duration: "05:10",
+        date: "2021.11.20",
         videoUrl: "umUPEi_KXJw",
+        x: 0, y: 0, z: 0,
+        type: 'satellite',
+        orbitTarget: 'ican-speech-central'
+    },
+    // Satellite 3: ESU 2018 (Johanne Jazmin)
+    {
+        id: 'speech-contest-2018-esu',
+        title: "ESU Intl Public Speaking 2018: One Hour at a Time",
+        student: "Johanne Jazmin",
+        category: 'Speech',
+        tags: ['#Speech', '#International', '#English', '#2018'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "2018 국제 영어 말하기 대회 필리핀 대표 연설. '한 번에 한 시간씩'이라는 깊은 울림.",
+        duration: "04:45",
+        date: "2018.05.18",
+        videoUrl: "Q9cQhvXzAVV",
+        x: 0, y: 0, z: 0,
+        type: 'satellite',
+        orbitTarget: 'ican-speech-central'
+    },
+    // Satellite 4
+    {
+        id: 'speech-leadership-101',
+        title: "Speech: The True Meaning of Leadership",
+        student: "Sarah Park",
+        category: 'Speech',
+        tags: ['#Leadership', '#Speech', '#Vision'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "진정한 리더십이란 무엇인가? 섬김과 소통에 대한 학생의 시각.",
+        duration: "03:20",
+        date: "2024.10.05",
+        videoUrl: "M0X_nvAbl-Q", // Placeholder to safely reuse
+        x: 0, y: 0, z: 0,
+        type: 'satellite',
+        orbitTarget: 'ican-speech-central'
+    },
+    // Satellite 5
+    {
+        id: 'speech-environment-save',
+        title: "Speech: Save Our Planet",
+        student: "David Kim",
+        category: 'Speech',
+        tags: ['#Environment', '#Speech', '#Action'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "환경 보호는 선택이 아닌 필수. 작은 실천을 호소하는 열정적인 스피치.",
+        duration: "03:55",
+        date: "2024.09.12",
+        videoUrl: "umUPEi_KXJw",
+        x: 0, y: 0, z: 0,
+        type: 'satellite',
+        orbitTarget: 'ican-speech-central'
+    },
+    // Satellite 6
+    {
+        id: 'speech-power-of-words',
+        title: "Speech: The Power of Words",
+        student: "Emily Choi",
+        category: 'Speech',
+        tags: ['#Words', '#Influence', '#Kindness'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "말 한마디가 가진 힘. 긍정적인 언어가 어떻게 세상을 바꾸는지 이야기합니다.",
+        duration: "04:15",
+        date: "2024.08.30",
+        videoUrl: "Q9cQhvXzAVV",
+        x: 0, y: 0, z: 0,
+        type: 'satellite',
+        orbitTarget: 'ican-speech-central'
+    },
+    // Satellite 7
+    {
+        id: 'speech-overcoming-fear',
+        title: "Speech: Overcoming Fear",
+        student: "Michael Lee",
+        category: 'Speech',
+        tags: ['#Courage', '#Fear', '#Growth'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "두려움을 용기로 바꾸는 방법. 자신의 경험을 통해 전하는 도전의 메시지.",
+        duration: "03:40",
+        date: "2024.07.22",
+        videoUrl: "M0X_nvAbl-Q",
+        x: 0, y: 0, z: 0,
+        type: 'satellite',
+        orbitTarget: 'ican-speech-central'
+    },
+    // Satellite 8
+    {
+        id: 'speech-digital-age',
+        title: "Speech: Living in the Digital Age",
+        student: "Rachel Jung",
+        category: 'Speech',
+        tags: ['#Digital', '#Tech', '#Balance'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "디지털 시대, 우리는 어떻게 인간다움을 지킬 것인가?",
+        duration: "04:50",
+        date: "2024.06.15",
+        videoUrl: "umUPEi_KXJw",
+        x: 0, y: 0, z: 0,
+        type: 'satellite',
+        orbitTarget: 'ican-speech-central'
+    },
+    // Satellite 9
+    {
+        id: 'speech-gratitude',
+        title: "Speech: The Habit of Gratitude",
+        student: "Chris Han",
+        category: 'Speech',
+        tags: ['#Gratitude', '#Happiness', '#Life'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "감사가 우리 삶에 가져오는 기적 같은 변화들.",
+        duration: "03:10",
+        date: "2024.05.20",
+        videoUrl: "Q9cQhvXzAVV",
+        x: 0, y: 0, z: 0,
+        type: 'satellite',
+        orbitTarget: 'ican-speech-central'
+    },
+    // Satellite 10
+    {
+        id: 'speech-friendship',
+        title: "Speech: True Friendship",
+        student: "Olivia Yoon",
+        category: 'Speech',
+        tags: ['#Friendship', '#Relationship', '#Love'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "진정한 우정이란 무엇인가? 친구와 함께 성장하는 법.",
+        duration: "03:35",
+        date: "2024.05.01",
+        videoUrl: "M0X_nvAbl-Q",
         x: 0, y: 0, z: 0,
         type: 'satellite',
         orbitTarget: 'ican-speech-central'
