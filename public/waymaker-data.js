@@ -393,7 +393,7 @@ window.WAYMAKER_DATA = [
         duration: "00:00",
         date: "2025.01.01",
         videoUrl: "", // Central Star
-        x: 0, y: -90, z: 0
+        x: 0, y: -30, z: 0
     },
     // Satellite 1: 2022 Champion (Johnny Alvarez)
     {
