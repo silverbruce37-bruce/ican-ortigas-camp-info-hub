@@ -546,7 +546,7 @@ window.WAYMAKER_DATA = [
         desc: "A heartwarming monologue about a magic ladle from ICAN Speech Power.",
         duration: "00:00",
         date: "2026.02.05",
-        videoUrl: "qBaEpqbQcrI",
+        videoUrl: "CR84ITvhdTo", // Remastered Shorts Version
         x: 0, y: 0, z: 0,
         type: 'satellite',
         orbitTarget: 'ican-speech-central'
