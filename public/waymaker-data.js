@@ -535,5 +535,18 @@ window.WAYMAKER_DATA = [
         date: "2024.07.01",
         videoUrl: "0r4rYQ8WFQs", // Reusing validated ID
         x: 0, y: 0, z: 0, type: 'satellite', orbitTarget: 'ican-speech-central'
+    },
+    {
+        id: 'speech-moon-jihu-magic-ladle',
+        title: "My Magic Ladle (Monologue)",
+        student: "Moon Jihu",
+        category: 'Speech',
+        tags: ['#New', '#Speech', '#ICAN'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "A heartwarming monologue about a magic ladle from ICAN Speech Power.",
+        duration: "00:00",
+        date: "2026.02.05",
+        videoUrl: "qBaEpqbQcrI",
+        x: 62, y: 39, z: 68
     }
 ];
