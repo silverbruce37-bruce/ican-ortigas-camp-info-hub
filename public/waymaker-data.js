@@ -547,6 +547,8 @@ window.WAYMAKER_DATA = [
         duration: "00:00",
         date: "2026.02.05",
         videoUrl: "qBaEpqbQcrI",
-        x: 62, y: 39, z: 68
+        x: 0, y: 0, z: 0,
+        type: 'satellite',
+        orbitTarget: 'ican-speech-central'
     }
 ];

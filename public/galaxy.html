@@ -381,7 +381,7 @@
                                     // Unique phase offset based on node ID to prevent stacking
                                     const offset = node.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0) % 360;
                                     const orbitRadius = 60; // Base radius
-                                    const orbitSpeed = 0.05; // Drastically slower (was 0.3) for easy clicking
+                                    const orbitSpeed = 0.015; // Even slower for easier clicking (User Request)
 
                                     // Use offset in the angle calculation
                                     const angle = (time * orbitSpeed) + offset;
