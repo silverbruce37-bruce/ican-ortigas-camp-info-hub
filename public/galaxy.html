@@ -7,14 +7,18 @@
     <title>Space Waymaker - Galaxy View</title>
 
     <!-- React & ReactDOM -->
-    <script src="./waymaker-data-v2.js?v=2" onerror="alert(" Data Load Error")"></script>
-    <script src="./waymaker-data-v2.js?v=2" onerror="alert(" Data Load Error")"></script>
-    <!-- Babel for JSX -->
-    <script src="./waymaker-data-v2.js?v=2" onerror="alert(" Data Load Error")"></script>
-    <!-- Tailwind -->
-    <script src="./waymaker-data-v2.js?v=2" onerror="alert(" Data Load Error")"></script>
-    <!-- LOAD DATA (Cache Busted) -->
-    <script src="./waymaker-data-v2.js?v=2" onerror="alert(" Data Load Error")"></script>
+    <!-- React & ReactDOM (Local) -->
+    <script src="./libs/react.js"></script>
+    <script src="./libs/react-dom.js"></script>
+
+    <!-- Babel for JSX (Local) -->
+    <script src="./libs/babel.js"></script>
+
+    <!-- Tailwind (Local) -->
+    <script src="./libs/tailwindcss.js"></script>
+
+    <!-- LOAD DATA (Cache Busted v2) -->
+    <script src="./waymaker-data-v2.js?v=2" onerror="console.error('Data Load Error')"></script>
 
     <style>
         body {
