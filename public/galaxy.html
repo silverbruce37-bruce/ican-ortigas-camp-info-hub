@@ -19,7 +19,7 @@
     <!-- LOAD DATA (Cache Busted) -->
     <script>
         // INLINED DATA TO FORCE UPDATE
-        const data = [
+        window.WAYMAKER_DATA = [
             {
                 id: 'kwon-soo-a-happiness',
                 title: "행복은 선물인가, 재능인가?",
@@ -857,8 +857,8 @@
             const { useState, useEffect, useRef } = React;
 
             // Use Global Data, Fallback to empty array if missing
-            // Inlined Data Usage
-            const waymakerNodes = data || [];
+            // Inlined Data Usage (Global)
+            const waymakerNodes = window.WAYMAKER_DATA || [];
 
             // --- ICONS ---
             const RefreshIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21.5 2v6h-6" /><path d="M2.5 22v-6h6" /><path d="M2.5 13.5a10 10 0 1 1 14.9 4.3" /><path d="M21.5 10.5a10 10 0 1 1-14.9-4.3" /></svg>;
