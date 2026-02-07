@@ -166,6 +166,24 @@
             setInterval(createHomeButton, 1000);
         })();
     </script>
+    <!-- FLIGHT RECORDER (DEBUG) -->
+    <div id="debug-panel"
+        style="position:fixed; top:0; left:0; background:rgba(0,0,0,0.8); color:#4ade80; padding:8px; z-index:9999; font-family:monospace; font-size:12px;">
+        Init System...
+    </div>
+    <script>
+        setInterval(() => {
+            const el = document.getElementById('debug-panel');
+            if (el) {
+                const d = window.WAYMAKER_DATA;
+                const count = d ? d.length : "N/A";
+                const react = window.React ? "OK" : "MISSING";
+                const root = document.getElementById('root');
+                const rootHasChild = root && root.children.length > 0 ? "MOUNTED" : "EMPTY";
+                el.innerText = `SYSTEM: ONLINE | DATA: ${count} | REACT: ${react} | ROOT: ${rootHasChild}`;
+            }
+        }, 500);
+    </script>
     <div id="root"></div>
 
     <script type="text/babel">
