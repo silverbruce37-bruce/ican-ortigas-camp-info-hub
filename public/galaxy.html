@@ -176,15 +176,20 @@
         Init System...
     </div>
     <script>
+        window.onerror = function (msg, url, line) {
+            const el = document.getElementById('debug-panel');
+            if (el) el.innerText = `ERROR: ${msg} (L${line})`;
+            return false;
+        };
         setInterval(() => {
             const el = document.getElementById('debug-panel');
-            if (el) {
+            if (el && !el.innerText.startsWith('ERROR')) {
                 const d = window.WAYMAKER_DATA;
                 const count = d ? d.length : "N/A";
                 const react = window.React ? "OK" : "MISSING";
                 const root = document.getElementById('root');
-                const rootHasChild = root && root.children.length > 0 ? "MOUNTED" : "EMPTY";
-                el.innerText = `SYSTEM: ONLINE | DATA: ${count} | REACT: ${react} | ROOT: ${rootHasChild}`;
+                const mounted = root && root.children.length > 0 ? "MOUNTED" : "EMPTY";
+                el.innerText = `SYSTEM: ONLINE | DATA: ${count} | REACT: ${react} | ROOT: ${mounted}`;
             }
         }, 500);
     </script>
