@@ -288,6 +288,41 @@
                             };
                         };
 
+                        // --- HOLY PATH (MISSIONARY JOURNEY) ---
+                        // Draw this BEFORE other links/nodes so it appears behind them
+                        const holyNodes = waymakerNodes.filter(n => n.isHoly);
+                        if (holyNodes.length > 1) {
+                            ctx.beginPath();
+                            let firstPoint = null;
+
+                            holyNodes.forEach((node, index) => {
+                                // Project each holy node
+                                const cos = Math.cos(rotation);
+                                const sin = Math.sin(rotation);
+                                const rotX = node.x * cos - node.z * sin;
+                                const rotZ = node.x * sin + node.z * cos;
+                                const scale = 800 / (800 + rotZ * 10);
+
+                                const px = centerX + rotX * 10 * scale;
+                                const py = centerY + node.y * 10 * scale;
+
+                                if (index === 0) {
+                                    ctx.moveTo(px, py);
+                                    firstPoint = { x: px, y: py };
+                                } else {
+                                    ctx.lineTo(px, py);
+                                }
+                            });
+
+                            const pulse = (Math.sin(Date.now() * 0.002) + 1) / 2;
+                            ctx.strokeStyle = `rgba(245, 158, 11, ${0.3 + pulse * 0.5})`; // Amber glow
+                            ctx.lineWidth = 2 + pulse * 1;
+                            ctx.setLineDash([5, 5]);
+                            ctx.stroke();
+                            ctx.setLineDash([]); // Reset
+                        }
+                        // --------------------------------------
+
                         links.forEach(link => {
                             const isHighlighted = selectedTag
                                 ? (link.source.tags.includes(selectedTag) && link.target.tags.includes(selectedTag))
@@ -510,14 +545,6 @@
 
                                     // Draw Tail (Simulated based on velocity tangent)
                                     // Tangent vector is (-sin, cos)
-                                    const tailLen = 60 * p.scale;
-                                    const tx = Math.sin(angle) * tailLen; // Points backwards
-                                    const ty = -Math.cos(angle) * tailLen * 0.5; // Flattened Y component
-
-                                    // Gradient Tail
-                                    const grad = ctx.createLinearGradient(0, 0, tx, ty);
-                                    grad.addColorStop(0, "rgba(255, 223, 0, 0.8)"); // Bright Yellow
-                                    grad.addColorStop(1, "rgba(255, 223, 0, 0)");   // Transparent
 
                                     ctx.beginPath();
                                     ctx.moveTo(0, 0);
