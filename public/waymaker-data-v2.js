@@ -2,6 +2,65 @@
 // React/Babel 없이도 어디서든 접근 가능하도록 window 객체에 할당합니다.
 
 window.WAYMAKER_DATA = [
+    // --- MISSIONARY JOURNEY (THE HOLY CONSTELLATION) ---
+    // Theme: "The First Step of Faith" (Acts 13)
+    {
+        id: 'mission_01_antioch',
+        title: "수리아 안디옥 (The Calling)",
+        student: "Paul & Barnabas",
+        category: 'Missionary',
+        tags: ['#부르심', '#출발', '#성령의지시', '#Journey'],
+        thumbnail: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop',
+        desc: "주를 섬겨 금식할 때에 성령이 이르시되... (행 13:2)",
+        scripture: "Acts 13:1-3",
+        date: "AD 46",
+        x: 0, y: 50, z: 0, // Top Center (Start)
+        type: 'missionary',
+        isHoly: true
+    },
+    {
+        id: 'mission_02_seleucia',
+        title: "실루기아 (The Port)",
+        student: "Paul & Barnabas",
+        category: 'Missionary',
+        tags: ['#항구', '#떠남', '#첫걸음', '#Journey'],
+        thumbnail: 'https://images.unsplash.com/photo-1505245208761-ba872912fac0?q=80&w=2070&auto=format&fit=crop',
+        desc: "두 사람이 성령의 보내심을 받아 실루기아에 내려가... (행 13:4)",
+        scripture: "Acts 13:4",
+        date: "AD 46",
+        x: 20, y: 45, z: 10, // Moving slightly right and down
+        type: 'missionary',
+        isHoly: true
+    },
+    {
+        id: 'mission_03_salamis',
+        title: "살라미 (The Synagogues)",
+        student: "Paul & Barnabas & John",
+        category: 'Missionary',
+        tags: ['#구브로', '#회당', '#말씀전파', '#Journey'],
+        thumbnail: 'https://images.unsplash.com/photo-1548625361-e88c60dc55f4?q=80&w=2070&auto=format&fit=crop',
+        desc: "살라미에 이르러 하나님의 말씀을 유대인의 여러 회당에서 전할새... (행 13:5)",
+        scripture: "Acts 13:5",
+        date: "AD 46",
+        x: 40, y: 40, z: 20, // Further out
+        type: 'missionary',
+        isHoly: true
+    },
+    {
+        id: 'mission_04_paphos',
+        title: "바보 (The Confrontation)",
+        student: "Paul (Saul)",
+        category: 'Missionary',
+        tags: ['#총독', '#엘루마', '#성령충만', '#Journey'],
+        thumbnail: 'https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?q=80&w=2070&auto=format&fit=crop',
+        desc: "바울이라고 하는 사울이 성령이 충만하여 그를 주목하고... (행 13:9)",
+        scripture: "Acts 13:6-12",
+        date: "AD 46",
+        x: 60, y: 35, z: 10, // The climax of Cyprus
+        type: 'missionary',
+        isHoly: true
+    },
+    // ---------------------------------------------------
     {
         id: 'kwon-soo-a-happiness',
         title: "행복은 선물인가, 재능인가?",
