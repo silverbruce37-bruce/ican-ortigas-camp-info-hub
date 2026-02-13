@@ -248,7 +248,72 @@ export const BLOG_POSTS: BlogPost[] = [
           </a>
         </div>
       </div>
+    `,
+    author: "Roy House",
+    tags: ["Bilingual", "Space Age", "Insight"]
+  },
+  {
+    id: 'blog-24',
+    title: "SKY 캐슬보다 무서운 '데이터 캐슬'이 온다",
+    author: "Roy House",
+    category: "Waymaker",
+    tags: ["Future", "Data", "AI"],
+    date: "2026-02-21",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2670&auto=format&fit=crop",
+    excerpt: "앤트로픽 CEO가 예고한 '천재 국가'의 탄생. 지식 암기가 아닌 '질문(Prompt)' 능력이 아이의 계급을 결정합니다.",
+    content: `
+      <div class="space-y-6 text-gray-800 leading-relaxed">
+        <p><strong>[Coming Soon]</strong> 이 글은 곧 공개될 예정입니다. AI 시대, 우리 아이들이 마주할 새로운 경쟁의 판도를 분석합니다.</p>
+        <div class="bg-gray-100 p-6 rounded-2xl">
+           <p>사전 알림 신청을 하시면 가장 먼저 글을 받아보실 수 있습니다.</p>
+        </div>
+      </div>
     `
+  },
+  {
+    id: 'blog-25',
+    title: "맹모삼천지교? 이제는 '맹모우주지교(孟母宇宙之敎)'입니다",
+    author: "Roy House",
+    category: "Waymaker",
+    tags: ["Environment", "Space", "Education"],
+    date: "2026-02-28",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2672&auto=format&fit=crop",
+    excerpt: "닫힌 교실에서 벗어나, 24시간 영어라는 '새로운 운영체제' 속에서 살아가는 공간의 혁명.",
+    content: `
+        <div class="space-y-6 text-gray-800 leading-relaxed">
+          <p><strong>[Coming Soon]</strong> 맹모삼천지교의 현대적 해석. 왜 올티가스가 우리 아이들의 '우주 정거장'이 되어야 하는지 이야기합니다.</p>
+        </div>
+      `
+  },
+  {
+    id: 'blog-26',
+    title: "하버드가 성적표보다 먼저 보는 '이것'",
+    author: "Roy House",
+    category: "Waymaker",
+    tags: ["Character", "Leadership", "Harvard"],
+    date: "2026-03-07",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop",
+    excerpt: "AI 시대, 유일하게 대체 불가능한 것은 '따뜻한 인성'과 '영성'입니다. 실력만 있는 괴물이 아닌 사랑받는 리더로 키웁니다.",
+    content: `
+        <div class="space-y-6 text-gray-800 leading-relaxed">
+          <p><strong>[Coming Soon]</strong> 성공을 결정짓는 결정적 요인, '인성'. AI가 흉내 낼 수 없는 인간 고유의 가치에 대해 탐구합니다.</p>
+        </div>
+      `
+  },
+  {
+    id: 'blog-27',
+    title: "부모가 줄 수 있는 최고의 유산, 'Waymaker DNA'",
+    author: "Roy House",
+    category: "Waymaker",
+    tags: ["legacy", "DNA", "Waymaker"],
+    date: "2026-03-14",
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2732&auto=format&fit=crop",
+    excerpt: "예측 불가능한 미래, 어떤 환경에서도 길을 찾아내는 아이캔 졸업생들의 놀라운 변화.",
+    content: `
+        <div class="space-y-6 text-gray-800 leading-relaxed">
+          <p><strong>[Coming Soon]</strong> 아이캔의 마지막 메시지. 우리 아이에게 진정으로 물려주어야 할 유산은 무엇일까요?</p>
+        </div>
+      `
   },
   {
     id: 'blog-22',
@@ -1057,6 +1122,54 @@ export const BLOG_POSTS: BlogPost[] = [
     image: blog10Img,
     author: "Roy House",
     tags: ["Graduation", "Growth", "Memory"]
+  }
+];
+
+export const WAYMAKER_SERIES = [
+  {
+    step: 1,
+    title: "AI 통번역기 시대, 왜 구글은 여전히 '이중언어' 인재를 찾는가?",
+    subtitle: "번역기는 '말'을 옮기지만, 이중언어 뇌는 '맥락'을 읽습니다",
+    status: "published",
+    summary: "\"제미나이가 다 해주는데 왜?\"라는 질문에 대한 명쾌한 해답. AI는 텍스트를 읽지만, 인간은 흐름을 읽습니다.",
+    link: "/blog/blog-23",
+    date: "2026.02.14"
+  },
+  {
+    step: 2,
+    title: "SKY 캐슬보다 무서운 '데이터 캐슬'이 온다",
+    subtitle: "5천만 명의 천재들과 경쟁할 준비가 되셨습니까?",
+    status: "published",
+    summary: "앤트로픽 CEO가 예고한 '천재 국가'의 탄생. 지식 암기가 아닌 '질문(Prompt)' 능력이 아이의 계급을 결정합니다.",
+    link: "/blog/blog-24",
+    date: "2026.02.21"
+  },
+  {
+    step: 3,
+    title: "맹모삼천지교? 이제는 '맹모우주지교(孟母宇宙之敎)'입니다",
+    subtitle: "강남 학원가에는 없고, 필리핀 올티가스에는 있는 것",
+    status: "published",
+    summary: "닫힌 교실에서 벗어나, 24시간 영어라는 '새로운 운영체제' 속에서 살아가는 공간의 혁명.",
+    link: "/blog/blog-25",
+    date: "2026.02.28"
+  },
+  {
+    step: 4,
+    title: "하버드가 성적표보다 먼저 보는 '이것'",
+    subtitle: "인성이 실력이 되는 시대",
+    status: "published",
+    summary: "AI 시대, 유일하게 대체 불가능한 것은 '따뜻한 인성'과 '영성'입니다. 실력만 있는 괴물이 아닌 사랑받는 리더로 키웁니다.",
+    link: "/blog/blog-26",
+    date: "2026.03.07"
+  },
+  {
+    step: 5,
+    title: "부모가 줄 수 있는 최고의 유산, 'Waymaker DNA'",
+    subtitle: "건물 대신 '살아남는 뇌'를 물려주십시오",
+    status: "published",
+    summary: "예측 불가능한 미래, 어떤 환경에서도 길을 찾아내는 아이캔 졸업생들의 놀라운 변화.",
+    link: "/blog/blog-27",
+    date: "2026.03.14"
   }
 ];
 

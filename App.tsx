@@ -19,6 +19,7 @@ import Vision from './pages/Vision';
 import Counseling from './pages/Counseling';
 import SchoolGuide from './pages/SchoolGuide';
 import Waymaker from './pages/Waymaker';
+import Series from './pages/Series';
 import { LanguageProvider } from './context/LanguageContext';
 import { BlogProvider } from './context/BlogContext';
 import { ChatProvider } from './context/ChatContext';
@@ -67,6 +68,7 @@ const App: React.FC = () => {
                   <Route path="/golf-tour" element={<GolfTour />} />
                   <Route path="/counseling" element={<Counseling />} />
                   <Route path="/galaxy" element={<Waymaker />} />
+                  <Route path="/series" element={<Series />} />
                 </Routes>
               </Router>
             </BlogProvider>

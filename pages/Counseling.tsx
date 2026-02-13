@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Share2, Sun, Sunset, Moon, Sunrise, PlayCircle, HeartHandshake, CheckCircle, ExternalLink, ChevronLeft, ChevronRight, BookOpen, Compass, Heart, Cpu, Hammer, Rocket, Target } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -581,8 +582,43 @@ const Counseling: React.FC = () => {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.5 }}
                     >
+                        {/* Waymaker Series Banner */}
+                        <motion.div
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2 }}
+                            className="pt-24 px-6 md:px-0 max-w-3xl mx-auto mb-8"
+                        >
+                            <a href="/series" className="block relative overflow-hidden rounded-3xl bg-[#0f1014] border border-gray-800 shadow-2xl group hover:border-gray-600 transition-colors">
+                                {/* Stars / Space Effect Background */}
+                                <div className="absolute inset-0">
+                                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 animate-pulse"></div>
+                                    <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-900/20 rounded-full blur-3xl filter mix-blend-screen"></div>
+                                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-900/20 rounded-full blur-3xl filter mix-blend-screen"></div>
+                                </div>
+
+                                <div className="relative p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                                    <div className="flex items-start md:items-center gap-5">
+                                        <div className="p-4 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl shadow-lg ring-4 ring-white/5">
+                                            <Rocket className="w-8 h-8 text-white" />
+                                        </div>
+                                        <div className="text-left">
+                                            <div className="flex items-center gap-2 mb-1">
+                                                <span className="text-[10px] font-bold text-indigo-400 tracking-[0.2em] uppercase border border-indigo-500/30 px-2 py-0.5 rounded-full bg-indigo-500/10">New Campaign</span>
+                                            </div>
+                                            <h3 className="text-2xl font-black text-white tracking-tight mb-1">The Waymaker Series</h3>
+                                            <p className="text-gray-400 text-sm font-medium">불확실한 미래, 아이캔이 새로운 길을 제시합니다</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-2 text-white font-bold text-sm bg-white/10 pr-3 pl-5 py-3 rounded-full backdrop-blur-md group-hover:bg-white/20 transition-all group-hover:pr-2">
+                                        우주 정거장 입장 <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                    </div>
+                                </div>
+                            </a>
+                        </motion.div>
+
                         {/* Hero Section */}
-                        <section className="pt-28 pb-20 px-6 text-center">
+                        <section className="pt-4 pb-12 px-6 text-center">
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
