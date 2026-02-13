@@ -513,7 +513,7 @@
 
                             } else if (node.type === 'shooting-star') {
                                 // 4. SHOOTING STAR (METEOR) RENDERING
-                                const time = Date.now() * 0.0008; // Faster than normal stars
+                                const time = Date.now() * 0.00056; // Reduced speed by 30% for better clicks
                                 // Unique phase offset
                                 const offset = node.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
 

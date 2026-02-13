@@ -197,7 +197,7 @@ const WaymakerCanvas: React.FC<Props> = ({ selectedTag, onNodeClick }) => {
                         node.y = targetNode.y + Math.sin(time * 0.3) * 10;
                     }
                 } else if (node.type === 'shooting-star') {
-                    const time = Date.now() * 0.0008;
+                    const time = Date.now() * 0.00056;
                     const offset = node.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
                     const a = 50 + (offset % 30);
                     const b = 15 + (offset % 10);
@@ -226,7 +226,7 @@ const WaymakerCanvas: React.FC<Props> = ({ selectedTag, onNodeClick }) => {
                     ctx.closePath();
                     ctx.fill();
                 } else if (node.type === 'shooting-star') {
-                    const time = Date.now() * 0.0008;
+                    const time = Date.now() * 0.00056;
                     const offset = node.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
                     const angle = time + offset;
                     const tx = Math.sin(angle) * 20;
