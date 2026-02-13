@@ -184,6 +184,73 @@ export const CARROT_ITEMS: CarrotItem[] = [
 // --- Blog Data (Roy House) ---
 export const BLOG_POSTS: BlogPost[] = [
   {
+    id: 'blog-23',
+    title: "AI 통번역기 시대, 왜 구글은 여전히 '이중언어' 인재를 찾는가?",
+    excerpt: "\"제미나이가 다 해주는데 영어 공부 시켜야 하나요?\" 3040 학부모님들의 가장 큰 고민에 대한 폴샘의 명쾌한 통찰. AI는 텍스트를 읽지만, 이중언어 뇌는 맥락을 읽습니다.",
+    date: "2026-02-14",
+    category: "Insight",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2665&auto=format&fit=crop", // Placeholder for the bilingual brain concept
+    content: `
+      <div class="space-y-6 text-gray-800 leading-relaxed">
+        <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 mb-8">
+          <p class="font-bold text-lg text-blue-900 mb-2">"제미나이가 다 해주는데, 영어 공부 시켜야 하나요?"</p>
+          <p class="text-blue-800">상담실을 찾는 3040 학부모님들이 가장 많이 하시는 질문 중 하나입니다. "폴샘, 스마트폰만 있으면 전 세계 누구와도 대화가 되는 세상이잖아요. 우리 아이가 굳이 그 고생을 해서 영어를 배워야 할까요? 차라리 코딩이나 주식을 가르치는 게 낫지 않을까요?"</p>
+        </div>
+
+        <p>매우 타당한 질문입니다. <strong>단순히 '여행 가서 밥 사 먹는 영어'를 위해서라면, 더 이상 영어 학원에 다닐 필요가 없습니다.</strong> 그건 3년 안에 AI가 완벽하게 해결해 줄 테니까요.</p>
+        
+        <p>하지만, <strong>테슬라(Tesla), 구글(Google), 엔비디아(NVIDIA)</strong> 같은 글로벌 혁신 기업들은 왜 여전히 채용 공고에서 <span class="bg-yellow-100 px-1 font-bold">"Bilingual (이중언어 구사자) 우대"</span>라는 조건을 빼지 않을까요? 그들이 번역기를 살 돈이 없어서일까요?</p>
+
+        <h3 class="text-2xl font-bold mt-10 mb-4 text-gray-900">1. AI는 '텍스트(Text)'를 읽고, 사람은 '맥락(Context)'을 읽습니다.</h3>
+        <p>AI 번역기에게 "잘했어"라는 말을 입력해 봅시다.</p>
+        <ul class="list-disc ml-6 space-y-2 text-gray-700 bg-gray-50 p-4 rounded-xl">
+          <li>칭찬일 수도 있습니다. ("Good job!")</li>
+          <li>비꼬는 말일 수도 있습니다. ("Well done, genius." - 실수했을 때)</li>
+          <li>이제 그만하라는 뜻일 수도 있습니다. ("Okay, that's enough.")</li>
+        </ul>
+        <p class="mt-4">기계는 확률적으로 가장 많이 쓰이는 단어를 뱉어낼 뿐, 그 뒤에 숨겨진 <strong>미묘한 공기, 문화적 배경, 상대방의 의도</strong>를 완벽하게 파악하지 못합니다. 글로벌 비즈니스의 현장, 혹은 미래의 협업 공간에서 중요한 결정은 바로 이 <strong>'보이지 않는 뉘앙스'</strong>에서 갈립니다. 이중언어 사용자는 두 개의 문화권(OS)을 넘나들며 이 미묘한 차이를 본능적으로 감지합니다. 이것이 바로 기계가 대체할 수 없는 <strong>'협상력'</strong>이고 <strong>'설득력'</strong>입니다.</p>
+
+        <h3 class="text-2xl font-bold mt-10 mb-4 text-gray-900">2. '이중언어 뇌'는 사고의 엔진 자체가 다릅니다.</h3>
+        <p>영어 단어를 많이 아는 것이 중요한 게 아닙니다. 뇌과학적으로 <strong>이중언어 뇌(Bilingual Brain)</strong>는 단일 언어 뇌보다 <strong>'인지적 유연성(Cognitive Flexibility)'</strong>이 월등히 높습니다.</p>
+        
+        <div class="grid md:grid-cols-2 gap-4 my-6">
+          <div class="bg-white border border-gray-200 p-5 rounded-xl shadow-sm">
+            <h4 class="font-bold text-lg mb-2 text-indigo-600">유연한 우회 능력</h4>
+            <p class="text-sm text-gray-600">한국어로 막혔을 때 영어의 논리로 우회해서 생각하는 힘은 문제 해결의 지름길을 찾아줍니다.</p>
+          </div>
+          <div class="bg-white border border-gray-200 p-5 rounded-xl shadow-sm">
+            <h4 class="font-bold text-lg mb-2 text-purple-600">창의적 융합 능력</h4>
+            <p class="text-sm text-gray-600">A 문화와 B 문화의 관점을 융합하여 제3의 아이디어(C)를 만들어내는 힘은 혁신의 원동력입니다.</p>
+          </div>
+        </div>
+
+        <p>이것은 단순한 어학 능력이 아니라, <strong>복잡한 문제를 해결하는 고차원적인 지능</strong>입니다. AI 시대, 정답이 없는 난제가 쏟아질 때 가장 필요한 능력이 바로 이 유연한 사고력입니다.</p>
+
+        <h3 class="text-2xl font-bold mt-10 mb-4 text-gray-900">3. 아이캔은 '영어'가 아니라 '스키마(Schema)'를 가르칩니다.</h3>
+        <p>필리핀 올티가스의 아이캔 아카데미는 단순히 단어를 암기시키는 곳이 아닙니다. 안전하고 풍요로운 이 공간에서, 아이들은 <strong>24시간 영어라는 '새로운 운영체제'</strong> 속에서 살아갑니다.</p>
+
+        <div class="relative rounded-2xl overflow-hidden my-6 shadow-md">
+          <img src="https://images.unsplash.com/photo-1529390003868-6c640a9376c6?q=80&w=2670&auto=format&fit=crop" alt="Students learning in Ortigas" class="w-full h-64 object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+             <p class="text-white font-medium">"친구들과 수영하며 외치는 영어는 '공부'가 아니라 '생존'이고 '놀이'입니다."</p>
+          </div>
+        </div>
+
+        <p>이렇게 몸으로 체득한 <strong>'Bilingual Schema(이중언어 사고 체계)'</strong>는 아이가 훗날 어떤 AI 도구를 만나든, 그 도구를 지배하고 활용할 수 있는 <strong>강력한 정신적 근육</strong>이 됩니다.</p>
+
+        <hr class="my-10 border-gray-200" />
+
+        <div class="bg-gray-900 text-white p-8 rounded-3xl text-center">
+          <h4 class="text-2xl font-bold mb-4 font-['Playfair_Display']">Parents, Be a Waymaker.</h4>
+          <p class="mb-6 opacity-90">AI 시대, 영어는 '목적'이 아니라 아이가 더 넓은 우주로 나아가게 하는 '티켓'입니다.<br/>남들이 "AI가 다 해주는데 왜?"라고 물으며 멈춰 설 때,<br/><strong>"AI를 부리는 주인(Master)이 되기 위해"</strong>라고 대답하며 아이의 뇌를 깨워주십시오.</p>
+          <a href="/#/counseling" class="inline-block bg-white text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors">
+            아이캔 교육 철학 더 보기
+          </a>
+        </div>
+      </div>
+    `
+  },
+  {
     id: 'blog-22',
     title: "🍌 [올티가스 맛집 탐방] 나노바나나와 함께 떠나는 식도락 여행!",
     excerpt: "로이하우스 캠프 가족을 위한 실패 없는 맛집 리스트! 나노바나나가 직접 다녀온 마실, 주몽, 팔도 그리고 핫한 카페까지 총정리했습니다.",
@@ -1609,7 +1676,7 @@ export const KO_DATA = {
     fees: "비용안내",
     schools: "학교정보",
     living: "생활정보",
-    waymaker: "테드 우주인", // New Protocol
+    waymaker: "테드우주인", // New Protocol
     carrot: "올티캐롯", // NEW
     counseling: "상담일지",
     blog: "로이하우스 블로그",

@@ -86,7 +86,7 @@ const Layout: React.FC = () => {
                   key={item.path}
                   to={item.path}
                   className={({ isActive }) =>
-                    `text-[12px] font-normal transition-opacity duration-300 ${scrolled
+                    `text-[12px] font-normal transition-opacity duration-300 whitespace-nowrap ${scrolled
                       ? isActive ? 'text-ink opacity-100 font-medium' : 'text-ink opacity-80 hover:opacity-100 hover:text-accent'
                       : isActive ? 'text-white opacity-100 font-medium' : 'text-white opacity-80 hover:opacity-100'
                     }`
