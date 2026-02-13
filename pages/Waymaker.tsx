@@ -371,7 +371,7 @@ const WaymakerCanvas: React.FC<CanvasProps> = ({ selectedTag, onNodeClick }) => 
                         node.y = targetNode.y + Math.sin(time * 0.3) * 10;
                     }
                 } else if (node.type === 'shooting-star') {
-                    const time = Date.now() * 0.00056;
+                    const time = Date.now() * 0.000392;
                     const offset = node.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
                     const a = 50 + (offset % 30);
                     const b = 15 + (offset % 10);
@@ -400,7 +400,7 @@ const WaymakerCanvas: React.FC<CanvasProps> = ({ selectedTag, onNodeClick }) => 
                     ctx.closePath();
                     ctx.fill();
                 } else if (node.type === 'shooting-star') {
-                    const time = Date.now() * 0.00056;
+                    const time = Date.now() * 0.000392;
                     const offset = node.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
                     const angle = time + offset;
                     const tx = Math.sin(angle) * 20;
@@ -473,7 +473,7 @@ const Waymaker: React.FC = () => {
                         The Infinity Loop Protocol
                     </div>
                     <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 mb-6 tracking-tight drop-shadow-2xl">
-                        SPACE WAYMAKER
+                        테드 우주인
                     </h1>
                     <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
                         아이들의 생각이 연결되어 거대한 은하계를 이룹니다.<br />

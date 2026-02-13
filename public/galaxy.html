@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Waymaker - Galaxy View</title>
+    <title>테드 우주인 - Galaxy View</title>
 
     <!-- React & ReactDOM -->
     <!-- React & ReactDOM (Local) -->
@@ -513,7 +513,7 @@
 
                             } else if (node.type === 'shooting-star') {
                                 // 4. SHOOTING STAR (METEOR) RENDERING
-                                const time = Date.now() * 0.00056; // Reduced speed by 30% for better clicks
+                                const time = Date.now() * 0.000392; // Reduced speed by another 30%
                                 // Unique phase offset
                                 const offset = node.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
 
@@ -794,7 +794,7 @@
 
                                         <div>
                                             <h1 className="text-4xl font-black italic tracking-tighter text-white leading-none" style={{ textShadow: "0 0 20px rgba(59, 130, 246, 0.5)" }}>
-                                                SPACE WAYMAKER
+                                                테드 우주인
                                             </h1>
                                             <div className="text-sm font-mono text-slate-500 mt-1 uppercase tracking-wider">
                                                 The Infinity Loop Protocol
@@ -802,7 +802,7 @@
                                         </div>
 
                                         <p className="text-xs md:text-sm text-slate-300 font-light leading-relaxed">
-                                            <span className="text-white font-medium">스페이스 웨이메이커</span>는 우리 아이들의 생각이 연결된
+                                            <span className="text-white font-medium">테드 우주인</span>은 우리 아이들의 생각이 연결된
                                             광활한 지식의 은하계입니다. 각 별들은 고유한 이야기를 담고 있습니다.
                                         </p>
 
@@ -846,7 +846,7 @@
 
                             <div className="fixed right-8 bottom-8 z-30 flex flex-col gap-2 items-end pointer-events-auto transition-all duration-700 delay-300 transform-none max-h-[70vh] overflow-y-auto pr-2 scrollbar-hide">
                                 <div className="text-[10px] text-slate-500 font-mono mb-2 uppercase tracking-widest bg-slate-900/80 px-2 py-1 rounded backdrop-blur border border-slate-800 self-end">
-                                    Space Waymaker Archive
+                                    테드 우주인 Archive
                                 </div>
                                 <button
                                     onClick={() => setSelectedTag(null)}

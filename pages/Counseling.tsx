@@ -6,6 +6,76 @@ import { motion, AnimatePresence } from 'framer-motion';
 // --- Data Structure for Journal Entries ---
 const JOURNAL_ENTRIES = [
     {
+        id: 12,
+        date: "2026.04.17 • Fri",
+        title: "[Future Shock] 2년 뒤, 우리가 알던 세상은 끝납니다",
+        subtitle: "앤트로픽 CEO가 예고한 '천재 국가'의 탄생, 우리 아이는 무엇을 준비해야 할까?",
+        themeChip: "Future Strategy",
+        morning: {
+            title: "데이터 센터에 갇힌 5천만 명의 천재들",
+            content: "앤트로픽의 CEO 다리오 아모데이는 충격적인 예측을 내놓았습니다. 2년 뒤인 2027년경, 데이터 센터 안에 무려 5천만 명의 노벨상 수상자급 천재들이 동시에 일하고 있는 것과 같은 세상이 올 것이라고 말입니다. 잠도 자지 않고, 한계를 모르는 속도로 정보를 처리하는 AI가 실질적으로 모든 사무직과 지능형 업무를 대체하는 시대입니다. 부모님, 이제 '지식의 축적'은 더 이상 교육의 목표가 될 수 없습니다.",
+            icon: Cpu,
+            color: "orange"
+        },
+        noon: {
+            title: "폭풍의 눈에서 '나침반'을 쥐여주십시오",
+            content: "변화가 너무 급격해서 감당하기조차 어렵게 느껴지시나요? 다리오는 AI가 '일반 인지능력의 완전한 대체지'가 될 것이라고 경고합니다. 이럴 때일수록 우리가 아이들에게 가르쳐야 할 것은 'How(어떻게)'가 아니라 'What & Why(무엇을, 왜)'입니다. 수천 명의 천재 비서를 발밑에 둔 '지휘관(Commander)'으로서의 자질, 즉 복잡한 문제를 정의하고 윤리적 결단을 내리는 능력이 아이의 진짜 실력이 될 것입니다.",
+            icon: Compass,
+            color: "blue"
+        },
+        evening: {
+            title: "변하지 않는 '사랑'으로 전진하십시오",
+            content: "기술이 지능을 정복하는 시대일수록, 역설적으로 '지능'보다 '영혼'이 중요해집니다. 사도 바울이 고백했듯, 세상의 지식은 언젠가 폐하여지지만 사랑은 영원합니다. AI는 답을 줄 수 있지만, 타인의 아픔에 함께 울어줄 수는 없습니다. 아이들에게 AI라는 강력한 도구를 쥐여주는 동시에, 그 도구를 '타인을 향한 사랑'으로 사용할 수 있는 따뜻한 인성을 가르칩시다. 그것이 아이를 안전하게 지키는 가장 강력한 방패입니다.",
+            bibleVerse: "사랑은 오래 참고... 지식도 폐하리라 (고전 13:4-8)",
+            actionTitle: "오늘 아이에게 물어봐 주세요",
+            actionContent: "\"기술이 모든 걸 해주는 세상에서, 너는 사람들을 위해 어떤 특별한 사랑을 베풀고 싶니?\" 아이의 대답 속에 미래의 해답이 있습니다.",
+            icon: Heart,
+            color: "indigo"
+        },
+        media: {
+            title: "AI가 바꾸는 인류의 다음 2년",
+            url: "https://www.ted.com/talks/mustafa_suleyman_how_ai_will_transform_the_world",
+            image: "https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/1eabb690-09a8-4447-8178-028448ec834c/SalKhan_2023-embed.jpg", // Placeholder
+            desc: "Mustafa Suleyman • TED Talk",
+            icon: PlayCircle
+        }
+    },
+    {
+        id: 11,
+        date: "2026.04.10 • Fri",
+        title: "[New Horizon] '스페이스'를 넘어 '테드(TED)'로: 아이들의 꿈에 날개를 달다",
+        subtitle: "공간(Space)을 채우는 것은 결국 아이들의 이야기(TED)입니다",
+        themeChip: "TED Waymaker",
+        morning: {
+            title: "왜 '테드 우주인'인가? 말하기의 혁명",
+            content: "스페이스 웨이메이커가 테드 우주인(TED Waymaker)으로 새롭게 태어났습니다. 단순히 우주를 유영하는 것을 넘어, 자신의 생각을 논리적으로 구조화하여 세상에 외치는 'TED'의 정신을 담았습니다. 이제 우리 아이들은 광활한 지식의 은하계에서 자신만의 고유한 별 이름을 걸고, 당당하게 자신의 비전을 선포하는 진정한 '우주 리더'로 성장할 것입니다.",
+            icon: Rocket,
+            color: "blue"
+        },
+        noon: {
+            title: "연결된 별들이 이루는 지혜의 은하계",
+            content: "은하계의 별들은 혼자 빛나지 않습니다. 아이들의 영상 노드가 서로 연결되어 거대한 성운을 이루듯, 지식은 공유되고 연결될 때 비로소 가치를 발휘합니다. 하나의 영상을 찍기 위해 수십 번의 리허설을 견뎌내는 그 '그릿(Grit)'이 모여, 누구도 무시할 수 없는 아이캔만의 단단한 커뮤니티를 만듭니다. 과정의 고통은 잠시지만, 그 결과로 얻은 자신감은 평생의 자산이 됩니다.",
+            icon: Target,
+            color: "orange"
+        },
+        evening: {
+            title: "우주보다 넓은 아이의 마음을 품는 법",
+            content: "부모님, 밤하늘의 별을 보며 아이를 축복해 주세요. '테드 우주인' 아카이브에 쌓인 아이의 영상은 단순한 숙제가 아니라, 미래의 자신에게 보내는 '꿈의 신호탄'입니다. 아이의 서툰 말솜씨 속에서 반짝이는 진심을 읽어주세요. 사랑으로 빚어진 아이의 목소리는 어떤 AI도 흉내 낼 수 없는 가장 우주적인 감동입니다.",
+            bibleVerse: "하늘이 하나님의 영광을 선포하고 궁창이 그의 손으로 하신 일을 나타내는도다 (시 19:1)",
+            actionTitle: "오늘의 사랑 표현",
+            actionContent: "아이의 영상을 함께 시청한 후, \"네 별이 우주에서 가장 밝게 빛나네\"라고 하며 꼭 안아주세요. 아이가 자신의 이야기에 자부심을 갖게 되는 기적의 순간이 될 것입니다.",
+            icon: Heart,
+            color: "indigo"
+        },
+        media: {
+            title: "아이들의 아이디어가 우주를 바꿉니다",
+            url: "https://www.ted.com/talks/adora_svitak_what_adults_can_learn_from_kids",
+            image: "https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/f8e918c5-9769-429a-995c-7d3a040b7931/AdoraSvitak_2010-embed.jpg",
+            desc: "Adora Svitak • TED Talk",
+            icon: PlayCircle
+        }
+    },
+    {
         id: 10,
         date: "2026.04.02 • Thu",
         title: "[Hot Issue] '클로드봇(Clawdbot)'의 등장: 말하는 AI에서 '행동하는 AI'로",
@@ -32,8 +102,6 @@ const JOURNAL_ENTRIES = [
             icon: Rocket,
             color: "indigo"
         },
-        themeChip: "AI Education",
-        subtitle: "우리 아이는 '어떤 AI'를 쓸 것인가? 폴샘이 제안하는 기준",
         media: {
             title: "AI와 함께하는 미래 교육",
             url: "https://www.ted.com/talks/sal_khan_how_ai_could_save_not_destroy_education",
