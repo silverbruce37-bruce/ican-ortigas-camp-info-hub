@@ -6,7 +6,7 @@ import { Play, Hash, RefreshCw, X, Youtube, Home } from 'lucide-react';
 interface WaymakerNode {
     id: string;
     title: string;
-    category: '다큐멘터리' | '방송' | '쇼츠' | '에세이' | '비전' | 'TED';
+    category: string;
     tags: string[];
     thumbnail: string;
     desc: string;
@@ -17,9 +17,75 @@ interface WaymakerNode {
     x: number;
     y: number;
     z: number;
+    type?: string;
+    orbitTarget?: string;
+    shipType?: number;
+    isHoly?: boolean;
+    isNew?: boolean;
 }
 
 const waymakerNodes: WaymakerNode[] = [
+    // --- MISSIONARY JOURNEY (THE HOLY CONSTELLATION) ---
+    {
+        id: 'mission_01_antioch',
+        title: "수리아 안디옥 (The Calling)",
+        student: "Paul & Barnabas",
+        category: 'Missionary',
+        tags: ['#부르심', '#출발', '#성령의지시', '#Journey'],
+        thumbnail: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop',
+        desc: "주를 섬겨 금식할 때에 성령이 이르시되... (행 13:2)",
+        duration: "00:00",
+        date: "AD 46",
+        x: 0, y: 50, z: 0,
+        type: 'missionary',
+        isHoly: true,
+        videoUrl: ""
+    },
+    {
+        id: 'mission_02_seleucia',
+        title: "실루기아 (The Port)",
+        student: "Paul & Barnabas",
+        category: 'Missionary',
+        tags: ['#항구', '#떠남', '#첫걸음', '#Journey'],
+        thumbnail: 'https://images.unsplash.com/photo-1505245208761-ba872912fac0?q=80&w=2070&auto=format&fit=crop',
+        desc: "두 사람이 성령의 보내심을 받아 실루기아에 내려가... (행 13:4)",
+        duration: "00:00",
+        date: "AD 46",
+        x: 20, y: 45, z: 10,
+        type: 'missionary',
+        isHoly: true,
+        videoUrl: ""
+    },
+    {
+        id: 'mission_03_salamis',
+        title: "살라미 (The Synagogues)",
+        student: "Paul & Barnabas & John",
+        category: 'Missionary',
+        tags: ['#구브로', '#회당', '#말씀전파', '#Journey'],
+        thumbnail: 'https://images.unsplash.com/photo-1548625361-e88c60dc55f4?q=80&w=2070&auto=format&fit=crop',
+        desc: "살라미에 이르러 하나님의 말씀을 유대인의 여러 회당에서 전할새... (행 13:5)",
+        duration: "00:00",
+        date: "AD 46",
+        x: 40, y: 40, z: 20,
+        type: 'missionary',
+        isHoly: true,
+        videoUrl: ""
+    },
+    {
+        id: 'mission_04_paphos',
+        title: "바보 (The Confrontation)",
+        student: "Paul (Saul)",
+        category: 'Missionary',
+        tags: ['#총독', '#엘루마', '#성령충만', '#Journey'],
+        thumbnail: 'https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?q=80&w=2070&auto=format&fit=crop',
+        desc: "바울이라고 하는 사울이 성령이 충만하여 그를 주목하고... (행 13:9)",
+        duration: "00:00",
+        date: "AD 46",
+        x: 60, y: 35, z: 10,
+        type: 'missionary',
+        isHoly: true,
+        videoUrl: ""
+    },
     {
         id: 'kwon-soo-a-happiness',
         title: "행복은 선물인가, 재능인가?",
@@ -84,6 +150,93 @@ const waymakerNodes: WaymakerNode[] = [
         date: "2026.02.02",
         videoUrl: "PtIN1fFSeJs",
         x: -15, y: 30, z: -10
+    },
+    {
+        id: 'park-si-yeon-climate',
+        title: "TED:: Climate Change",
+        student: "박시연 (Park Si Yeon)",
+        category: 'TED',
+        tags: ['#기후변화', '#환경', '#미래', '#책임', '#New'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "기후 변화의 심각성과 우리가 가져야 할 책임감에 대한 박시연 학생의 통찰력 있는 발표.",
+        duration: "03:45",
+        date: "2025.01.01",
+        videoUrl: "J0fXgg6W_BE",
+        x: 40, y: 20, z: -10,
+        isNew: true
+    },
+    {
+        id: 'mok-min-chan-space-junk',
+        title: "Space Junk: Who Should Be Responsible?",
+        student: "목민찬 (Mok Min Chan)",
+        category: 'TED Documentary',
+        tags: ['#우주', '#환경', '#우주쓰레기', '#과학', '#책임'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "우주 개발의 이면에 감춰진 우주 쓰레기 문제, 누가 책임져야 할까요?",
+        duration: "05:15",
+        date: "2024.12.29",
+        videoUrl: "sSgwXQfQHmA",
+        x: -30, y: 30, z: -30,
+        type: 'satellite',
+        orbitTarget: 'kwon-soo-a-happiness'
+    },
+    {
+        id: 'ahn-jay-space-pollution',
+        title: "Human Actions and Space Pollution",
+        student: "안제이 (Ahn Jay)",
+        category: 'TED Documentary',
+        tags: ['#우주오염', '#인류', '#환경보호', '#지속가능성'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "인류의 활동이 우주 환경에 미치는 영향과 우리가 나아가야 할 방향.",
+        duration: "04:40",
+        date: "2024.12.28",
+        videoUrl: "jvKzvW6Yt-g",
+        x: 30, y: -30, z: 30,
+        type: 'satellite',
+        orbitTarget: 'kwon-soo-a-happiness'
+    },
+    {
+        id: 'kim-ji-woo-drones',
+        title: "EduSpace Conference :: Drones in Space Exploration",
+        student: "Kim Ji Woo",
+        category: 'Eduspace',
+        tags: ['#Drones', '#Space', '#Future', '#Tech'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "우주 탐사에서 드론이 어떻게 활용될 수 있는지, 김지우 학생의 미래 기술 브리핑.",
+        duration: "04:15",
+        date: "2025.09.15",
+        videoUrl: "7bKbsT_25rI",
+        x: 70, y: 30, z: -40,
+        type: 'spaceship',
+        shipType: 2
+    },
+    {
+        id: 'choi-ji-yun-interview',
+        title: "Winter 2025 Final Interview",
+        student: "Choi Ji Yun",
+        category: 'Interview',
+        tags: ['#New', '#Interview', '#ICAN'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "Choi Ji Yun shares her thoughts on the winter camp.",
+        duration: "00:00",
+        date: "2026.02.05",
+        videoUrl: "gDyCQJF5udI",
+        x: 0, y: 0, z: 0,
+        type: 'shooting-star'
+    },
+    {
+        id: 'hong-seong-wook-interview',
+        title: "Winter 2025 Final Interview",
+        student: "Hong Seong Wook",
+        category: 'Interview',
+        tags: ['#New', '#Interview', '#ICAN'],
+        thumbnail: '/assets/ted-v3.jpg',
+        desc: "Reflecting on the best moments of the camp.",
+        duration: "00:00",
+        date: "2026.02.05",
+        videoUrl: "-2w1ybqKilk",
+        x: 0, y: 0, z: 0,
+        type: 'shooting-star'
     }
 ];
 
@@ -107,10 +260,9 @@ const WaymakerCanvas: React.FC<CanvasProps> = ({ selectedTag, onNodeClick }) => 
 
         let animationFrameId: number;
         let rotation = 0;
-        let pulse = 0;
         let mouseX = 0;
         let mouseY = 0;
-        let hoveredNode: WaymakerNode | null = null; // Correct Type
+        let hoveredNode: WaymakerNode | null = null;
 
         const handleMouseMove = (e: MouseEvent) => {
             const rect = canvas.getBoundingClientRect();
@@ -153,8 +305,6 @@ const WaymakerCanvas: React.FC<CanvasProps> = ({ selectedTag, onNodeClick }) => 
             const centerX = canvas.width / 2;
             const centerY = canvas.height / 2;
             rotation += 0.002;
-            pulse += 0.05;
-
             const currentTag = tagRef.current;
             hoveredNode = null;
 
@@ -173,60 +323,115 @@ const WaymakerCanvas: React.FC<CanvasProps> = ({ selectedTag, onNodeClick }) => 
                 };
             };
 
+            // --- HOLY PATH (MISSIONARY JOURNEY) ---
+            const holyNodes = waymakerNodes.filter(n => n.isHoly);
+            if (holyNodes.length > 1) {
+                ctx.beginPath();
+                holyNodes.forEach((node, index) => {
+                    const p = project(node.x, node.y, node.z);
+                    if (index === 0) ctx.moveTo(p.x, p.y);
+                    else ctx.lineTo(p.x, p.y);
+                });
+                const pulse = (Math.sin(Date.now() * 0.002) + 1) / 2;
+                ctx.strokeStyle = `rgba(245, 158, 11, ${0.3 + pulse * 0.5})`;
+                ctx.lineWidth = 2;
+                ctx.setLineDash([5, 5]);
+                ctx.stroke();
+                ctx.setLineDash([]);
+            }
+
             links.forEach(link => {
                 const isHighlighed = currentTag
                     ? (link.source.tags.includes(currentTag) && link.target.tags.includes(currentTag))
                     : false;
-
                 if (currentTag && !isHighlighed) return;
 
                 const p1 = project(link.source.x, link.source.y, link.source.z);
                 const p2 = project(link.target.x, link.target.y, link.target.z);
+                if (!p1.isVisible || !p2.isVisible) return;
 
                 ctx.beginPath();
                 ctx.moveTo(p1.x, p1.y);
                 ctx.lineTo(p2.x, p2.y);
-
-                if (isHighlighed) {
-                    ctx.strokeStyle = 'rgba(96, 165, 250, 0.8)';
-                    ctx.lineWidth = 2;
-                } else {
-                    ctx.strokeStyle = 'rgba(59, 130, 246, 0.1)';
-                    ctx.lineWidth = 0.5;
-                }
+                ctx.strokeStyle = isHighlighed ? 'rgba(96, 165, 250, 0.8)' : 'rgba(59, 130, 246, 0.1)';
+                ctx.lineWidth = isHighlighed ? 2 : 0.5;
                 ctx.stroke();
             });
 
             waymakerNodes.forEach(node => {
+                // SATELLITE & SHOOTING STAR LOGIC (SYNCED FROM GALAXY.HTML)
+                if (node.type === 'satellite') {
+                    const targetNode = waymakerNodes.find(n => n.id === node.orbitTarget);
+                    if (targetNode) {
+                        const time = Date.now() * 0.001;
+                        const offset = node.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0) % 360;
+                        const angle = (time * 0.015) + offset;
+                        node.x = targetNode.x + Math.cos(angle) * 60;
+                        node.z = targetNode.z + Math.sin(angle) * 60;
+                        node.y = targetNode.y + Math.sin(time * 0.3) * 10;
+                    }
+                } else if (node.type === 'shooting-star') {
+                    const time = Date.now() * 0.0008;
+                    const offset = node.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+                    const a = 50 + (offset % 30);
+                    const b = 15 + (offset % 10);
+                    const angle = time + offset;
+                    node.x = Math.cos(angle) * a;
+                    node.z = Math.sin(angle) * b;
+                    node.y = (Math.cos(angle) * a * 0.2);
+                }
+
                 const p = project(node.x, node.y, node.z);
                 if (!p.isVisible) return;
 
                 const isSelected = currentTag ? node.tags.includes(currentTag) : true;
                 const isHovered = Math.abs(p.x - mouseX) < 20 && Math.abs(p.y - mouseY) < 20;
+                if (isHovered) hoveredNode = node;
 
-                if (isHovered) {
-                    hoveredNode = node;
-                    canvas.style.cursor = 'pointer';
+                ctx.save();
+                ctx.translate(p.x, p.y);
+                const baseSize = ((isSelected ? 4 : 2) + (isHovered ? 3 : 0)) * p.scale;
+
+                if (node.type === 'spaceship') {
+                    const s = baseSize * 2.5;
+                    ctx.fillStyle = isSelected || isHovered ? '#22d3ee' : '#0e7490';
+                    ctx.beginPath();
+                    ctx.moveTo(0, -s); ctx.lineTo(s * 0.8, s); ctx.lineTo(0, s * 0.7); ctx.lineTo(-s * 0.8, s);
+                    ctx.closePath();
+                    ctx.fill();
+                } else if (node.type === 'shooting-star') {
+                    const time = Date.now() * 0.0008;
+                    const offset = node.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+                    const angle = time + offset;
+                    const tx = Math.sin(angle) * 20;
+                    const ty = -Math.cos(angle) * 10;
+                    const grad = ctx.createLinearGradient(0, 0, tx, ty);
+                    grad.addColorStop(0, '#fef08a'); grad.addColorStop(1, 'transparent');
+                    ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(tx, ty); ctx.strokeStyle = grad; ctx.lineWidth = 4 * p.scale; ctx.stroke();
+                    ctx.beginPath(); ctx.arc(0, 0, baseSize * 1.8, 0, Math.PI * 2); ctx.fillStyle = '#fef08a'; ctx.fill();
+                } else {
+                    let color = isSelected || isHovered ? '#60a5fa' : '#475569';
+                    if (node.isHoly) color = '#F59E0B';
+                    else if (node.isNew) color = '#fbbf24';
+                    ctx.beginPath();
+                    ctx.arc(0, 0, baseSize, 0, Math.PI * 2);
+                    ctx.fillStyle = color;
+                    if (isSelected || isHovered || node.isHoly) {
+                        ctx.shadowBlur = 15;
+                        ctx.shadowColor = color;
+                    }
+                    ctx.fill();
                 }
-
-                const size = ((isSelected ? 4 : 2) + (isHovered ? 3 : 0)) * p.scale;
-
-                ctx.beginPath();
-                ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
-                ctx.fillStyle = isSelected || isHovered ? '#60a5fa' : '#475569';
-                ctx.fill();
+                ctx.restore();
 
                 if (p.scale > 0.8 || isSelected || isHovered) {
                     ctx.fillStyle = isSelected || isHovered ? 'white' : 'rgba(255,255,255,0.5)';
                     ctx.font = isSelected || isHovered ? 'bold 12px sans-serif' : '10px sans-serif';
-                    ctx.fillText(node.student || "", p.x + 12, p.y + 4);
+                    ctx.fillText((node.isHoly ? "✝ " : (node.type === 'spaceship' ? "🛸 " : "")) + (node.student || node.title.split('(')[0]), p.x + 12, p.y + 4);
                 }
             });
 
-            if (!hoveredNode) {
-                canvas.style.cursor = 'default';
-            }
-
+            canvas.style.cursor = hoveredNode ? 'pointer' : 'default';
             animationFrameId = requestAnimationFrame(render);
         };
 
@@ -240,7 +445,7 @@ const WaymakerCanvas: React.FC<CanvasProps> = ({ selectedTag, onNodeClick }) => 
         };
     }, []);
 
-    return <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" />;
+    return <canvas ref={canvasRef} className="fixed inset-0 z-0" />;
 };
 
 const Waymaker: React.FC = () => {

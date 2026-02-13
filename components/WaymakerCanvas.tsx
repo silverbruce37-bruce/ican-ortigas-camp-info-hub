@@ -103,9 +103,6 @@ const WaymakerCanvas: React.FC<Props> = ({ selectedTag, onNodeClick }) => {
 
         let animationFrameId: number;
         let rotation = 0;
-        let pulse = 0;
-
-        // Mouse interaction state
         let mouseX = 0;
         let mouseY = 0;
         let hoveredNode: WaymakerNode | null = null;
@@ -125,7 +122,15 @@ const WaymakerCanvas: React.FC<Props> = ({ selectedTag, onNodeClick }) => {
         canvas.addEventListener('mousemove', handleMouseMove);
         canvas.addEventListener('click', handleClick);
 
-        // Connections Logic
+        const resize = () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            ctx.fillStyle = '#0f172a';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+        };
+        window.addEventListener('resize', resize);
+        resize();
+
         const links: { source: WaymakerNode, target: WaymakerNode }[] = [];
         waymakerNodes.forEach((n1, i) => {
             waymakerNodes.slice(i + 1).forEach(n2 => {
@@ -136,22 +141,13 @@ const WaymakerCanvas: React.FC<Props> = ({ selectedTag, onNodeClick }) => {
             });
         });
 
-        const resize = () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        };
-        window.addEventListener('resize', resize);
-        resize();
-
         const render = () => {
-            ctx.fillStyle = '#0f172a'; // Slate-900
+            ctx.fillStyle = '#0f172a';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
             const centerX = canvas.width / 2;
             const centerY = canvas.height / 2;
             rotation += 0.002;
-            pulse += 0.05;
-
             const currentTag = tagRef.current;
             hoveredNode = null;
 
@@ -170,78 +166,99 @@ const WaymakerCanvas: React.FC<Props> = ({ selectedTag, onNodeClick }) => {
                 };
             };
 
-            // Draw Links
             links.forEach(link => {
                 const isHighlighed = currentTag
                     ? (link.source.tags.includes(currentTag) && link.target.tags.includes(currentTag))
                     : false;
-
                 if (currentTag && !isHighlighed) return;
 
                 const p1 = project(link.source.x, link.source.y, link.source.z);
                 const p2 = project(link.target.x, link.target.y, link.target.z);
+                if (!p1.isVisible || !p2.isVisible) return;
 
                 ctx.beginPath();
                 ctx.moveTo(p1.x, p1.y);
                 ctx.lineTo(p2.x, p2.y);
-
-                if (isHighlighed) {
-                    ctx.strokeStyle = 'rgba(96, 165, 250, 0.8)';
-                    ctx.lineWidth = 2;
-                    ctx.shadowBlur = 10 + Math.sin(pulse) * 5;
-                    ctx.shadowColor = '#60a5fa';
-                } else {
-                    ctx.strokeStyle = 'rgba(59, 130, 246, 0.1)';
-                    ctx.lineWidth = 0.5;
-                    ctx.shadowBlur = 0;
-                }
+                ctx.strokeStyle = isHighlighed ? 'rgba(96, 165, 250, 0.8)' : 'rgba(59, 130, 246, 0.1)';
+                ctx.lineWidth = isHighlighed ? 2 : 0.5;
                 ctx.stroke();
-                ctx.shadowBlur = 0;
             });
 
-            // Draw Nodes
             waymakerNodes.forEach(node => {
+                // SATELLITE & SHOOTING STAR LOGIC (SYNCED)
+                if (node.type === 'satellite') {
+                    const targetNode = waymakerNodes.find(n => n.id === node.orbitTarget);
+                    if (targetNode) {
+                        const time = Date.now() * 0.001;
+                        const offset = node.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0) % 360;
+                        const angle = (time * 0.015) + offset;
+                        node.x = targetNode.x + Math.cos(angle) * 60;
+                        node.z = targetNode.z + Math.sin(angle) * 60;
+                        node.y = targetNode.y + Math.sin(time * 0.3) * 10;
+                    }
+                } else if (node.type === 'shooting-star') {
+                    const time = Date.now() * 0.0008;
+                    const offset = node.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+                    const a = 50 + (offset % 30);
+                    const b = 15 + (offset % 10);
+                    const angle = time + offset;
+                    node.x = Math.cos(angle) * a;
+                    node.z = Math.sin(angle) * b;
+                    node.y = (Math.cos(angle) * a * 0.2);
+                }
+
                 const p = project(node.x, node.y, node.z);
+                if (!p.isVisible) return;
 
                 const isSelected = currentTag ? node.tags.includes(currentTag) : true;
                 const isHovered = Math.abs(p.x - mouseX) < 20 && Math.abs(p.y - mouseY) < 20;
+                if (isHovered) hoveredNode = node;
 
-                if (isHovered) {
-                    hoveredNode = node;
-                    canvas.style.cursor = 'pointer';
-                } else if (!hoveredNode) {
-                    canvas.style.cursor = 'default';
-                }
+                ctx.save();
+                ctx.translate(p.x, p.y);
+                const baseSize = ((isSelected ? 4 : 2) + (isHovered ? 3 : 0)) * p.scale;
 
-                const opacity = isSelected || isHovered ? 1 : 0.2;
-                const size = ((isSelected ? 4 : 2) + (isHovered ? 3 : 0)) * p.scale;
-
-                ctx.globalAlpha = opacity;
-
-                ctx.beginPath();
-                ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
-                ctx.fillStyle = isSelected || isHovered ? '#60a5fa' : '#475569';
-                ctx.fill();
-
-                if (isSelected || isHovered) {
-                    const gradient = ctx.createRadialGradient(p.x, p.y, size, p.x, p.y, size * (currentTag || isHovered ? 8 : 4));
-                    gradient.addColorStop(0, 'rgba(96, 165, 250, 0.5)');
-                    gradient.addColorStop(1, 'rgba(96, 165, 250, 0)');
-                    ctx.fillStyle = gradient;
+                if (node.type === 'spaceship') {
+                    const s = baseSize * 2.5;
+                    ctx.fillStyle = isSelected || isHovered ? '#22d3ee' : '#0e7490';
                     ctx.beginPath();
-                    ctx.arc(p.x, p.y, size * (currentTag || isHovered ? 8 : 4), 0, Math.PI * 2);
+                    ctx.moveTo(0, -s); ctx.lineTo(s * 0.8, s); ctx.lineTo(0, s * 0.7); ctx.lineTo(-s * 0.8, s);
+                    ctx.closePath();
+                    ctx.fill();
+                } else if (node.type === 'shooting-star') {
+                    const time = Date.now() * 0.0008;
+                    const offset = node.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+                    const angle = time + offset;
+                    const tx = Math.sin(angle) * 20;
+                    const ty = -Math.cos(angle) * 10;
+                    const grad = ctx.createLinearGradient(0, 0, tx, ty);
+                    grad.addColorStop(0, '#fef08a'); grad.addColorStop(1, 'transparent');
+                    ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(tx, ty); ctx.strokeStyle = grad; ctx.lineWidth = 4 * p.scale; ctx.stroke();
+                    ctx.beginPath(); ctx.arc(0, 0, baseSize * 1.8, 0, Math.PI * 2); ctx.fillStyle = '#fef08a'; ctx.fill();
+                } else {
+                    let color = isSelected || isHovered ? '#60a5fa' : '#475569';
+                    if (node.isHoly) color = '#F59E0B';
+                    // @ts-ignore
+                    else if (node.isNew) color = '#fbbf24';
+                    ctx.beginPath();
+                    ctx.arc(0, 0, baseSize, 0, Math.PI * 2);
+                    ctx.fillStyle = color;
+                    if (isSelected || isHovered || node.isHoly) {
+                        ctx.shadowBlur = 15;
+                        ctx.shadowColor = color;
+                    }
                     ctx.fill();
                 }
+                ctx.restore();
 
                 if (p.scale > 0.8 || isSelected || isHovered) {
-                    ctx.fillStyle = `rgba(255, 255, 255, ${isSelected || isHovered ? p.scale : 0.3})`;
-                    ctx.font = isSelected || isHovered ? 'bold 12px monospace' : '10px monospace';
-                    ctx.fillText(node.student || "", p.x + 15, p.y + 4);
+                    ctx.fillStyle = isSelected || isHovered ? 'white' : 'rgba(255,255,255,0.5)';
+                    ctx.font = isSelected || isHovered ? 'bold 12px sans-serif' : '10px sans-serif';
+                    ctx.fillText((node.isHoly ? "✝ " : (node.type === 'spaceship' ? "🛸 " : "")) + (node.student || node.title.split('(')[0]), p.x + 12, p.y + 4);
                 }
-
-                ctx.globalAlpha = 1.0;
             });
 
+            canvas.style.cursor = hoveredNode ? 'pointer' : 'default';
             animationFrameId = requestAnimationFrame(render);
         };
 
@@ -255,7 +272,7 @@ const WaymakerCanvas: React.FC<Props> = ({ selectedTag, onNodeClick }) => {
         };
     }, []);
 
-    return <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" />;
+    return <canvas ref={canvasRef} className="fixed inset-0 z-0" />;
 };
 
 export default WaymakerCanvas;

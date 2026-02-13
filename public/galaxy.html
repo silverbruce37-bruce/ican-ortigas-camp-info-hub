@@ -543,8 +543,17 @@
                                     ctx.save();
                                     ctx.translate(p.x, p.y);
 
-                                    // Draw Tail (Simulated based on velocity tangent)
-                                    // Tangent vector is (-sin, cos)
+                                    // Calculate Velocity Tangent for Tail direction
+                                    const vx = -Math.sin(angle) * a;
+                                    const vy = Math.cos(angle) * b * Math.sin(inclination);
+
+                                    // Tail length based on speed and scale
+                                    const tx = -vx * 0.1;
+                                    const ty = -vy * 0.1;
+
+                                    const grad = ctx.createLinearGradient(0, 0, tx, ty);
+                                    grad.addColorStop(0, '#fef08a');
+                                    grad.addColorStop(1, 'rgba(254, 240, 138, 0)');
 
                                     ctx.beginPath();
                                     ctx.moveTo(0, 0);
