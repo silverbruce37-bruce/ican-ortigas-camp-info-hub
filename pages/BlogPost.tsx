@@ -2,13 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useBlog } from '../context/BlogContext';
+import { BLOG_POSTS } from '../constants';
 import { ArrowLeft, User, Calendar, ChevronLeft, ChevronRight, Share2, MessageCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const BlogPost: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { posts } = useBlog();
-  const post = posts.find(p => p.id === id);
+  const post = posts.find(p => p.id === id) || BLOG_POSTS.find(p => p.id === id);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showShareToast, setShowShareToast] = useState(false);
 
