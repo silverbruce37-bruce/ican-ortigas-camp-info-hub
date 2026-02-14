@@ -2050,26 +2050,25 @@ export const KO_DATA = {
     }
   ],
   fees: {
-    tuitionTitle: "캠프수업료 안내",
-    tuitionSubtitle: "합리적인 비용으로 최고의 교육을 제공합니다.",
-    headers: ["기간", "캠프수업료", "교재비"],
+    tuitionTitle: "연수비 안내",
+    tuitionSubtitle: "주 5회 / 하루 8 시간 수업 기준",
+    headers: ["과정", "비용", "비고"],
     items: [
-      { duration: "4주", tuition: "190만원", materialFee: "10만원" },
-      { duration: "8주", tuition: "360만원", materialFee: "15만원" },
-      { duration: "12주", tuition: "530만원", materialFee: "20만원" }
+      { duration: "4주 과정", tuition: "200만원", materialFee: "교재비 포함" },
+      { duration: "8주 과정", tuition: "380만원", materialFee: "교재비 포함" },
+      { duration: "12주 과정", tuition: "560만원", materialFee: "교재비 포함" }
     ],
     additionalClasses: {
-      title: "추가 선택 수업",
-      subtitle: "학생의 필요와 목표에 맞춰 선택할 수 있는 심화 과정입니다.",
+      title: "과목별 추가수업비",
+      subtitle: "4주 기준",
       headers: ["수업명", "기간", "추가 비용"],
       items: [
-        { name: "테드 (TED) 수업 추가", duration: "4주", price: "5만원" },
-        { name: "주니어 토플 수업 추가", duration: "4주", price: "5만원" },
-        { name: "AI 수업 추가", duration: "4주", price: "7만원" },
-        { name: "토플 수업 추가", duration: "4주", price: "10만원" }
+        { name: "테드, 주니어토플, 에세이클리닉", duration: "4주", price: "5만원" },
+        { name: "AI, Eduspace 수업", duration: "4주", price: "7만원" },
+        { name: "토플, 아이엘츠", duration: "4주", price: "10만원" }
       ]
     },
-    note: "* 환율 변동에 따라 원화 금액은 달라질 수 있습니다.\n* 숙소 및 식비는 별도입니다.\n* 입학금 한 가정당 15만원 (재등록자 면제)",
+    note: "* 일주일 연장시 47만원 수업비 추가\n* 입학금: 한가족당 15만원 (재등록시 면제)\n* 환율 변동에 따라 원화 금액은 달라질 수 있습니다.\n* 숙소 및 식비는 별도입니다.",
     visaTitle: "비자 및 기타 비용",
     visaSubtitle: "필리핀 현지에서 납부해야 하는 비용입니다.",
     visaItems: [
