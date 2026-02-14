@@ -2,6 +2,8 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
+import SEO from './components/seo/SEO';
+import SchemaOrg from './components/seo/SchemaOrg';
 import Home from './pages/Home';
 import Curriculum from './pages/Curriculum';
 import VisaAndEntry from './pages/VisaAndEntry';
@@ -42,6 +44,8 @@ const App: React.FC = () => {
           <ChatProvider>
             <BlogProvider>
               <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+                <SEO />
+                <SchemaOrg />
                 <ScrollToTop />
                 <Routes>
                   {/* Admin Login Route (Separate Layout) */}

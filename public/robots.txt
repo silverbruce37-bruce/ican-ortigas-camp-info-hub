@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /mypage/
+
+Sitemap: https://ican-space.vercel.app/sitemap.xml
