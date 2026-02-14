@@ -263,9 +263,32 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: "앤트로픽 CEO가 예고한 '천재 국가'의 탄생. 지식 암기가 아닌 '질문(Prompt)' 능력이 아이의 계급을 결정합니다.",
     content: `
       <div class="space-y-6 text-gray-800 leading-relaxed">
-        <p><strong>[Coming Soon]</strong> 이 글은 곧 공개될 예정입니다. AI 시대, 우리 아이들이 마주할 새로운 경쟁의 판도를 분석합니다.</p>
-        <div class="bg-gray-100 p-6 rounded-2xl">
-           <p>사전 알림 신청을 하시면 가장 먼저 글을 받아보실 수 있습니다.</p>
+        <div class="bg-red-50 p-6 rounded-2xl border border-red-100 mb-8">
+           <p class="font-bold text-lg text-red-900 mb-2">"변호사님, 이제 우리 애는 뭐 먹고 살아야 합니까?"</p>
+           <p class="text-red-800">최근 GPT-4가 변호사 시험 상위 10% 성적을 기록했다는 뉴스에 한 학부모님이 하신 말씀입니다. 의사, 변호사, 회계사... 우리가 알던 '철밥통' 전문직의 성벽이 무너지고 있습니다.</p>
+        </div>
+
+        <p>과거의 입시 경쟁이 'SKY 캐슬'이라는 대학 간판을 따기 위한 전쟁이었다면, <strong>AI 시대의 새로운 계급 전쟁은 '데이터 캐슬'</strong>에서 일어납니다. 누가 더 양질의 데이터에 접근하고, 누가 AI를 더 잘 부리는가?</p>
+
+        <h3 class="text-2xl font-bold mt-10 mb-4 text-gray-900">1. 질문(Prompt)하는 자가 지배한다</h3>
+        <p>AI는 답을 주는 기계입니다. 하지만 <strong>'좋은 질문'</strong>이 없으면 AI는 깡통에 불과합니다. 과거엔 정답을 잘 맞히는 아이가 우등생이었지만, 앞으론 <strong>"남들이 생각지 못한 질문을 던지는 아이"</strong>가 리더가 됩니다.</p>
+        <p class="mt-2">영어로 질문을 구조화하고, AI의 답변을 비판적으로 검증할 수 있는 능력. 이것이 바로 <strong>'프롬프트 엔지니어링(Prompt Engineering)'</strong>의 본질이며, 이는 고도의 논리적 사고력과 언어 능력(English)을 요구합니다.</p>
+
+        <h3 class="text-2xl font-bold mt-10 mb-4 text-gray-900">2. 영어는 AI의 모국어(Native Language)입니다</h3>
+        <p>전 세계 데이터의 60% 이상은 영어로 되어 있습니다. 최신 AI 모델들은 영어로 사고하고 한국어로 번역해서 내뱉을 뿐입니다.</p>
+        <ul class="list-disc ml-6 space-y-2 text-gray-700 bg-gray-50 p-4 rounded-xl">
+          <li><strong>정보의 속도:</strong> 영어를 하는 아이는 최신 기술을 '실시간'으로 습득합니다.</li>
+          <li><strong>정보의 깊이:</strong> 번역된 정보가 아닌, 원문의 미묘한 뉘앙스와 맥락을 파악합니다.</li>
+        </ul>
+
+        <h3 class="text-2xl font-bold mt-10 mb-4 text-gray-900">결론: AI를 두려워하지 않는 아이</h3>
+        <p>아이캔은 단순히 영어 점수를 올리는 곳이 아닙니다. 영어라는 도구를 통해 <strong>전 세계 정보의 바다를 항해하고, AI라는 강력한 무기를 자유자재로 휘두르는 법</strong>을 가르칩니다.</p> 
+        <p>두려움 대신 설렘으로 미래를 맞이하게 해주십시오.</p>
+
+        <hr class="my-10 border-gray-200" />
+        <div class="bg-gray-900 text-white p-8 rounded-3xl text-center">
+           <p class="mb-4 text-lg">우리 아이를 'AI의 주인'으로 키우고 싶으신가요?</p>
+           <a href="/#/counseling" class="inline-block bg-white text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors">상담 예약하고 미래 준비하기</a>
         </div>
       </div>
     `
@@ -281,7 +304,33 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: "닫힌 교실에서 벗어나, 24시간 영어라는 '새로운 운영체제' 속에서 살아가는 공간의 혁명.",
     content: `
         <div class="space-y-6 text-gray-800 leading-relaxed">
-          <p><strong>[Coming Soon]</strong> 맹모삼천지교의 현대적 해석. 왜 올티가스가 우리 아이들의 '우주 정거장'이 되어야 하는지 이야기합니다.</p>
+          <p>맹모(孟母)가 2026년에 살았다면, 과연 묘지 옆이나 시장통을 피해 <strong>'강남 대치동'</strong>으로 이사 갔을까요?</p>
+          <p class="text-lg font-medium text-indigo-700">아닙니다. 맹모는 아마 비행기 표를 끊었을 것입니다.</p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-4 text-gray-900">닫힌 교실 vs 열린 우주</h3>
+          <p>한국의 영어 학원은 훌륭하지만, 거대한 <strong>'어항'</strong>과 같습니다. 어항 속에서는 아무리 헤엄쳐도 문 밖을 나서면 다시 한국어의 바다입니다. 아이들은 영어를 '공부'로만 인식하고, 시험이 끝나면 책을 덮어버립니다.</p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-4 text-gray-900">올티가스: 안전하고 거대한 영어 생태계</h3>
+          <p>필리핀 올티가스(Ortigas)는 단순한 도시가 아닙니다. 아시아개발은행(ADB) 본사와 다국적 기업들이 모여 있는 <strong>'살아있는 글로벌 현장'</strong>입니다.</p>
+          
+          <div class="grid md:grid-cols-2 gap-4 my-6">
+            <div class="bg-green-50 p-5 rounded-xl">
+              <h4 class="font-bold text-green-800 mb-2">🎬 현실 같은 영어 (Real Life)</h4>
+              <p class="text-sm text-gray-600">쇼핑몰에서 물건을 사고, 카페에서 주문하며, 수영장에서 친구를 사귀는 모든 과정이 영어입니다. 생존을 위해 영어를 씁니다.</p>
+            </div>
+            <div class="bg-blue-50 p-5 rounded-xl">
+              <h4 class="font-bold text-blue-800 mb-2">🛡️ 완벽한 치안과 인프라</h4>
+              <p class="text-sm text-gray-600">부모님이 가장 걱정하시는 안전. 올티가스는 필리핀 내에서도 가장 안전하고 쾌적한 부촌으로, 아이들이 마음껏 뛰어놀 수 있는 '보호구역'입니다.</p>
+            </div>
+          </div>
+
+          <p><strong>'맹모우주지교'</strong>. 아이를 더 넓은 세상에 던져 놓으십시오. 그곳에서 아이는 스스로 궤도를 찾아 비행하는 법을 배웁니다. 아이캔이 그 안전한 발사대가 되어드립니다.</p>
+
+          <hr class="my-10 border-gray-200" />
+           <div class="bg-gray-100 p-8 rounded-3xl text-center">
+             <p class="mb-4">백문이 불여일견, 올티가스의 환경을 직접 확인하세요.</p>
+             <a href="/#/living-info" class="text-blue-600 font-bold hover:underline">생활 정보 미리보기 →</a>
+          </div>
         </div>
       `
   },
@@ -296,7 +345,32 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: "AI 시대, 유일하게 대체 불가능한 것은 '따뜻한 인성'과 '영성'입니다. 실력만 있는 괴물이 아닌 사랑받는 리더로 키웁니다.",
     content: `
         <div class="space-y-6 text-gray-800 leading-relaxed">
-          <p><strong>[Coming Soon]</strong> 성공을 결정짓는 결정적 요인, '인성'. AI가 흉내 낼 수 없는 인간 고유의 가치에 대해 탐구합니다.</p>
+          <div class="float-right ml-6 mb-4 w-1/3">
+             <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop" class="rounded-xl shadow-lg" alt="Teamwork" />
+          </div>
+          <p>AI가 코딩도 하고, 소설도 쓰고, 심지어 상담까지 해주는 세상. 인간이 기계보다 더 잘할 수 있는 것이 단 하나라도 남아있을까요?</p>
+          <p class="text-xl font-bold text-gray-900 my-4">네, 바로 '따뜻함(Warmth)'과 '영성(Spirituality)'입니다.</p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-4 text-gray-900">Character: 대체 불가능한 자산</h3>
+          <p>하버드 입학 사정관들은 더 이상 완벽한 성적표에 놀라지 않습니다. 그들이 찾는 것은 <strong>"이 학생이 우리 공동체에 어떤 긍정적인 영향을 미칠 것인가?"</strong>입니다.</p>
+          <ul class="list-disc ml-6 space-y-2 text-gray-700 mt-4">
+            <li>타인의 아픔에 공감하는 능력 (Empathy)</li>
+            <li>실패를 딛고 일어나는 회복 탄력성 (Resilience)</li>
+            <li>팀을 하나로 묶는 섬김의 리더십 (Servant Leadership)</li>
+          </ul>
+
+          <h3 class="text-2xl font-bold mt-10 mb-4 text-gray-900">아이캔의 공동체 생활</h3>
+          <p>아이캔 캠프에서 아이들은 24시간 선생님, 친구들과 부대끼며 지냅니다. 때로는 다투기도 하고, 화해하고, 서로를 챙겨주며 <strong>'관계의 근육'</strong>을 키웁니다.</p>
+          <p class="bg-yellow-50 p-4 rounded-lg my-4 italic text-gray-700">"공부는 혼자 하면 승리하지만, 인생은 함께 하면 축제가 된다."</p>
+
+          <p>실력만 있는 괴물이 아닌, 실력을 갖춘 <strong>'존경받는 리더'</strong>. 아이캔이 지향하는 Waymaker의 진짜 모습입니다.</p>
+
+          <hr class="my-10 border-gray-200" />
+           <div class="flex justify-center">
+             <a href="/#/counseling" class="inline-flex items-center gap-2 text-indigo-600 font-bold border border-indigo-200 px-6 py-3 rounded-full hover:bg-indigo-50 transition-all">
+                아이캔의 인성 교육 철학 문의하기
+             </a>
+          </div>
         </div>
       `
   },
@@ -311,7 +385,32 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: "예측 불가능한 미래, 어떤 환경에서도 길을 찾아내는 아이캔 졸업생들의 놀라운 변화.",
     content: `
         <div class="space-y-6 text-gray-800 leading-relaxed">
-          <p><strong>[Coming Soon]</strong> 아이캔의 마지막 메시지. 우리 아이에게 진정으로 물려주어야 할 유산은 무엇일까요?</p>
+          <p>부모님이 아이에게 물려줄 수 있는 가장 큰 유산은 무엇일까요? 강남의 아파트? 수억 원의 통장?</p>
+          <p>안타깝게도 물질적인 유산은 시대의 변화 앞에 너무나 쉽게 무너집니다. <strong>건물은 낡지만, 아이의 머릿속에 심어준 '소프트웨어(사고방식)'는 평생 업데이트되며 아이를 지킵니다.</strong></p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-4 text-gray-900">Waymaker DNA: 길을 만드는 본능</h3>
+          <p>아이캔(I CAN)이라는 이름에는 강력한 주문이 걸려 있습니다. <strong>"나는 할 수 있다."</strong></p>
+          <p>낯선 땅 필리핀에서, 낯선 외국인 선생님과, 낯선 언어로 대화하며 아이들은 매일 작은 '두려움'을 이겨냅니다. 이 작은 승리의 경험들이 쌓여 <strong>"어? 부딪혀보니까 별거 아니네?"</strong>라는 단단한 자존감을 형성합니다.</p>
+
+          <div class="bg-gray-900 text-white p-6 rounded-2xl my-8">
+            <h4 class="text-xl font-bold mb-4">🎓 The Waymaker's Promise</h4>
+            <ul class="space-y-3 opacity-90">
+              <li class="flex items-start gap-2"><span class="text-yellow-400">✓</span> 어떤 문제 앞에서도 당황하지 않고 길을 찾겠습니다.</li>
+              <li class="flex items-start gap-2"><span class="text-yellow-400">✓</span> 실패를 두려워하지 않고 다시 도전하겠습니다.</li>
+              <li class="flex items-start gap-2"><span class="text-yellow-400">✓</span> 받은 사랑을 세상에 흘려보내는 리더가 되겠습니다.</li>
+            </ul>
+          </div>
+
+          <p>부모님, 이제 아이의 손을 놓고 더 넓은 우주로 보내주십시오. 아이캔이 그 여정의 가장 든든한 베이스캠프가 되겠습니다.</p>
+          <p class="font-bold text-center text-xl mt-8">"Your Child is the Next Waymaker."</p>
+
+          <hr class="my-10 border-gray-200" />
+          <div class="text-center">
+            <a href="/#/counseling" class="inline-block bg-indigo-600 text-white font-bold text-lg py-4 px-10 rounded-full shadow-xl hover:bg-indigo-700 transform hover:-translate-y-1 transition-all">
+              지금, 아이캔 스페이스 탑승 신청하기
+            </a>
+            <p class="mt-4 text-gray-500 text-sm">2026 시즌 캠프 모집 중 (선착순 마감)</p>
+          </div>
         </div>
       `
   },
