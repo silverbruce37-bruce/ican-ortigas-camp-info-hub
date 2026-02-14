@@ -5,6 +5,7 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css'; // Important: Import Leaflet CSS
 import L from 'leaflet';
 import { useLanguage } from '../context/LanguageContext';
+import SEO from '../components/seo/SEO';
 
 // Fix for default Leaflet markers in React
 delete (L.Icon.Default.prototype as any)._getIconUrl;
@@ -283,8 +284,17 @@ const SchoolGuide: React.FC = () => {
         ? SCHOOLS
         : SCHOOLS.filter(s => s.location === filter);
 
+    const filteredSchools = filter === 'all'
+        ? SCHOOLS
+        : SCHOOLS.filter(school => school.location === filter);
+
     return (
         <div className="bg-[#FAFAFA] min-h-screen pt-24 pb-32 font-sans text-[#1d1d1f]">
+            <SEO
+                title="School Guide - 올티가스/그린힐스 명문 학교 가이드"
+                description="세인트 폴, 포베다, 자비에르, ICA 등 필리핀 올티가스와 그린힐스 지역의 명문 사립학교 및 국제학교 정보를 한눈에 확인하세요."
+                keywords={["올티가스 국제학교", "마닐라 사립학교", "세인트폴 파시그", "포베다", "자비에르", "ICA", "필리핀 조기유학 학교"]}
+            />
             <div className="max-w-[1200px] mx-auto px-6">
 
                 {/* Hero Section */}

@@ -1,3 +1,4 @@
+```
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Rocket } from 'lucide-react';
@@ -6,13 +7,18 @@ import { useLanguage } from '../context/LanguageContext';
 import ConundrumCard from '../components/ConundrumCard';
 import heroMonitorImg from '../hero-monitor-final-wide.png';
 import TeamShowcase from '../components/TeamShowcase';
+import SEO from '../components/seo/SEO';
 
 const Home: React.FC = () => {
   const { content } = useLanguage();
 
   return (
     <div className="font-sans bg-white text-black">
-
+      <SEO 
+          title="ICAN SPACE - 올티가스 프리미엄 영어 캠프 (Ortigas English Camp)" 
+          description="AI 시대, 미래를 살아가는 힘. 필리핀 올티가스에서 시작하는 이중언어(Bilingual) 교육 혁명. 안전한 관리형 유학의 새로운 표준, 아이캔 스페이스."
+          keywords={["올티가스 영어캠프", "필리핀 가족연수", "Ortigas English Camp", "마닐라 영어학원", "이중언어 교육", "관리형 유학", "아이캔 아카데미"]}
+      />
 
       {/* Hero Section */}
       <section className="min-h-[60vh] flex flex-col items-center justify-center text-center p-8 pt-24 pb-16">

@@ -5,6 +5,7 @@ import { useLanguage } from '../context/LanguageContext';
 import OrtigasMap from '../components/OrtigasMap';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import SEO from '../components/seo/SEO';
 
 const LivingInfo: React.FC = () => {
   const { content } = useLanguage();
@@ -18,6 +19,11 @@ const LivingInfo: React.FC = () => {
 
   return (
     <div className="bg-[#F5F5F7] min-h-screen font-sans text-[#1d1d1f]">
+      <SEO
+        title="Living Info - 올티가스 생활의 모든 것"
+        description="필리핀 올티가스 맛집, 쇼핑몰, 병원, 교회, 필수 앱 등 현지 생활에 필요한 실전 정보를 아이캔이 직접 검증하여 제공합니다."
+        keywords={["올티가스 맛집", "필리핀 생활비", "마닐라 병원", "올티가스 쇼핑몰", "필리핀 한인교회", "그랩 사용법", "지캐시 환전"]}
+      />
       {/* Hero Panorama Image (36:9 Aspect Ratio) */}
       <div className="w-full h-[180px] md:h-[320px] relative">
         <img
