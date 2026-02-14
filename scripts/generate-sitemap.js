@@ -1,40 +1,49 @@
-import { writeFileSync } from 'fs';
-import { resolve } from 'path';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const SITE_URL = 'https://ican-space.vercel.app';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-const pages = [
-    '/',
-    '/vision',
-    '/curriculum',
-    '/fees',
-    '/schools',
-    '/living',
-    '/community',
-    '/golf-tour',
-    '/counseling',
-    '/galaxy',
-    '/series',
-    // Blogs will be dynamic in a real scenario, adding known ones manually for now
-    '/series/waymaker'
+const BASE_URL = 'https://ican-space.vercel.app';
+
+const routes = [
+  '/',
+  '/vision',
+  '/curriculum',
+  '/fees',
+  '/schools',
+  '/living',
+  '/community',
+  '/mypage',
+  '/blog',
+  '/faq',
+  '/golf-tour',
+  '/counseling',
+  '/galaxy',
+  '/series'
 ];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  ${pages
-        .map((page) => {
-            return `
+  ${routes
+    .map((route) => {
+      return `
   <url>
-    <loc>${SITE_URL}${page}</loc>
+    <loc>${BASE_URL}${route}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>${page === '/' ? '1.0' : '0.8'}</priority>
+    <priority>${route === '/' ? '1.0' : '0.8'}</priority>
   </url>`;
-        })
-        .join('')}
+    })
+    .join('')}
 </urlset>`;
 
-const publicDir = resolve('public');
-writeFileSync(resolve(publicDir, 'sitemap.xml'), sitemap);
+const publicDir = path.resolve(__dirname, '../public');
+// Ensure public directory exists
+if (!fs.existsSync(publicDir)) {
+  fs.mkdirSync(publicDir, { recursive: true });
+}
 
-console.log('✅ Sitemap generated successfully at public/sitemap.xml');
+fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
+console.log('✅ Sitemap generated successfully!');

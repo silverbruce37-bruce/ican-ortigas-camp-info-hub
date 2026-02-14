@@ -14,8 +14,8 @@ const SchemaOrg = () => {
                 "logo": "https://ican-space.vercel.app/assets/logo.png", // Ensure this exists or use a valid URL
                 "sameAs": [
                     "https://icanacademy.com",
-                    "https://www.facebook.com/icanacademy", // Verify exact URL
-                    "https://band.us/@icanacademy" // Verify exact URL
+                    "https://www.facebook.com/icanacademy",
+                    "https://band.us/@icanacademy"
                 ],
                 "address": {
                     "@type": "PostalAddress",
