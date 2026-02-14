@@ -1,0 +1,25 @@
+{
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ],
+    "redirects": [
+        {
+            "source": "/series",
+            "destination": "/#/series",
+            "permanent": true
+        },
+        {
+            "source": "/counseling",
+            "destination": "/#/counseling",
+            "permanent": true
+        },
+        {
+            "source": "/blog/:path*",
+            "destination": "/#/blog/:path*",
+            "permanent": true
+        }
+    ]
+}
