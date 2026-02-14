@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, GraduationCap, Globe, ExternalLink, Star, Crown, BookOpen, DollarSign, Shield, Heart, Church, Cross } from 'lucide-react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css'; // Important: Import Leaflet CSS
 import L from 'leaflet';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -13,20 +14,35 @@ L.Icon.Default.mergeOptions({
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
 });
 
+// Component to fix map rendering issues (grey tiles / half map)
+const MapRevalidator = () => {
+    const map = useMap();
+    useEffect(() => {
+        setTimeout(() => {
+            map.invalidateSize();
+        }, 100);
+    }, [map]);
+    return null;
+};
+
 // Map Controller to handle view changes
 const MapController: React.FC<{ filter: string }> = ({ filter }) => {
     const map = useMap();
 
     React.useEffect(() => {
-        if (filter === 'all') {
-            map.flyTo([14.5800, 121.0550], 13);
-        } else if (filter === 'ortigas') {
-            map.flyTo([14.5850, 121.0610], 15);
-        } else if (filter === 'greenhills') {
-            map.flyTo([14.6000, 121.0450], 15);
-        } else if (filter === 'bgc') {
-            map.flyTo([14.5520, 121.0480], 14);
-        }
+        // Slight delay to ensure map is ready
+        const timer = setTimeout(() => {
+            if (filter === 'all') {
+                map.flyTo([14.5800, 121.0550], 13);
+            } else if (filter === 'ortigas') {
+                map.flyTo([14.5850, 121.0610], 15);
+            } else if (filter === 'greenhills') {
+                map.flyTo([14.6000, 121.0450], 15);
+            } else if (filter === 'bgc') {
+                map.flyTo([14.5520, 121.0480], 14);
+            }
+        }, 100);
+        return () => clearTimeout(timer);
     }, [filter, map]);
 
     return null;
@@ -305,11 +321,18 @@ const SchoolGuide: React.FC = () => {
 
                     {/* Real Map */}
                     <div className="h-[500px] w-full rounded-3xl overflow-hidden relative z-0">
-                        <MapContainer center={[14.5800, 121.0550]} zoom={13} scrollWheelZoom={false} className="h-full w-full">
+                        <MapContainer
+                            center={[14.5800, 121.0550]}
+                            zoom={13}
+                            scrollWheelZoom={false}
+                            className="h-full w-full"
+                            style={{ height: "100%", width: "100%", zIndex: 0 }}
+                        >
                             <TileLayer
                                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             />
+                            <MapRevalidator />
                             <MapController filter={filter} />
 
                             {filteredSchools.map(school => (
