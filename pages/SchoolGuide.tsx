@@ -284,9 +284,7 @@ const SchoolGuide: React.FC = () => {
         ? SCHOOLS
         : SCHOOLS.filter(s => s.location === filter);
 
-    const filteredSchools = filter === 'all'
-        ? SCHOOLS
-        : SCHOOLS.filter(school => school.location === filter);
+
 
     return (
         <div className="bg-[#FAFAFA] min-h-screen pt-24 pb-32 font-sans text-[#1d1d1f]">

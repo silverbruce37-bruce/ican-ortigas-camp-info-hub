@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ChevronDown, Search } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -20,6 +21,24 @@ const FAQ: React.FC = () => {
 
   return (
     <div className="bg-[#F5F5F7] min-h-screen pt-24 pb-24 font-sans text-[#1d1d1f]">
+      <Helmet>
+        <title>FAQ - 자주 묻는 질문 | ICAN SPACE</title>
+        <meta name="description" content="아이캔 올티가스 캠프에 대해 자주 묻는 질문들을 모았습니다. 치안, 숙소, 식사, 액티비티 등 궁금한 점을 확인하세요." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faq.items.map(item => ({
+              "@type": "Question",
+              "name": item.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.answer
+              }
+            }))
+          })}
+        </script>
+      </Helmet>
       <div className="max-w-3xl mx-auto px-6">
 
         <div className="text-center mb-12">

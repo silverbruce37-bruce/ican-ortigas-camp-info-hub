@@ -1,4 +1,4 @@
-```
+
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Hash, RefreshCw, X, Youtube, Home } from 'lucide-react';
@@ -335,7 +335,8 @@ const WaymakerCanvas: React.FC<CanvasProps> = ({ selectedTag, onNodeClick }) => 
                     else ctx.lineTo(p.x, p.y);
                 });
                 const pulse = (Math.sin(Date.now() * 0.002) + 1) / 2;
-                ctx.strokeStyle = `rgba(245, 158, 11, ${ 0.3 + pulse * 0.5 })`;
+                const alpha = 0.3 + pulse * 0.5;
+                ctx.strokeStyle = 'rgba(245, 158, 11, ' + alpha + ')';
                 ctx.lineWidth = 2;
                 ctx.setLineDash([5, 5]);
                 ctx.stroke();
@@ -496,11 +497,10 @@ const Waymaker: React.FC = () => {
                     </div>
                     <button
                         onClick={() => setSelectedTag(null)}
-                        className={`px - 4 py - 2 rounded - l - full text - xs font - medium transition - all duration - 300 border - r - 4 backdrop - blur - md w - 32 text - right ${
-    selectedTag === null
-    ? 'bg-white text-slate-900 border-blue-500 shadow-[0_0_20px_rgba(255,255,255,0.4)] translate-x-2'
-    : 'bg-slate-900/60 text-slate-400 border-slate-700 hover:border-slate-500 hover:bg-slate-800/80 hover:w-36'
-} `}
+                        className={`px - 4 py - 2 rounded - l - full text - xs font - medium transition - all duration - 300 border - r - 4 backdrop - blur - md w - 32 text - right ${selectedTag === null
+                                ? 'bg-white text-slate-900 border-blue-500 shadow-[0_0_20px_rgba(255,255,255,0.4)] translate-x-2'
+                                : 'bg-slate-900/60 text-slate-400 border-slate-700 hover:border-slate-500 hover:bg-slate-800/80 hover:w-36'
+                            } `}
                     >
                         전체 보기 (Reset)
                     </button>
@@ -508,11 +508,10 @@ const Waymaker: React.FC = () => {
                         <button
                             key={tag}
                             onClick={() => setSelectedTag(selectedTag === tag ? null : tag)}
-                            className={`px - 4 py - 2 rounded - l - full text - xs font - medium transition - all duration - 300 border - r - 4 flex items - center justify - end gap - 2 backdrop - blur - md w - auto min - w - [120px] ${
-    selectedTag === tag
-    ? 'bg-gradient-to-l from-blue-600/90 to-blue-900/40 text-white border-cyan-400 shadow-[0_0_25px_rgba(59,130,246,0.6)] translate-x-2'
-    : 'bg-slate-900/60 text-slate-400 border-slate-700 hover:border-blue-500/50 hover:text-blue-200 hover:bg-slate-800/80 hover:pr-6'
-} `}
+                            className={`px - 4 py - 2 rounded - l - full text - xs font - medium transition - all duration - 300 border - r - 4 flex items - center justify - end gap - 2 backdrop - blur - md w - auto min - w - [120px] ${selectedTag === tag
+                                    ? 'bg-gradient-to-l from-blue-600/90 to-blue-900/40 text-white border-cyan-400 shadow-[0_0_25px_rgba(59,130,246,0.6)] translate-x-2'
+                                    : 'bg-slate-900/60 text-slate-400 border-slate-700 hover:border-blue-500/50 hover:text-blue-200 hover:bg-slate-800/80 hover:pr-6'
+                                } `}
                         >
                             {tag.replace('#', '')} <Hash size={10} className="opacity-50" />
                         </button>
@@ -554,47 +553,47 @@ const Waymaker: React.FC = () => {
                                     width="100%"
                                     height="100%"
                                     src={`https://www.youtube.com/embed/${selectedVideo.videoUrl}?autoplay=1`}
-title = { selectedVideo.title }
-frameBorder = "0"
-allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-allowFullScreen
-    ></iframe >
+                                    title={selectedVideo.title}
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe >
                             </div >
 
-    <div className="px-8 py-6 bg-slate-900">
-        <div className="flex items-center justify-between mb-4">
-            <h2 className="text-2xl font-bold text-white">{selectedVideo.title}</h2>
-            <span className="text-slate-500 font-mono text-sm">{selectedVideo.date}</span>
-        </div>
-        <div className="flex items-center gap-2 mb-6">
-            <span className="text-slate-400 text-sm">{selectedVideo.student}</span>
-            <span className="w-1 h-1 bg-slate-600 rounded-full"></span>
-            <span className="text-slate-500 text-sm">{selectedVideo.category}</span>
-        </div>
+                            <div className="px-8 py-6 bg-slate-900">
+                                <div className="flex items-center justify-between mb-4">
+                                    <h2 className="text-2xl font-bold text-white">{selectedVideo.title}</h2>
+                                    <span className="text-slate-500 font-mono text-sm">{selectedVideo.date}</span>
+                                </div>
+                                <div className="flex items-center gap-2 mb-6">
+                                    <span className="text-slate-400 text-sm">{selectedVideo.student}</span>
+                                    <span className="w-1 h-1 bg-slate-600 rounded-full"></span>
+                                    <span className="text-slate-500 text-sm">{selectedVideo.category}</span>
+                                </div>
 
-        <p className="text-slate-300 leading-relaxed mb-8 border-l-2 border-slate-700 pl-4">
-            {selectedVideo.desc}
-        </p>
+                                <p className="text-slate-300 leading-relaxed mb-8 border-l-2 border-slate-700 pl-4">
+                                    {selectedVideo.desc}
+                                </p>
 
-        <div className="flex gap-2 mb-8 flex-wrap">
-            {selectedVideo.tags.map(tag => (
-                <span key={tag} className="text-xs text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-md border border-blue-500/20">
-                    {tag}
-                </span>
-            ))}
-        </div>
-    </div>
+                                <div className="flex gap-2 mb-8 flex-wrap">
+                                    {selectedVideo.tags.map(tag => (
+                                        <span key={tag} className="text-xs text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-md border border-blue-500/20">
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
                         </motion.div >
                     </motion.div >
                 )}
             </AnimatePresence >
 
-    {/* Home Button (Top Right) - Bulletproof Inline Styles - SVG Version */ }
-    < a href = "/" style = {{ position: 'fixed', top: '24px', right: '24px', zIndex: 99999, display: 'flex', alignItems: 'center', justifyContent: 'center', width: '50px', height: '50px', backgroundColor: 'rgba(15, 23, 42, 0.9)', border: '1px solid rgba(59, 130, 246, 0.5)', borderRadius: '50%', boxShadow: '0 0 15px rgba(59, 130, 246, 0.5)', cursor: 'pointer', textDecoration: 'none' }} title = "Main Base" >
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-            <polyline points="9 22 9 12 15 12 15 22" />
-        </svg>
+            {/* Home Button (Top Right) - Bulletproof Inline Styles - SVG Version */}
+            < a href="/" style={{ position: 'fixed', top: '24px', right: '24px', zIndex: 99999, display: 'flex', alignItems: 'center', justifyContent: 'center', width: '50px', height: '50px', backgroundColor: 'rgba(15, 23, 42, 0.9)', border: '1px solid rgba(59, 130, 246, 0.5)', borderRadius: '50%', boxShadow: '0 0 15px rgba(59, 130, 246, 0.5)', cursor: 'pointer', textDecoration: 'none' }} title="Main Base" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
             </a >
         </div >
     );

@@ -197,7 +197,7 @@ export const BLOG_POSTS: BlogPost[] = [
           <p class="text-blue-800">상담실을 찾는 3040 학부모님들이 가장 많이 하시는 질문 중 하나입니다. "폴샘, 스마트폰만 있으면 전 세계 누구와도 대화가 되는 세상이잖아요. 우리 아이가 굳이 그 고생을 해서 영어를 배워야 할까요? 차라리 코딩이나 주식을 가르치는 게 낫지 않을까요?"</p>
         </div>
 
-        <p>매우 타당한 질문입니다. <strong>단순히 '여행 가서 밥 사 먹는 영어'를 위해서라면, 더 이상 영어 학원에 다닐 필요가 없습니다.</strong> 그건 3년 안에 AI가 완벽하게 해결해 줄 테니까요.</p>
+        <p>매우 타당한 질문입니다. <strong>단순히 '여행 가서 밥 사 먹는 영어'를 위해서라면, 더 이상 <a href="/#/curriculum" class="text-blue-600 hover:underline">영어 학원</a>에 다닐 필요가 없습니다.</strong> 그건 3년 안에 AI가 완벽하게 해결해 줄 테니까요.</p>
         
         <p>하지만, <strong>테슬라(Tesla), 구글(Google), 엔비디아(NVIDIA)</strong> 같은 글로벌 혁신 기업들은 왜 여전히 채용 공고에서 <span class="bg-yellow-100 px-1 font-bold">"Bilingual (이중언어 구사자) 우대"</span>라는 조건을 빼지 않을까요? 그들이 번역기를 살 돈이 없어서일까요?</p>
 
@@ -227,7 +227,7 @@ export const BLOG_POSTS: BlogPost[] = [
         <p>이것은 단순한 어학 능력이 아니라, <strong>복잡한 문제를 해결하는 고차원적인 지능</strong>입니다. AI 시대, 정답이 없는 난제가 쏟아질 때 가장 필요한 능력이 바로 이 유연한 사고력입니다.</p>
 
         <h3 class="text-2xl font-bold mt-10 mb-4 text-gray-900">3. 아이캔은 '영어'가 아니라 '스키마(Schema)'를 가르칩니다.</h3>
-        <p>필리핀 올티가스의 아이캔 아카데미는 단순히 단어를 암기시키는 곳이 아닙니다. 안전하고 풍요로운 이 공간에서, 아이들은 <strong>24시간 영어라는 '새로운 운영체제'</strong> 속에서 살아갑니다.</p>
+        <p>필리핀 올티가스의 <a href="/#/vision" class="text-blue-600 hover:underline">아이캔 아카데미</a>는 단순히 단어를 암기시키는 곳이 아닙니다. 안전하고 풍요로운 이 공간에서, 아이들은 <strong>24시간 영어라는 '새로운 운영체제'</strong> 속에서 살아갑니다.</p>
 
         <div class="relative rounded-2xl overflow-hidden my-6 shadow-md">
           <img src="https://images.unsplash.com/photo-1529390003868-6c640a9376c6?q=80&w=2670&auto=format&fit=crop" alt="Students learning in Ortigas" class="w-full h-64 object-cover" />
@@ -271,7 +271,7 @@ export const BLOG_POSTS: BlogPost[] = [
         <p>과거의 입시 경쟁이 'SKY 캐슬'이라는 대학 간판을 따기 위한 전쟁이었다면, <strong>AI 시대의 새로운 계급 전쟁은 '데이터 캐슬'</strong>에서 일어납니다. 누가 더 양질의 데이터에 접근하고, 누가 AI를 더 잘 부리는가?</p>
 
         <h3 class="text-2xl font-bold mt-10 mb-4 text-gray-900">1. 질문(Prompt)하는 자가 지배한다</h3>
-        <p>AI는 답을 주는 기계입니다. 하지만 <strong>'좋은 질문'</strong>이 없으면 AI는 깡통에 불과합니다. 과거엔 정답을 잘 맞히는 아이가 우등생이었지만, 앞으론 <strong>"남들이 생각지 못한 질문을 던지는 아이"</strong>가 리더가 됩니다.</p>
+        <p>AI는 답을 주는 기계입니다. 하지만 <strong>'좋은 질문'</strong>이 없으면 AI는 깡통에 불과합니다. 과거엔 정답을 잘 맞히는 아이가 우등생이었지만, 앞으론 <strong><a href="/#/curriculum" class="text-blue-600 hover:underline">"남들이 생각지 못한 질문을 던지는 아이"</a></strong>가 리더가 됩니다.</p>
         <p class="mt-2">영어로 질문을 구조화하고, AI의 답변을 비판적으로 검증할 수 있는 능력. 이것이 바로 <strong>'프롬프트 엔지니어링(Prompt Engineering)'</strong>의 본질이며, 이는 고도의 논리적 사고력과 언어 능력(English)을 요구합니다.</p>
 
         <h3 class="text-2xl font-bold mt-10 mb-4 text-gray-900">2. 영어는 AI의 모국어(Native Language)입니다</h3>
@@ -308,7 +308,7 @@ export const BLOG_POSTS: BlogPost[] = [
           <p class="text-lg font-medium text-indigo-700">아닙니다. 맹모는 아마 비행기 표를 끊었을 것입니다.</p>
 
           <h3 class="text-2xl font-bold mt-10 mb-4 text-gray-900">닫힌 교실 vs 열린 우주</h3>
-          <p>한국의 영어 학원은 훌륭하지만, 거대한 <strong>'어항'</strong>과 같습니다. 어항 속에서는 아무리 헤엄쳐도 문 밖을 나서면 다시 한국어의 바다입니다. 아이들은 영어를 '공부'로만 인식하고, 시험이 끝나면 책을 덮어버립니다.</p>
+          <p>한국의 <a href="/#/curriculum" class="text-blue-600 hover:underline">영어 학원</a>은 훌륭하지만, 거대한 <strong>'어항'</strong>과 같습니다. 어항 속에서는 아무리 헤엄쳐도 문 밖을 나서면 다시 한국어의 바다입니다. 아이들은 영어를 '공부'로만 인식하고, 시험이 끝나면 책을 덮어버립니다.</p>
 
           <h3 class="text-2xl font-bold mt-10 mb-4 text-gray-900">올티가스: 안전하고 거대한 영어 생태계</h3>
           <p>필리핀 올티가스(Ortigas)는 단순한 도시가 아닙니다. 아시아개발은행(ADB) 본사와 다국적 기업들이 모여 있는 <strong>'살아있는 글로벌 현장'</strong>입니다.</p>
