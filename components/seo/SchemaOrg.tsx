@@ -7,27 +7,33 @@ const SchemaOrg = () => {
         "@graph": [
             {
                 "@type": "EducationalOrganization",
-                "@id": "https://ican-space.vercel.app/#organization",
-                "name": "ICAN Academy Ortigas",
-                "alternateName": ["아이캔 아카데미", "아이캔 어학원", "ICAN SPACE"],
-                "url": "https://ican-space.vercel.app/",
-                "logo": "https://ican-space.vercel.app/assets/logo.png", // Ensure this exists or use a valid URL
+                "@id": "https://ican-ortigas-camp-info-hub.vercel.app/#organization",
+                "name": "아이캔 올티가스 캠프 (ICAN Ortigas Camp)",
+                "alternateName": ["아이캔 아카데미", "ICAN Academy", "ICAN SPACE"],
+                "url": "https://ican-ortigas-camp-info-hub.vercel.app/",
+                "logo": "https://ican-ortigas-camp-info-hub.vercel.app/assets/logo.png",
                 "sameAs": [
                     "https://icanacademy.com",
                     "https://www.facebook.com/icanacademy",
-                    "https://band.us/@icanacademy"
+                    "https://band.us/@icanacademy",
+                    "https://blog.naver.com/icanacademy"
                 ],
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "Strata 100, F. Ortigas Jr. Road",
+                    "streetAddress": "16F Strata 100 Building, Emerald Ave",
                     "addressLocality": "Ortigas Center",
                     "addressRegion": "Pasig City",
                     "postalCode": "1605",
                     "addressCountry": "PH"
                 },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 14.5869,
+                    "longitude": 121.0628
+                },
                 "contactPoint": {
                     "@type": "ContactPoint",
-                    "telephone": "+63-917-817-5703", // Example, replace with real number if available
+                    "telephone": "+82-70-7014-2233",
                     "contactType": "admissions",
                     "areaServed": ["KR", "PH"],
                     "availableLanguage": ["Korean", "English"]
@@ -35,11 +41,11 @@ const SchemaOrg = () => {
             },
             {
                 "@type": "WebSite",
-                "@id": "https://ican-space.vercel.app/#website",
-                "url": "https://ican-space.vercel.app/",
-                "name": "ICAN SPACE",
+                "@id": "https://ican-ortigas-camp-info-hub.vercel.app/#website",
+                "url": "https://ican-ortigas-camp-info-hub.vercel.app/",
+                "name": "ICAN SPACE - 올티가스 영어 캠프 정보",
                 "publisher": {
-                    "@id": "https://ican-space.vercel.app/#organization"
+                    "@id": "https://ican-ortigas-camp-info-hub.vercel.app/#organization"
                 }
             }
         ]
