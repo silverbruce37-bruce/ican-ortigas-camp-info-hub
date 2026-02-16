@@ -1960,7 +1960,7 @@ export const KO_DATA = {
     }
   },
   strengths: [
-    { title: "AI 'Dr. ICAN'", description: "20년 교육 데이터와 AI의 결합. 학생의 학습 패턴을 정밀 분석하여 개인별 최적화된 스킬 중심 커리큘럼을 제공합니다.", icon: ICONS.Cpu },
+    { title: "자비스AI ' Dr.ICAN '", description: "20년 교육 데이터와 AI의 결합. 학생의 학습 패턴을 정밀 분석하여 개인별 최적화된 스킬 중심 커리큘럼을 제공합니다.", icon: ICONS.Cpu },
     { title: "Resilience & Grit", description: "힘든 과제 앞에서도 포기하지 않는 회복탄력성을 기릅니다. 작은 성공의 축적이 아이의 내면을 단단한 슈퍼파워로 채웁니다.", icon: ICONS.HeartPulse },
     { title: "Bilingual Schema", description: "이중언어 환경에서 축적된 지식 체계는 복잡한 세상의 문제를 지혜롭게 해결하는 창의적 솔루션의 원천이 됩니다.", icon: ICONS.Brain },
     { title: "Christian Higher-minds", description: "엄격한 수업 모니터링과 크리스천 품성 교육으로, AI 시대에도 기술에 휘둘리지 않고 올바른 가치관으로 리드하는 인성을 갖춥니다.", icon: ICONS.ShieldCheck }
