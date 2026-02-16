@@ -7,6 +7,41 @@ import { motion, AnimatePresence } from 'framer-motion';
 // --- Data Structure for Journal Entries ---
 const JOURNAL_ENTRIES = [
     {
+        id: 13,
+        date: "2026.04.24 • Fri",
+        title: "[Deep Insights] 유발 하라리의 사피엔스: 허구의 기술에서 '다정함의 연대'로",
+        subtitle: "거대 서사의 해체를 넘어, 기독교적 가치로 꿈꾸는 새로운 희망",
+        themeChip: "Christian Perspective",
+        morning: {
+            title: "인지 혁명: 허구의 기술인가, 다정함의 선물인가?",
+            content: "유발 하라리는 인간이 '허구(국가, 인권, 돈)'를 믿는 능력 덕분에 거대한 협력을 이루었다고 말합니다. 하지만 폴샘의 시각에서 이 '허구'는 단순한 통제 기제가 아니라, 낯선 타자와 신뢰를 구축하기 위해 우리에게 주신 '다정함의 기술'입니다. 우리 아이들이 배우는 지식과 가치들이 단순히 시스템의 부품이 되기 위한 기술이 아니라, 이웃과 사랑으로 연결되기 위한 따스한 도구가 되기를 소망합니다.",
+            icon: BookOpen,
+            color: "orange"
+        },
+        noon: {
+            title: "효율성의 제국에서 '사람'의 가치를 찾습니다",
+            content: "하라리의 역사관은 때로 '효율성'이라는 미명 하에 개인의 희생과 제국의 폭력을 정당화하는 위험을 안고 있습니다. 데이터 처리의 효율성이 민주주의나 인권보다 앞설 수 있다는 그의 진단은 무섭기까지 합니다. 부모님, 우리 교육의 목적은 아이를 '효율적인 데이터 처리기'로 만드는 것이 아닙니다. 효율성보다 중요한 것은 한 영혼의 천하보다 귀한 가치입니다. 제국의 논리가 아닌, '사람'을 소중히 여기는 마음을 가르쳐야 합니다.",
+            icon: HeartHandshake,
+            color: "blue"
+        },
+        evening: {
+            title: "다정함의 연대: 우리가 꿈꾸는 진짜 희망",
+            content: "기술이 지배하는 시대일수록 우리가 붙잡아야 할 유일한 대안은 엘리트의 효율성이 아니라 '다정함의 연대'입니다. 성경은 우리가 그리스도 안에서 한 몸 되어 서로를 돌보는 공동체임을 가르칩니다. 알고리즘이 우리를 분류하고 통제하려 할 때, 우리는 사랑의 네트워크로 서로를 껴안읍시다. 우리 아이들이 살아가야 할 미래는 차가운 AI의 독재가 아니라, 깨어 있는 시민들의 민주적 의지와 기독교적 사랑이 꽃피는 따뜻한 세상이어야 합니다.",
+            bibleVerse: "사랑안에 두려움이 없고 온전한 사랑이 두려움을 내쫓나니 (요일 4:18)",
+            actionTitle: "오늘 아이의 손을 잡고 축복해 주세요",
+            actionContent: "\"기술보다 사람이, 효율보다 사랑이 훨씬 더 강하단다. 너는 세상을 따뜻하게 할 하나님의 사랑의 원자력이야.\"",
+            icon: Heart,
+            color: "indigo"
+        },
+        media: {
+            title: "AI 시대에도 변하지 않는 인간의 가치",
+            url: "https://www.ted.com/talks/rutger_bregman_humankind_a_hopeful_history",
+            image: "https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/248cfa0b-0442-4e48-8df2-06830a68f001/KaiFuLee_2018-embed.jpg",
+            desc: "Rutger Bregman • TED Talk",
+            icon: PlayCircle
+        }
+    },
+    {
         id: 12,
         date: "2026.04.17 • Fri",
         title: "[Future Shock] 2년 뒤, 우리가 알던 세상은 끝납니다",
