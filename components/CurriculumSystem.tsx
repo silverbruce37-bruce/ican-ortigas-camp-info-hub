@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { BookOpen, Mic, Activity, Zap, MessageCircle, Layers, Lightbulb, Database, Network } from 'lucide-react';
-import vectorBannerImg from '../src/assets/ican_curriculum_vector_32_9.png';
+import vectorBannerImg from '../src/assets/curriculum_ontology_hero_v3.png';
 import vectorProcessImg from '../src/assets/ican_vector_process.png'; // Keep this for Step 2 internal if needed
 
 const DiagnosisItem = ({ icon: Icon, title, delay }: { icon: any, title: string, delay: number }) => (
