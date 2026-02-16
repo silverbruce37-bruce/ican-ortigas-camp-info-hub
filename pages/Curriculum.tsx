@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Clock, Star, Check, Rocket, Zap, Globe, MessageSquare } from 'lucide-react';
+import { Clock, Star, Check, Rocket, Zap, Globe, MessageSquare, ExternalLink, Sparkles, MousePointerClick } from 'lucide-react';
 import { motion } from 'framer-motion';
 import BrochureViewer from '../components/BrochureViewer';
 import brochurePdf from '../curriculum-brochure.pdf';
@@ -155,15 +155,71 @@ const Curriculum: React.FC = () => {
                 href="https://eduspace-three.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 mb-4 transition-transform hover:scale-[1.02]"
+                className="group block mb-6"
               >
-                <h2 className="flex flex-col font-black leading-none drop-shadow-sm">
-                  <span className="text-[#1d1d1f] tracking-tight text-lg md:text-2xl mb-2">폴샘과 함께 하는</span>
-                  <span className="text-[#0071E3] tracking-tighter text-3xl md:text-5xl break-keep">에듀스페이스 캠프</span>
-                </h2>
-                <div className="bg-purple-100 p-2 rounded-full border border-purple-200 group-hover:bg-purple-200 transition-colors">
-                  <Rocket className="w-6 h-6 md:w-7 md:h-7 text-purple-600 group-hover:animate-pulse" />
-                </div>
+                {/* Sandbox-style Interactive Card */}
+                <motion.div
+                  whileHover={{ scale: 1.02, boxShadow: '0 0 30px rgba(99, 102, 241, 0.3)' }}
+                  whileTap={{ scale: 0.98 }}
+                  className="relative bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50 rounded-2xl p-5 md:p-6 border-2 border-dashed border-indigo-300 group-hover:border-indigo-500 transition-all duration-300 overflow-hidden"
+                >
+                  {/* Animated corner sparkles */}
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
+                    className="absolute -top-3 -right-3 w-16 h-16 bg-gradient-to-br from-yellow-300 to-amber-400 rounded-full opacity-20 blur-xl"
+                  />
+                  <motion.div
+                    animate={{ scale: [1, 1.3, 1] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className="absolute top-3 right-3"
+                  >
+                    <Sparkles className="w-5 h-5 text-amber-400" />
+                  </motion.div>
+
+                  {/* LIVE Badge */}
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="inline-flex items-center gap-1.5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-lg">
+                      <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-[0_0_6px_rgba(74,222,128,0.8)]"></span>
+                      LIVE 특별 프로그램
+                    </span>
+                    <span className="inline-flex items-center gap-1 bg-white/80 backdrop-blur px-2 py-0.5 rounded-full text-[10px] font-semibold text-indigo-600 border border-indigo-200">
+                      <MousePointerClick className="w-3 h-3" />
+                      클릭하여 체험
+                    </span>
+                  </div>
+
+                  {/* Title */}
+                  <h2 className="flex flex-col font-black leading-none drop-shadow-sm mb-3">
+                    <span className="text-[#1d1d1f] tracking-tight text-lg md:text-2xl mb-2">폴샘과 함께 하는</span>
+                    <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent tracking-tighter text-3xl md:text-5xl break-keep">
+                      에듀스페이스 캠프
+                    </span>
+                  </h2>
+
+                  {/* Interactive CTA Bar */}
+                  <div className="flex items-center gap-3 mt-4">
+                    <motion.div
+                      animate={{ x: [0, 4, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                      className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-xl text-sm font-bold shadow-lg group-hover:shadow-xl group-hover:from-indigo-700 group-hover:to-purple-700 transition-all"
+                    >
+                      <Rocket className="w-4 h-4" />
+                      특별 프로그램 체험하기
+                      <ExternalLink className="w-3.5 h-3.5 opacity-70" />
+                    </motion.div>
+                    <span className="text-xs text-indigo-400 font-medium hidden sm:block">
+                      AI 우주 탐험 인터랙티브 학습 앱
+                    </span>
+                  </div>
+
+                  {/* Bottom decoration dots */}
+                  <div className="absolute bottom-2 right-3 flex gap-1 opacity-40">
+                    <div className="w-1.5 h-1.5 bg-indigo-400 rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                  </div>
+                </motion.div>
               </a>
               <p className="text-xl text-[#86868b] font-medium mb-8">
                 {spaceProgram.subtitle}
