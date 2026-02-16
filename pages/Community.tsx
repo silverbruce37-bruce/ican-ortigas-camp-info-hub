@@ -443,7 +443,7 @@ const PaulEpistlesAppPost = ({ onBack }: { onBack: () => void }) => {
                             언제 어디서든 바울의 편지를 꺼내 읽어보세요.
                         </p>
                         <a
-                            href="https://pauline-epistles-viewer.vercel.app/"
+                            href="https://returnhome-1.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all text-lg"
