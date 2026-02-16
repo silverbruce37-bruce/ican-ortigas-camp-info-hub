@@ -20,13 +20,11 @@ const Home: React.FC = () => {
         keywords={["올티가스 영어캠프", "필리핀 가족연수", "Ortigas English Camp", "마닐라 영어학원", "이중언어 교육", "관리형 유학", "아이캔 아카데미"]}
       />
 
-      {/* Hero Section */}
-      <section className="min-h-[60vh] flex flex-col items-center justify-center text-center p-8 pt-24 pb-16">
+      {/* Full-width Hero Banner - flush with navbar */}
+      <TeamShowcase />
 
-        {/* Paul Sam Team Showcase (Moved to Top) */}
-        <div className="w-full mb-12">
-          <TeamShowcase />
-        </div>
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center text-center p-8 pt-12 pb-16">
 
         <motion.div
           initial={{ opacity: 0, y: -10 }}

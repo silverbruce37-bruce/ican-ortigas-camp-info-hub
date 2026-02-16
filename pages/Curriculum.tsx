@@ -20,7 +20,7 @@ const Curriculum: React.FC = () => {
   ];
 
   return (
-    <div className="bg-[#F5F5F7] min-h-screen pt-12 pb-24 font-sans">
+    <div className="bg-[#F5F5F7] min-h-screen pb-24 font-sans">
 
 
       {/* Systematic AI Engine - serves as the new Header */}

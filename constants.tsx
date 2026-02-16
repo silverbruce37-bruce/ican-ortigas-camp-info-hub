@@ -1898,7 +1898,7 @@ export const KO_DATA = {
   home: {
     catchphrase: "슈퍼키즈 마인드셋: 회복탄력성(Resilience)과 그릿(Grit)으로 완성되는 슈퍼파워. 거친 도전 속에서도 끝까지 해내는 힘, 뇌의 컨트롤 센터를 깨웁니다.",
     hero: {
-      badge: "스페이스 엔지니어",
+      badge: "스페이스 오리엔티어링 엔지니어",
       titleLine1: "이중언어와 우주적 사고",
       titleLine2: "슈퍼키즈 마인드셋",
       subtitle: "아이캔의 아이들을 우주시대의 CHOSEN 자유인으로 만들어 나갑니다.",
