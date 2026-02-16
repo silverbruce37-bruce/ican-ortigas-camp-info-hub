@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Share2, Sun, Sunset, Moon, Sunrise, PlayCircle, HeartHandshake, CheckCircle, ExternalLink, ChevronLeft, ChevronRight, BookOpen, Compass, Heart, Cpu, Hammer, Rocket, Target } from 'lucide-react';
+import { Share2, Sun, Sunset, Moon, Sunrise, PlayCircle, HeartHandshake, CheckCircle, ExternalLink, ChevronLeft, ChevronRight, BookOpen, Compass, Heart, Cpu, Hammer, Rocket, Target, List } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // --- Data Structure for Journal Entries ---
@@ -502,6 +502,7 @@ const Counseling: React.FC = () => {
     const [currentEntryIndex, setCurrentEntryIndex] = useState(0);
     const [theme, setTheme] = useState<'morning' | 'noon' | 'evening'>('morning');
     const [isTransitioning, setIsTransitioning] = useState(false);
+    const [isIndexOpen, setIsIndexOpen] = useState(false);
 
     const entry = JOURNAL_ENTRIES[currentEntryIndex];
 
@@ -566,6 +567,112 @@ const Counseling: React.FC = () => {
         }
     };
 
+    const handleJumpToEntry = (index: number) => {
+        setIsTransitioning(true);
+        setTimeout(() => {
+            setCurrentEntryIndex(index);
+            window.scrollTo(0, 0);
+            setIsTransitioning(false);
+            setIsIndexOpen(false);
+        }, 300);
+    };
+
+    const JournalIndex = () => (
+        <div className={`fixed right-0 top-16 bottom-0 w-80 z-30 transform transition-transform duration-500 ease-in-out ${isIndexOpen ? 'translate-x-0' : 'translate-x-full lg:translate-x-0'} ${theme === 'evening' ? 'bg-[#0f172a]/90 text-white' : 'bg-white/90 text-[#1D1D1F]'} backdrop-blur-xl border-l ${theme === 'evening' ? 'border-white/10' : 'border-gray-200'} overflow-y-auto hidden lg:block shadow-2xl`}>
+            <div className="p-6">
+                <h3 className="text-xs font-black tracking-[0.2em] uppercase mb-8 opacity-50">Timeline Index</h3>
+                <div className="relative">
+                    {/* Vertical Line */}
+                    <div className="absolute left-2.5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500/50 via-purple-500/50 to-pink-500/50" />
+
+                    <div className="space-y-6">
+                        {JOURNAL_ENTRIES.map((item, idx) => (
+                            <button
+                                key={item.id}
+                                onClick={() => handleJumpToEntry(idx)}
+                                className={`relative pl-8 text-left group transition-all w-full ${currentEntryIndex === idx ? 'opacity-100 scale-105' : 'opacity-40 hover:opacity-80'}`}
+                            >
+                                <div className={`absolute left-0 top-1.5 w-5 h-5 rounded-full border-4 flex items-center justify-center transition-all ${currentEntryIndex === idx ? 'bg-indigo-500 border-indigo-200' : 'bg-white border-gray-300 group-hover:border-indigo-300'}`}>
+                                    {currentEntryIndex === idx && <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />}
+                                </div>
+                                <div className="flex flex-col gap-1">
+                                    <span className="text-[10px] font-bold tracking-wider opacity-60 font-mono italic">
+                                        {item.date.split(' • ')[0]}
+                                    </span>
+                                    <span className={`text-xs font-bold leading-tight line-clamp-2 ${currentEntryIndex === idx ? 'text-indigo-500' : ''}`}>
+                                        {item.title.replace(/\[.*?\]\s*/, '')}
+                                    </span>
+                                    <span className={`text-[10px] px-1.5 py-0.5 rounded-full w-fit ${theme === 'evening' ? 'bg-white/10' : 'bg-gray-100'} font-bold`}>
+                                        {item.themeChip}
+                                    </span>
+                                </div>
+                                {currentEntryIndex === idx && (
+                                    <div className="absolute -left-12 top-0 bottom-0 flex items-center">
+                                        <div className="h-0.5 w-8 bg-indigo-500/30" />
+                                    </div>
+                                )}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+
+    const MobileToggle = () => (
+        <button
+            onClick={() => setIsIndexOpen(!isIndexOpen)}
+            className={`fixed top-4 right-16 z-50 p-2 rounded-xl backdrop-blur-md lg:hidden transition-all ${isIndexOpen ? 'bg-red-500 text-white' : theme === 'evening' ? 'bg-white/10 text-white' : 'bg-black/5 text-gray-900'}`}
+        >
+            <List className="w-5 h-5" />
+        </button>
+    );
+
+    const MobileDrawer = () => (
+        <AnimatePresence>
+            {isIndexOpen && (
+                <>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setIsIndexOpen(false)}
+                        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] lg:hidden"
+                    />
+                    <motion.div
+                        initial={{ x: '100%' }}
+                        animate={{ x: 0 }}
+                        exit={{ x: '100%' }}
+                        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+                        className={`fixed right-0 top-0 bottom-0 w-[85%] max-w-sm z-[70] p-8 overflow-y-auto lg:hidden ${theme === 'evening' ? 'bg-[#0f172a] text-white' : 'bg-white text-[#1D1D1F]'}`}
+                    >
+                        <div className="flex justify-between items-center mb-10">
+                            <h3 className="text-sm font-black tracking-widest uppercase opacity-40">INDEX</h3>
+                            <button onClick={() => setIsIndexOpen(false)} className="text-xs font-bold opacity-60">CLOSE</button>
+                        </div>
+                        <div className="space-y-8 relative">
+                            <div className="absolute left-2 top-0 bottom-0 w-0.5 bg-gray-200/20" />
+                            {JOURNAL_ENTRIES.map((item, idx) => (
+                                <button
+                                    key={item.id}
+                                    onClick={() => handleJumpToEntry(idx)}
+                                    className={`relative pl-8 text-left w-full transition-all ${currentEntryIndex === idx ? 'scale-105' : 'opacity-60'}`}
+                                >
+                                    <div className={`absolute left-0 top-1 w-4 h-4 rounded-full border-2 ${currentEntryIndex === idx ? 'bg-indigo-500 border-indigo-200' : 'bg-gray-300 border-transparent'}`} />
+                                    <div className="flex flex-col gap-1.5">
+                                        <span className="text-[10px] font-bold opacity-50 font-mono italic">{item.date}</span>
+                                        <span className={`text-sm font-bold leading-tight ${currentEntryIndex === idx ? 'text-indigo-400' : ''}`}>{item.title}</span>
+                                        <span className={`text-[10px] px-2 py-0.5 rounded-md w-fit bg-indigo-500/10 text-indigo-400 font-bold`}>{item.themeChip}</span>
+                                    </div>
+                                </button>
+                            ))}
+                        </div>
+                    </motion.div>
+                </>
+            )}
+        </AnimatePresence>
+    );
+
     return (
         <div className={`min-h-screen transition-colors duration-700 ease-in-out ${getThemeStyles()}`}>
 
@@ -580,8 +687,12 @@ const Counseling: React.FC = () => {
                 </div>
             </div>
 
+            <MobileToggle />
+            <MobileDrawer />
+            <JournalIndex />
+
             {/* Navigation Bar (Floating - Bottom) */}
-            <div className="fixed bottom-8 left-0 right-0 z-50 flex justify-center gap-4">
+            <div className="fixed bottom-8 left-0 right-0 lg:right-80 z-50 flex justify-center gap-4 transition-all duration-500">
                 <button
                     onClick={handlePrev}
                     disabled={currentEntryIndex === JOURNAL_ENTRIES.length - 1}
@@ -616,6 +727,7 @@ const Counseling: React.FC = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.5 }}
+                        className="lg:mr-80 transition-all duration-500"
                     >
                         {/* Waymaker Series Banner */}
                         <motion.div
