@@ -111,7 +111,7 @@ const Home: React.FC = () => {
         <div className="text-center mb-10">
           <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-6 tracking-tight">공간이 바뀌면 생각이 바뀐다</h2>
           <p className="text-gray-500 max-w-3xl mx-auto font-medium">
-            20년 교육 노하우가 집약된 AI '닥터아이캔'의 개인별 맞춤 설계와 크리스천 인성 교육으로 완성하는 미래형 에듀스페이스
+            20년 교육 노하우가 집약된 자비스AI ' Dr.ICAN '의 개인별 맞춤 설계와 크리스천 인성 교육으로 완성하는 미래형 에듀스페이스
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
