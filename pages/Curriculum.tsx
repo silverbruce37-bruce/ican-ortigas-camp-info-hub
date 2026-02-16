@@ -152,7 +152,7 @@ const Curriculum: React.FC = () => {
                 <Star className="w-3 h-3 fill-current" /> {spaceProgram.badge}
               </div>
               <a
-                href="https://icaneduspace.vercel.app/"
+                href="https://eduspace-three.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 mb-4 transition-transform hover:scale-[1.02]"
