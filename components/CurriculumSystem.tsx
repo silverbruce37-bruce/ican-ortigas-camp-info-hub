@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen, Mic, Activity, Zap, MessageCircle, Layers, Lightbulb, Database, Network } from 'lucide-react';
+import { BookOpen, Mic, Activity, Zap, MessageCircle, Layers, Lightbulb, Database, Network, FileSpreadsheet, FileText } from 'lucide-react';
 import vectorBannerImg from '../src/assets/curriculum_ontology_hero_v3.png';
-import vectorProcessImg from '../src/assets/ican_vector_process.png'; // Keep this for Step 2 internal if needed
+import vectorProcessV2Img from '../src/assets/ican_vector_process_v2.png';
 
 const DiagnosisItem = ({ icon: Icon, title, delay }: { icon: any, title: string, delay: number }) => (
     <motion.div
@@ -109,44 +109,44 @@ const CurriculumSystem: React.FC = () => {
                     {/* 3. STEP 2: Vector Analysis (Process) */}
                     <div className="mb-20">
                         <div className="relative bg-[#0f1014] rounded-3xl overflow-hidden shadow-2xl border border-gray-800">
-                            <div className="grid md:grid-cols-2 gap-0">
-                                {/* Image Side */}
-                                <div className="relative h-full min-h-[300px] md:min-h-[400px]">
+                            <div className="grid md:grid-cols-5 h-full">
+                                {/* Image Side - 3 Cols (Restrained Size, Reduced Min-Height) */}
+                                <div className="md:col-span-3 relative h-[250px] md:h-auto min-h-[250px] bg-[#0f1014] overflow-hidden">
                                     <img
-                                        src={vectorProcessImg}
-                                        alt="ICAN Vector Data Process"
-                                        className="absolute inset-0 w-full h-full object-cover"
+                                        src={vectorProcessV2Img}
+                                        alt="ICAN Vector Data Process V2"
+                                        className="w-full h-full object-cover shadow-2xl"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0f1014]/90"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#0f1014]/50"></div>
                                 </div>
 
-                                {/* Content Side - Detailed Text */}
-                                <div className="p-8 md:p-12 flex flex-col justify-center text-left">
+                                {/* Content Side - 2 Cols (Tighter Spacing) */}
+                                <div className="md:col-span-2 p-6 md:py-8 md:px-10 flex flex-col justify-center relative z-10 bg-[#0f1014]">
                                     <h3 className="text-2xl font-bold mb-2 text-blue-400">STEP 2 : 벡터(Vector) 관계형 데이터 분석</h3>
-                                    <h4 className="text-white text-lg font-medium mb-8 leading-relaxed">
-                                        "아이들의 구석구석 어렵고 힘든 부분과<br />강력한 힘들을 찾아내어 미래와 연결합니다"
+                                    <h4 className="text-white text-lg font-medium mb-6 leading-relaxed break-keep">
+                                        "수백만 개의 노드가 연결되어<br />아이만의 고유한 <strong>페르소나</strong>를 규정합니다"
                                     </h4>
 
-                                    <ul className="space-y-6 text-gray-300">
+                                    <ul className="space-y-4 text-gray-300">
                                         <li className="flex items-start gap-4">
                                             <div className="bg-blue-900/40 p-2 rounded-lg text-blue-400 mt-1 shrink-0">
-                                                <Database size={22} />
+                                                <Network size={22} />
                                             </div>
                                             <div>
-                                                <strong className="block text-white text-lg mb-1">정형·비정형 데이터 통합</strong>
-                                                <span className="text-sm text-gray-400 leading-relaxed block">
-                                                    캠프에서 모인 학습 데이터와 행동 데이터를 관계형 벡터 DB로 통합하여 다각도로 분석합니다.
+                                                <strong className="block text-white text-lg mb-1">약점의 선명한 관찰</strong>
+                                                <span className="text-sm text-gray-400 leading-relaxed block break-keep">
+                                                    벡터 DB에 쌓인 수백만 개의 데이터 연결성이 아이의 학습 및 행동 패턴을 시각화하여, 감춰진 약점을 선명하게 드러냅니다.
                                                 </span>
                                             </div>
                                         </li>
                                         <li className="flex items-start gap-4">
                                             <div className="bg-purple-900/40 p-2 rounded-lg text-purple-400 mt-1 shrink-0">
-                                                <Network size={22} />
+                                                <Database size={22} />
                                             </div>
                                             <div>
-                                                <strong className="block text-white text-lg mb-1">잠재력 및 결핍 파악</strong>
-                                                <span className="text-sm text-gray-400 leading-relaxed block">
-                                                    단순 점수로는 알 수 없는 아이의 숨겨진 재능과 보완이 필요한 부분을 즉각적으로 발견합니다.
+                                                <strong className="block text-white text-lg mb-1">강화학습(Reinforcement Learning)</strong>
+                                                <span className="text-sm text-gray-400 leading-relaxed block break-keep">
+                                                    구축된 개인 데이터베이스를 근거로 최적화된 강화학습을 제공하여, 아이를 우리가 원하는 이상적인 인재로 성장시킵니다.
                                                 </span>
                                             </div>
                                         </li>
@@ -206,8 +206,8 @@ const CurriculumSystem: React.FC = () => {
                     </div>
 
                 </div>
-            </section>
-        </div>
+            </section >
+        </div >
     );
 };
 
