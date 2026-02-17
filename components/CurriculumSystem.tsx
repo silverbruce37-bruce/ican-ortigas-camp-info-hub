@@ -115,7 +115,7 @@ const CurriculumSystem: React.FC = () => {
                                     <img
                                         src={vectorProcessV2Img}
                                         alt="ICAN Vector Data Process V2"
-                                        className="w-full h-full object-cover shadow-2xl"
+                                        className="w-full h-full object-cover shadow-2xl scale-[1.15]"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#0f1014]/50"></div>
                                 </div>
