@@ -111,41 +111,41 @@ const CurriculumSystem: React.FC = () => {
                         <div className="relative bg-[#0f1014] rounded-3xl overflow-hidden shadow-2xl border border-gray-800">
                             <div className="grid md:grid-cols-5 h-full">
                                 {/* Image Side - 3 Cols (Restrained Size, Reduced Min-Height) */}
-                                <div className="md:col-span-3 relative h-full min-h-[180px] bg-[#0f1014] overflow-hidden">
+                                <div className="md:col-span-3 relative h-full min-h-[160px] bg-[#0f1014] overflow-hidden">
                                     <img
                                         src={vectorProcessV2Img}
                                         alt="ICAN Vector Data Process V2"
-                                        className="w-full h-full object-cover shadow-2xl"
+                                        className="w-full h-full object-cover object-center shadow-2xl scale-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#0f1014]/50"></div>
                                 </div>
 
                                 {/* Content Side - 2 Cols (Ultra Compact for Crop) */}
-                                <div className="md:col-span-2 p-4 md:py-6 md:px-8 flex flex-col justify-center relative z-10 bg-[#0f1014]">
-                                    <h3 className="text-lg md:text-xl font-bold mb-2 text-blue-400">STEP 2 : 벡터(Vector) 관계형 데이터 분석</h3>
-                                    <h4 className="text-white text-sm md:text-base font-medium mb-4 leading-relaxed break-keep">
+                                <div className="md:col-span-2 p-3 md:py-4 md:px-6 flex flex-col justify-center relative z-10 bg-[#0f1014]">
+                                    <h3 className="text-base md:text-lg font-bold mb-2 text-blue-400">STEP 2 : 벡터(Vector) 관계형 데이터 분석</h3>
+                                    <h4 className="text-white text-xs md:text-sm font-medium mb-3 leading-relaxed break-keep">
                                         "수백만 개의 노드가 연결되어<br />아이만의 고유한 <strong>페르소나</strong>를 규정합니다"
                                     </h4>
 
-                                    <ul className="space-y-3 text-gray-300">
-                                        <li className="flex items-start gap-3">
-                                            <div className="bg-blue-900/40 p-1.5 rounded-lg text-blue-400 mt-0.5 shrink-0">
-                                                <Network size={18} />
+                                    <ul className="space-y-2 text-gray-300">
+                                        <li className="flex items-start gap-2">
+                                            <div className="bg-blue-900/40 p-1 rounded-lg text-blue-400 mt-0.5 shrink-0">
+                                                <Network size={16} />
                                             </div>
                                             <div>
-                                                <strong className="block text-white text-base mb-0.5">약점의 선명한 관찰</strong>
-                                                <span className="text-xs text-gray-400 leading-relaxed block break-keep">
+                                                <strong className="block text-white text-sm mb-0.5">약점의 선명한 관찰</strong>
+                                                <span className="text-[10px] md:text-xs text-gray-400 leading-relaxed block break-keep">
                                                     벡터 DB에 쌓인 수백만 개의 데이터 연결성이 아이의 학습 및 행동 패턴을 시각화하여, 감춰진 약점을 선명하게 드러냅니다.
                                                 </span>
                                             </div>
                                         </li>
-                                        <li className="flex items-start gap-3">
-                                            <div className="bg-purple-900/40 p-1.5 rounded-lg text-purple-400 mt-0.5 shrink-0">
-                                                <Database size={18} />
+                                        <li className="flex items-start gap-2">
+                                            <div className="bg-purple-900/40 p-1 rounded-lg text-purple-400 mt-0.5 shrink-0">
+                                                <Database size={16} />
                                             </div>
                                             <div>
-                                                <strong className="block text-white text-base mb-0.5">강화학습(Reinforcement Learning)</strong>
-                                                <span className="text-xs text-gray-400 leading-relaxed block break-keep">
+                                                <strong className="block text-white text-sm mb-0.5">강화학습(Reinforcement Learning)</strong>
+                                                <span className="text-[10px] md:text-xs text-gray-400 leading-relaxed block break-keep">
                                                     구축된 개인 데이터베이스를 근거로 최적화된 강화학습을 제공하여, 아이를 우리가 원하는 이상적인 인재로 성장시킵니다.
                                                 </span>
                                             </div>
