@@ -111,7 +111,7 @@ const CurriculumSystem: React.FC = () => {
                         <div className="relative bg-[#0f1014] rounded-3xl overflow-hidden shadow-2xl border border-gray-800">
                             <div className="grid md:grid-cols-5 h-full">
                                 {/* Image Side - 3 Cols (Restrained Size, Reduced Min-Height) */}
-                                <div className="md:col-span-3 relative h-[250px] md:h-auto min-h-[250px] bg-[#0f1014] overflow-hidden">
+                                <div className="md:col-span-3 relative h-[200px] md:h-auto min-h-[200px] bg-[#0f1014] overflow-hidden">
                                     <img
                                         src={vectorProcessV2Img}
                                         alt="ICAN Vector Data Process V2"
@@ -121,13 +121,13 @@ const CurriculumSystem: React.FC = () => {
                                 </div>
 
                                 {/* Content Side - 2 Cols (Tighter Spacing) */}
-                                <div className="md:col-span-2 p-6 md:py-8 md:px-10 flex flex-col justify-center relative z-10 bg-[#0f1014]">
-                                    <h3 className="text-2xl font-bold mb-2 text-blue-400">STEP 2 : 벡터(Vector) 관계형 데이터 분석</h3>
-                                    <h4 className="text-white text-lg font-medium mb-6 leading-relaxed break-keep">
+                                <div className="md:col-span-2 p-5 md:py-5 md:px-8 flex flex-col justify-center relative z-10 bg-[#0f1014]">
+                                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-blue-400">STEP 2 : 벡터(Vector) 관계형 데이터 분석</h3>
+                                    <h4 className="text-white text-base md:text-lg font-medium mb-4 leading-relaxed break-keep">
                                         "수백만 개의 노드가 연결되어<br />아이만의 고유한 <strong>페르소나</strong>를 규정합니다"
                                     </h4>
 
-                                    <ul className="space-y-4 text-gray-300">
+                                    <ul className="space-y-3 text-gray-300">
                                         <li className="flex items-start gap-4">
                                             <div className="bg-blue-900/40 p-2 rounded-lg text-blue-400 mt-1 shrink-0">
                                                 <Network size={22} />
