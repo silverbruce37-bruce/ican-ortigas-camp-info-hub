@@ -108,14 +108,14 @@ const CurriculumSystem: React.FC = () => {
 
                     {/* 3. STEP 2: Vector Analysis (Process) */}
                     <div className="mb-20">
-                        <div className="relative bg-[#0f1014] rounded-3xl overflow-hidden shadow-2xl border border-gray-800">
+                        <div className="relative bg-[#0f1014] rounded-3xl overflow-hidden shadow-2xl border border-gray-800 md:h-[240px]">
                             <div className="grid md:grid-cols-5 h-full">
                                 {/* Image Side - 3 Cols (Restrained Size, Reduced Min-Height) */}
                                 <div className="md:col-span-3 relative h-full min-h-[160px] bg-[#0f1014] overflow-hidden">
                                     <img
                                         src={vectorProcessV2Img}
                                         alt="ICAN Vector Data Process V2"
-                                        className="w-full h-full object-cover object-center shadow-2xl scale-110"
+                                        className="w-full h-full object-cover object-center shadow-2xl"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#0f1014]/50"></div>
                                 </div>
