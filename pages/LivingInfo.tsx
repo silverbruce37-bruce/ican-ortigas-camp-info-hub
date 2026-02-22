@@ -3,6 +3,7 @@ import { Home, ShoppingBag, Utensils, Wifi, MapPin, Dumbbell, HeartPulse, Church
 import { LivingInfoItem } from '../types';
 import { useLanguage } from '../context/LanguageContext';
 import OrtigasMap from '../components/OrtigasMap';
+import MontmartreMarket from '../components/MontmartreMarket';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import SEO from '../components/seo/SEO';
@@ -47,6 +48,11 @@ const LivingInfo: React.FC = () => {
 
           {/* Ad Banner Carousel (5 Items) */}
           <AdBannerCarousel items={living.items} />
+        </div>
+
+        {/* Montmartre Market Street */}
+        <div className="mb-12">
+          <MontmartreMarket />
         </div>
 
         {/* Controls */}
