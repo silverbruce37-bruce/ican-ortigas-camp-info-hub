@@ -184,6 +184,50 @@ const StringLights: React.FC = () => (
     </svg>
 );
 
+const BustlingCrowd: React.FC = () => {
+    // Array of people emojis with positions to spread across the cobblestone path and sideways
+    const people = [
+        { e: '👨‍👩‍👧‍👦', t: '8%', l: '45%', s: 1.1, d: 0 },
+        { e: '🚶‍♂️', t: '12%', l: '54%', s: 0.9, d: 2 },
+        { e: '🧑‍🤝‍🧑', t: '18%', l: '46%', s: 1, d: 1 },
+        { e: '🛍️🚶‍♀️', t: '25%', l: '50%', s: 1.05, d: 3 },
+        { e: '🏃', t: '32%', l: '44%', s: 0.85, d: 1.5 },
+        { e: '👩‍❤️‍👨', t: '40%', l: '53%', s: 1.1, d: 0.5 },
+        { e: '👨‍🎓', t: '48%', l: '47%', s: 0.9, d: 2.5 },
+        { e: '🚶‍♀️', t: '55%', l: '49%', s: 0.95, d: 1 },
+        { e: '📸🧑‍🤝‍🧑', t: '62%', l: '53%', s: 1.05, d: 4 },
+        { e: '🚴', t: '70%', l: '45%', s: 1.1, d: 2 },
+        { e: '👨‍👩‍👦', t: '78%', l: '51%', s: 1, d: 0.5 },
+        { e: '🏃‍♀️', t: '85%', l: '46%', s: 0.95, d: 1.5 },
+        { e: '🚶‍♂️', t: '92%', l: '52%', s: 0.9, d: 3 },
+        { e: '👭', t: '97%', l: '48%', s: 1.05, d: 2 },
+
+        // Background people scattered on left/right slightly off pavement
+        { e: '👫', t: '15%', l: '35%', s: 0.8, d: 1 },
+        { e: '👨‍👩‍👧', t: '28%', l: '65%', s: 0.85, d: 2 },
+        { e: '🏃', t: '45%', l: '32%', s: 0.75, d: 3 },
+        { e: '🏃‍♀️', t: '60%', l: '68%', s: 0.8, d: 1.5 },
+        { e: '🚶‍♂️', t: '75%', l: '30%', s: 0.9, d: 0 },
+        { e: '👩‍❤️‍👨', t: '88%', l: '70%', s: 0.85, d: 2.5 },
+    ];
+
+    return (
+        <div className="absolute inset-0 pointer-events-none z-10 overflow-hidden">
+            {people.map((p, i) => (
+                <motion.div
+                    key={i}
+                    className="absolute text-xl"
+                    style={{ top: p.t, left: p.l, scale: p.s, opacity: 0.85 }}
+                    animate={{ y: [0, -3, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, delay: p.d, ease: "easeInOut" }}
+                >
+                    {p.e}
+                </motion.div>
+            ))}
+        </div>
+    );
+};
+
 const MontmartreMarket: React.FC = () => {
     const [expanded, setExpanded] = useState(false);
 
@@ -229,6 +273,8 @@ const MontmartreMarket: React.FC = () => {
                 <div className="absolute top-12 right-4 md:right-8 w-1 h-[85%] rounded-full opacity-20"
                     style={{ background: 'linear-gradient(180deg, #8B7355, #D4A574)' }}
                 />
+
+                <BustlingCrowd />
 
                 <div className="relative max-w-2xl mx-auto">
                     {/* Cobblestone Center Line */}
