@@ -537,8 +537,120 @@ const OrtigasNewsPost = ({ onBack }: { onBack: () => void }) => {
     )
 }
 
+const TovFootballClubPost = ({ onBack }: { onBack: () => void }) => {
+    return (
+        <div className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 animate-fade-in">
+            <div className="relative h-64 md:h-96 bg-gray-900">
+                <img
+                    src="/assets/sparta_field.png"
+                    alt="Sparta Indoor Futsal Field"
+                    className="w-full h-full object-cover opacity-80"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
+                    <div className="p-8 text-white max-w-4xl w-full">
+                        <div className="bg-green-600 text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">Sports & Community</div>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-2 text-shadow-lg">올티가스 축구 모임 '토브(TOV)' ⚽</h2>
+                        <p className="text-lg md:text-xl opacity-90 text-shadow-md">축구로 맺는 이웃과의 건강한 만남! 새로 단장한 스파르타 구장.</p>
+                    </div>
+                </div>
+                <button
+                    onClick={onBack}
+                    className="absolute top-6 left-6 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white px-4 py-2 rounded-full text-sm font-bold transition-all"
+                >
+                    ← Back to Stories
+                </button>
+            </div>
+
+            <div className="max-w-5xl mx-auto px-6 py-12">
+                <div className="flex flex-col md:flex-row gap-12">
+                    {/* Main Content */}
+                    <div className="md:w-2/3 space-y-10">
+                        <section>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                                <span className="text-green-600">01.</span> 스파르타(Sparta) 실내구장의 변신
+                            </h3>
+                            <p className="text-gray-600 leading-relaxed text-lg mb-6">
+                                인조잔디를 새로 깔아서 푹신푹신하고 좋아졌습니다! 지붕이 덮여있어 비가 와도, 더워도 쾌적하게 뛸 수 있는 최고의 실내구장입니다.
+                            </p>
+                            <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                                <img src="/assets/sparta_field.png" className="w-full h-auto object-cover" alt="Sparta Futsal Field" />
+                            </div>
+                        </section>
+
+                        <section>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                                <span className="text-green-600">02.</span> 함께 뛰며 맺어지는 이웃의 끈끈함
+                            </h3>
+                            <p className="text-gray-600 leading-relaxed text-lg mb-6">
+                                보통 같이 차시는 팀 단위로 오시면 <strong>2시간씩 예약</strong>해서 찹니다. <br />
+                                <strong>7 대 7</strong> 공 차시는 게 사이즈에 제일 적합한 것 같습니다. <strong>8 대 8</strong>까지도 굿굿! <br />
+                                인원이 많아 18명~22명 가시면 7명씩 3팀을 만들어서 차면 딱 좋습니다.
+                            </p>
+
+                            <div className="bg-green-100 border-l-4 border-green-600 p-6 my-6 rounded-r-2xl shadow-sm">
+                                <h4 className="font-bold text-green-900 mb-2 flex items-center gap-2">
+                                    ⚽ 오픈 축구 (현지인 교류 매치)
+                                </h4>
+                                <p className="text-green-800 leading-relaxed">
+                                    <strong>화요일과 목요일</strong>에는 주로 <strong>'오픈 축구'</strong> 형식으로 진행됩니다! <br />
+                                    현지에서 스태프가 7대7로 팀을 만들어 주어, 현지인 팀들과 함께 어울려 박진감 넘치고 재미있게 공을 찰 수 있습니다.
+                                </p>
+                            </div>
+
+                            <div className="bg-gray-50 border-l-4 border-green-500 p-6 my-6 italic text-gray-700 rounded-r-2xl">
+                                "안녕하세요, 2월 26일 (목) 축구 모임 있습니다.<br />
+                                참석 원하시는 분들 명단 작성 부탁드립니다!"
+                            </div>
+
+                            <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 mt-6">
+                                <img src="/assets/tov_team.png" className="w-full h-auto object-cover" alt="TOV Football Team High Five" />
+                            </div>
+                        </section>
+                    </div>
+
+                    {/* Sidebar / Info */}
+                    <div className="md:w-1/3">
+                        <div className="sticky top-24 bg-green-50 rounded-3xl p-8 space-y-6 border border-green-100 shadow-sm">
+                            <h3 className="text-xl font-bold text-gray-900 border-b border-green-200 pb-3 flex items-center gap-2">
+                                <span className="bg-white p-2 rounded-full shadow-sm">🗓️</span> 모임 참여 안내
+                            </h3>
+
+                            <div className="space-y-5">
+                                <div className="flex gap-4 items-start">
+                                    <span className="font-bold w-12 text-green-800 bg-white px-2 py-1 rounded text-center shadow-sm text-sm shrink-0">시간</span>
+                                    <span className="text-gray-700 text-sm leading-relaxed font-medium">매주 화, 목요일<br />오후 8:30 - 오후 10:30</span>
+                                </div>
+                                <div className="flex gap-4 items-start">
+                                    <span className="font-bold w-12 text-green-800 bg-white px-2 py-1 rounded text-center shadow-sm text-sm shrink-0">장소</span>
+                                    <span className="text-gray-700 text-sm leading-relaxed font-medium mt-1">Sparta (실내구장)</span>
+                                </div>
+                                <div className="flex gap-4 items-start">
+                                    <span className="font-bold w-12 text-green-800 bg-white px-2 py-1 rounded text-center shadow-sm text-sm shrink-0">회비</span>
+                                    <span className="text-gray-700 text-sm leading-relaxed font-medium mt-1">350 페소</span>
+                                </div>
+                                <div className="flex gap-4 items-start">
+                                    <span className="font-bold w-12 text-green-800 bg-white px-2 py-1 rounded text-center shadow-sm text-sm shrink-0">예약</span>
+                                    <span className="text-gray-700 text-sm leading-relaxed font-medium">0977-763-4402<br /><span className="text-gray-500 text-xs font-normal">가시기 전에 번호로 전화 예약 필수입니다.</span></span>
+                                </div>
+                            </div>
+
+                            <div className="pt-6 border-t border-green-200 mt-6">
+                                <button className="w-full bg-[#FEE500] hover:bg-[#FADA0A] text-[#191919] font-bold py-4 rounded-xl transition-all shadow-md transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                                    <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 3.185-9 7.111 0 2.536 1.677 4.773 4.195 6.01L6.75 21l3.96-1.503c.414.072.842.115 1.29.115 4.97 0 9-3.185 9-7.111C21 6.185 16.97 3 12 3z" /></svg>
+                                    카카오톡 그룹 참여하기
+                                </button>
+                                <p className="text-center text-xs text-gray-500 mt-3">투표 및 명단 작성을 위해 참여해주세요!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 const TentmakerStories = () => {
-    const [view, setView] = useState<'list' | 'paul_journey' | 'paul_epistles' | 'ortigas_news'>('list');
+    const [view, setView] = useState<'list' | 'paul_journey' | 'paul_epistles' | 'ortigas_news' | 'tov_football'>('list');
 
     if (view === 'paul_journey') {
         return <MissionaryJourneyPost onBack={() => setView('list')} />;
@@ -548,6 +660,9 @@ const TentmakerStories = () => {
     }
     if (view === 'ortigas_news') {
         return <OrtigasNewsPost onBack={() => setView('list')} />;
+    }
+    if (view === 'tov_football') {
+        return <TovFootballClubPost onBack={() => setView('list')} />;
     }
 
     return (
@@ -585,6 +700,37 @@ const TentmakerStories = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* TOV Football Club Card */}
+                <div
+                    onClick={() => setView('tov_football')}
+                    className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer group border border-gray-100 flex flex-col"
+                >
+                    <div className="h-48 overflow-hidden relative">
+                        <img
+                            src="/assets/tov_team.png"
+                            alt="TOV Football Team"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">
+                            Community
+                        </div>
+                    </div>
+                    <div className="p-6 flex flex-col flex-grow">
+                        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
+                            올티가스 축구 모임 '토브' ⚽
+                        </h3>
+                        <p className="text-gray-500 text-sm line-clamp-2 mb-4 flex-grow">
+                            화, 목요일 현지인 매칭 오픈축구! 축구로 건강과 끈끈한 이웃의 정을 나눠요.
+                        </p>
+                        <div className="flex items-center justify-between text-xs mt-auto">
+                            <span className="text-gray-400 font-medium">화,목 8:30 PM • 350 PHP</span>
+                            <div className="flex items-center gap-1 text-green-600 font-bold">
+                                Read More <ArrowRight size={14} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Paul's Journey Card */}
                 <div
                     onClick={() => setView('paul_journey')}
@@ -596,7 +742,7 @@ const TentmakerStories = () => {
                             alt="Ancient Map"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         />
-                        <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">
                             Devotion
                         </div>
                     </div>
