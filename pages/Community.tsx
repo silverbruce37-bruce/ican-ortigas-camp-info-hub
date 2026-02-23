@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { useAuth } from '../context/AuthContext';
 import { COMMUNITY_DATA } from '../constants_community';
-import { Users, Store, Heart, MessageCircle, ArrowRight, BookOpen, Compass, Map, ExternalLink } from 'lucide-react';
+import { Users, Store, Heart, MessageCircle, ArrowRight, BookOpen, Compass, Map, ExternalLink, Rocket, Database, Cpu, TrendingUp } from 'lucide-react';
 import OrtiCarrot from './OrtiCarrot';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -796,14 +796,121 @@ const TentmakerStories = () => {
     );
 };
 
+const AiStartupIncubator = () => {
+    return (
+        <div className="space-y-8 animate-fade-in">
+            {/* Hero Section */}
+            <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 flex flex-col md:flex-row relative">
+                <div className="md:w-1/2 relative overflow-hidden min-h-[350px] md:min-h-0">
+                    <img
+                        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
+                        alt="Teens and Twenties Startup Collaboration"
+                        className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-indigo-950 via-indigo-900/80 to-transparent p-10 flex flex-col justify-end">
+                        <div className="relative z-10 text-white">
+                            <div className="flex gap-2 mb-4">
+                                <span className="bg-indigo-600 text-xs font-bold px-3 py-1 rounded-full shadow-sm">AI Incubator</span>
+                                <span className="bg-white/20 backdrop-blur-md text-xs font-bold px-3 py-1 rounded-full text-white">Teens & Twenties</span>
+                            </div>
+                            <h2 className="text-3xl md:text-5xl font-bold mb-3 leading-tight text-shadow-lg">
+                                세상을 혁신하는<br />
+                                <span className="text-indigo-300">AI 스타트업 인큐베이팅</span>
+                            </h2>
+                            <p className="text-indigo-100 leading-relaxed font-medium">
+                                "청소년과 청년들이 모여 미래의 가치를 창출합니다. 기업을 만들고, AI로 데이터 중심의 결정을 내리는 법을 배웁니다."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="md:w-1/2 p-10 flex flex-col justify-center bg-gray-50">
+                    <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                        <Rocket className="text-indigo-600" size={24} />
+                        미래를 그리는 청년 창업가들
+                    </h3>
+
+                    <p className="text-gray-600 leading-relaxed mb-6">
+                        아이캔에서는 AI 스타트업에 관심이 많은 <strong>청소년(Teens)</strong>과 <strong>청년(Twenties)</strong>들을 육성합니다. 희망자가 많을 경우 기수를 나누어 오디션을 통해 선발하며, 매주 정기적인 모임을 통해 실전 창업과 비즈니스 모델 구축을 학습합니다.
+                        <br /><br />
+                        주변의 협력 업체를 선정하여 <strong>산학협동 체제</strong>로 기존의 전통적인 기업을 'AI로 운영되는 혁신 기업'으로 탈바꿈시키는 프로젝트를 주도합니다.
+                        <br /><br />
+                        <span className="inline-block bg-indigo-100/70 text-indigo-800 px-4 py-3 rounded-xl font-bold shadow-sm">
+                            💡 전통적인 기업과 가게를 AI 시대에도 두려움 없이 발전하게 하는 원동력을 만들어 드립니다.
+                        </span>
+                    </p>
+
+                    <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 group">
+                        스타트업 동호회 지원하기 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                    </button>
+                </div>
+            </div>
+
+            {/* Core Strategy Area */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                        <Database size={24} strokeWidth={2.5} />
+                    </div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">데이터 통합 및 분석</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                        고객관리부터 광고까지 전 범위의 데이터를 통합하고, 비정형 데이터를 파이프라인으로 끌어옵니다. 오래된 관행을 깨고 '온톨로지형 데이터센터'를 구축하여 유효한 결정과 정확한 타겟팅을 이룹니다.
+                    </p>
+                    <div className="mt-4 rounded-xl overflow-hidden h-32">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover" alt="Data Analytics" />
+                    </div>
+                </div>
+
+                <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="w-12 h-12 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                        <Cpu size={24} strokeWidth={2.5} />
+                    </div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">전략 AI 에이전트</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                        확보된 데이터를 기반으로 현재를 분명히 평가하고, 강화 전략을 수립합니다. AI 에이전트와 함께 다양한 시장 변화를 시뮬레이션하여 매출 및 수익률 상승을 위한 입체적 개선 방향을 세웁니다.
+                    </p>
+                    <div className="mt-4 rounded-xl overflow-hidden h-32">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover" alt="AI Agent & Code" />
+                    </div>
+                </div>
+
+                <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6">
+                        <TrendingUp size={24} strokeWidth={2.5} />
+                    </div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">시나리오 기반 시장 장악</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                        경쟁사를 분석하고 이길 수 있는 순차적 시나리오 전략을 준비합니다. 변화하는 판도에 따라 유연한 조치를 취해 타겟 상품 판매에 완전히 유리한 구조(알짜 수익 모델)로 재편합니다.
+                    </p>
+                    <div className="mt-4 rounded-xl overflow-hidden h-32">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover" alt="Strategy Board" />
+                    </div>
+                </div>
+            </div>
+
+            {/* Quote / Conclusion */}
+            <div className="bg-indigo-900 rounded-3xl p-10 text-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop')] opacity-10 blur-sm mix-blend-overlay bg-cover bg-center"></div>
+                <div className="relative z-10 max-w-2xl mx-auto">
+                    <h3 className="text-2xl font-bold text-white mb-4">"우리는 실패를 두려워하지 않는 데이터 탐험가입니다."</h3>
+                    <p className="text-indigo-200">
+                        Teens & Twenties Startup Club은 단순한 이론에 머물지 않습니다. 살아숨쉬는 기업의 생태계에 직접 뛰어들어, 데이터 파이프라인을 구축하고 AI와 함께 미래 산업의 승리 공식을 써내려갑니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 const Community: React.FC = () => {
     const { language } = useLanguage();
     // Default to 'story' to show the new content
-    const [activeTab, setActiveTab] = useState<'market' | 'help' | 'business' | 'story'>('story');
+    const [activeTab, setActiveTab] = useState<'market' | 'help' | 'business' | 'story' | 'startup'>('story');
     const t = language === 'ko' ? COMMUNITY_DATA.ko : COMMUNITY_DATA.en;
 
     const tabs = [
         { id: 'story', label: t.tabs.story, icon: MessageCircle },
+        { id: 'startup', label: t.tabs.startup || 'AI 스타트업', icon: Rocket },
         { id: 'help', label: t.tabs.help, icon: Heart },
         { id: 'market', label: t.tabs.market, icon: Store },
         { id: 'business', label: t.tabs.business, icon: Users },
@@ -851,6 +958,7 @@ const Community: React.FC = () => {
                         {activeTab === 'help' && <HelpBoard />}
                         {activeTab === 'business' && <BusinessDirectory />}
                         {activeTab === 'story' && <TentmakerStories />}
+                        {activeTab === 'startup' && <AiStartupIncubator />}
                     </motion.div>
                 </AnimatePresence>
             </div>

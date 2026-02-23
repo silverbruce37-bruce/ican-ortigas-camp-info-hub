@@ -10,7 +10,8 @@ export const COMMUNITY_DATA = {
             help: '서로 돕기 (Help)',
             business: '비즈니스 파트너',
             market: '올티 마켓',
-            story: '우리의 이야기'
+            story: '우리의 이야기',
+            startup: 'AI 스타트업'
         },
         helpBoard: {
             title: 'I Can Help / I Need Help',
@@ -39,7 +40,8 @@ export const COMMUNITY_DATA = {
             help: 'I Can Help',
             business: 'Business Partners',
             market: 'Orti Market',
-            story: 'Our Stories' // Corrected key to match 'story'
+            story: 'Our Stories',
+            startup: 'AI Startup'
         },
         helpBoard: {
             title: 'I Can Help / I Need Help',
