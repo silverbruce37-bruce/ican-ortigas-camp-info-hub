@@ -117,7 +117,7 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       const apiKey = import.meta.env.VITE_GEMINI_API_KEY || '';
 
       if (!apiKey) {
-        throw new Error("Gemini API Key (VITE_GEMINI_API_KEY) not found in env.");
+        throw new Error("Gemini API Key (VITE_GEMINI_API_KEY) not found. Please check your environment variables.");
       }
 
       const genAI = new GoogleGenerativeAI(apiKey);
@@ -126,28 +126,46 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         systemInstruction: generateSystemContext() + "\n\nADDITIONAL KNOWLEDGE:\n" + knowledgeBase.map(k => `[Topic: ${k.title}]\n${k.content}`).join('\n\n')
       });
 
-      // Construct history for the API - correct format for @google/generative-ai
-      const history = messages.map(m => ({
-        role: m.role,
-        parts: [{ text: m.text }]
-      }));
+      // Construct history manually to ensure it starts with 'user'
+      // We skip the first message if it's from the model (the default greeting)
+      const history = messages
+        .filter((msg, index) => index > 0 || msg.role === 'user')
+        .map(m => ({
+          role: m.role === 'user' ? 'user' : 'model',
+          parts: [{ text: m.text }]
+        }));
 
-      const chat = model.startChat({
-        history: history,
+      // Robust check: Ensure history starts with 'user'
+      while (history.length > 0 && history[0].role !== 'user') {
+        history.shift();
+      }
+
+      // Final contents must start with 'user' and alternate.
+      // Since we add a 'user' message now, history must end with 'model' or be empty.
+      while (history.length > 0 && history[history.length - 1].role !== 'model') {
+        history.pop();
+      }
+
+      const contents = [...history, { role: 'user', parts: [{ text }] }];
+
+      const result = await model.generateContent({
+        contents,
         generationConfig: {
           temperature: 0.7,
         }
       });
 
-      const result = await chat.sendMessage(text);
       const response = await result.response;
       const responseText = response.text();
 
       const botMsg: ChatMessage = { role: 'model', text: responseText, timestamp: Date.now() };
       setMessages(prev => [...prev, botMsg]);
 
-    } catch (error) {
-      console.error("Gemini API Error:", error);
+    } catch (error: any) {
+      console.error("Dr. ICAN AI Error:", error);
+      // Log more details if available
+      if (error.response) console.error("Error Response:", error.response);
+
       setMessages(prev => [...prev, {
         role: 'model',
         text: '죄송합니다. 현재 AI 서버와 연결할 수 없습니다. 잠시 후 다시 시도해주시거나, 카카오톡으로 문의해주세요.',
