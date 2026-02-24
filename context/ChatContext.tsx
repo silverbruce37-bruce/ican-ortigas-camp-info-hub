@@ -122,7 +122,7 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
       const genAI = new GoogleGenerativeAI(apiKey);
       const model = genAI.getGenerativeModel({
-        model: "gemini-1.5-flash",
+        model: "gemini-2.0-flash",
         systemInstruction: generateSystemContext() + "\n\nADDITIONAL KNOWLEDGE:\n" + knowledgeBase.map(k => `[Topic: ${k.title}]\n${k.content}`).join('\n\n')
       });
 

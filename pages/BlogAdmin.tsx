@@ -449,7 +449,7 @@ const BlogAdmin: React.FC = () => {
             if (!apiKey) throw new Error("No API Key configured in .env (VITE_GEMINI_API_KEY)");
 
             const genAI = new GoogleGenerativeAI(apiKey);
-            const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+            const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
             const prompt = `Write a poetic and warm Korean blog post about "${generationTopic || 'Ortigas Life'}". valid JSON: {title, excerpt, content(html), category, tags, imageSearchTerm}`;
 
@@ -477,7 +477,7 @@ const BlogAdmin: React.FC = () => {
             if (!apiKey) throw new Error("API Key missing.");
 
             const genAI = new GoogleGenerativeAI(apiKey);
-            const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+            const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
             const result = await model.generateContent({
                 contents: [{
@@ -543,7 +543,7 @@ const BlogAdmin: React.FC = () => {
             if (!apiKey) throw new Error("System Error: API Key (VITE_GEMINI_API_KEY) is missing in .env.");
 
             const genAI = new GoogleGenerativeAI(apiKey);
-            const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+            const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
             const promptText = `
         You are "NanoBanana", a legendary fairy tale magazine editor with a warm, lyrical, and poetic soul (like J.K. Rowling or a Studio Ghibli narrator).

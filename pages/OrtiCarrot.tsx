@@ -273,7 +273,7 @@ const OrtiCarrot: React.FC<OrtiCarrotProps> = ({ embedded = false }) => {
             }
 
             const genAI = new GoogleGenerativeAI(apiKey);
-            const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+            const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
             const prompt = `
                 당신은 '올티가스 캐롯마켓'의 전문 판매글 작성 도우미입니다.
