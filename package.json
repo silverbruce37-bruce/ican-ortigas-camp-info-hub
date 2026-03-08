@@ -11,11 +11,13 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
+    "@types/nodemailer": "^7.0.11",
     "firebase": "^12.7.0",
     "framer-motion": "^10.16.4",
     "heic2any": "^0.0.4",
     "leaflet": "1.9.4",
     "lucide-react": "^0.460.0",
+    "nodemailer": "^8.0.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-helmet-async": "^2.0.5",
