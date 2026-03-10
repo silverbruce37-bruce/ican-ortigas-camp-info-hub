@@ -22,6 +22,7 @@ import Counseling from './pages/Counseling';
 import SchoolGuide from './pages/SchoolGuide';
 import Waymaker from './pages/Waymaker';
 import Series from './pages/Series';
+import CampRegistration from './pages/CampRegistration';
 import { LanguageProvider } from './context/LanguageContext';
 import { BlogProvider } from './context/BlogContext';
 import { ChatProvider } from './context/ChatContext';
@@ -66,6 +67,7 @@ const App: React.FC = () => {
                     <Route path="blog/admin" element={<BlogAdmin />} />
                     <Route path="blog/:id" element={<BlogPost />} />
                     <Route path="faq" element={<FAQ />} />
+                    <Route path="camp-registration" element={<CampRegistration />} />
                   </Route>
 
                   {/* Standalone Pages */}

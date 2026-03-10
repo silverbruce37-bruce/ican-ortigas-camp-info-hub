@@ -1891,6 +1891,7 @@ export const KO_DATA = {
     waymaker: "테드우주인", // New Protocol
     carrot: "올티캐롯", // NEW
     counseling: "상담일지",
+    campRegistration: "캠프등록", // NEW
     blog: "올티 스테이 블로그",
     faq: "FAQ",
     contact: "Contact Us"
@@ -2135,6 +2136,7 @@ export const EN_DATA = {
     waymaker: "테드 우주인 (TED Spaceman)", // New Protocol
     carrot: "OrtiCarrot", // NEW
     counseling: "Counseling",
+    campRegistration: "Camp Registration", // NEW
     blog: "Blog",
     faq: "FAQ",
     contact: "Contact Us"

@@ -38,6 +38,7 @@ const Layout: React.FC = () => {
     { label: content.nav.waymaker, path: '/galaxy.html' },
     { label: content.nav.counseling, path: '/counseling' },
     { label: 'Community', path: '/community' }, // Changed from OrtiCarrot to generic Community
+    { label: content.nav.campRegistration, path: '/camp-registration' }, // NEW
     { label: content.nav.blog, path: '/blog' },
     { label: content.nav.faq, path: '/faq' },
   ];
