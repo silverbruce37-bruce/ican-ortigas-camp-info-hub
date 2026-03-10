@@ -181,7 +181,7 @@ export const CARROT_ITEMS: CarrotItem[] = [
 ];
 
 
-// --- Blog Data (Roy House) ---
+// --- Blog Data (Olti Stay) ---
 export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'blog-23',
@@ -249,13 +249,13 @@ export const BLOG_POSTS: BlogPost[] = [
         </div>
       </div>
     `,
-    author: "Roy House",
+    author: "Olti Stay",
     tags: ["Bilingual", "Space Age", "Insight"]
   },
   {
     id: 'blog-24',
     title: "SKY 캐슬보다 무서운 '데이터 캐슬'이 온다",
-    author: "Roy House",
+    author: "Olti Stay",
     category: "Waymaker",
     tags: ["Future", "Data", "AI"],
     date: "2026-02-21",
@@ -296,7 +296,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'blog-25',
     title: "맹모삼천지교? 이제는 '맹모우주지교(孟母宇宙之敎)'입니다",
-    author: "Roy House",
+    author: "Olti Stay",
     category: "Waymaker",
     tags: ["Environment", "Space", "Education"],
     date: "2026-02-28",
@@ -337,7 +337,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'blog-26',
     title: "하버드가 성적표보다 먼저 보는 '이것'",
-    author: "Roy House",
+    author: "Olti Stay",
     category: "Waymaker",
     tags: ["Character", "Leadership", "Harvard"],
     date: "2026-03-07",
@@ -377,7 +377,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'blog-27',
     title: "부모가 줄 수 있는 최고의 유산, 'Waymaker DNA'",
-    author: "Roy House",
+    author: "Olti Stay",
     category: "Waymaker",
     tags: ["legacy", "DNA", "Waymaker"],
     date: "2026-03-14",
@@ -417,9 +417,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'blog-22',
     title: "🍌 [올티가스 맛집 탐방] 나노바나나와 함께 떠나는 식도락 여행!",
-    excerpt: "로이하우스 캠프 가족을 위한 실패 없는 맛집 리스트! 나노바나나가 직접 다녀온 마실, 주몽, 팔도 그리고 핫한 카페까지 총정리했습니다.",
+    excerpt: "올티 스테이 캠프 가족을 위한 실패 없는 맛집 리스트! 나노바나나가 직접 다녀온 마실, 주몽, 팔도 그리고 핫한 카페까지 총정리했습니다.",
     content: `
-      <p>안녕하세요, <strong>로이하우스 캠프 가족 여러분!</strong> 👋</p><br/>
+      <p>안녕하세요, <strong>올티 스테이 캠프 가족 여러분!</strong> 👋</p><br/>
       <p>오늘은 우리 아이들과 가족들이 올티가스에서 맛있는 끼니를 해결할 수 있는 <strong>'실패 없는 맛집 리스트'</strong>를 준비했습니다.</p>
       <p>특별히 오늘은 귀여운 식탐 요정 <strong>'나노바나나(Nano Banana)'</strong>가 가이드로 함께 합니다! 🍌💛 함께 떠나볼까요? 슝~! 🚀</p><br/>
 
@@ -501,7 +501,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026.01.20",
     category: "Food",
     image: nanoBananaIntroImg,
-    author: "Roy House & Nano Banana",
+    author: "Olti Stay & Nano Banana",
     tags: ["Masil", "OrtigasFood", "NanoBanana", "Jumong", "Doma", "SaChunSung", "Jjangkae", "KingKong"]
   },
   {
@@ -509,7 +509,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "공룡이 살아있다? 🦖 로빈손 갤러리아 지하 1층 공룡관 탐험기 (아이들과 주말 나들이 추천)",
     excerpt: "공부하느라 지친 아이들에게 특별한 선물이 없을까? 로빈손 갤러리아 지하 1층에 새로 생긴 공룡관을 다녀왔어요! 맛있는 식사와 공룡 탐험까지, 완벽한 주말 코스를 소개합니다.",
     content: `
-      <p>안녕하세요! <strong>로이 하우스(Joy Mom)</strong>입니다. 💖</p><br/>
+      <p>안녕하세요! <strong>올티 스테이(Joy Mom)</strong>입니다. 💖</p><br/>
       <p>우리 아이들, 평일 내내 캠프에서 영어 공부하느라 정말 고생 많았죠? 주말만큼은 스트레스를 확~ 날려주고 싶은데, 멀리 가긴 부담스럽고... 🤔 그런 고민을 하던 찰나, <strong>로빈손 갤러리아(Robinsons Galleria) 지하 1층</strong>에 아주 특별한 곳이 생겼다는 소식을 듣고 후다닥 다녀왔습니다.</p><br/>
       
       <h3 class="text-xl font-bold mb-2">🦖 도심 속 쥬라기 공원? '공룡관'의 등장!</h3>
@@ -536,7 +536,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026.01.08",
     category: "Activity",
     image: nanobananaDinosaurImg,
-    author: "Roy House (Joy Mom)",
+    author: "Olti Stay (Joy Mom)",
     tags: ["RobinsonsGalleria", "Dinosaur", "WeekendTrip", "KidsActivity"]
   },
   {
@@ -544,7 +544,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "1인 1냄비의 행복! 🍲 BGC 미츠코시 샤브리(Shaburi)에서 즐긴 완벽한 샤브샤브",
     excerpt: "아이들과 함께 가도 눈치 보지 않고 취향껏 즐길 수 있는 곳! 신선한 야채와 고기가 무한리필되는 '샤브리'에서 보낸 아이캔 맘들의 맛있는 수다 시간을 공개합니다.",
     content: `
-      <p>안녕하세요! 맛있는 곳이라면 어디든 찾아가는 <strong>로이 하우스(Joy Mom)</strong>입니다. 😊</p><br/>
+      <p>안녕하세요! 맛있는 곳이라면 어디든 찾아가는 <strong>올티 스테이(Joy Mom)</strong>입니다. 😊</p><br/>
       <p>오늘은 아이들 학원 보내놓고 육아 동지와 함께 다녀온, <strong>한국 사람들이 정말 좋아할 만한 일본 샤브리 집</strong>을 소개해 드리려고 해요. 바로 일본계 백화점 <strong>미츠코시(Mitsukoshi) BGC 2층</strong>에 위치한 프리미엄 샤브샤브 뷔페, <strong><샤브리(Shaburi)></strong>입니다!</p><br/>
 
       <img src="${nanobananaShaburiImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="NanoBanana enjoying Shaburi Shabu-shabu" />
@@ -584,7 +584,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026.01.09",
     category: "Food",
     image: nanobananaShaburiImg,
-    author: "Roy House (Joy Mom)",
+    author: "Olti Stay (Joy Mom)",
     tags: ["ShaburiBGC", "Mitsukoshi Mall", "ShabuShabu", "FamilyDining"]
   },
   {
@@ -592,7 +592,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "올티가스 포디움의 완벽한 오후: 와일드플라워 & % 아라비카 (응커피) ☕️🥐",
     excerpt: "올티가스 더 포디움(The Podium)에서 즐기는 완벽한 미식 코스! 입안 가득 터지는 페이스트리의 풍미와 교토 감성 가득한 라떼 한 잔의 여유. 실패 없는 브런치 메뉴와 '응 커피'의 매력을 소개합니다.",
     content: `
-      <p>안녕하세요! 맛있는 행복을 찾아다니는 <strong>로이 하우스(Joy Mom)</strong>입니다. 💖</p><br/>
+      <p>안녕하세요! 맛있는 행복을 찾아다니는 <strong>올티 스테이(Joy Mom)</strong>입니다. 💖</p><br/>
       <p>오늘은 제가 올티가스에서 가장 애정하는 <strong>'더 포디움(The Podium)'</strong> 몰의 보석 같은 두 곳을 소개해 드리려고 해요. 브런치부터 커피까지, 엄마들의 소확행을 위한 완벽한 코스랍니다!</p><br/>
       
       <h3 class="text-xl font-bold mb-2">1. 와일드플라워 (Wildflour Café + Bakery): 눈과 입이 즐거운 브런치</h3>
@@ -627,7 +627,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <p>원두도 직접 선택할 수 있으니, 산미를 좋아하시거나 고소한 맛을 선호하시는 분들 모두 취향에 맞는 커피를 즐기실 수 있을 거예요.</p><br/>
       
       <div class="border-l-4 border-ican-500 pl-4 py-2 bg-gray-50 my-6">
-        <h4 class="font-bold text-gray-800">✨ 로이 하우스의 꿀팁</h4>
+        <h4 class="font-bold text-gray-800">✨ 올티 스테이의 꿀팁</h4>
         <p class="text-gray-600 mt-2">
           "포디움은 치안이 좋고 쾌적해서 아이들과 함께 가기에도 정말 좋아요. 와일드플라워에서 든든하게 식사하고, % 아라비카에서 커피 한 잔 테이크아웃해서 5층 야외 정원을 산책해보세요. 그게 바로 올티가스 라이프의 낭만 아닐까요? 🥰"
         </p>
@@ -636,16 +636,16 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026.01.07",
     category: "Food",
     image: wildflourBrunchImg,
-    author: "Roy House (Joy Mom)",
+    author: "Olti Stay (Joy Mom)",
     tags: ["Wildflour", "ArabicaPH", "ThePodium", "BrunchTime", "EungCoffee"]
   },
   {
     id: 'blog-18',
     title: "문식 선생님의 27번째 생일, 포디움 미우(Niu)에서의 특별한 파티! 🎉",
-    excerpt: "미우(Niu) 뷔페에서 열린 문식 선생님의 27번째 생일 파티! 아이캔 식구들과 로이하우스 가족이 함께한 맛있는 점심 식사와 축하의 현장을 공개합니다. 생일자 무료 혜택까지 챙긴 알뜰 살뜰 파티 후기!",
+    excerpt: "미우(Niu) 뷔페에서 열린 문식 선생님의 27번째 생일 파티! 아이캔 식구들과 올티 스테이 가족이 함께한 맛있는 점심 식사와 축하의 현장을 공개합니다. 생일자 무료 혜택까지 챙긴 알뜰 살뜰 파티 후기!",
     content: `
-      <p>안녕하세요! <strong>로이 하우스(Joy Mom)</strong>입니다. 🎂</p><br/>
-      <p>오늘은 정말 기쁜 날입니다! 바로 아이캔 캠프의 든든한 지원군, <strong>문식 선생님</strong>의 27번째 생일이거든요! 🥳 이 특별한 날을 그냥 보낼 수 없죠. 아이캔의 우주 교육 책임자 <strong>에드워드 선생님</strong>, <strong>원장님</strong>, 그리고 우리 <strong>로이하우스 식구들</strong>까지 총출동했습니다.</p><br/>
+      <p>안녕하세요! <strong>올티 스테이(Joy Mom)</strong>입니다. 🎂</p><br/>
+      <p>오늘은 정말 기쁜 날입니다! 바로 아이캔 캠프의 든든한 지원군, <strong>문식 선생님</strong>의 27번째 생일이거든요! 🥳 이 특별한 날을 그냥 보낼 수 없죠. 아이캔의 우주 교육 책임자 <strong>에드워드 선생님</strong>, <strong>원장님</strong>, 그리고 우리 <strong>올티 스테이 식구들</strong>까지 총출동했습니다.</p><br/>
       
       <p>장소는 어디냐고요? 바로 올티가스의 핫플레이스 더 포디움(The Podium)에 위치한 프리미엄 뷔페, <strong><미우 바이 바이킹스(Niu by Vikings)></strong>입니다!</p><br/>
 
@@ -658,7 +658,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <h3 class="text-xl font-bold mb-2">🎁 꿀팁: 생일자는 '무료'라고요?!</h3>
       <p>여기서 중요한 정보! 미우 뷔페에서는 <strong>생일 당일 방문 시 본인 무료</strong> 혜택을 줍니다. (단, 1명의 정가 지불 동반인이 있어야 해요.) 덕분에 문식 선생님은 공짜로 이 호사를 누렸다는 사실! 맛있는 스테이크부터 신선한 회, 달콤한 디저트까지... 접시가 쉴 틈이 없었답니다.</p><br/>
 
-      <h3 class="text-xl font-bold mb-2">🥂 아이캔 & 로이하우스, 우리는 가족!</h3>
+      <h3 class="text-xl font-bold mb-2">🥂 아이캔 & 올티 스테이, 우리는 가족!</h3>
       <p>에드워드 선생님의 유쾌한 건배사와 원장님의 따뜻한 덕담이 오가는 행복한 점심시간이었습니다. 단순히 일로 만난 사이가 아니라, 타지에서 서로를 챙겨주는 '진짜 가족' 같은 끈끈함이 느껴졌어요. 아이캔 캠프가 아이들에게 사랑받는 이유도 이런 따뜻한 선생님들의 팀워크 덕분이 아닐까요?</p><br/>
 
       <div class="bg-yellow-50 p-6 rounded-xl border border-yellow-100 my-6">
@@ -671,7 +671,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2025.12.30",
     category: "Event",
     image: blogMoonsikBirthdayImg,
-    author: "Roy House (Joy Mom)",
+    author: "Olti Stay (Joy Mom)",
     tags: ["BirthdayParty", "NiuByVikings", "ICANTEAM", "MoonsikDay"]
   },
   {
@@ -679,7 +679,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "엄마들의 힐링 아지트, 포디움 6층 'Social Club'에서의 완벽한 오후 🥂",
     excerpt: "육아 동지들과 함께한 꿀맛 같은 브런치! 탁 트인 스카이라인 뷰, 감각적인 인테리어, 그리고 입맛을 사로잡은 다국적 요리들까지. 우리들만의 소중한 시간을 기록해 봅니다.",
     content: `
-      <p>안녕하세요! <strong>로이 하우스(Joy Mom)</strong>입니다. ✨</p><br/>
+      <p>안녕하세요! <strong>올티 스테이(Joy Mom)</strong>입니다. ✨</p><br/>
       <p>매일 반복되는 일상, 아이들 뒷바라지에 지칠 때쯤... 우리에게 필요한 건 뭐다? 바로 마음 맞는 친구들과의 '맛있는 수다'죠! 오늘은 제가 정말 좋아하는 아지트, <strong>더 포디움(The Podium) 6층 'Social Club'</strong>에 다녀온 이야기를 들려드릴게요.</p><br/>
       
       <img src="${socialClubAtmosphereImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="Podium Social Club Atmosphere with NanoBanana" />
@@ -716,7 +716,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2025.12.30",
     category: "Food",
     image: socialClubMomKidsImg,
-    author: "Roy House (Joy Mom)",
+    author: "Olti Stay (Joy Mom)",
     tags: ["PodiumSocial", "OrtigasBrunch", "MomsDayOut", "BistroAurora"]
   },
   {
@@ -724,7 +724,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "육즙 팡팡! 🥟 아이들도 반한 BGC 딘타이펑(Din Tai Fung) 미식 탐방기",
     excerpt: "\"엄마, 이거 국물이 예술이야!\" 숟가락 위에서 터지는 육즙의 향연. 세계적인 맛집 딘타이펑, 보니파시오(BGC) 점을 로하우스 가족이 직접 다녀왔습니다. 실패 없는 메뉴 추천까지!",
     content: `
-      <p>안녕하세요! 맛있는 것과 여행을 사랑하는 <strong>로이 하우스(Joy Mom)</strong>입니다. 💖</p><br/>
+      <p>안녕하세요! 맛있는 것과 여행을 사랑하는 <strong>올티 스테이(Joy Mom)</strong>입니다. 💖</p><br/>
       <p>주말을 맞아 아이들과 함께 올티가스를 벗어나 <strong class="text-ican-600">보니파시오 글로벌 시티(BGC)</strong>로 나들이를 다녀왔어요. BGC는 깨끗한 거리와 멋진 쇼핑몰들이 모여 있어 '필리핀의 강남'이라고 불리는 곳이죠.</p>
       <p>오늘의 목적지는 바로, 전 세계 미식가들의 입맛을 사로잡은 <strong><딘타이펑(Din Tai Fung)></strong>입니다! 👨‍🍳 유명한 만큼 웨이팅도 길지만, 한 입 먹는 순간 기다림의 피로가 싹~ 사라지는 마법 같은 곳. 저희 가족의 '찐' 후기를 들려드릴게요.</p><br/>
 
@@ -759,7 +759,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <p>"만두에서 초콜릿이 나와!" 하며 눈이 휘둥그레지는 아이들 표정을 보니 시키길 잘했다 싶더라고요. 달콤하게 식사를 마무리하기에 딱 좋았습니다.</p><br/>
 
       <div class="border-l-4 border-ican-500 pl-4 py-2 bg-gray-50 my-6">
-        <h4 class="font-bold text-gray-800">📝 로이 하우스 총평</h4>
+        <h4 class="font-bold text-gray-800">📝 올티 스테이 총평</h4>
         <p class="text-gray-600 mt-2">
           "올티가스에서 조금 이동해야 하지만, BGC의 세련된 분위기와 딘타이펑의 변함없는 맛은 그만한 가치가 충분합니다. 특히 아이들이 잘 먹는 메뉴가 많아 가족 외식 장소로 강력 추천해요! (주말엔 대기가 기니 오픈런 추천드려요 🏃‍♀️)"
         </p>
@@ -768,7 +768,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2025.12.29",
     category: "Food",
     image: nanobananaXiaolongbaoImg,
-    author: "Roy House (Joy Mom)",
+    author: "Olti Stay (Joy Mom)",
     tags: ["DinTaiFung", "BGC", "FamilyDining", "XiaoLongBao"]
   },
   {
@@ -776,7 +776,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "새벽 5시의 기적? ☕️ 올티가스 스타벅스 명당 & 오픈시간 총정리!",
     excerpt: "새벽 묵상과 모닝 커피를 사랑하는 분들을 위한 특급 정보! 24시간 불이 꺼지지 않는 곳부터, 호텔급 인테리어의 리저브 매장까지. 올티가스 스벅 대동여지도를 공개합니다.",
     content: `
-      <p>안녕하세요! 스타벅스 닉네임 <strong>'로이맘'</strong>, 로이 하우스입니다. 🌿</p><br/>
+      <p>안녕하세요! 스타벅스 닉네임 <strong>'로이맘'</strong>, 올티 스테이입니다. 🌿</p><br/>
       <p>저는 하루 중 가장 좋아하는 시간이 바로 모두가 잠든 <strong>새벽 5시</strong>예요. 따뜻한 아메리카노 한 잔과 함께 다이어리를 정리하고 말씀을 묵상하는 그 고요한 시간이 없으면 하루를 시작할 에너지가 안 생기더라고요.</p>
       <p>그래서 저처럼 <strong>'새벽형 인간'</strong>이신 학부모님들을 위해, 제가 두 발로 뛰어 완성한 <strong><올티가스 스타벅스 대동여지도></strong>를 공개합니다. 5시, 6시에 여는 곳? 모두 찾았습니다! (저장은 필수! ⭐)</p><br/>
 
@@ -829,7 +829,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
       <div class="mb-6">
         <h4 class="font-bold text-lg text-ican-600">📍 올티가스 익스텐션 (Ortigas Ext) 점</h4>
-        <p>로이 하우스에서 차로 조금 이동해야 하지만, <strong>오전 6시 칼오픈</strong> 하는 부지런한 매장입니다. 드라이브 스루라 픽업하기도 편해요.</p>
+        <p>올티 스테이에서 차로 조금 이동해야 하지만, <strong>오전 6시 칼오픈</strong> 하는 부지런한 매장입니다. 드라이브 스루라 픽업하기도 편해요.</p>
       </div>
 
       <h3 class="text-xl font-bold mb-2">3. ✨ (번외) 시설 & 분위기 끝판왕</h3>
@@ -872,7 +872,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2025.12.28",
     category: "Cafe",
     image: starbucksMeditationImg,
-    author: "Roy House (Joy Mom)",
+    author: "Olti Stay (Joy Mom)",
     tags: ["Starbucks", "OrtigasCafe", "MorningRoutine", "24Hours"]
   },
   {
@@ -880,7 +880,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "나만 알고 싶은 아지트, 토비 하우스(Toby's Estate) ☕️✨",
     excerpt: "우연히 들렀다가 '인생 카페' 등극! 산미 가득한 롱블랙과 가성비 최고의 파스타, 그리고 끊이지 않는 수다. 엄마들의 힐링 성지, 함께 가실래요?",
     content: `
-      <p>안녕하세요! 로이 하우스입니다. :) 👋</p><br/>
+      <p>안녕하세요! 올티 스테이입니다. :) 👋</p><br/>
       <p>오늘은 제가 정말 우연히 발견했다가, 이제는 <strong>'없으면 못 사는'</strong> 최애 아지트가 되어버린 곳을 소개해 드리려고 해요. 바로 올티가스의 숨은(사실은 유명하지만! 😉) 보석, <strong>'토비 하우스(Toby's Estate)'</strong>입니다.</p><br/>
 
       <h3 class="text-xl font-bold mb-2">🚪 우연이 선물해 준 마법 같은 공간</h3>
@@ -901,7 +901,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2025.12.28",
     category: "Food",
     image: blogTobysEstateMothersImg,
-    author: "Roy House (Joy Mom)",
+    author: "Olti Stay (Joy Mom)",
     tags: ["OrtigasCafe", "TobysEstate", "MomsBrunch", "LongBlack"]
   },
   {
@@ -909,7 +909,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "도로가 운동장으로 변신? 오감만족, 토요일의 에메랄드 애비뉴 🛹🍱",
     excerpt: "차 없는 거리에서 즐기는 자유! 자전거, 스케이트보드, 줄넘기... 그리고 오후 3시까지만 열리는 반짝 맛집 시장과 이색 테니스까지. 올티가스 주민이 전하는 생생한 주말 라이프!",
     content: `
-      <p>안녕하세요! 로이 하우스입니다. :) 🌿</p><br/>
+      <p>안녕하세요! 올티 스테이입니다. :) 🌿</p><br/>
       <p>매주 토요일, 제가 사는 이곳 올티가스에는 마법 같은 일이 벌어집니다. 평일 내내 차들로 꽉 막혀있던 <strong>'에메랄드 애비뉴(Emerald Avenue)'</strong>가 거대한 놀이터로 변신하거든요! 로컬 주민인 제가 직접 다녀온 생생한 현장을 여러분께 1인칭 시점으로 중계해 드릴게요.</p><br/>
       
       <h3 class="text-xl font-bold mb-2">🚫 차 없는 거리의 자유로움 (Car-Free Weekend)</h3>
@@ -936,7 +936,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2025.12.27",
     category: "Culture",
     image: blogEmeraldWeekendImg,
-    author: "Roy House (Joy Mom)",
+    author: "Olti Stay (Joy Mom)",
     tags: ["OrtigasWeekend", "EmeraldAvenue", "StreetFood", "Pickleball"]
   },
   {
@@ -944,7 +944,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "첨벙첨벙! 개구쟁이 쌍둥이와 함께한 에이스 워터 스파 (Ace Water Spa) 파식 정복기!",
     excerpt: "에너자이저 3학년 아들 둘과 함께 다녀온 파식의 핫플레이스! 물놀이도 하고 피로도 풀고, 온 가족이 만족한 하루 코스를 공개합니다.",
     content: `
-      <p>안녕하세요! 로이 하우스입니다. ✨</p><br/>
+      <p>안녕하세요! 올티 스테이입니다. ✨</p><br/>
       <p>오늘은 저희 가족(저, 남편, 그리고 에너지가 넘쳐흐르는 3학년 쌍둥이 아들 둘!)이 다녀온 <strong>'에이스 워터 스파(Ace Water Spa)'</strong> 이야기를 들려드릴게요. 파식(Pasig) 시에 위치한 이곳은 단순한 수영장이 아니라, 어른들은 마사지를 즐기고 아이들은 신나게 놀 수 있는 일석이조의 천국이랍니다.</p><br/>
       
       <h3 class="text-xl font-bold mb-2">🚗 출발 전 체크! 준비물 챙기기</h3>
@@ -973,7 +973,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2025.12.27",
     category: "Activity",
     image: nanobananaAceWaterSpaImg,
-    author: "Roy House (Joy Mom)",
+    author: "Olti Stay (Joy Mom)",
     tags: ["AceWaterSpa", "Pasig", "FamilyTrip"]
   },
   {
@@ -981,7 +981,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Fun & Smart! 엄마와 아이를 위한 SM 메가몰 하루 코스 정복기!",
     excerpt: "거대 쇼핑몰 SM 메가몰, 어디서부터 가야 할지 막막하시죠? 전문 가이드가 추천하는 알짜배기 데이트 코스로 하루를 완벽하게 즐겨보세요!",
     content: `
-      <p>안녕하세요, 로이 하우스입니다.</p><br/>
+      <p>안녕하세요, 올티 스테이입니다.</p><br/>
       <p>올티가스 생활의 중심, <strong>SM 메가몰(SM Megamall)</strong>! 하지만 막상 가보면 너무 넓어서 어디가 어딘지, 아이랑 가기엔 괜찮을지 고민되시죠?</p>
       <p>그래서 준비했습니다. <strong>엄마는 여유롭게 쇼핑하고, 아이는 신나게 뛰어노는 '1타 2피' 하루 완성 코스!</strong> 지금 바로 출발합니다.</p><br/>
       
@@ -1010,7 +1010,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2025.12.27",
     category: "Philippines Life",
     image: nanobananaSkatingImg,
-    author: "Roy House",
+    author: "Olti Stay",
     tags: ["SMMegaMall", "DayTour", "MomsGuide"]
   },
   {
@@ -1018,7 +1018,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "아이캔 캠프의 하루: 몰입과 즐거움 사이",
     excerpt: "아침 8시부터 시작되는 아이캔 캠프의 뜨거운 열기. 1:1 수업의 집중력과 그룹 활동의 활기를 담았습니다.",
     content: `
-      <p>안녕하세요, 로이 하우스입니다.</p><br/>
+      <p>안녕하세요, 올티 스테이입니다.</p><br/>
       <p>오늘은 아이캔 캠프의 생생한 하루 일과를 소개해드리려고 합니다. 많은 학부모님들이 "아이가 하루 종일 공부만 하면 지치지 않을까요?"라고 걱정하시는데요, 현장에서 지켜본 아이들의 모습은 사뭇 다릅니다.</p><br/>
       
       <h3 class="text-xl font-bold mb-2">1. 아침을 여는 1:1 집중 클래스</h3>
@@ -1040,7 +1040,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=2070&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop"
     ],
-    author: "Roy House",
+    author: "Olti Stay",
     tags: ["Camp Life", "ESL", "하루일과"]
   },
   {
@@ -1062,7 +1062,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2024.01.18",
     category: "Food",
     image: "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=2070&auto=format&fit=crop",
-    author: "Roy House",
+    author: "Olti Stay",
     tags: ["Cafe", "Brunch", "Moms Life"]
   },
   {
@@ -1083,7 +1083,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2024.01.20",
     category: "Activity",
     image: blog3Img,
-    author: "Roy House",
+    author: "Olti Stay",
     tags: ["Weekend", "Swimming", "Kids Activity"]
   },
   {
@@ -1102,7 +1102,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2024.01.25",
     category: "Education",
     image: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=2070&auto=format&fit=crop",
-    author: "Roy House",
+    author: "Olti Stay",
     tags: ["Study", "OneOnOne", "English"]
   },
   {
@@ -1121,7 +1121,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2024.02.01",
     category: "Lifestyle",
     image: blog5Img,
-    author: "Roy House",
+    author: "Olti Stay",
     tags: ["Shopping", "Mall", "Guide"]
   },
   {
@@ -1141,7 +1141,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2024.02.05",
     category: "Food",
     image: blog6Img,
-    author: "Roy House",
+    author: "Olti Stay",
     tags: ["Jollibee", "LocalFood", "KidsFavorite"]
   },
   {
@@ -1161,7 +1161,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2024.02.10",
     category: "Local Life",
     image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop",
-    author: "Roy House",
+    author: "Olti Stay",
     tags: ["Accommodation", "Safety", "Condo"]
   },
   {
@@ -1180,7 +1180,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2024.02.15",
     category: "Activity",
     image: blog8Img,
-    author: "Roy House",
+    author: "Olti Stay",
     tags: ["Travel", "WeekendTrip", "Tagaytay"]
   },
   {
@@ -1201,7 +1201,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2024.02.20",
     category: "Education",
     image: blog9Img,
-    author: "Roy House",
+    author: "Olti Stay",
     tags: ["Parenting", "Tips", "Confidence"]
   },
   {
@@ -1214,12 +1214,12 @@ export const BLOG_POSTS: BlogPost[] = [
       <h3 class="text-xl font-bold mb-2">단순한 영어 공부 그 이상</h3>
       <p>아이들은 이곳에서 단순히 영어 단어만 외운 것이 아닙니다. 낯선 환경에 적응하는 법, 다른 문화의 친구들과 소통하는 법, 그리고 스스로 해낼 수 있다는 '자신감'을 배웠습니다.</p><br/>
       
-      <p>한국으로 돌아가는 아이들의 뒷모습이 한층 듬직해 보입니다. 이 경험이 아이들의 미래에 단단한 자양분이 되기를 로이 하우스가 항상 응원하겠습니다.</p>
+      <p>한국으로 돌아가는 아이들의 뒷모습이 한층 듬직해 보입니다. 이 경험이 아이들의 미래에 단단한 자양분이 되기를 올티 스테이가 항상 응원하겠습니다.</p>
     `,
     date: "2024.02.28",
     category: "Lifestyle",
     image: blog10Img,
-    author: "Roy House",
+    author: "Olti Stay",
     tags: ["Graduation", "Growth", "Memory"]
   }
 ];
@@ -1891,7 +1891,7 @@ export const KO_DATA = {
     waymaker: "테드우주인", // New Protocol
     carrot: "올티캐롯", // NEW
     counseling: "상담일지",
-    blog: "로이하우스 블로그",
+    blog: "올티 스테이 블로그",
     faq: "FAQ",
     contact: "Contact Us"
   },

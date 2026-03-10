@@ -28,13 +28,13 @@ const Blog: React.FC = () => {
         <div className="flex justify-between items-end mb-12 border-b border-gray-100 pb-8">
           <div>
             <h1 className="text-4xl font-bold tracking-tight mb-2 font-['Playfair_Display']">
-              <span className="text-2xl mr-2">로이하우스</span>
+              <span className="text-2xl mr-2">올티 스테이</span>
               <span>LIVING IN WONDER</span>
             </h1>
             <p className="text-gray-500 text-sm">이곳에서의 평범한 일상이 아이들에게는 특별한 여정이 됩니다.</p>
             <p className="text-gray-400 text-xs mt-2 leading-relaxed">
               올티가스 근처의 좋은 명소들을 나노바나나가 소개합니다. 직접갈 수 없는 경우 빠른 정보 전달을 위해서 온라인상에서 실제로 직접 방문한 사람들의 이야기를 모아 각색해서 스토리를 만들어 보여드립니다.<br />
-              실제로 로이하우스 식구들이 방문하거나 경험을 통해 쓴 글은 <span className="font-bold text-blue-600">"레알"</span> 이라는 문구를 넣어 실제경험담을 나누게 될 것입니다.
+              실제로 올티 스테이 식구들이 방문하거나 경험을 통해 쓴 글은 <span className="font-bold text-blue-600">"레알"</span> 이라는 문구를 넣어 실제경험담을 나누게 될 것입니다.
             </p>
           </div>
           <Link

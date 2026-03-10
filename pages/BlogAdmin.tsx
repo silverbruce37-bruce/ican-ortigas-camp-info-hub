@@ -383,7 +383,7 @@ const BlogAdmin: React.FC = () => {
     // User Search
     const [userSearchTerm, setUserSearchTerm] = useState('');
 
-    const initialFormState: BlogPost = { id: '', title: '', excerpt: '', content: '', date: new Date().toISOString().split('T')[0].replace(/-/g, '.'), category: 'Lifestyle', image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070', galleryImages: [], author: 'Roy House', tags: [] };
+    const initialFormState: BlogPost = { id: '', title: '', excerpt: '', content: '', date: new Date().toISOString().split('T')[0].replace(/-/g, '.'), category: 'Lifestyle', image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070', galleryImages: [], author: 'Olti Stay', tags: [] };
     const [formData, setFormData] = useState<BlogPost>(initialFormState);
 
     const systemRestoreInputRef = useRef<HTMLInputElement>(null);
