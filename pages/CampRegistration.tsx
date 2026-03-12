@@ -132,7 +132,7 @@ const CampRegistration: React.FC = () => {
 
           <motion.a
             {...fadeUp(0.3)}
-            href="#"   /* TODO: 실제 앱 URL로 교체 */
+            href="https://ican-registration-app.vercel.app/camp-registration.html"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 mt-10 bg-white text-[#1d1d1f] font-semibold text-[15px] px-8 py-4 rounded-2xl hover:bg-white/90 transition-all shadow-xl hover:shadow-white/20 hover:-translate-y-0.5 active:translate-y-0"
@@ -270,7 +270,7 @@ const CampRegistration: React.FC = () => {
             확정된 비밀번호를 준비하고 앱에 접속해 3단계를 완료해 주세요.
           </p>
           <a
-            href="#"   /* TODO: 실제 앱 URL로 교체 */
+            href="https://ican-registration-app.vercel.app/camp-registration.html"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-white text-[#1d1d1f] font-semibold text-[15px] px-10 py-4 rounded-2xl hover:bg-white/90 transition-all shadow-2xl hover:-translate-y-0.5 active:translate-y-0"
