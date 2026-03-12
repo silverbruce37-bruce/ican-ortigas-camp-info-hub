@@ -7,6 +7,41 @@ import { motion, AnimatePresence } from 'framer-motion';
 // --- Data Structure for Journal Entries ---
 const JOURNAL_ENTRIES = [
     {
+        id: 15,
+        date: "2026.05.07 • Thu",
+        title: "[Special] 88학번 아빠의 '바이브 코딩': 아이의 앞길에 이정표를 세우다",
+        subtitle: "대학 편입의 파고를 넘는 아이를 위해 만든 '금융수학 앱' 이야기",
+        themeChip: "Vibe Coding",
+        morning: {
+            title: "디지털과 아날로그의 가교, 88학번의 도전",
+            content: "우리는 아날로그의 낭만과 디지털의 혁명을 동시에 경험한 축복받은 세대입니다. 그 자신감으로 저는 늦깎이 코딩, 아니 '바이브 코딩(Vibe Coding)'의 세계에 발을 들였습니다. 이제는 복잡한 앱도 뚝딱 만들어낼 수 있게 되었습니다. AI와 대화하며 로직을 짜는 이 과정이 단순히 효율을 넘어, 사랑하는 이를 위한 따뜻한 도구가 될 수 있음을 깨닫습니다.",
+            quote: "너희는 이 세대를 본받지 말고 오직 마음을 새롭게 함으로 변화를 받아... (롬 12:2)",
+            icon: Cpu,
+            color: "orange"
+        },
+        noon: {
+            title: "금융수학 앱: 아이의 미래를 일구는 나침반",
+            content: "대학 편입 후 낯선 학문과 환경 앞에 힘들어하는 아이를 보며, 부모로서 해줄 수 있는 최선이 무엇일까 고민했습니다. '독립해서 혼자 해내는 것'도 중요하지만, 지금의 시대는 너무나도 빠릅니다. 적절한 통찰과 도움이 없다면 아이들은 자칫 길을 잃기 쉽습니다. 그래서 저는 직접 '금융수학 앱'을 만들었습니다. 빈 곳을 빨리 채워 학과 공부를 따라가고, 자기의 미래를 일구는 길에 좌초되지 않도록, 제가 경험한 어려운 길을 조금이라도 쉽게 가게 하기 위한 '이정표'의 마음을 담았습니다.",
+            icon: Target,
+            color: "blue"
+        },
+        evening: {
+            title: "행복과 진리를 향한 전진, 폴샘의 길을 따라서",
+            content: "제가 아이를 돕고자 함은 단순히 더 빠르고 효율적으로 일하게 하기 위함이 아닙니다. 행복하게 세상을 받아들이고, 즐겁게 일할 수 있는 깨달음과 진리를 향한 전진을 돕고자 함입니다. 이미 폴샘을 통해 우리가 어떻게 그 길을 가야 하는지 배웠기에, 그 발자취를 따라 오늘도 묵묵히 이 길을 갑니다. 부모의 통찰 섞인 지지가 아이의 마음속에 꺼지지 않는 등불이 되기를 소망합니다.",
+            actionTitle: "오늘 아이의 손을 잡고 축복해 주세요",
+            actionContent: "\"네가 걷는 길은 결코 외롭지 않단다. 너를 위해 세워진 수많은 이정표와 사랑을 기억하며, 행복하게 너만의 미래를 그려나가렴.\"",
+            icon: Heart,
+            color: "indigo"
+        },
+        media: {
+            title: "아이를 위해 만든 '금융수학 앱' 바로가기",
+            url: "https://persona-survey-app.vercel.app/",
+            image: "https://img.youtube.com/vi/FCswPOXVxlU/sddefault.jpg", // Placeholder or relevant image
+            desc: "부모의 사랑과 통찰이 담긴 맞춤형 학습 도구",
+            icon: ExternalLink
+        }
+    },
+    {
         id: 14,
         date: "2026.04.30 • Thu",
         title: "[Hot Issue] 대치동을 떠나 별을 향해 가는 아이들",
