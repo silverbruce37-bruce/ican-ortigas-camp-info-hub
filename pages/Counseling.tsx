@@ -34,10 +34,10 @@ const JOURNAL_ENTRIES = [
             color: "indigo"
         },
         media: {
-            title: "헤일메리 프로젝트: 아이들을 위한 우주적 사고의 시작",
-            url: "https://www.youtube.com/watch?v=S8pBOnP_X5U",
-            image: "https://img.youtube.com/vi/S8pBOnP_X5U/sddefault.jpg",
-            desc: "AI와 라즈베리파이로 여는 우주 과학의 세계",
+            title: "프로젝트 헤일메리: 인류의 마지막 희망",
+            url: "https://www.youtube.com/watch?v=NC9xKey9V28",
+            image: "https://img.youtube.com/vi/NC9xKey9V28/sddefault.jpg",
+            desc: "영화적 상상력으로 그려본 미지의 우주와 리얼리즘",
             icon: PlayCircle
         }
     },
