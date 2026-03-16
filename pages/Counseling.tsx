@@ -7,6 +7,33 @@ import { motion, AnimatePresence } from 'framer-motion';
 // --- Data Structure for Journal Entries ---
 const JOURNAL_ENTRIES = [
     {
+        id: 16,
+        date: "2026.03.16 • Mon",
+        title: "[Episode] 직접 코딩이 사라진 시대: 다니엘의 지혜로 준비하는 미래",
+        subtitle: "앤트로픽 책임개발자의 '0줄 코딩' 고백이 던지는 거대한 전환의 메세지",
+        themeChip: "Paradigm Shift",
+        morning: {
+            title: "실리콘밸리의 충격: 키보드에서 손을 뗀 개발자들",
+            content: "최근 앤트로픽(Anthropic)의 책임자들이 한 달 동안 단 한 줄의 코드도 직접 쓰지 않았다는 고백은 우리에게 큰 충격을 줍니다. 이제 AI(Claude)가 내부 코드의 100%를 작성하고 스스로 검토하는 시대가 왔습니다. 인간은 이제 '코더(Coder)'가 아닌, 전체를 조망하고 방향을 결정하는 '에디터(Editor)'이자 '감독'으로 그 역할이 완전히 변화하고 있습니다.",
+            icon: Cpu,
+            color: "orange"
+        },
+        noon: {
+            title: "바벨론의 술객인가, 다니엘의 통찰인가?",
+            content: "수천 년 전 바벨론 제국에도 방대한 시스템을 다루는 기술자들이 있었습니다. 하지만 제국의 운명이 달린 위기 앞에서 답을 내놓은 것은 단순한 기술자가 아닌, 주님이 주신 탁월한 지혜(Excellent Spirit)로 본질을 꿰뚫어 본 다니엘이었습니다. 직접 코딩이 사라진 이 시대, 우리 아이들에게 필요한 것은 남들보다 빠른 기술적 숙련도가 아니라, 시대를 해석하고 방향을 제시하는 다니엘과 같은 영적 통찰력입니다.",
+            icon: Compass,
+            color: "blue"
+        },
+        evening: {
+            title: "거대한 전환의 파도 위에서 드리는 축복",
+            content: "우리는 지금 단순한 기술 혁신을 넘어선 거대한 패러다임의 전환점에 서 있습니다. 우리 아이들이 이 변화를 두려워하지 않고, 다니엘처럼 세상의 학문을 주도하면서도 주님의 은혜와 지혜를 굳건히 간직하길 소망합니다. 복잡한 로직의 미로에서 빠져나와, AI라는 거대한 동력을 선한 곳으로 정렬시키는 존귀한 미래의 리더들로 세워지기를 기도합니다.",
+            actionTitle: "오늘 아이의 손을 잡고 다니엘의 축복을 전해주세요",
+            actionContent: "\"주님, 이 아이가 변하는 세상 속에서도 변치 않는 주님의 지혜를 소유하게 하소서. 거대한 변화의 파도를 타고 세상을 이끄는 시대의 다니엘이 되게 하소서.\"",
+            icon: Heart,
+            color: "indigo"
+        }
+    },
+    {
         id: 15,
         date: "2026.05.07 • Thu",
         title: "[Special] 88학번 아빠의 '바이브 코딩': 아이의 앞길에 이정표를 세우다",
@@ -35,8 +62,8 @@ const JOURNAL_ENTRIES = [
         },
         media: {
             title: "아이를 위해 만든 '금융수학 앱' 바로가기",
-            url: "https://persona-survey-app.vercel.app/",
-            image: "https://img.youtube.com/vi/FCswPOXVxlU/sddefault.jpg", // Placeholder or relevant image
+            url: "https://chronicles-of-quant.vercel.app/",
+            image: "/us-stock-market.png",
             desc: "부모의 사랑과 통찰이 담긴 맞춤형 학습 도구",
             icon: ExternalLink
         }
