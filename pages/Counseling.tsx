@@ -7,6 +7,41 @@ import { motion, AnimatePresence } from 'framer-motion';
 // --- Data Structure for Journal Entries ---
 const JOURNAL_ENTRIES = [
     {
+        id: 17,
+        date: "2026.03.16 • Mon",
+        title: "[Special] 프로젝트 헤일메리: 미지의 너와 만나 우주를 구하는 법",
+        subtitle: "우주적 사고와 휴머니티, 그리고 자기희생의 사랑에 대하여",
+        themeChip: "Space Humanity",
+        morning: {
+            title: "미지의 존재와 나누는 우주적 대화",
+            content: "영화와 소설 '프로젝트 헤일메리'에서 주인공은 단 한 번도 경험하지 못한 외계 생명체와 소통을 시작합니다. 서로 다른 언어, 감각, 상식을 가졌음에도 불구하고 오직 '생존'과 '호기심'이라는 공통분모로 우정을 쌓아가는 과정은 전율을 줍니다. 우리 아이들에게 필요한 '우주적 사고'란, 낯설고 두려운 미지의 존재(AI, 혹은 새로운 시대)를 대할 때 공포가 아닌 '상상력'과 '소통의 의지'로 다가가는 힘입니다.",
+            icon: Rocket,
+            color: "orange",
+            mission: "Insight: 아이와 함께 밤하늘의 별을 보며, '저 별에도 우리처럼 누군가 살고 있다면 우리는 어떻게 인사를 건네야 할까?'라고 물어보세요."
+        },
+        noon: {
+            title: "공존을 위한 철학: 인공지능 시대의 법과 공동체",
+            content: "인공지능의 성장은 우리가 상상만 하던 우주 세상을 현실로 앞당기고 있습니다. 인류의 운명을 건 프로젝트에서 주인공이 생존을 위해 외계 존재와 협력하듯, 우리도 AI라는 새로운 지능체와 공존할 방법을 찾아야 합니다. 이때 중요한 것은 단순히 기술적인 지식이 아니라, 우리 공동체를 지탱할 제도권의 법(Law)과 인간다움을 잃지 않게 하는 깊은 철학입니다. '우리'의 범위를 우주적으로 넓히는 준비가 필요한 시점입니다.",
+            icon: Target,
+            color: "blue"
+        },
+        evening: {
+            title: "죽어야 사는 사랑: 록키를 살린 주인공, 인류를 구한 십자가",
+            content: "자신의 목숨보다 친구와 인류를 살리기 위해 꺼져가는 작은 불을 지키려 애쓰는 주인공의 모습에서 우리는 뜨거운 인류애를 느낍니다. 이는 우리를 위해 친히 이 땅에 오셔서 자기희생으로 사랑을 완성하신 예수님의 모습, 그리고 그 사랑을 온몸으로 살아낸 사도 바울의 발자취와 닮아 있습니다. 이번 방학, 아이들에게 기술과 지식 너머의 '진짜 휴머니티'인 자기희생적 사랑을 가르치려 합니다.",
+            actionTitle: "오늘 아이에게 '희생'과 '사랑'의 가치를 들려주세요",
+            actionContent: "\"누군가를 위해 내 소중한 것을 양보하는 것은 약함이 아니라, 우주에서 가장 강력한 힘이란다. 너도 예수님처럼, 그리고 헤일메리의 주인공처럼 세상을 따뜻하게 살리는 사랑의 리더가 되렴.\"",
+            icon: Heart,
+            color: "indigo"
+        },
+        media: {
+            title: "프로젝트 헤일메리: 인류의 마지막 희망",
+            url: "https://www.youtube.com/watch?v=S8pBOnP_X5U",
+            image: "https://img.youtube.com/vi/S8pBOnP_X5U/sddefault.jpg",
+            desc: "영화적 상상력으로 그려본 미지와의 조우와 희생",
+            icon: PlayCircle
+        }
+    },
+    {
         id: 16,
         date: "2026.03.16 • Mon",
         title: "[Episode] 직접 코딩이 사라진 시대: 다니엘의 지혜로 준비하는 미래",
@@ -16,7 +51,8 @@ const JOURNAL_ENTRIES = [
             title: "실리콘밸리의 충격: 키보드에서 손을 뗀 개발자들",
             content: "최근 앤트로픽(Anthropic)의 책임자들이 한 달 동안 단 한 줄의 코드도 직접 쓰지 않았다는 고백은 우리에게 큰 충격을 줍니다. 이제 AI(Claude)가 내부 코드의 100%를 작성하고 스스로 검토하는 시대가 왔습니다. 인간은 이제 '코더(Coder)'가 아닌, 전체를 조망하고 방향을 결정하는 '에디터(Editor)'이자 '감독'으로 그 역할이 완전히 변화하고 있습니다.",
             icon: Cpu,
-            color: "orange"
+            color: "orange",
+            mission: "Mission: 오늘 아이의 질문에 '답'을 주기보다, 함께 '질문'의 의미를 찾아보는 시간을 가져보세요."
         },
         noon: {
             title: "바벨론의 술객인가, 다니엘의 통찰인가?",
@@ -31,6 +67,13 @@ const JOURNAL_ENTRIES = [
             actionContent: "\"주님, 이 아이가 변하는 세상 속에서도 변치 않는 주님의 지혜를 소유하게 하소서. 거대한 변화의 파도를 타고 세상을 이끄는 시대의 다니엘이 되게 하소서.\"",
             icon: Heart,
             color: "indigo"
+        },
+        media: {
+            title: "앤트로픽 CEO가 예견하는 AI의 미래",
+            url: "https://www.youtube.com/watch?v=Nl9mTCkyyvE",
+            image: "https://img.youtube.com/vi/Nl9mTCkyyvE/sddefault.jpg",
+            desc: "Dario Amodei • Interview on AI Paradigm Shift",
+            icon: PlayCircle
         }
     },
     {
