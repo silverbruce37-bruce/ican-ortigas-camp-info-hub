@@ -156,8 +156,8 @@ const Curriculum: React.FC = () => {
                   <span className="text-2xl">🌌</span>
                 </div>
                 <h3 className="text-xl font-bold text-[#1d1d1f] mb-3">미래 시스템 사고력</h3>
-                <p className="text-[#86868b] text-[15px] leading-relaxed">
-                  EDUSPACE와 RE-EARTH 커리큘럼을 통해 복잡한 문제를 구조적으로 꿰뚫어보는 <strong className="text-indigo-600">시스템 사고(Systems Thinking)</strong>를 흡수합니다.
+                <p className="text-[#86868b] text-[15px] leading-relaxed break-keep">
+                  EDUSPACE와 RE-EARTH 커리큘럼을 통해 복잡한 문제를 구조적으로 꿰뚫어보는 <strong className="text-indigo-600">시스템 사고(Systems Thinking)</strong>와 미래 솔루션에 집중하는 <strong className="text-indigo-600">우주적 사고(Cosmic Thinking)</strong>를 흡수합니다.
                 </p>
               </div>
 
