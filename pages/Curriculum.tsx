@@ -80,7 +80,7 @@ const Curriculum: React.FC = () => {
             </a>
 
             {/* RE-EARTH Banner */}
-            <a href="#" className="relative w-full h-[110px] rounded-[24px] bg-gradient-to-r from-[#0d2a17] via-[#0d5930] to-[#0b9165] flex items-center justify-between px-6 shadow-lg shadow-emerald-900/10 hover:shadow-2xl hover:shadow-emerald-500/20 hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 overflow-hidden cursor-pointer group border border-white/10 mt-1">
+            <a href="/re-earth-flipbook/Revival_Earth_Flipbook/index.html" target="_blank" rel="noopener noreferrer" className="relative w-full h-[110px] rounded-[24px] bg-gradient-to-r from-[#0d2a17] via-[#0d5930] to-[#0b9165] flex items-center justify-between px-6 shadow-lg shadow-emerald-900/10 hover:shadow-2xl hover:shadow-emerald-500/20 hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 overflow-hidden cursor-pointer group border border-white/10 mt-1">
               {/* Background Particles Pattern */}
               <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-5 left-[15%] w-1 h-1 rounded-full bg-emerald-200 opacity-20 blur-[1px]"></div>
