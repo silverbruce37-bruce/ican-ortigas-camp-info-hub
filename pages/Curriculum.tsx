@@ -169,8 +169,8 @@ const Curriculum: React.FC = () => {
                     <span className="text-2xl filter drop-shadow-sm">👑</span>
                   </div>
                   <h3 className="text-xl font-bold text-[#1d1d1f] mb-3">융합형 리더십 완성</h3>
-                  <p className="text-[#86868b] text-[15px] leading-relaxed">
-                    언어 능력과 우주적 시야가 결합될 때 발생하는 엄청난 시너지. 아이들은 <strong className="text-emerald-700">미래 사회를 설계하는 통찰력 있는 청지기</strong>로 자라납니다.
+                  <p className="text-[#86868b] text-[15px] leading-relaxed break-keep">
+                    언어 능력과 우주적 시야가 결합될 때 발생하는 엄청난 시너지. 여기에 극강의 회복탄력성(Resilience)인 <strong className="text-emerald-700">슈퍼키즈 마인드셋</strong>을 집중 훈련하여, 어떠한 어려운 도전도 끝까지 수행하고 결과를 내는 <strong className="text-emerald-700">미래 사회의 통찰력 있는 청지기</strong>로 자라납니다.
                   </p>
                 </div>
               </div>
