@@ -42,6 +42,7 @@ import hProperInteriorImg from './h_proper_interior.png';
 import nanoBananaJjangkaeImg from './nano_banana_jjangkae.png';
 import nanoBananaKingkongImg from './nano_banana_kingkong.png';
 import nanoBananaSachunsungImg from './nano_banana_sachunsung.png';
+import paulSamAiNativeImg from './paulsam_ainative.png';
 
 // --- Icons Map (To share across languages) ---
 export const ICONS = {
@@ -183,6 +184,53 @@ export const CARROT_ITEMS: CarrotItem[] = [
 
 // --- Blog Data (Olti Stay) ---
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: 'blog-28',
+    title: "👨‍🏫 [상담일지] 폴샘(Paul AI)과 함께하는 'AI Native' 교육 혁명",
+    excerpt: "아이캔 아카데미에 부는 변화의 바람! 똑똑한 AI 에이전트 '폴샘'이 어떻게 선생님들의 준비 작업을 혁신하고, 아이들을 향한 온전한 사랑과 열정을 되찾아주었는지 소개합니다.",
+    date: "2026-04-07",
+    category: "Insight",
+    image: paulSamAiNativeImg,
+    author: "원장 Bruce",
+    tags: ["AINative", "PaulSam", "AI_Agent", "Education", "Future"],
+    content: `
+      <div class="space-y-6 text-gray-800 leading-relaxed">
+        <p>안녕하세요! 아이캔 아카데미의 <strong>원장 Bruce</strong>입니다. 👋</p><br/>
+        <p>우리 아이캔 가족 여러분, 요즘 아카데미 교무실 풍경이 예전과 어떻게 달라졌는지 혹시 스치듯 보신 적 있으신가요? 늘 업무에 치여 바쁘던 선생님들의 얼굴에 요즘 들어 부쩍 여유와 웃음꽃이 활짝 피었답니다. 그 비결은 바로 스마트한 인공지능 파트너, <strong>'폴샘'</strong>의 전격 도입 덕분이죠!</p>
+        
+        <img src="${paulSamAiNativeImg}" class="w-full rounded-2xl my-6 shadow-sm" alt="폴샘 AI 네이티브 에피소드" />
+
+        <h3 class="text-xl font-bold mb-2">👨‍🏫 새 식구 '폴샘'을 소개합니다!</h3>
+        <p>위 그림을 한 번 보시겠어요? 깔끔한 맵시를 하고 홀로그램 궤도와 화면을 이리저리 넘기며 엄청난 속도로 데이터 분석 작업을 하고 있는 젊은 선생님! 이 분이 바로 우리 학원의 현장 지휘자이자 AI 조력자인 <strong>'폴샘(Paul)'</strong>입니다.</p>
+        <p>사도 바울의 지혜와 뜨거운 열정을 현대적으로 인물화한 인공지능 에이전트 폴샘은, 이제 우리 아이캔 시스템에서 빼놓을 수 없는 선생님들의 가장 든든한 파트너가 되었습니다.</p><br/>
+
+        <h3 class="text-xl font-bold mb-2">📝 굿바이, 끝없는 서류 작업!</h3>
+        <p>과거에는 우리 선생님들이 복잡한 성적 데이터 분석이나 맞춤형 학습지 제작, 출결 관리 같은 일명 <strong>'준비 작업(Administrative Paperwork)'</strong>을 직접 챙기느라 가끔씩 밤을 지새우기도 하셨어요. 그러다 보니 정작 다음 날 우리 아이들 앞에 설 땐 피로가 쌓여 온전한 에너지를 전해주지 못할 때도 있었죠.</p>
+        <p>하지만 상위 리더십의 과감한 결정으로 <strong>'AI Native (초기부터 AI가 사람과 깊숙이 결합된 시스템)'</strong> 환경을 구축한 지금은 완전히 다릅니다! 과연 구체적으로 무엇이 달라졌을까요?</p><br/>
+
+        <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 my-4">
+          <h4 class="font-bold text-blue-800 mb-2">💡 1. 든든한 실무자, '폴샘'의 데이터 분석</h4>
+          <p class="text-sm text-blue-900">
+            폴샘은 24시간 쉬지 않고 우리 학생들의 학습 데이터를 분석합니다. <em>"오늘 A군이 관계대명사 파트에서 오답률이 높으니, 내일은 이 3가지 방식의 복습 플랜 중 하나를 적용해 보세요."</em>라며 완벽하게 분석된 <strong>'통찰력 있는 솔루션 선택지(Options)'</strong>를 선생님 책상 위에 척척 대령한답니다.
+          </p>
+        </div>
+
+        <div class="bg-green-50 p-6 rounded-xl border border-green-100 my-4">
+          <h4 class="font-bold text-green-800 mb-2">🎯 2. 인간 명장의 빛나는 '직관'과 선택</h4>
+          <p class="text-sm text-green-900">
+            데이터를 모으는 힘든 작업은 폴샘이 했으니, 이제 선생님은 우아하게 선택만 하시면 됩니다! 오른쪽 선생님의 행복한 미소가 보이시나요? 훌륭한 선생님들은 폴샘이 가져온 스마트 옵션들을 훑어본 뒤, 훈련된 교육적 <strong>'직관'</strong>과 <strong>'인사이트'</strong>를 발휘해 오늘 아이의 심리 상태와 얼굴빛에 가장 딱 맞는 솔루션을 '1초' 만에 골라내십니다.
+          </p>
+        </div>
+
+        <h3 class="text-xl font-bold mt-10 mb-4">❤️ 결론: 아이들을 향한 온전한 사랑과 열정의 회복</h3>
+        <p>서류 작업에 빼앗기던 에너지를 100% 고스란히 돌려받은 우리 선생님들, 제일 먼저 무엇을 하실까요? 맞습니다. 바로 그림에 나오는 것처럼 우리 사랑스러운 아이들과 눈을 더 길게 맞추고, 크게 웃어주고, 안아주며 정서적으로 교감하는 <strong>'진짜 가르침'</strong>에 모든 힘을 쏟습니다.</p>
+
+        <div class="border-l-4 border-ican-500 pl-4 py-2 bg-gray-50 my-6">
+          <p class="text-gray-700 italic">"이것이 바로 선진 회사들과 우리 아이캔 아카데미가 추구하는 <strong>'AI 네이티브'의 핵심</strong>입니다. AI가 사람을 대체하는 것이 아니라, 똑똑한 <strong>폴샘</strong>이 궂은일을 대행해 주고, 우리 선생님들은 오직 아이들 영혼에 불을 지피는 <strong>'휴먼 터치(Human Touch)'</strong>에만 열정을 바치는 완벽한 협업! 부모님들, 이제 우리 아이들 곁엔 가장 따뜻한 선생님이 계시답니다."</p>
+        </div>
+      </div>
+    `
+  },
   {
     id: 'blog-23',
     title: "AI 통번역기 시대, 왜 구글은 여전히 '이중언어' 인재를 찾는가?",
@@ -1967,14 +2015,14 @@ export const KO_DATA = {
     { title: "Christian Higher-minds", description: "엄격한 수업 모니터링과 크리스천 품성 교육으로, AI 시대에도 기술에 휘둘리지 않고 올바른 가치관으로 리드하는 인성을 갖춥니다.", icon: ICONS.ShieldCheck }
   ],
   spaceProgram: {
-    badge: "New Special Program",
-    title: "닥터아이캔 SPACE CAMP",
-    subtitle: "우주 과학 영어 캠프",
-    description: "단순한 영어 학습을 넘어, 우주 과학을 주제로 한 창의 융합 수업입니다. 아이들의 호기심을 자극하고 과학적 사고력과 영어 표현력을 동시에 키웁니다.",
+    badge: "Project Hail Mary",
+    title: "헤일메리 프로젝트 (Project Hail Mary)",
+    subtitle: "과학·수학 & 융합 리더십 여름 캠프",
+    description: "헤일메리 커리큘럼을 통해 과학과 수학, 그리고 공동체 정신과 휴머니티를 배웁니다. 미래 예측 능력과 다가올 문제를 해결하는 의사결정 능력을 함께 고양해 나갑니다. 다양한 수업들이 연계되어 여름방학 기간에 진행됩니다.",
     modules: [
-      { title: "Rocket Science", desc: "로켓의 원리를 배우고 직접 모형을 제작하여 발사합니다.", icon: ICONS.Rocket },
-      { title: "Solar System", desc: "태양계 행성들의 특징을 탐구하고 영어로 프레젠테이션 합니다.", icon: ICONS.Telescope },
-      { title: "Astronaut Training", desc: "우주인의 생활과 훈련 과정을 체험하며 팀워크를 배웁니다.", icon: ICONS.Atom }
+      { title: "Science & Math", desc: "우주적 관점에서의 수학과 과학 원리를 탐구하고 응용합니다.", icon: ICONS.Rocket },
+      { title: "Community & Humanity", desc: "팀 프로젝트를 통해 공동체 정신과 인류애를 기릅니다.", icon: ICONS.Globe },
+      { title: "Decision Making", desc: "미래를 예측하고 위기 상황을 극복하는 의사결정 능력을 훈련합니다.", icon: ICONS.Brain }
     ]
   },
   curriculumPage: {
