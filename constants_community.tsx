@@ -11,6 +11,7 @@ export const COMMUNITY_DATA = {
             business: '비즈니스 파트너',
             market: '올티 마켓',
             story: '우리의 이야기',
+            herald: '아이캔 헤럴드',
             startup: 'AI 스타트업'
         },
         helpBoard: {
@@ -41,6 +42,7 @@ export const COMMUNITY_DATA = {
             business: 'Business Partners',
             market: 'Orti Market',
             story: 'Our Stories',
+            herald: 'iCAN Herald',
             startup: 'AI Startup'
         },
         helpBoard: {

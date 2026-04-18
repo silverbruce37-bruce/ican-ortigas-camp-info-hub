@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { useAuth } from '../context/AuthContext';
 import { COMMUNITY_DATA } from '../constants_community';
-import { Users, Store, Heart, MessageCircle, ArrowRight, BookOpen, Compass, Map, ExternalLink, Rocket, Database, Cpu, TrendingUp } from 'lucide-react';
+import { Users, Store, Heart, MessageCircle, ArrowRight, BookOpen, Compass, Map, ExternalLink, Rocket, Database, Cpu, TrendingUp, Newspaper, Globe } from 'lucide-react';
 import OrtiCarrot from './OrtiCarrot';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -902,14 +902,129 @@ const AiStartupIncubator = () => {
     );
 };
 
+const HeraldSection: React.FC<{ language: string }> = ({ language }) => {
+    const isKo = language === 'ko';
+    const heraldUrl = 'https://ican-heralds.vercel.app/';
+    const today = new Date().toLocaleDateString(isKo ? 'ko-KR' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+    return (
+        <div className="space-y-8 animate-fade-in">
+            {/* Hero */}
+            <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 flex flex-col md:flex-row relative">
+                <div className="md:w-1/2 relative overflow-hidden min-h-[320px] md:min-h-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700">
+                    <div className="absolute inset-0 p-10 flex flex-col justify-end">
+                        <div className="relative z-10 text-white">
+                            <div className="flex gap-2 mb-4">
+                                <span className="bg-amber-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-full shadow-sm">DAILY</span>
+                                <span className="bg-white/20 backdrop-blur-md text-xs font-bold px-3 py-1 rounded-full text-white">
+                                    {isKo ? '매일 오전 8시 (PHT)' : 'Daily 8AM PHT'}
+                                </span>
+                            </div>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-3 leading-tight tracking-tight" style={{ fontFamily: 'Rajdhani, sans-serif', fontWeight: 300 }}>
+                                iCAN <span className="bg-gradient-to-r from-amber-300 to-amber-500 bg-clip-text text-transparent">Herald</span>
+                            </h2>
+                            <p className="text-slate-200 leading-relaxed font-medium">
+                                {isKo
+                                    ? '"필리핀에 사는 한인 교민을 위한 매일 아침의 이중언어 신문 — 한-필 관계부터 생활 정보까지, TOP 20 뉴스를 영·한으로."'
+                                    : '"Your daily bilingual briefing for Koreans in the Philippines — 20 curated stories in English and Korean, every morning."'}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="md:w-1/2 p-10 flex flex-col justify-center bg-gray-50">
+                    <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                        <Newspaper className="text-amber-600" size={24} />
+                        {isKo ? '아이캔 데일리 써머리 헤럴드' : 'iCAN Daily Summary Herald'}
+                    </h3>
+
+                    <p className="text-gray-600 leading-relaxed mb-6">
+                        {isKo ? (
+                            <>
+                                필리핀 주요 언론(Philstar, Inquirer, Manila Bulletin 등)을 매일 새벽 크롤링해서 한-필 관계·교민 필수·교육·생활까지 <strong>TOP 20 뉴스</strong>로 추려냅니다.
+                                <br /><br />
+                                각 기사에는 <strong>배경지식 레이어(L1~L4)</strong>가 붙어 있어 영어 학습 교재로도 활용할 수 있고, 폴샘과의 Q&A 채팅으로 더 깊이 파고들 수 있습니다.
+                                <br /><br />
+                                <span className="inline-block bg-amber-100/70 text-amber-800 px-4 py-3 rounded-xl font-bold shadow-sm">
+                                    📰 오늘의 발행: {today}
+                                </span>
+                            </>
+                        ) : (
+                            <>
+                                Every dawn, we crawl major Philippine outlets (Philstar, Inquirer, Manila Bulletin) and curate <strong>TOP 20 stories</strong> across Korea-PH relations, expat essentials, education, and daily life.
+                                <br /><br />
+                                Each article ships with <strong>Background Layers (L1–L4)</strong> so it doubles as an English-learning resource, with an in-page Q&A chat for deeper exploration.
+                                <br /><br />
+                                <span className="inline-block bg-amber-100/70 text-amber-800 px-4 py-3 rounded-xl font-bold shadow-sm">
+                                    📰 Today: {today}
+                                </span>
+                            </>
+                        )}
+                    </p>
+
+                    <a
+                        href={heraldUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 group"
+                    >
+                        {isKo ? '오늘자 헤럴드 읽기' : 'Read Today\'s Herald'}
+                        <ExternalLink size={18} className="group-hover:translate-x-1 transition-transform" />
+                    </a>
+                </div>
+            </div>
+
+            {/* Feature cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
+                        <Globe size={24} strokeWidth={2.5} />
+                    </div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">{isKo ? '한-필 관계 최우선' : 'Korea-PH First'}</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                        {isKo
+                            ? '1~5위는 한-필 정치·경제·문화 이슈. 교민으로서 꼭 알아야 할 뉴스를 상단에 배치합니다.'
+                            : 'The top 5 slots are reserved for Korea-Philippines politics, economy, and culture — must-know news for Korean residents.'}
+                    </p>
+                </div>
+
+                <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                        <BookOpen size={24} strokeWidth={2.5} />
+                    </div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">{isKo ? '이중언어 + 학습 교재' : 'Bilingual Learning'}</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                        {isKo
+                            ? '모든 기사가 영·한 병기. 배경지식 레이어(L1~L4)와 단어장·Q&A로 iCAN 영어 교재 역할까지 합니다.'
+                            : 'Every story in both English and Korean. Background layers (L1-L4), vocabulary, and Q&A chat turn news into iCAN learning material.'}
+                    </p>
+                </div>
+
+                <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6">
+                        <Compass size={24} strokeWidth={2.5} />
+                    </div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">{isKo ? '생활 정보까지' : 'Life in PH'}</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                        {isKo
+                            ? '환율·날씨·치안부터 Food & Travel, 이벤트까지. 교민 생활에 바로 쓰이는 정보를 매일 업데이트합니다.'
+                            : 'From FX rates and weather to Food & Travel and events — practical info for expat life, refreshed daily.'}
+                    </p>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 const Community: React.FC = () => {
     const { language } = useLanguage();
     // Default to 'story' to show the new content
-    const [activeTab, setActiveTab] = useState<'market' | 'help' | 'business' | 'story' | 'startup'>('story');
+    const [activeTab, setActiveTab] = useState<'market' | 'help' | 'business' | 'story' | 'startup' | 'herald'>('story');
     const t = language === 'ko' ? COMMUNITY_DATA.ko : COMMUNITY_DATA.en;
 
     const tabs = [
         { id: 'story', label: t.tabs.story, icon: MessageCircle },
+        { id: 'herald', label: (t.tabs as any).herald || '아이캔 헤럴드', icon: Newspaper },
         { id: 'startup', label: t.tabs.startup || 'AI 스타트업', icon: Rocket },
         { id: 'help', label: t.tabs.help, icon: Heart },
         { id: 'market', label: t.tabs.market, icon: Store },
@@ -958,6 +1073,7 @@ const Community: React.FC = () => {
                         {activeTab === 'help' && <HelpBoard />}
                         {activeTab === 'business' && <BusinessDirectory />}
                         {activeTab === 'story' && <TentmakerStories />}
+                        {activeTab === 'herald' && <HeraldSection language={language} />}
                         {activeTab === 'startup' && <AiStartupIncubator />}
                     </motion.div>
                 </AnimatePresence>
