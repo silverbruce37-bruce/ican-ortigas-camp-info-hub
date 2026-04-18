@@ -902,10 +902,41 @@ const AiStartupIncubator = () => {
     );
 };
 
+interface HeraldArchiveEntry {
+    date: string;
+    vol: number;
+    cover_en: string;
+    cover_kr: string;
+    tags?: string[];
+}
+
+const heraldCoverImage = (entry: HeraldArchiveEntry) => {
+    const prompt = encodeURIComponent(`bold editorial vector illustration, flat graphic poster: ${entry.cover_en}`.slice(0, 250));
+    const seedNum = parseInt(entry.date.replace(/-/g, ''), 10) % 100000;
+    return `https://image.pollinations.ai/prompt/${prompt}?width=600&height=400&seed=${seedNum}&model=turbo&nologo=true`;
+};
+
 const HeraldSection: React.FC<{ language: string }> = ({ language }) => {
     const isKo = language === 'ko';
     const heraldUrl = 'https://ican-heralds.vercel.app/';
     const today = new Date().toLocaleDateString(isKo ? 'ko-KR' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+    const [archive, setArchive] = React.useState<HeraldArchiveEntry[] | null>(null);
+    const [archiveError, setArchiveError] = React.useState<boolean>(false);
+
+    React.useEffect(() => {
+        const url = 'https://raw.githubusercontent.com/silverbruce37-bruce/ICAN-Heralds/main/data/archive-index.json';
+        fetch(url)
+            .then(r => {
+                if (!r.ok) throw new Error(`HTTP ${r.status}`);
+                return r.json();
+            })
+            .then((data: HeraldArchiveEntry[]) => {
+                const sorted = [...data].sort((a, b) => b.date.localeCompare(a.date));
+                setArchive(sorted.slice(0, 7));
+            })
+            .catch(() => setArchiveError(true));
+    }, []);
 
     return (
         <div className="space-y-8 animate-fade-in">
@@ -1011,6 +1042,98 @@ const HeraldSection: React.FC<{ language: string }> = ({ language }) => {
                             : 'From FX rates and weather to Food & Travel and events — practical info for expat life, refreshed daily.'}
                     </p>
                 </div>
+            </div>
+
+            {/* Recent 7 days — auto-fetched from Herald archive */}
+            <div className="bg-white rounded-3xl p-8 md:p-10 border border-gray-100 shadow-sm">
+                <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
+                    <div>
+                        <h3 className="text-2xl font-bold text-gray-900 mb-1">
+                            {isKo ? '최근 1주일 커버 스토리' : 'This Week on the Herald'}
+                        </h3>
+                        <p className="text-sm text-gray-500">
+                            {isKo ? '매일 아침 자동 업데이트됩니다.' : 'Auto-refreshed every morning.'}
+                        </p>
+                    </div>
+                    <a
+                        href={heraldUrl + 'archive.html'}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-semibold text-slate-700 hover:text-slate-900 flex items-center gap-1 group"
+                    >
+                        {isKo ? '아카이브 전체' : 'Full archive'}
+                        <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                    </a>
+                </div>
+
+                {archive === null && !archiveError && (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                        {[...Array(6)].map((_, i) => (
+                            <div key={i} className="animate-pulse bg-gray-100 rounded-2xl h-56" />
+                        ))}
+                    </div>
+                )}
+
+                {archiveError && (
+                    <div className="text-center py-10 text-gray-500">
+                        {isKo
+                            ? '최근 발행본을 불러오지 못했어요. 잠시 후 다시 시도해주세요.'
+                            : 'Could not load recent issues. Please try again shortly.'}
+                    </div>
+                )}
+
+                {archive && archive.length > 0 && (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                        {archive.map((entry) => {
+                            const dateObj = new Date(entry.date + 'T00:00:00');
+                            const dateLabel = dateObj.toLocaleDateString(isKo ? 'ko-KR' : 'en-US', {
+                                month: 'short', day: 'numeric', weekday: 'short'
+                            });
+                            const title = isKo ? entry.cover_kr : entry.cover_en;
+                            return (
+                                <a
+                                    key={entry.date}
+                                    href={heraldUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all"
+                                >
+                                    <div className="relative overflow-hidden" style={{ aspectRatio: '3 / 2' }}>
+                                        <img
+                                            src={heraldCoverImage(entry)}
+                                            alt={title}
+                                            loading="lazy"
+                                            className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                            onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+                                        />
+                                        <div className="absolute top-3 left-3 flex gap-2">
+                                            <span className="bg-slate-900/85 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-md tracking-wider">
+                                                VOL. {String(entry.vol).padStart(2, '0')}
+                                            </span>
+                                            <span className="bg-white/90 text-slate-800 text-[10px] font-bold px-2.5 py-1 rounded-md">
+                                                {dateLabel}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className="p-5">
+                                        <h4 className="font-bold text-gray-900 text-base leading-snug line-clamp-2 mb-2 group-hover:text-slate-700 transition-colors">
+                                            {title}
+                                        </h4>
+                                        {entry.tags && entry.tags.length > 0 && (
+                                            <div className="flex flex-wrap gap-1.5">
+                                                {entry.tags.slice(0, 3).map((tag) => (
+                                                    <span key={tag} className="text-[10px] font-semibold text-slate-500 bg-slate-50 px-2 py-0.5 rounded">
+                                                        {tag}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                </a>
+                            );
+                        })}
+                    </div>
+                )}
             </div>
         </div>
     );
