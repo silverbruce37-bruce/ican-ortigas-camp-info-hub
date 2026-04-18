@@ -910,6 +910,342 @@ interface HeraldArchiveEntry {
     tags?: string[];
 }
 
+interface HeraldDaily {
+    edition_date?: string;
+    header_date_line?: string;
+    dashboard?: {
+        date?: string;
+        embassy_en?: string; embassy_kr?: string;
+        php_krw_rate?: string;
+        weather_en?: string; weather_kr?: string;
+    };
+    cover_story?: {
+        headline_en?: string; headline_kr?: string;
+        body_en?: string[]; body_kr?: string[];
+        image_query?: string; image_seed?: string;
+        tags?: string[]; author?: string;
+    };
+    featured_news?: {
+        headline_en?: string; headline_kr?: string;
+        lead_en?: string; lead_kr?: string;
+        tag?: string; tag_class?: string;
+        image_query?: string; image_seed?: string;
+        read_time_min?: number; desk?: string;
+    };
+    news_grid?: Array<{
+        headline_en?: string; headline_kr?: string;
+        summary_en?: string; summary_kr?: string;
+        tag?: string; image_query?: string; image_seed?: string;
+        read_time_min?: number;
+    }>;
+    word_of_day?: {
+        word_en?: string; word_kr?: string;
+        definition_en?: string; definition_kr?: string;
+        example_en?: string; example_kr?: string;
+    };
+}
+
+const briefingImageUrl = (prompt: string | undefined, seedStr: string | undefined, w: number, h: number) => {
+    if (!prompt) return '';
+    const styled = `bold editorial vector illustration, flat graphic poster: ${prompt}`.slice(0, 250);
+    const encoded = encodeURIComponent(styled);
+    let seed = 0;
+    const src = seedStr || prompt;
+    for (let i = 0; i < src.length; i++) seed = (seed * 31 + src.charCodeAt(i)) % 100000;
+    return `https://image.pollinations.ai/prompt/${encoded}?width=${w}&height=${h}&seed=${seed}&model=turbo&nologo=true`;
+};
+
+const fetchDailyJson = async (date: string): Promise<HeraldDaily> => {
+    const url = `https://raw.githubusercontent.com/silverbruce37-bruce/ICAN-Heralds/main/data/daily-${date}.json`;
+    const r = await fetch(url);
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return r.json();
+};
+
+const BriefingSection: React.FC<{ language: string }> = ({ language }) => {
+    const isKo = language === 'ko';
+    const heraldUrl = 'https://ican-heralds.vercel.app/';
+    const [data, setData] = React.useState<HeraldDaily | null>(null);
+    const [editionDate, setEditionDate] = React.useState<string>('');
+    const [error, setError] = React.useState<boolean>(false);
+
+    React.useEffect(() => {
+        // Manila time date → fallback to yesterday if today's not published yet.
+        const mkDate = (offsetDays: number) => {
+            const d = new Date();
+            d.setUTCDate(d.getUTCDate() + offsetDays);
+            // Philippines is UTC+8; get YYYY-MM-DD in PHT
+            const pht = new Date(d.getTime() + 8 * 3600 * 1000);
+            return pht.toISOString().slice(0, 10);
+        };
+
+        (async () => {
+            for (const offset of [0, -1, -2]) {
+                const date = mkDate(offset);
+                try {
+                    const json = await fetchDailyJson(date);
+                    setData(json);
+                    setEditionDate(date);
+                    return;
+                } catch { /* try previous day */ }
+            }
+            setError(true);
+        })();
+    }, []);
+
+    // ── Loading state ─────────────────────────────────────
+    if (!data && !error) {
+        return (
+            <div className="space-y-6 animate-fade-in">
+                <div className="animate-pulse bg-gray-100 rounded-3xl h-32" />
+                <div className="animate-pulse bg-gray-100 rounded-3xl h-96" />
+                <div className="grid md:grid-cols-2 gap-4">
+                    {[...Array(4)].map((_, i) => <div key={i} className="animate-pulse bg-gray-100 rounded-2xl h-40" />)}
+                </div>
+            </div>
+        );
+    }
+
+    if (error || !data) {
+        return (
+            <div className="text-center py-20 text-gray-500 bg-white rounded-3xl border border-gray-100">
+                {isKo ? '오늘의 브리핑을 불러오지 못했어요. 잠시 후 다시 시도해주세요.' : 'Could not load today\'s briefing. Please try again shortly.'}
+            </div>
+        );
+    }
+
+    const { dashboard, cover_story, featured_news, news_grid, word_of_day } = data;
+    const dateObj = new Date((editionDate || new Date().toISOString().slice(0, 10)) + 'T00:00:00');
+    const dateLongKo = dateObj.toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
+    const dateLongEn = dateObj.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' }).toUpperCase();
+
+    return (
+        <div className="space-y-6 animate-fade-in">
+            {/* ═══ Masthead ═══ */}
+            <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 rounded-3xl overflow-hidden shadow-xl relative">
+                <div className="absolute inset-0 opacity-5" style={{
+                    backgroundImage: 'radial-gradient(circle at 20% 30%, white 1px, transparent 1px), radial-gradient(circle at 80% 70%, white 1px, transparent 1px)',
+                    backgroundSize: '40px 40px'
+                }} />
+                <div className="relative z-10 px-8 py-10 md:px-12 md:py-12">
+                    <div className="flex items-center gap-2 mb-4 flex-wrap">
+                        <span className="bg-amber-500 text-slate-900 text-[10px] font-black px-3 py-1 rounded-full tracking-[0.2em]">
+                            DAILY • 데일리
+                        </span>
+                        <span className="text-amber-300/90 text-[10px] font-bold tracking-[0.3em] uppercase">
+                            Korea · Philippines Briefing
+                        </span>
+                    </div>
+                    <h2 className="text-white text-4xl md:text-6xl font-bold mb-2 tracking-tight leading-none" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                        {isKo ? '한·필 데일리' : 'Korea-PH'}
+                        <span className="bg-gradient-to-r from-amber-300 to-amber-500 bg-clip-text text-transparent"> {isKo ? '브리핑' : 'Daily'}</span>
+                    </h2>
+                    <p className="text-slate-300 text-sm md:text-base font-medium mb-6 max-w-xl leading-relaxed">
+                        {isKo
+                            ? '매일 아침 필리핀 주요 언론을 스캔해 한인 교민에게 가장 중요한 뉴스를 영·한으로 전합니다.'
+                            : 'Every dawn, we scan major Philippine outlets and deliver what matters most to Koreans — in both English and Korean.'}
+                    </p>
+                    <div className="text-[11px] tracking-[0.25em] text-slate-400 font-bold mb-6 border-t border-slate-700 pt-4">
+                        {dateLongEn} · {dateLongKo}
+                    </div>
+
+                    {/* Dashboard strip */}
+                    {dashboard && (
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                            <div className="bg-slate-800/70 backdrop-blur rounded-xl px-4 py-3 border border-slate-700">
+                                <div className="text-[9px] text-slate-400 font-bold tracking-widest mb-1">FX · 환율</div>
+                                <div className="text-white font-bold text-lg">{dashboard.php_krw_rate || '—'}</div>
+                                <div className="text-slate-400 text-[10px]">100 KRW / PHP</div>
+                            </div>
+                            <div className="bg-slate-800/70 backdrop-blur rounded-xl px-4 py-3 border border-slate-700">
+                                <div className="text-[9px] text-slate-400 font-bold tracking-widest mb-1">WEATHER · 날씨</div>
+                                <div className="text-white font-bold text-lg">{dashboard.weather_en || '—'}</div>
+                                <div className="text-slate-400 text-[10px]">{dashboard.weather_kr || ''}</div>
+                            </div>
+                            <div className="bg-slate-800/70 backdrop-blur rounded-xl px-4 py-3 border border-slate-700 col-span-2 md:col-span-1">
+                                <div className="text-[9px] text-slate-400 font-bold tracking-widest mb-1">EMBASSY · 영사관</div>
+                                <div className="text-white font-bold text-lg">{dashboard.embassy_en || '—'}</div>
+                                <div className="text-slate-400 text-[10px]">{dashboard.embassy_kr || ''}</div>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            </div>
+
+            {/* ═══ Cover Story ═══ */}
+            {cover_story && (
+                <article className="bg-white rounded-3xl overflow-hidden shadow-md border border-gray-100">
+                    {cover_story.image_query && (
+                        <div className="relative overflow-hidden" style={{ aspectRatio: '3 / 2' }}>
+                            <img
+                                src={briefingImageUrl(cover_story.image_query, cover_story.image_seed, 1200, 800)}
+                                alt={cover_story.headline_en || 'Cover'}
+                                loading="lazy"
+                                className="absolute inset-0 w-full h-full object-cover object-center"
+                            />
+                            <div className="absolute top-4 left-4 flex gap-2 flex-wrap">
+                                <span className="bg-red-600 text-white text-[10px] font-black tracking-[0.2em] px-3 py-1 rounded-full">
+                                    COVER · 1면 톱
+                                </span>
+                                {cover_story.tags?.slice(0, 2).map(t => (
+                                    <span key={t} className="bg-white/95 text-slate-800 text-[10px] font-bold px-2.5 py-1 rounded-full">
+                                        {t}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                    <div className="p-8 md:p-10">
+                        <div className="mb-5">
+                            <h3 className="text-2xl md:text-4xl font-bold text-gray-900 leading-tight mb-3" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                                {cover_story.headline_en}
+                            </h3>
+                            <h4 className="text-xl md:text-2xl font-bold text-slate-700 leading-snug">
+                                {cover_story.headline_kr}
+                            </h4>
+                        </div>
+                        {(cover_story.body_en?.[0] || cover_story.body_kr?.[0]) && (
+                            <div className="grid md:grid-cols-2 gap-6 border-t border-gray-100 pt-6">
+                                <div>
+                                    <div className="text-[10px] font-black tracking-[0.25em] text-slate-400 mb-2">ENGLISH</div>
+                                    <p className="text-gray-700 text-sm leading-relaxed">{cover_story.body_en?.[0]}</p>
+                                </div>
+                                <div>
+                                    <div className="text-[10px] font-black tracking-[0.25em] text-slate-400 mb-2">한국어</div>
+                                    <p className="text-gray-700 text-sm leading-relaxed">{cover_story.body_kr?.[0]}</p>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </article>
+            )}
+
+            {/* ═══ Featured News ═══ */}
+            {featured_news && (
+                <article className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100 border-l-4 border-l-amber-500">
+                    <div className="flex items-center gap-3 mb-4 flex-wrap">
+                        <span className="bg-amber-500 text-white text-[10px] font-black tracking-[0.2em] px-3 py-1 rounded-full">
+                            FEATURED · 피처드
+                        </span>
+                        {featured_news.desk && (
+                            <span className="text-[10px] font-bold text-slate-500 tracking-widest uppercase">
+                                {featured_news.desk}
+                            </span>
+                        )}
+                        {featured_news.tag && (
+                            <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-full">
+                                {featured_news.tag}
+                            </span>
+                        )}
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-2" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                        {featured_news.headline_en}
+                    </h3>
+                    <h4 className="text-lg md:text-xl font-bold text-slate-700 leading-snug mb-5">
+                        {featured_news.headline_kr}
+                    </h4>
+                    <div className="grid md:grid-cols-2 gap-5 border-t border-gray-100 pt-5">
+                        <p className="text-gray-600 text-sm leading-relaxed">{featured_news.lead_en}</p>
+                        <p className="text-gray-600 text-sm leading-relaxed">{featured_news.lead_kr}</p>
+                    </div>
+                </article>
+            )}
+
+            {/* ═══ News Grid ═══ */}
+            {news_grid && news_grid.length > 0 && (
+                <div>
+                    <div className="flex items-center gap-3 mb-4 px-2">
+                        <div className="h-px bg-gray-300 flex-1" />
+                        <span className="text-[11px] font-black tracking-[0.3em] text-slate-500">
+                            {isKo ? '주요 기사 · MORE STORIES' : 'MORE STORIES · 주요 기사'}
+                        </span>
+                        <div className="h-px bg-gray-300 flex-1" />
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {news_grid.map((n, i) => (
+                            <article key={i} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                                <div className="flex items-start gap-4 mb-3">
+                                    <div className="w-10 h-10 flex-shrink-0 bg-slate-900 text-amber-300 font-black text-lg rounded-xl flex items-center justify-center" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                                        {String(i + 1).padStart(2, '0')}
+                                    </div>
+                                    <div className="flex-1 min-w-0">
+                                        {n.tag && (
+                                            <span className="inline-block text-[9px] font-bold text-slate-500 tracking-widest uppercase mb-1">
+                                                {n.tag}
+                                            </span>
+                                        )}
+                                        <h4 className="font-bold text-gray-900 text-base leading-snug" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                                            {n.headline_en}
+                                        </h4>
+                                        <h5 className="font-bold text-slate-700 text-sm leading-snug mt-1">
+                                            {n.headline_kr}
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3 border-t border-gray-100">
+                                    <p className="text-gray-600 text-xs leading-relaxed line-clamp-4">{n.summary_en}</p>
+                                    <p className="text-gray-600 text-xs leading-relaxed line-clamp-4">{n.summary_kr}</p>
+                                </div>
+                            </article>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            {/* ═══ Word of the Day ═══ */}
+            {word_of_day?.word_en && (
+                <div className="bg-gradient-to-br from-amber-50 via-amber-100/70 to-white rounded-3xl p-8 border border-amber-200/60">
+                    <div className="text-[10px] font-black tracking-[0.3em] text-amber-700 mb-3">
+                        WORD OF THE DAY · 오늘의 단어
+                    </div>
+                    <div className="flex items-baseline gap-3 flex-wrap mb-2">
+                        <span className="text-3xl md:text-4xl font-bold text-slate-900" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                            {word_of_day.word_en}
+                        </span>
+                        <span className="text-xl md:text-2xl font-bold text-amber-700">
+                            {word_of_day.word_kr}
+                        </span>
+                    </div>
+                    {word_of_day.definition_en && (
+                        <p className="text-gray-700 text-sm leading-relaxed mb-1">{word_of_day.definition_en}</p>
+                    )}
+                    {word_of_day.definition_kr && (
+                        <p className="text-gray-600 text-sm leading-relaxed">{word_of_day.definition_kr}</p>
+                    )}
+                </div>
+            )}
+
+            {/* ═══ Footer CTA ═══ */}
+            <div className="bg-slate-900 rounded-3xl p-8 md:p-10 text-center relative overflow-hidden">
+                <div className="relative z-10">
+                    <p className="text-amber-300 text-[11px] font-black tracking-[0.3em] mb-3">
+                        KEEP READING · 계속 읽기
+                    </p>
+                    <h3 className="text-white text-2xl md:text-3xl font-bold mb-3 leading-tight" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                        {isKo
+                            ? '오늘의 모든 기사는 아이캔 헤럴드에서'
+                            : 'The full edition awaits on iCAN Herald'}
+                    </h3>
+                    <p className="text-slate-300 text-sm mb-6 max-w-xl mx-auto">
+                        {isKo
+                            ? 'Food & Travel, 이벤트, 배경지식 레이어까지 — 브리핑은 시작일 뿐입니다.'
+                            : 'Food & Travel, events, background-knowledge layers — briefings are just the beginning.'}
+                    </p>
+                    <a
+                        href={heraldUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 font-black tracking-wider px-8 py-4 rounded-full transition-all shadow-lg hover:shadow-xl group"
+                    >
+                        {isKo ? '아이캔 헤럴드 읽기' : 'Read iCAN Herald'}
+                        <ExternalLink size={18} className="group-hover:translate-x-1 transition-transform" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 const heraldCoverImage = (entry: HeraldArchiveEntry) => {
     const prompt = encodeURIComponent(`bold editorial vector illustration, flat graphic poster: ${entry.cover_en}`.slice(0, 250));
     const seedNum = parseInt(entry.date.replace(/-/g, ''), 10) % 100000;
@@ -1142,11 +1478,12 @@ const HeraldSection: React.FC<{ language: string }> = ({ language }) => {
 const Community: React.FC = () => {
     const { language } = useLanguage();
     // Default to 'story' to show the new content
-    const [activeTab, setActiveTab] = useState<'market' | 'help' | 'business' | 'story' | 'startup' | 'herald'>('story');
+    const [activeTab, setActiveTab] = useState<'market' | 'help' | 'business' | 'story' | 'startup' | 'herald' | 'briefing'>('story');
     const t = language === 'ko' ? COMMUNITY_DATA.ko : COMMUNITY_DATA.en;
 
     const tabs = [
         { id: 'story', label: t.tabs.story, icon: MessageCircle },
+        { id: 'briefing', label: (t.tabs as any).briefing || '한필 데일리 브리핑', icon: Globe },
         { id: 'herald', label: (t.tabs as any).herald || '아이캔 헤럴드', icon: Newspaper },
         { id: 'startup', label: t.tabs.startup || 'AI 스타트업', icon: Rocket },
         { id: 'help', label: t.tabs.help, icon: Heart },
@@ -1196,6 +1533,7 @@ const Community: React.FC = () => {
                         {activeTab === 'help' && <HelpBoard />}
                         {activeTab === 'business' && <BusinessDirectory />}
                         {activeTab === 'story' && <TentmakerStories />}
+                        {activeTab === 'briefing' && <BriefingSection language={language} />}
                         {activeTab === 'herald' && <HeraldSection language={language} />}
                         {activeTab === 'startup' && <AiStartupIncubator />}
                     </motion.div>
