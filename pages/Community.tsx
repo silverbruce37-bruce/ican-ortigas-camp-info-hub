@@ -931,7 +931,15 @@ const renderInline = (line: string, key: number) => {
     );
 };
 
-const renderBriefingBody = (body: string) => {
+const briefingThumbUrl = (date: string, itemNum: string, title: string): string => {
+    const clean = title.replace(/\*\*/g, '').split('—')[0].split('(')[0].trim().slice(0, 140);
+    const prompt = encodeURIComponent(`bold editorial vector illustration, flat graphic icon, minimal: ${clean}`.slice(0, 250));
+    const dayNum = parseInt(date.replace(/-/g, ''), 10) || 0;
+    const seed = (dayNum * 100 + (parseInt(itemNum, 10) || 0)) % 1000000;
+    return `https://image.pollinations.ai/prompt/${prompt}?width=160&height=160&seed=${seed}&model=turbo&nologo=true`;
+};
+
+const renderBriefingBody = (body: string, date: string) => {
     const lines = body.split('\n');
     return lines.map((raw, i) => {
         const trimmed = raw.trim();
@@ -968,12 +976,20 @@ const renderBriefingBody = (body: string) => {
         // Numbered item
         const num = trimmed.match(/^(\d+)\.\s+(.*)$/);
         if (num) {
+            const thumb = briefingThumbUrl(date, num[1], num[2]);
             return (
-                <div key={i} className="flex items-start gap-3 mb-2 group">
-                    <span className="flex-shrink-0 font-black text-amber-600 text-sm min-w-[1.75rem] text-right pt-0.5" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                <div key={i} className="flex items-start gap-3 mb-3 group">
+                    <span className="flex-shrink-0 font-black text-amber-600 text-sm min-w-[1.5rem] text-right pt-0.5" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
                         {num[1]}
                     </span>
-                    <div className="text-gray-800 leading-relaxed text-[15px] flex-1">
+                    <img
+                        src={thumb}
+                        alt=""
+                        loading="lazy"
+                        className="flex-shrink-0 w-14 h-14 md:w-16 md:h-16 rounded-lg object-cover bg-slate-100 border border-slate-200"
+                        onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+                    />
+                    <div className="text-gray-800 leading-relaxed text-[15px] flex-1 pt-0.5">
                         {renderInline(num[2], i)}
                     </div>
                 </div>
@@ -1143,7 +1159,7 @@ const BriefingSection: React.FC<{ language: string }> = ({ language }) => {
 
                 {content && (
                     <div className="briefing-body">
-                        {renderBriefingBody(content)}
+                        {renderBriefingBody(content, selectedDate)}
                     </div>
                 )}
             </article>
