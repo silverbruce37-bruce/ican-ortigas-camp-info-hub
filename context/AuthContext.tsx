@@ -144,7 +144,13 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
   // Legacy Admin Login (keeps working for 'admin' fallback if needed, but creates a session)
   const loginAdmin = async (id: string, password: string): Promise<boolean> => {
-    const storedPwd = localStorage.getItem(ADMIN_PWD_KEY) || '1441';
+    const storedPwd = localStorage.getItem(ADMIN_PWD_KEY)
+      || import.meta.env.VITE_ADMIN_INITIAL_PWD;
+
+    if (!storedPwd) {
+      console.error('Admin password not provisioned. Set VITE_ADMIN_INITIAL_PWD or save to localStorage.');
+      return false;
+    }
 
     if (id === 'admin' && password === storedPwd) {
       // Create a mock admin user (Firebase User structure)
