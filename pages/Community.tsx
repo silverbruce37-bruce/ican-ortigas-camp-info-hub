@@ -960,7 +960,7 @@ const renderBriefingBody = (body: string, date: string) => {
         // Top-level title (starts with flag emoji)
         if (/^🇵🇭🇰🇷/.test(trimmed)) {
             return (
-                <h3 key={i} className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 leading-tight" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                <h3 key={i} className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 leading-tight">
                     {renderInline(trimmed.replace(/\*\*$/, ''), i)}
                 </h3>
             );
@@ -979,7 +979,7 @@ const renderBriefingBody = (body: string, date: string) => {
             const thumb = briefingThumbUrl(date, num[1], num[2]);
             return (
                 <div key={i} className="flex items-start gap-3 mb-3 group">
-                    <span className="flex-shrink-0 font-black text-amber-600 text-sm min-w-[1.5rem] text-right pt-0.5" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                    <span className="flex-shrink-0 font-black text-amber-600 text-sm min-w-[1.5rem] text-right pt-0.5">
                         {num[1]}
                     </span>
                     <img
@@ -1075,7 +1075,7 @@ const BriefingSection: React.FC<{ language: string }> = ({ language }) => {
                             Korea · Philippines Briefing
                         </span>
                     </div>
-                    <h2 className="text-white text-4xl md:text-6xl font-bold mb-2 tracking-tight leading-none" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                    <h2 className="text-white text-4xl md:text-6xl font-bold mb-2 tracking-tight leading-none">
                         {isKo ? '한·필 데일리' : 'Korea-PH'}
                         <span className="bg-gradient-to-r from-amber-300 to-amber-500 bg-clip-text text-transparent"> {isKo ? '브리핑' : 'Briefing'}</span>
                     </h2>
@@ -1169,7 +1169,7 @@ const BriefingSection: React.FC<{ language: string }> = ({ language }) => {
                 <p className="text-amber-300 text-[11px] font-black tracking-[0.3em] mb-3">
                     FULL EDITION · 편집본
                 </p>
-                <h3 className="text-white text-2xl md:text-3xl font-bold mb-3 leading-tight" style={{ fontFamily: 'Playfair Display, Georgia, serif' }}>
+                <h3 className="text-white text-2xl md:text-3xl font-bold mb-3 leading-tight">
                     {isKo ? '헤럴드에서 기사 전문 · 이미지 · 학습 콘텐츠까지' : 'Full stories, visuals, and learning content on the Herald'}
                 </h3>
                 <p className="text-slate-300 text-sm mb-6 max-w-xl mx-auto">
