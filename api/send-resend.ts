@@ -27,14 +27,14 @@ export default async function handler(req: any, res: any) {
         return;
     }
 
-    // 환경변수 체크
-    const resendApiKey = process.env.VITE_RESEND_API_KEY;
+    // 환경변수 체크 (server-only: VITE_ prefix 금지 — client bundle 유출 방지)
+    const resendApiKey = process.env.RESEND_API_KEY;
 
     if (!resendApiKey) {
         console.error('Resend API Key is missing from environment variables.');
         res.status(500).json({
             success: false,
-            message: 'Server Configuration Error: VITE_RESEND_API_KEY is not set'
+            message: 'Server Configuration Error: RESEND_API_KEY is not set'
         });
         return;
     }

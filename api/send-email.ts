@@ -27,14 +27,14 @@ export default async function handler(req: any, res: any) {
         return;
     }
 
-    // 환경변수 체크
-    const user = process.env.VITE_EMAIL_USER || 'silverbruce37@gmail.com';
-    const pass = process.env.VITE_EMAIL_APP_PASSWORD;
+    // 환경변수 체크 (server-only: VITE_ prefix 금지 — client bundle 유출 방지)
+    const user = process.env.EMAIL_USER || 'silverbruce37@gmail.com';
+    const pass = process.env.EMAIL_APP_PASSWORD;
 
     if (!pass) {
         res.status(500).json({
             success: false,
-            message: 'Server Configuration Error: VITE_EMAIL_APP_PASSWORD is not set'
+            message: 'Server Configuration Error: EMAIL_APP_PASSWORD is not set'
         });
         return;
     }

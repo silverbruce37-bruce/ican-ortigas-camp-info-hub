@@ -25,14 +25,14 @@ export default async function handler(req: any, res: any) {
         return;
     }
 
-    // 환경변수 체크 (Vercel 설정에서 입력받을 웹훅 주소)
-    const webhookUrl = process.env.VITE_DISCORD_WEBHOOK_URL;
+    // 환경변수 체크 (server-only: VITE_ prefix 금지 — client bundle 유출 방지)
+    const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
 
     if (!webhookUrl) {
         console.error('Discord Webhook URL is missing from environment variables.');
         res.status(500).json({
             success: false,
-            message: 'Server Configuration Error: VITE_DISCORD_WEBHOOK_URL is not set'
+            message: 'Server Configuration Error: DISCORD_WEBHOOK_URL is not set'
         });
         return;
     }
