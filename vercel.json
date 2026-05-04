@@ -17,6 +17,11 @@
             "permanent": true
         },
         {
+            "source": "/band-editorial",
+            "destination": "/#/band-editorial",
+            "permanent": true
+        },
+        {
             "source": "/blog/:path*",
             "destination": "/#/blog/:path*",
             "permanent": true
