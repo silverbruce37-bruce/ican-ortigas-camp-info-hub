@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Rocket } from 'lucide-react';
+import { ArrowRight, Rocket, Newspaper, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import ConundrumCard from '../components/ConundrumCard';
@@ -103,6 +103,42 @@ const Home: React.FC = () => {
             className="absolute top-[8%] right-0 w-[41%] h-[38%] z-10 cursor-pointer"
             aria-label="Visit ICAN Academy"
           />
+        </motion.div>
+
+        {/* ── 밴드 에디토리얼 특별 박스 ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
+          className="mt-10 w-full max-w-4xl"
+        >
+          <Link
+            to="/band-editorial"
+            className="group relative flex items-center justify-between gap-4 px-6 py-5 rounded-2xl border border-indigo-200 bg-gradient-to-r from-indigo-50 via-white to-purple-50 hover:from-indigo-100 hover:to-purple-100 transition-all duration-300 shadow-sm hover:shadow-md overflow-hidden"
+          >
+            {/* 배경 광원 효과 */}
+            <div className="absolute -right-10 -top-10 w-40 h-40 bg-indigo-200/30 rounded-full blur-2xl pointer-events-none" />
+            <div className="absolute -left-10 -bottom-10 w-32 h-32 bg-purple-200/20 rounded-full blur-2xl pointer-events-none" />
+
+            <div className="relative flex items-center gap-4">
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-200">
+                <Newspaper className="w-6 h-6 text-white" />
+              </div>
+              <div className="text-left">
+                <div className="flex items-center gap-2 mb-0.5">
+                  <span className="text-[10px] font-bold text-indigo-500 tracking-[0.2em] uppercase border border-indigo-300/60 bg-indigo-50 px-2 py-0.5 rounded-full">Daily</span>
+                  <span className="text-[10px] text-gray-400 font-medium">매일 자동 발행</span>
+                </div>
+                <p className="text-sm font-black text-gray-900 tracking-tight">밴드 에디토리얼</p>
+                <p className="text-xs text-gray-500 font-medium">헤럴즈 뉴스 × 상담 저널 — 교육 철학 이야기</p>
+              </div>
+            </div>
+
+            <div className="relative flex-shrink-0 flex items-center gap-1 text-xs font-bold text-indigo-600 group-hover:gap-2 transition-all">
+              <span className="hidden sm:inline">아카이브 보기</span>
+              <ChevronRight className="w-4 h-4" />
+            </div>
+          </Link>
         </motion.div>
       </section>
 
